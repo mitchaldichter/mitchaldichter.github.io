@@ -246,6 +246,19 @@ Determining the solutions of this equation is difficult analytically, but graphi
 7.3.9 a)<br>
 &nbsp;&nbsp;The last line $\displaystyle r_{1} = \frac{1}{5}\sin(t)+\frac{2}{5}\cos(\theta) + Ce^{-2t}$ should be $\displaystyle r_{1} = \frac{1}{5}\sin(\theta)+\frac{2}{5}\cos(\theta) + Ce^{-2\theta}$.<br>
 <br>
+7.6.3 b)<br>
+&nbsp;&nbsp;The initial conditions were applied incorrectly. The correct equations are,<br>
+\begin{align}
+&\ddot{x}_{0}+x_{0} = 0 \Rightarrow x_{0} = \cos(t) \\
+&\ddot{x}_{2}+x_{2} = 0 \Rightarrow x_{2} = 0 \\
+&\ddot{x}_{1}+x_{1} - 1 = 0 \Rightarrow x_{1} = 1-\cos(t)
+\end{align}
+&nbsp;&nbsp;and
+\begin{align}
+x(t,\epsilon) &= x_{0}(t,\epsilon) + \epsilon x_{1}(t,\epsilon) + \epsilon^{2}x_{2}(t,\epsilon) + O\big(\epsilon^{3}\big) \\
+&\approx \cos(t) + \epsilon\big(1-\cos(t)\big) = \epsilon + (1-\epsilon)\cos(t)
+\end{align}
+<br>
 7.6.15 a)<br>
 &nbsp;&nbsp;There were many errors. Here is the corrected segment.
 \begin{align}
