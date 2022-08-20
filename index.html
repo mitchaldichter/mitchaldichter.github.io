@@ -234,6 +234,47 @@ So in fact what happens is the trajectories that escape to infinity asymptote to
 6.4.11 b)<br>
 &nbsp;&nbsp;The eigenvalues for matrix $\displaystyle A_{(0,0,z)}$ should be changed from $\displaystyle \lambda_{1} = 0 \quad \lambda_{2} = 0 \quad \lambda_{3} = rz$ to $\displaystyle \lambda_{1} = rz \quad \lambda_{2} = rz \quad \lambda_{3} = 0$.<br>
 <br>
+6.5.7 c)<br>
+\begin{align*}
+&A = \begin{pmatrix}
+0 & 1 \\
+2\epsilon u - 1 & 0
+\end{pmatrix} \\
+&A_{\left(\frac{1+\sqrt{1-4\alpha\epsilon}}{2\epsilon},0\right)} = \begin{pmatrix}
+0 & 1 \\
+\sqrt{1-4\alpha\epsilon} & 0
+\end{pmatrix} \\
+&\Delta = -\sqrt{1-4\alpha\epsilon} \quad \tau = 0 \Rightarrow \text{Saddle point} \\
+&A_{\left(\frac{1-\sqrt{1-4\alpha\epsilon}}{2\epsilon},0\right)} = \begin{pmatrix}
+0 & 1 \\
+-\sqrt{1-4\alpha\epsilon} & 0
+\end{pmatrix} \\
+&\Delta = \sqrt{1-4\alpha\epsilon} \quad \tau = 0 \Rightarrow \text{Linear Center}
+\end{align*}
+This is also a nonlinear center by Theorem 6.5.1 with the only difficult condition to check is that the fixed point is a local minimum of a conserved quantity.
+\begin{align*}
+&E = \frac{1}{2}\dot{x}^{2} + \int -(\alpha+\epsilon x^{2} - x) \text{ d}x = \frac{1}{2}\dot{x}^{2} - \alpha x - \frac{\epsilon}{3}x^{3} + \frac{1}{2}x^{2} \\
+&\nabla E = \langle \alpha+\epsilon x^{2} - x , \dot{x} \rangle \\
+&\nabla E\left(\frac{1-\sqrt{1-4\alpha\epsilon}}{2\epsilon},0\right) = (0,0)
+\end{align*}
+\begin{align*}
+\begin{vmatrix}
+E_{xx} & E_{x\dot{x}} \\
+E_{\dot{x}x} & E_{\dot{x}\dot{x}}
+\end{vmatrix} &= \begin{vmatrix}
+-2\epsilon x+1 & \dot{x}-\alpha-\epsilon x^{2}+x \\
+\dot{x}-\alpha-\epsilon x^{2}+x & 1
+\end{vmatrix} \\
+&= -2\epsilon x+1 - (\dot{x}-\alpha-\epsilon x^{2}+x)^{2}
+\end{align*}
+$\nabla E = (0,0)$ at the fixed fixed point. Both $E_{xx}, E_{\dot{x}\dot{x}} > 0$ at the fixed point for sufficiently small $\epsilon$, as well as the evaulation of the Jocobian at the fixed point,
+\begin{equation*}
+\begin{vmatrix}
+E_{xx} & E_{x\dot{x}} \\
+E_{\dot{x}x} & E_{\dot{x}\dot{x}}
+\end{vmatrix}_{\left(\frac{1-\sqrt{1-4\alpha\epsilon}}{2\epsilon},0\right)} = \sqrt{1-4\alpha\epsilon} > 0 \Rightarrow \left(\frac{1-\sqrt{1-4\alpha\epsilon}}{2\epsilon},0\right) \text{is a local minimum.}
+\end{equation*}
+<br>
 7.2.7 a)<br>
 &nbsp;&nbsp;The partial derivatives should be reversed to $\displaystyle \frac{\partial}{\partial y}\big(y+2xy\big) = 1+2x = \frac{\partial}{\partial x}\big(x+x^{2}-y^{2}\big)$.<br>
 <br>
