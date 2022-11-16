@@ -295,6 +295,11 @@ Determining the solutions of this equation is difficult analytically, but graphi
 \begin{equation}
 0 = \ddot{z}+k\big((z+1)^{2}-4\big)\dot{z} =\frac{\text{d}}{\text{d}t} \left(\dot{z}+k\left(\frac{1}{3}(z+1)^{3}-4z\right)\right)
 \end{equation}
+&nbsp;&nbsp;The limit cycle was assumed to be symmetric and is not, so both branches must be computed.
+\begin{equation*} 
+T \approx \int_{t_{A}}^{t_{B}}\text{d}t + \int_{t_{C}}^{t_{D}}\text{d}t = -k\left( \int_{3}^{1} \frac{(z+1)^{2}-4}{z}\text{d}z + \int_{-5}^{-3} \frac{(z+1)^{2}-4}{z}\text{d}z \right) = k\big(12-3\ln(5)\big)
+\end{equation*}
+  
 &nbsp;&nbsp;The $\displaystyle 2k \ln\big(8 − \ln(27)\big)$ should be $\displaystyle 2k \big(8 − \ln(27)\big)$ without the first $\displaystyle \ln$.<br>
 <br>
 7.6.3 b)<br>
