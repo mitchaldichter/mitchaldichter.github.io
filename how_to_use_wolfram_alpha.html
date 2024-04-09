@@ -7,12 +7,12 @@
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
 </script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 <link rel="stylesheet" href="maths_survival_guide.css">
 
 <script src="shared_html.js"></script>
 <script>
-  const header_text = "Differential Equations";
+  const header_text = "WolframAlpha";
 </script>
 </head>
 <body <body onload="set_common_html(header_text)">
@@ -36,27 +36,20 @@
   
 <div id="left_empty_column"></div>
   <div id="right_content">
-    <h1>Separable Differential Equations | <a href="" target="_blank">Topic Playlist</a></h1>
-	<p>This method can be used to solve <b>some</b> first order linear ODEs. If the differential equation is for the function $y(x)$, the goal is to separate the independent variable $x$ to one side of the equation and the dependent variable $y(x)$ to the other side of the equation. As a notational convenience, the $\displaystyle y'=\frac{\text{d}y}{\text{d}x}$ can be treated like a fraction.</p>
+    <h1>How to use <a href="https://www.wolframalpha.com/" target="_blank">WolframAlpha</a> | <a href="" target="_blank">Topic Playlist</a></h1>
+	<p>A lot of students don't realize this, but WolframAlpha can be used to <b>check</b> your work on maths homework. I say <b>check</b> because you don't want to use WolframAlpha to do your homework for you. If students don't actually do the homework themselves, those students tend to do very badly on exams because they didn't practice by doing the homework. Copying answers from anywhere will complete the assignment but you won't retain much for the exam. Despite homework counting for around 10% of the course usually, about 90% of learning happens when doing the homework. Don't sabotage yourself by not doing your homework.</p>
 	
-	<h3>Example 1 | <a href="" target="_blank">Solution Video</a></h3>
+	<p>WolframAlpha can do a lot a common problems if you know how to type the problem in correctly. One major difficulty is WolframAlpha will try to simplify the answer in a way a person would not, making the result significantly different from what a person would write. Also, complicated problems can exceed the free computation time limit and you may not get an answer. You can get around this by paying for a subscription, which also tries to provide step by step solutions, but the steps can be counter intuitive sometimes. However, the free version of WolframAlpha is often good enough.</p>
+	
+	<h3>Example 1 | <a href="" target="_blank">Explanation Video</a></h3>
 	<div class="example_solution">
-	<p>Find the general solution to the following differential equation.</p>
+	<p>WolframAlpha can do general differentiation.</p>
+	<p>This is a <a href="https://www.wolframalpha.com/input?i=derivative+of+x%5E4+sin%28x%29+e%5Ex+with+respect+to+x" target="_blank">WolframAlpha</a> link with the following input.</p>
+	<pre>derivative of x^4 sin(x) e^x with respect to x</pre>
 	\begin{equation}
-	\frac{1+x^2}{y} = \frac{\text{d}y}{\text{d}x}
+	\frac{\text{d}}{\text{d}x} (x^{4} \sin(x) e^{x}) = e^{x} x^{3} ((x + 4) \sin(x) + x \cos(x))
 	\end{equation}
-	<p>Multiple both sides by $y$ and $\text{d}x$ to separate the differential equation.</p>
-	\begin{equation}
-	(1+x^2)\text{ d}x = y\text{ d}y
-	\end{equation}
-	<p>Now integrate the LHS with respect to $x$ and the RHS with respect to $y$.</p>
-	\begin{equation}
-	\int (1+x^2)\text{ d}x = \int y\text{ d}y \qquad\qquad x + \frac{x^{3}}{3} + C = \frac{y^{2}}{2}
-	\end{equation}
-	<p>We can solve for $y(x)$ by multiplying by $2$ and taking the square root. (The constant of integration absorbs the $2$ along the way.)</p>
-	\begin{equation}
-	\frac{y^{2}}{2} = x + \frac{x^{3}}{3} + C \qquad\qquad y^{2} = 2x + \frac{2x^{3}}{3} + 2C = 2x + \frac{2x^{3}}{3} + C \qquad\qquad y(x) = \pm \sqrt{2x + \frac{2x^{3}}{3} + C}
-	\end{equation}
+	<p>The output is correct, but is simplified more than a person normally would.</p>
 	</div>
 	
 	<p>The above differential equation is called a <b>separable equation</b> because we were able to separate the $x$ and $y$ variables on different sides of the equation, including the $\text{d}y$ and $\text{d}x$.</p>
