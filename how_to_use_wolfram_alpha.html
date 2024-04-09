@@ -12,7 +12,7 @@
 
 <script src="shared_html.js"></script>
 <script>
-  const header_text = "WolframAlpha";
+  const header_text = "Additional Resources";
 </script>
 </head>
 <body <body onload="set_common_html(header_text)">
@@ -52,77 +52,7 @@
 	<p>The output is correct, but is simplified more than a person normally would.</p>
 	</div>
 	
-	<p>The above differential equation is called a <b>separable equation</b> because we were able to separate the $x$ and $y$ variables on different sides of the equation, including the $\text{d}y$ and $\text{d}x$.</p>
 	
-	<p>Not all differential equation are <b>separable equation</b>. The below differential equation is not separable.</p>
-	
-	<h3>Example 2 | <a href="" target="_blank">Solution Video</a></h3>
-	<div class="example_solution">
-	<p>Determine if this ODE is a separable differential equation and why.</p>
-	\begin{equation}
-	x+y = \frac{\text{d}y}{\text{d}x}
-	\end{equation}
-	<p>First try multiplying both sides of the equation by $\text{d}x$.</p>
-	\begin{equation}
-	x \text{ d}x + y \text{ d}x = \text{d}y
-	\end{equation}
-	<p>The differential equation is not separable because the $y \text{ d}x$ term has both $x$ and $y$ in it. Dividing the entire equation by $y$ or $\text{d}x$ would just make one of the other terms mixed.</p>
-	</div>
-	
-	<p>This method only works with first order differential equations. Sometimes the differential equation doesn't look separable but there's a trick to separate the variable, like a trig identity or factoring a polynomial into two parts with $x$ $y$ seprate.</p>
-	
-	<p>Try the following examples on your own.</p>
-	
-	<h3>Example 3 | <a href="" target="_blank">Solution Video</a></h3>
-	<div class="example_solution">
-	<p>Determine if this ODE is a separable differential equation. If yes, find the general solution.</p>
-	\begin{equation}
-	xy = \frac{\text{d}y}{\text{d}x}
-	\end{equation}
-	</div>
-	
-	<h3>Example 4 | <a href="" target="_blank">Solution Video</a></h3>
-	<div class="example_solution">
-	<p>Determine if this ODE is a separable differential equation. If yes, find the general solution.</p>
-	\begin{equation}
-	\frac{x}{y} = \frac{\text{d}y}{\text{d}x}
-	\end{equation}
-	</div>
-	
-	<h3>Example 5 | <a href="" target="_blank">Solution Video</a></h3>
-	<div class="example_solution">
-	<p>Determine if this ODE is a separable differential equation. If yes, find the general solution. (Warning: This will be an <b>implicit</b> solution.)</p>
-	\begin{equation}
-	\frac{\cos(x)}{9y^{8}+1} = \frac{\text{d}y}{\text{d}x}
-	\end{equation}
-	</div>
-	
-	<h3>Example 6 | <a href="" target="_blank">Solution Video</a></h3>
-	<div class="example_solution">
-	<p>Determine if this ODE is a separable differential equation. If yes, find the general solution. (Hint: Factor the LHS.)</p>
-	\begin{equation}
-	xy+y-x-1 = \frac{\text{d}y}{\text{d}x}
-	\end{equation}
-	</div>
-	
-	<p>You might remember that $\displaystyle \frac{\text{d}y}{\text{d}x}$ isn't a fraction, but treating $y'$ like a fraction in this case does. What's really going on goes back to implicit differention.</p>
-	
-	<h3>Why does treating $\displaystyle \frac{\text{d}y}{\text{d}x}$ like a fraction work? | <a href="https://www.youtube.com/watch?v=VqmicNYaJXI" target="_blank">Explanation Video</a></h3>
-	<div class="theory">
-	<p>A first order differential equation is separable if it can be rewritten into the below form.</p>
-	\begin{equation}
-	h(y)y' = g(x)
-	\end{equation}
-	<p>Taking the integral with respect to $x$ on the LHS and RHS absorbs the $y'$ into $H(y)$, where $H(y)$ and $G(x)$ are the antiderivatives of $h(y)$ and $g(x)$.</p>
-	\begin{equation}
-	\int h(y)y' \text{ d}x = \int g(x) \text{ d}x \qquad\qquad H(y) = G(x)
-	\end{equation}
-	<p>This is easier to see if $y$ is explicitly written as a function $y(x)$ and taking the derivative of the previous equation with respect to $x$.</p>
-	\begin{equation}
-	H\big(y(x)\big) = G(x) \qquad\qquad \frac{\text{d}}{\text{d}x} H\big(y(x)\big) = \frac{\text{d}}{\text{d}x} G(x) \qquad\qquad H'\big(y(x)\big)y'(x) = G'(x) \qquad\qquad h\big(y(x)\big)y'(x) = g(x)
-	\end{equation}
-	<p>The $y'(x)$ appears from the chain rule applied to $H\big(y(x)\big)$. So really the integration is with respect to $x$ on both sides of the equation, but treating the $\displaystyle y'=\frac{\text{d}y}{\text{d}x}$ as a fraction for serparting $x$ and $y$ to oppsites sides of the equation works and is notationally convenient.</p>
-	</div>
 	
   </div>
 </div>
