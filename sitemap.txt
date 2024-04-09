@@ -1,2 +1,7 @@
 https://mitchaldichter.com/index.html
-https://mitchaldichter.com/videos.html
+https://mitchaldichter.com/Strogatz_errata.html
+https://mitchaldichter.com/Maths_Survival_Guide.html
+https://mitchaldichter.com/differential_equations_overview.html
+https://mitchaldichter.com/how_to_use_wolfram_alpha.html
+https://mitchaldichter.com/separable_equations.html
+https://mitchaldichter.com/integrating_factor.html
