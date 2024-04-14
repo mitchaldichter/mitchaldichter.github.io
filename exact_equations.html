@@ -36,10 +36,82 @@
   
 <div id="left_empty_column"></div>
   <div id="right_content">
-    <h1>Exact Equations | <a href="" target="_blank">Topic Playlist</a></h1>
-	<p>put studd here</p>
-	
-	
+    <h1>Exact Equations | <a href="https://www.youtube.com/watch?v=56_IkK4qAWE&list=PLXQ5vz32rm_QrF--tlOvaWHeEW8QVOCU3" target="_blank">Topic Playlist</a></h1>
+	<p>A lot of differential equations come from physics, and a lot of physics equations conserve a quantity. Common examples are conservation of energy, conservation of mass, and conservation of momentum. The equation for the conserved quantity can look like $F(x,y) = C$ where $x$ and $y$ are properties of the physical system, $F(x,y)$ calculates the total energy of the system for for given $x$ and $y$ state, and $C$ is the total energy of the system which never changes. An example is a frictionless pendulum. The inputs $x$ and $y$ could represent the velocity and height of the arm of the pendulum, $F(x,y)$ calculates the energy for a velocity and height, which must always equal the same amount of energy $C$.</p>
+  
+  <p>When a derivative is applied to an equation that conserves a quantity, an exact equation results. There's a way to test if a differential equation is an exact equation. If the differential equation is an exact equation, then there's a way to work backwards to the $F(x,y)=C$ which solves the exact differential equation since there are no longer any derivatives of $y$ present. The procedure is a bit confusing though, so we'll go through some examples to understand the process. Partial derivatives are also used, but those will be explained as well.</p>
+  
+  <h3>Exact Equations, Partial Derivatives, and Calculating $F(x,y)$ | <a href="https://www.youtube.com/watch?v=56_IkK4qAWE&list=PLXQ5vz32rm_QrF--tlOvaWHeEW8QVOCU3" target="_blank">Explanation Playlist</a></h3>
+	<div class="theory">
+  <p>Take the derivative with respect to $x$ on the following equation with $y=y(x)$ is a function of $x$.</p>
+  \begin{equation}
+  F(x,y) = 7x^{2}y^{3} + \sin(y) - e^{x} = C
+  \end{equation}
+  \begin{equation}
+  \frac{\text{d}}{\text{d}x}F(x,y) = \frac{\text{d}}{\text{d}x} \big( 7x^{2}y^{3} + \sin(y) - e^{x} \big) = \frac{\text{d}}{\text{d}x} C
+  \end{equation}
+  \begin{equation}
+  \frac{\text{d}}{\text{d}x}F(x,y) = 14xy^{3} + 21x^{2}y^{2}y' + \cos(y)y' - e^{x} = 0
+  \end{equation}
+  <p>This can also be written in terms of partial derivatives. The name of the $\partial$ symbol is partial. The partial derivative with respect to $x$ is written as $\displaystyle \frac{\partial}{\partial x}$, and the partial derivative with respect to $y$ is written as $\displaystyle \frac{\partial}{\partial y}$. Partial derivatives are part of multivariable calculus, but for exact equations all you need to know is $\displaystyle \frac{\partial}{\partial x}$ is like taking the derivative with respect to $x$ while treating $y$ as a constant and $\displaystyle \frac{\partial}{\partial y}$ is like taking the derivative with respect to $y$ while treating $x$ as a constant.</p>
+  \begin{equation}
+  \frac{\partial F}{\partial x} = 14xy^{3} - e^{x} \qquad\qquad \frac{\partial F}{\partial y} = 21x^{2}y^{2} + \cos(y)
+  \end{equation}
+  \begin{equation}
+  \frac{\text{d}}{\text{d}x}F(x,y) = \frac{\partial F}{\partial x} + \frac{\partial F}{\partial y} y' = 14xy^{3} - e^{x} + \big( 21x^{2}y^{2} + \cos(y) \big) y'
+  \end{equation}
+  <p>Computing $\displaystyle \frac{\text{d}}{\text{d}x}F(x,y)$ the normal way and using partial derivatives are exactly the same. The result is some of the terms are multiplied by $y'$ and others are not. These are often named $M(x,y)$ and $N(x,y)$. (<b>Warning</b>: Be careful with your textbook as these names are not standardized.)</p>
+  \begin{equation}
+  \frac{\text{d}}{\text{d}x}F(x,y) = \frac{\partial F}{\partial x} + \frac{\partial F}{\partial y} y' = M(x,y) + N(x,y)y' \qquad\quad M(x,y) = 14xy^{3} - e^{x} \qquad\qquad N(x,y) = 21x^{2}y^{2} + \cos(y)
+  \end{equation}
+  <p>Partial derivatives can do strange things, but for this course you can always assume that the order of the partial derivatives doesn't matter.</p>
+  \begin{equation}
+  \frac{\partial }{\partial x}\frac{\partial }{\partial y}F = \frac{\partial^{2} F}{\partial x \partial y} = \frac{\partial^{2} F}{\partial y \partial x} = \frac{\partial }{\partial y}\frac{\partial }{\partial x}F
+  \end{equation}
+  <p>Because the order of the partial derivatives doesn't matter, a way to test if a differential equation is and exact equation from a conservation law $F(x,y)$ is the following.</p>
+  \begin{equation}
+  \frac{\partial }{\partial x}\frac{\partial }{\partial y}F = \frac{\partial }{\partial x}N \qquad \qquad \frac{\partial }{\partial y}\frac{\partial }{\partial x}F = \frac{\partial }{\partial y}M
+  \end{equation}
+  \begin{equation}
+  \text{If } \frac{\partial }{\partial x}N = \frac{\partial }{\partial y}M \text{ then the mixed partial derivatives are equal, meaning } F(x,y) \text{ exists and the equation is exact.}
+  \end{equation}
+  \begin{equation}
+  \text{If } \frac{\partial }{\partial x}N \neq \frac{\partial }{\partial y}M \text{ then the mixed partial derivatives are not equal, } F(x,y) \text{ does not exist, and the equation is not exact.}
+  \end{equation}
+  <p>If the differential equation is an exact equation, then you can work backwards to $F(x,y)$ by integrating $M(x,y)$ with respect to $x$ while treating $y$ as a constant and $N(x,y)$ with respect to $y$ while treating $x$ as a constant to calculate $F(x,y)$.</p>
+  </div>
+  
+  <h3>Example 1 | <a href="https://www.youtube.com/watch?v=Pny3HOZg7RU&list=PLXQ5vz32rm_QrF--tlOvaWHeEW8QVOCU3&index=7" target="_blank">Solution Video</a></h3>
+	<div class="example_solution">
+	<p>Verify the differential equation is an exact equation. If yes, solve the exact equation.</p>
+  \begin{equation}
+  14xy^{3} + 21x^{2}y^{2}y' + \cos(y)y' - e^{x} = 0
+  \end{equation}
+	</div>
+  
+  <h3>Example 2 | <a href="https://www.youtube.com/watch?v=L2xAry9EjC4&list=PLXQ5vz32rm_QrF--tlOvaWHeEW8QVOCU3&index=8" target="_blank">Solution Video</a></h3>
+	<div class="example_solution">
+	<p>Solve the initial value problem.</p>
+  \begin{equation}
+  14xy^{3} + 21x^{2}y^{2}y' + \cos(y)y' - e^{x} = 0 \qquad\qquad y(4) = 3
+  \end{equation}
+	</div>
+  
+  <h3>Example 3 | <a href="https://www.youtube.com/watch?v=i9XOvVHVi9A&list=PLXQ5vz32rm_QrF--tlOvaWHeEW8QVOCU3&index=9" target="_blank">Solution Video</a></h3>
+	<div class="example_solution">
+	<p>Verify the differential equation is an exact equation. If yes, solve the exact equation.</p>
+  \begin{equation}
+  \sin(xy) + \cos(y)y' = 0
+  \end{equation}
+	</div>
+  
+  <h3>Example 4 | <a href="https://www.youtube.com/watch?v=ACUh8uNszTU&list=PLXQ5vz32rm_QrF--tlOvaWHeEW8QVOCU3&index=10" target="_blank">Solution Video</a></h3>
+	<div class="example_solution">
+	<p>Solve the initial value problem. (Try solving this as an <b>exact equation</b> and as a <b>separable</b> equation.</p>
+  \begin{equation}
+  2x + 2yy' + 2xy' + 2y = 0 \qquad\qquad y(1) = -2
+  \end{equation}
+	</div>
 	
   </div>
 </div>

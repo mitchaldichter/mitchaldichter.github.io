@@ -36,23 +36,87 @@
   
 <div id="left_empty_column"></div>
   <div id="right_content">
-    <h1>How to use <a href="https://www.wolframalpha.com/" target="_blank">WolframAlpha</a> | <a href="" target="_blank">Topic Playlist</a></h1>
+    <h1>How to use <a href="https://www.wolframalpha.com/" target="_blank">WolframAlpha</a></h1>
 	<p>A lot of students don't realize this, but WolframAlpha can be used to <b>check</b> your work on maths homework. I say <b>check</b> because you don't want to use WolframAlpha to do your homework for you. If students don't actually do the homework themselves, those students tend to do very badly on exams because they didn't practice by doing the homework. Copying answers from anywhere will complete the assignment but you won't retain much for the exam. Despite homework counting for around 10% of the course usually, about 90% of learning happens when doing the homework. Don't sabotage yourself by not doing your homework.</p>
 	
 	<p>WolframAlpha can do a lot a common problems if you know how to type the problem in correctly. One major difficulty is WolframAlpha will try to simplify the answer in a way a person would not, making the result significantly different from what a person would write. Also, complicated problems can exceed the free computation time limit and you may not get an answer. You can get around this by paying for a subscription, which also tries to provide step by step solutions, but the steps can be counter intuitive sometimes. However, the free version of WolframAlpha is often good enough.</p>
 	
-	<h3>Example 1 | <a href="" target="_blank">Explanation Video</a></h3>
+  <h3>Example 1 | <a href="https://www.wolframalpha.com/input?i=solve+x+%3D+1+%2B+1%2Fy+for+y" target="_blank">WolframAlpha Solving Equations for $y$</a></h3>
 	<div class="example_solution">
-	<p>WolframAlpha can do general differentiation.</p>
-	<p>This is a <a href="https://www.wolframalpha.com/input?i=derivative+of+x%5E4+sin%28x%29+e%5Ex+with+respect+to+x" target="_blank">WolframAlpha</a> link with the following input.</p>
+	<p>The above link leads to WolframeAlpha with the following input.</p>
+	<pre>solve x = 1 + 1/y for y</pre>
+  <p>Part of the output is</p>
+	\begin{equation}
+	y = \frac{1}{x-1} \text{ and } x \neq 1
+	\end{equation}
+	</div>
+  
+	<h3>Example 2 | <a href="https://www.wolframalpha.com/input?i=derivative+of+x%5E4+sin%28x%29+e%5Ex+with+respect+to+x" target="_blank">WolframAlpha General Differentiation</a></h3>
+	<div class="example_solution">
+	<p>The above link leads to WolframeAlpha with the following input.</p>
 	<pre>derivative of x^4 sin(x) e^x with respect to x</pre>
+  <p>Part of the output is</p>
 	\begin{equation}
 	\frac{\text{d}}{\text{d}x} (x^{4} \sin(x) e^{x}) = e^{x} x^{3} ((x + 4) \sin(x) + x \cos(x))
 	\end{equation}
-	<p>The output is correct, but is simplified more than a person normally would.</p>
 	</div>
 	
-	
+	<h3>Example 3 | <a href="https://www.wolframalpha.com/input?i=integral+of+x%5E4+sin%28x%29+e%5Ex+dx" target="_blank">WolframAlpha Indefinite Integration</a></h3>
+	<div class="example_solution">
+	<p>The above link leads to WolframeAlpha with the following input.</p>
+	<pre>integral of x^4 sin(x) e^x dx</pre>
+  <p>Part of the output is</p>
+	\begin{equation}
+	\int x^{4} \sin(x) e^{x} \text{ d}x = \frac{1}{2} e^{x} ((x^{4} - 6 x^{2} + 12 x - 6) \sin(x) - (x^{4} - 4 x^{3} + 6 x^{2} - 6) \cos(x)) + \text{ constant}
+	\end{equation}
+	</div>
+  
+  <h3>Example 4 | <a href="https://www.wolframalpha.com/input?i=integral+from+3+to+7+of+x%2F%28x%5E2%2B1%29+dx" target="_blank">WolframAlpha Definite Integration</a></h3>
+	<div class="example_solution">
+	<p>The above link leads to WolframeAlpha with the following input.</p>
+	<pre>integral from 3 to 7 of x/(x^2+1) dx</pre>
+  <p>Part of the output is</p>
+	\begin{equation}
+	\int_{3}^{7} \frac{x}{x^{2}+1} \text{ d}x = \frac{\ln(5)}{2}
+	\end{equation}
+	</div>
+  
+  <h3>Example 4 | <a href="https://www.wolframalpha.com/input?i=plot+direction+field+for+y%27+%2B+xy+%3D+0" target="_blank">WolframAlpha Plotting Direction Fields</a></h3>
+	<div class="example_solution">
+	<p>The above link leads to WolframeAlpha with the following input.</p>
+	<pre>plot direction field for y' + xy = 0</pre>
+	<p>For legal reasons I have not shown the output here, but WolframAlpha does make direction field plots similar to your textbook.</p>
+	</div>
+  
+  <h3>Example 5 | <a href="https://www.wolframalpha.com/input?i=y%27+%2B+xy+%3D+0" target="_blank">WolframAlpha General Solution to an ODE</a></h3>
+	<div class="example_solution">
+	<p>The above link leads to WolframeAlpha with the following input.</p>
+	<pre>y' + xy = 0</pre>
+  <p>Part of the output is</p>
+	\begin{equation}
+	y(x) = c_{1} e^{-x^{2}/2}
+	\end{equation}
+	</div>
+  
+  <h3>Example 6 | <a href="https://www.wolframalpha.com/input?i=y%27+%2B+xy+%3D+7x+with+y%280%29+%3D+2" target="_blank">WolframAlpha First Order ODE Initial Value Problem</a></h3>
+	<div class="example_solution">
+	<p>The above link leads to WolframeAlpha with the following input.</p>
+	<pre>y' + xy = 7x with y(0) = 2</pre>
+  <p>Part of the output is</p>
+	\begin{equation}
+	y(x) = 7 - 5 e^{-x^{2}/2}
+	\end{equation}
+	</div>
+  
+  <h3>Example 7 | <a href="https://www.wolframalpha.com/input?i=y%27%27%2By%3D0%2C+y%27%280%29%3D-1%2Cy%280%29%3D4" target="_blank">WolframAlpha First Order ODE Initial Value Problem</a></h3>
+	<div class="example_solution">
+	<p>The above link leads to WolframeAlpha with the following input.</p>
+	<pre>y''+y=0, y'(0)=-1, y(0)=4</pre>
+  <p>Part of the output is</p>
+	\begin{equation}
+	y(x) = 4\cos(x)-\sin(x)
+	\end{equation}
+	</div>
 	
   </div>
 </div>

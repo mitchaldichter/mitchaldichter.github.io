@@ -1,11 +1,57 @@
-body {
-  margin: 0px ;
-
-  background-color: LightGray ;
-}
-
 * {
   box-sizing: border-box;
+}
+
+body {
+  margin: 0px ;
+  
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  
+  line-height: 175%;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+p {
+  line-height: 175%;
+}
+
+a {
+  font-color: black;
+}
+a:link {
+  color: black;
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  color: black;
+  text-decoration: underline;
+}
+a:active {
+  
+}
+
+ol {
+  counter-reset: item;
+  
+  line-height: 150%;
+}
+li {
+  display: block;
+}
+li:before {
+  content: counters(item, ".") " ";
+  counter-increment: item;
+  font-weight: bold;
 }
 
 #left_header {
@@ -54,26 +100,27 @@ body {
   overflow-y: scroll;
   background-color: White;
   padding: 10px;
+  
 }
 
 #right_content {
   float: left;
-  width: 70%;
+  width: 80%;
   height: 91vh;
   overflow-y: scroll;
   background-color: White;
-  padding: 10px;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
 
 #left_empty_column {
   float: left;
-  width: 5%;
+  width: 0%;
   height: 91vh;
 }
 
-
-
-/* Clear floats after the columns */
 #header_row:after {
   content: "";
   display: table;
@@ -85,6 +132,12 @@ body {
   content: "";
   display: table;
   clear: both;
+}
+
+.inline_youtube_icon {
+  height: 1em;
+  vertical-align:middle;
+  padding-bottom: 0.1em;
 }
 
 .example_solution {

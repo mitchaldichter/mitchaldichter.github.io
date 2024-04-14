@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" type="image/png" sizes="32x32" href="images/profile_image_favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/profile_image_favicon-16x16.png">
+<title>Maths Survival Guide by Mitchal Dichter</title>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+<link rel="stylesheet" href="maths_survival_guide.css">
+
+<script src="shared_html.js"></script>
+<script>
+  const header_text = "Differential Equations";
+</script>
+</head>
+<body <body onload="set_common_html(header_text)">
+
+<div id="header_row">
+  <div id="left_header">
+    Table of Contents
+  </div>
+  <div id="right_header">
+    <!--set by set_common_html(header_text)-->
+  </div>
+  <div id="profile_picture_div">
+	<img id="profile_picture_img" src="images/profile_image.png">
+  </div>
+</div>
+
+<div id="content_row">
+  <div id="left_content">
+  <!--set by set_common_html(header_text)-->
+  </div>
+  
+<div id="left_empty_column"></div>
+  <div id="right_content">
+    <h1>Notation and Definitions | <a href="" target="_blank">Topic Playlist</a></h1>
+    
+    <h3>What's a differential equation?</h3>
+	  <div class="theory">
+    <p>A differential equation is an equation that has an unknown function and its derivatives present. The simplest example is $y'(x) = y(x)$ with $y(x)$ an unknown function.</p>
+    
+    <p>A non-example is $y'(x) = x$ which is not usually considered a differential equation since $y(x)$ is not present.</p>
+    </div>
+    
+    <h3>Ordinary Differential Equation (ODE) vs. Partial Differential Equation (PDE)</h3>
+    <div class="theory">
+    <p>An <b>ODE</b> is a differential equation where the unknown function is a function of a single variable, like $y(x)$.</p>
+    
+    <p>A <b>PDE</b> is a differential equation where the unknown function is a function of a multiple variables, like $f(x,y)$ or $f(x,y,z)$. An example is the temperature at every point $(x,y)$ on a flat metal plate or the density of air at every point $(x,y,z)$ in a music hall.</p>
+    </div>
+    
+    <h3>Different ways to write derivatives.</h3>
+    <div class="theory">
+    <p>There's three common ways to write derivatives of a single variable function $y(x)$. Which one to use is personal preference, but people usually pick the one that requires the least writing and is easiest to read.</p>
+    \begin{equation}
+    \frac{\text{d}y}{\text{d}x} = y' = y^{(1)} \qquad\qquad \frac{\text{d}^{2}y}{\text{d}x^{2}} = y'' = y^{(2)} \qquad\qquad \frac{\text{d}^{5}y}{\text{d}x^{5}} = y''''' = y^{(5)}
+    \end{equation}
+    <p>A fourth way to write derivatives of a single variable function $u(t)$ is with the "dot notation" common in physics and engineering.</p>
+    \begin{equation}
+    \frac{\text{d}u}{\text{d}t} = u' = u^{(1)} = \dot{u} \qquad\qquad \frac{\text{d}^{2}u}{\text{d}t^{2}} = u'' = u^{(2)} = \ddot{u}
+    \end{equation}
+    <p>This notation is used for functions of time $t$ and you typically only see a single "u dot" or a "u double dot" since first and second time derivatives are common in physics and engineering. A differential equation with a "u triple dot" is uncommon.</p>
+    
+    <p>There's two common ways to write partial derivatives for a function $f(x,y)$. (<b>Note</b>: The order on the mixed partial changes between the two notations.)</p>
+    \begin{equation}
+    \frac{\partial f}{\partial x} = f_{x} \qquad \qquad \frac{\partial^{2} f}{\partial x^{2}} = f_{xx} \qquad\qquad \frac{\partial f}{\partial y} = f_{y} \qquad \qquad \frac{\partial^{2} f}{\partial y^{2}} = f_{yy}
+    \end{equation}
+    \begin{equation}
+    \frac{\partial }{\partial y}\frac{\partial }{\partial x} f = \frac{\partial^{2} f}{\partial y \partial x} = f_{xy} \qquad\qquad \frac{\partial }{\partial x}\frac{\partial }{\partial y} f = \frac{\partial^{2} f}{\partial x \partial y} = f_{yx}
+    \end{equation}
+    </div>
+    
+    <h3>Order of a differential equation.</h3>
+    <div class="theory">
+    <p>The <b>order</b> of a differential equation is the highest derivative of the unknown function present.</p>
+    \begin{align}
+    y'' + y = 1 & \quad\text{2nd order} \\
+    \\
+    (y')^{5} + y = 1 & \quad\text{1st order} \\
+    \\
+    y'''y''y'y  = x & \quad\text{3rd order} \\
+    \\
+    \sin(y^{(4)}) + y = e^{x} & \quad\text{4th order} \\
+    \\
+    \end{align}
+    </div>
+    
+    <h3>Linear vs. Nonlinear ODEs</h3>
+    <div class="theory">
+    <p>A <b>linear</b> differential equation has the following form.</p>
+    \begin{equation}
+    p_{n}(x)y^{(n)} + p_{n-1}(x)y^{(n-1)} + \cdots + p_{1}(x)y' + p_{-}(x)y = g(x)
+    \end{equation}
+    <p>The functions of $x$ do not matter for the differential equation to be linear or nonlinear. The only thing that matters is the $y(x)$ function and all its derivatives multiply a function of $x$. A differential equation is <b>nonlinear</b> means the differential equation does not fit the form of a linear differential equation.</p>
+    \begin{align}
+    y'' + y = 1 & \quad\text{linear} \\
+    \\
+    \tan\left(\frac{\ln(x)}{x^{2}+1}\right) y'' + x^{x} y = e^{\sin(x)} & \quad\text{linear} \\
+    \\
+    (y')^{2} + y = 7 & \quad\text{nonlinear} \\
+    \\
+    y''y' + y' + xy = 31 & \quad\text{nonlinear} \\
+    \\
+    y^{(5)} + \frac{1}{y} = e^{x} & \quad\text{nonlinear} \\
+    \\
+     y'' + \sin(y') + y = \frac{1}{x} & \quad\text{nonlinear} \\
+    \\
+    y'' + e^{y} = 4 & \quad\text{nonlinear} \\
+    \\
+    \ln(y') + y = 0 & \quad\text{nonlinear} \\
+    \end{align}
+    </div>
+    
+    <h3>General solution vs. Particular Solution</h3>
+    <div class="theory">
+    <p>The <b>general</b> solution of an ODE has a constant of integration present.</p>
+    \begin{equation}
+    y' = y \qquad y(x) = Ce^{x} \qquad\qquad y'' + y = 0 \qquad y(x) = c_{1}\cos(x) + c_{2}\sin(x)
+    \end{equation}
+    <p>A <b>particular</b> solution of an ODE sets the constant so that an initial condition is met, usually specified as $y(x_{0}) = y_{0}$ for first order and $y'(x_{0}) = y'_{0}$, $y(x_{0}) = y_{0}$.</p>
+    \begin{equation}
+    y' = y, y(0)=3 \qquad y(x) = 3e^{x} \qquad\qquad y'' + y = 0 \quad y'(0)=-1\quad y(0)=4 \qquad y(x) = 4\cos(x) - \sin(x)
+    \end{equation}
+    </div>
+    
+    <h3>Implicit vs. Explicit Solution</h3>
+    <div class="theory">
+    <p>An <b>explicit</b> solution to an ODE is $y(x)=f(x)$. Ideally, we want to solve for $y$ in terms of $x$, but that is not always possible.</p>
+    
+    <p>For example, there is no way to solve for $y$ in the following equation.</p>
+    \begin{equation}
+    y^{2} + e^{y} = \sin(x) + C\ln(x)
+    \end{equation}
+    <p>This is an <b>implicit</b> general solution for $x$ and $y$.</p>
+    </div>
+	
+	
+	
+  </div>
+</div>
+</body>
+</html>
