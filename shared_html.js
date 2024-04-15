@@ -7,7 +7,7 @@ function set_common_html(header_text) {
 
 
 const background_color_array = [];
-background_color_array["Maths Survival Guide"] = "Violet";
+background_color_array["Maths Survival Guide"] = "#EC745C";
 background_color_array["Single Variable Calculus: Integration"] = "MediumSeaGreen";
 background_color_array["Differential Equations"] = "#03a9f4";
 background_color_array["Additional Resources"] = "Tomato";
