@@ -44,6 +44,9 @@ ol {
   counter-reset: item;
   
   line-height: 150%;
+  padding-left: 1em;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 li {
   display: block;
@@ -132,6 +135,11 @@ li:before {
   content: "";
   display: table;
   clear: both;
+}
+
+.table_of_contents_h3 {
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .inline_youtube_icon {

@@ -23,7 +23,7 @@ background_color_array["temp0"] = "#f44336";
 
 
 const table_of_contents_courses_section = `
-  <h3>Courses</h3>
+  <h3 class="table_of_contents_h3">Courses</h3>
   <ol>
     <li>Single Variable Calculus
       <ol>
@@ -36,22 +36,23 @@ const table_of_contents_courses_section = `
     <li>Linear Algebra</li>
     <li><a href="differential_equations_overview.html">Differential Equations</a></li>
   </ol>
-    
-  <h3>Additional Resources</h3>
+  <br>
+  <h3 class="table_of_contents_h3">Additional Resources</h3>
   <ol>
     <li><a href="how_to_use_wolfram_alpha.html">WolframAlpha</a></li>
   </ol>
+  <br>
 `;
 const table_of_contents_array = [];
 table_of_contents_array["Maths Survival Guide"] = table_of_contents_courses_section;
 table_of_contents_array["Single Variable Calculus: Integration"] = table_of_contents_courses_section + `
-  <h3>Single Variable Calculus: Integration</h3>
+  <h3 class="table_of_contents_h3">Single Variable Calculus: Integration</h3>
   <ol>
     <li><a href="integration_by_parts.html">Integration by Parts</a></li>
   </ol>
 `;
 table_of_contents_array["Differential Equations"] = table_of_contents_courses_section + `
-  <h3>Differential Equations</h3>
+  <h3 class="table_of_contents_h3">Differential Equations</h3>
   <ol>
     <li>Introduction
       <ol>
