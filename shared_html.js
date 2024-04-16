@@ -8,6 +8,7 @@ function set_common_html(header_text) {
 
 const background_color_array = [];
 background_color_array["Maths Survival Guide"] = "#EC745C";
+background_color_array["Single Variable Calculus: Limits and Derivatives"] = "MediumSeaGreen";
 background_color_array["Single Variable Calculus: Integration"] = "MediumSeaGreen";
 background_color_array["Differential Equations"] = "#03a9f4";
 background_color_array["Additional Resources"] = "Tomato";
@@ -29,11 +30,11 @@ const table_of_contents_courses_section = `
       <ol>
         <li><a href="limits_and_derivatives_overview.html">Limits and Derivatives</a></li>
         <li><a href="integration_overview.html">Integration</a></li>
-        <li>Sequences and Series</li>
+        <li><a href="sequences_and_series_overview.html">Sequences and Series</a></li>
       </ol>
     </li>
-    <li>Multivariable Calculus</li>
-    <li>Linear Algebra</li>
+    <li><a href="multivariable_calculus_overview.html">Multivariable Calculus</a></li>
+    <li><a href="linear_algebra_overview.html">Linear Algebra</a></li>
     <li><a href="differential_equations_overview.html">Differential Equations</a></li>
   </ol>
   <br>
@@ -45,6 +46,12 @@ const table_of_contents_courses_section = `
 `;
 const table_of_contents_array = [];
 table_of_contents_array["Maths Survival Guide"] = table_of_contents_courses_section;
+table_of_contents_array["Single Variable Calculus: Limits and Derivatives"] = table_of_contents_courses_section + `
+  <h3 class="table_of_contents_h3">Single Variable Calculus: Limits and Derivatives</h3>
+  <ol>
+    <li><a href=".html">stuff</a></li>
+  </ol>
+`;
 table_of_contents_array["Single Variable Calculus: Integration"] = table_of_contents_courses_section + `
   <h3 class="table_of_contents_h3">Single Variable Calculus: Integration</h3>
   <ol>
