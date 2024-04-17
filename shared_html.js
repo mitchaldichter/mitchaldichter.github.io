@@ -26,7 +26,7 @@ background_color_array["temp0"] = "#f44336";
 const table_of_contents_courses_section = `
   <h3 class="table_of_contents_h3">Courses</h3>
   <ol>
-    <li>Single Variable Calculus
+    <!--<li>Single Variable Calculus
       <ol>
         <li><a href="limits_and_derivatives_overview.html">Limits and Derivatives</a></li>
         <li><a href="integration_overview.html">Integration</a></li>
@@ -34,7 +34,7 @@ const table_of_contents_courses_section = `
       </ol>
     </li>
     <li><a href="multivariable_calculus_overview.html">Multivariable Calculus</a></li>
-    <li><a href="linear_algebra_overview.html">Linear Algebra</a></li>
+    <li><a href="linear_algebra_overview.html">Linear Algebra</a></li>-->
     <li><a href="differential_equations_overview.html">Differential Equations</a></li>
   </ol>
   <br>
@@ -73,6 +73,7 @@ table_of_contents_array["Differential Equations"] = table_of_contents_courses_se
         <li><a href="direction_fields.html">Direction Fields</a></li>
         <li><a href="separable_equations.html">Separable Equations</a></li>
         <li><a href="integrating_factor.html">Integrating Factor</a></li>
+        <li><a href="differential_equations_substitution.html">Substitution</a></li>
         <li><a href="exact_equations.html">Exact Equations</a></li>
         <li><a href="exact_equations_integrating_factor.html">Exact Equations with Integrating Factor</a></li>
         <li><a href="eulers_method.html">Euler's Method</a></li>
