@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" type="image/png" sizes="32x32" href="images/profile_image_favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/profile_image_favicon-16x16.png">
+<title>Maths Survival Guide by Mitchal Dichter</title>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<link rel="stylesheet" href="maths_survival_guide.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+
+<script src="shared_html.js"></script>
+<script>
+  const header_text = "Differential Equations";
+</script>
+</head>
+<body <body onload="set_common_html(header_text)">
+
+<div id="header_row">
+  <div id="left_header">
+    Table of Contents
+  </div>
+  <div id="right_header">
+    <!--set by set_common_html(header_text)-->
+  </div>
+  <div id="profile_picture_div">
+	<img id="profile_picture_img" src="images/profile_image.png">
+  </div>
+</div>
+
+<div id="content_row">
+  <div id="left_content">
+  <!--set by set_common_html(header_text)-->
+  </div>
+  
+<div id="left_empty_column"></div>
+  <div id="right_content">
+    <h1>Euler's Method | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Topic Playlist</a></h1>
+	  <h3>Steps to Applying Euler's Method | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Explanation Video</a></h3>
+    <div class="theory">
+    <p>Given an IVP with a step size</p>
+    \begin{equation}
+    y' = f(x,y) \qquad y(x_{0}) = y_{0} \qquad \text{step size } \Delta x
+    \end{equation}
+    <p>The next $x_{n} = x_{n-1} + \Delta x$ and the next $y_{n} = y_{n-1} + \Delta x f(x_{n-1},y_{n-1})$ and you iterate.</p>
+    \begin{equation}
+    y_{new} = y_{old} + (\text{change in $x$}) \frac{\text{change in $y$}}{\text{change in $x$}} = y_{old} + (\text{change in $y$})
+    \end{equation}
+    </div>
+    
+    <h3>Example 1 | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
+    <div class="example_solution">
+    <p>Apply Euler's method to the ODE.</p>
+    \begin{equation}
+    \frac{\text{d}y}{\text{d}t} = \frac{1}{2}y \qquad y(0) = 1 \qquad \Delta t = 1
+    \end{equation}
+    <p>Check your work using <a href="https://www.wolframalpha.com/input?i=use+Euler+method+y%27+%3D+1%2F2*y%2C+y%280%29+%3D+1%2C+from+0+to+5%2C+h+%3D+1" target="_blank" style="text-decoration: underline; color: blue;">WolframAlpha</a>.</p>
+    </div>
+    
+    <h3>Example 2 | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
+    <div class="example_solution">
+    <p>Apply Euler's method to the ODE.</p>
+    \begin{equation}
+    \frac{\text{d}y}{\text{d}x} = -xy \qquad y(0) = 1 \qquad \Delta x = 0.2
+    \end{equation}
+    <p>Check your work using <a href="https://www.wolframalpha.com/input?i=use+Euler+method+y%27+%3D+-xy%2C+y%280%29+%3D+1%2C+from+0+to+5%2C+h+%3D+0.2" target="_blank" style="text-decoration: underline; color: blue;">WolframAlpha</a>.</p>
+    </div>
+    
+    <h3>Example 3 | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
+    <div class="example_solution">
+    <p>Apply Euler's method to the ODE.</p>
+    \begin{equation}
+    \frac{\text{d}y}{\text{d}t} = y(y-3) \qquad y(2) = 1 \qquad \Delta t = 0.1
+    \end{equation}
+    <p>Check your work using <a href="https://www.wolframalpha.com/input?i=use+Euler+method+y%27+%3D+y%28y-3%29%2C+y%282%29+%3D+1%2C+from+0+to+3%2C+h+%3D+0.1" target="_blank" style="text-decoration: underline; color: blue;">WolframAlpha</a>.</p>
+    </div>
+	
+  </div>
+</div>
+</body>
+</html>

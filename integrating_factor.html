@@ -40,128 +40,128 @@
 <div id="left_empty_column"></div>
   <div id="right_content">
     <h1>Method of Integrating Factor | <a href="https://www.youtube.com/watch?v=IOeVneRPZlc&list=PLXQ5vz32rm_TZ2eBVYzYZopCOfmuJAN3l" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Topic Playlist</a></h1>
-	<p>This method can be used to solve differential equations of the form $y' + f(x) y = g(x)$ and is a clever trick. The idea is to multiply the entire equation by something to make the differential equation integrable. The thing multiplying the entire differential equation is called the integrating factor and is usually called $\mu(x)$. This is one of those things that is easy to do once you know how to do it, but would be very difficult to come up with yourself.</p>
-	
-	<p>To get an idea of what to do, let's start with a few examples to get some intuition.</p>
-	
-	<h3>Example 1 | <a href="https://www.youtube.com/watch?v=hKKoUzJ-NAg&list=PLXQ5vz32rm_TZ2eBVYzYZopCOfmuJAN3l&index=2" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
-	<div class="example_solution">
-	<p>Find the general solution to the following differential equation.</p>
-	\begin{equation}
-	y' + 2y = 0
-	\end{equation}
-	<p>The first idea anyone thinks of is to just try to integrate the whole thing.</p>
-	\begin{equation}
-	\int y' \text{ d}x + \int 2y \text{ d}x = \int 0 \text{ d}x \qquad\qquad y + 2\int y \text{ d}x = C
-	\end{equation}
-	<p>The first and third integrals were possible because the antiderivative of $y'$ is just $y$ and the RHS is just the constant of integration $C$. The problem is the intergal of regular $y$ is left over, and we don't know what $y$ is, so we can't integrate. We've just traded one differential equation we can't solve for something worse we can't solve.</p>
-	<p>There's a clever trick though. If the entire equation is multiplied by $e^{2x}$ then the integration becomes simpler.</p>
-	\begin{equation}
-	e^{2x} y' + 2e^{2x} y = 0 e^{2x} = 0 \qquad\qquad \int e^{2x} y' + 2e^{2x} y \text{ d}x = \int 0 \text{ d}x
-	\end{equation}
-	<p>The LHS can be simplified by using the product rule in reverse.</p>
-	\begin{equation}
-	(e^{2x} y)' = e^{2x} y' + (e^{2x})' y = e^{2x} y' + 2e^{2x} y
-	\end{equation}
-	<p>The integrand on the LHS can be replaced with $(e^{2x} y)'$ which makes the integration easier because it's the integral of a derivative. The integral and derivative just cancel each other out.</p>
-	\begin{equation}
-	\int e^{2x} y' + 2e^{2x} y \text{ d}x = \int (e^{2x} y)' \text{ d}x = e^{2x} y
-	\end{equation}
-	<p>The only thing left to do is solve for $y$.</p>
-	\begin{equation}
-	\int e^{2x} y' + 2e^{2x} y \text{ d}x = \int 0e^{2x} \text{ d}x \qquad\qquad e^{2x} y = C \qquad\qquad y = Ce^{-2x}
-	\end{equation}
-	</div>
-	
-	<p>The above differential equation became much easier to solve after multiplying the entire differential equation by the integrating factor $e^{2x}$, but that leaves the question of how to come up with the integrating factor.</p>
-	<h3>How to Calculate Integrating Factor | <a href="https://www.youtube.com/watch?v=VKy8QLwadCY&list=PLXQ5vz32rm_TZ2eBVYzYZopCOfmuJAN3l&index=3" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Explanation Video</a></h3>
-	<div class="theory">
-	\begin{equation}
-	\text{The integrating factor for } y' + f(x)y = g(x) \text{ is } e^{\int f(x) \text{ d}x} = \text{exp}\left( \int f(x) \text{ d}x \right).
-	\end{equation}
-	</div>
-	
-	<p>Try to solve these other differential equations and use the videos as a guide if you get stuck.</p>
-	
-	<h3>Example 2 | <a href="https://www.youtube.com/watch?v=lvGGgFDFBKw&list=PLXQ5vz32rm_TZ2eBVYzYZopCOfmuJAN3l&index=4" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
-	<div class="example_solution">
-	<p>Find the general solution to the following differential equation.</p>
-	\begin{equation}
-	y' + \frac{1}{x}y = 0
-	\end{equation}
-	</div>
-	
-	<h3>Example 3 | <a href="https://www.youtube.com/watch?v=63cN8_kLfH4&list=PLXQ5vz32rm_TZ2eBVYzYZopCOfmuJAN3l&index=5" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
-	<div class="example_solution">
-	<p>Find the general solution to the following differential equation.</p>
-	\begin{equation}
-	y' - \tan(x)y = 0
-	\end{equation}
-	</div>
-	
-	<h3>Example 4 | <a href="https://www.youtube.com/watch?v=CwIrj1Yfp4A&list=PLXQ5vz32rm_TZ2eBVYzYZopCOfmuJAN3l&index=6" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
-	<div class="example_solution">
-	<p>Find the general solution to the following differential equation.</p>
-	\begin{equation}
-	xy' + 3y = 7
-	\end{equation}
-	</div>
-	
-	<h3>Example 5 | <a href="https://www.youtube.com/watch?v=arj4liJTAWs&list=PLXQ5vz32rm_TZ2eBVYzYZopCOfmuJAN3l&index=7" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
-	<div class="example_solution">
-	<p>Find the general solution to the following differential equation.</p>
-	\begin{equation}
-	3y' + xy = x
-	\end{equation}
-	</div>
-	
-	<h3>Example 6 | <a href="https://www.youtube.com/watch?v=53zEMqxxckM&list=PLXQ5vz32rm_TZ2eBVYzYZopCOfmuJAN3l&index=8" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
-	<div class="example_solution">
-	<p>Find the general solution to the following differential equation.</p>
-	\begin{equation}
-	y' + y = x^{3}
-	\end{equation}
-	</div>
-	
-	<h3>Integrating Factor Intuition | <a href="https://www.youtube.com/watch?v=VqmicNYaJXI&list=PLXQ5vz32rm_TZ2eBVYzYZopCOfmuJAN3l&index=11" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Explanation Video</a></h3>
-	<div class="theory">
-	<p>Solve the following differential equation using Integrating Factor.</p>
-	\begin{equation}
-	y' + f(x)y = g(x)
-	\end{equation}
-	<p>The integrating factor to use is $e^{\int f(x) \text{ d}x} = \text{exp}\big( \int f(x) \text{ d}x \big)$ which will allow for the $y'$ and $y$ to both turn into just $y$.</p>
-	\begin{equation}
-	\text{exp}\left( \int f(x) \text{ d}x \right) y' + f(x) \text{exp}\left( \int f(x) \text{ d}x \right) y = g(x) \text{exp}\left( \int f(x) \text{ d}x \right)
-	\end{equation}
-	<p>It's very difficult to see here, but the LHS can be simplified by using the product rule in reverse.</p>
-	\begin{equation}
-	\left(\text{exp}\left( \int f(x) \text{ d}x \right) y \right)' = \text{exp}\left( \int f(x) \text{ d}x \right) y' + \left(\text{exp}\left( \int f(x) \text{ d}x \right)\right)' y 
-	\end{equation}
-	<p>There's still the derivative of the exponential to do though.</p>
-	<p>The derivative of the exponential uses the chain rule. The derivative of the exponent cancels out the integral in the exponent.</p>
-	\begin{equation}
-	\left(\text{exp}\left( \int f(x) \text{ d}x \right)\right)' = \left( \int f(x) \text{ d}x \right)' \text{exp}\left( \int f(x) \text{ d}x \right) = f(x) \text{exp}\left( \int f(x) \text{ d}x \right)
-	\end{equation}
-	<p>Multiplying by the integrating factor $e^{\int f(x) \text{ d}x}$ actually made integrating the LHS easier.</p>
-	\begin{equation}
-	\text{exp}\left( \int f(x) \text{ d}x \right) y' + f(x) \text{exp}\left( \int f(x) \text{ d}x \right) y = g(x) \text{exp}\left( \int f(x) \text{ d}x \right)
-	\end{equation}
-	\begin{equation}
-	\left(\text{exp}\left( \int f(x) \text{ d}x \right) y \right)' = g(x) \text{exp}\left( \int f(x) \text{ d}x \right)
-	\end{equation}
-	\begin{equation}
-	\int \left(\text{exp}\left( \int f(x) \text{ d}x \right) y \right)' \text{ d}x = \int g(x) \text{exp}\left( \int f(x) \text{ d}x \right) \text{d}x
-	\end{equation}
-	\begin{equation}
-	\text{exp}\left( \int f(x) \text{ d}x \right) y = \int g(x) \text{exp}\left( \int f(x) \text{ d}x \right) \text{d}x
-	\end{equation}
-	<p>The LHS no longer has any $y'$ terms, just $y$. The only integrals left, even though they look like a headache, are only integrals of $x$, which are at least possible to do.</p>
-	\begin{equation}
-	y = \frac{\int g(x) \text{exp}\left( \int f(x) \text{ d}x \right) \text{d}x}{\text{exp}\left( \int f(x) \text{ d}x \right)}
-	\end{equation}
-	</div>
-	
-	<p>This formula will solve the problem, but it's often easier to do everything one step at a time, like in the example solutions, rather than all at once.</p>
+    <p>This method can be used to solve differential equations of the form $y' + f(x) y = g(x)$ and is a clever trick. The idea is to multiply the entire equation by something to make the differential equation integrable. The thing multiplying the entire differential equation is called the integrating factor and is usually called $\mu(x)$. This is one of those things that is easy to do once you know how to do it, but would be very difficult to come up with yourself.</p>
+    
+    <p>To get an idea of what to do, let's start with a few examples to get some intuition.</p>
+    
+    <h3>Example 1 | <a href="https://www.youtube.com/watch?v=hKKoUzJ-NAg&list=PLXQ5vz32rm_TZ2eBVYzYZopCOfmuJAN3l&index=2" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
+    <div class="example_solution">
+    <p>Find the general solution to the following differential equation.</p>
+    \begin{equation}
+    y' + 2y = 0
+    \end{equation}
+    <p>The first idea anyone thinks of is to just try to integrate the whole thing.</p>
+    \begin{equation}
+    \int y' \text{ d}x + \int 2y \text{ d}x = \int 0 \text{ d}x \qquad\qquad y + 2\int y \text{ d}x = C
+    \end{equation}
+    <p>The first and third integrals were possible because the antiderivative of $y'$ is just $y$ and the RHS is just the constant of integration $C$. The problem is the intergal of regular $y$ is left over, and we don't know what $y$ is, so we can't integrate. We've just traded one differential equation we can't solve for something worse we can't solve.</p>
+    <p>There's a clever trick though. If the entire equation is multiplied by $e^{2x}$ then the integration becomes simpler.</p>
+    \begin{equation}
+    e^{2x} y' + 2e^{2x} y = 0 e^{2x} = 0 \qquad\qquad \int e^{2x} y' + 2e^{2x} y \text{ d}x = \int 0 \text{ d}x
+    \end{equation}
+    <p>The LHS can be simplified by using the product rule in reverse.</p>
+    \begin{equation}
+    (e^{2x} y)' = e^{2x} y' + (e^{2x})' y = e^{2x} y' + 2e^{2x} y
+    \end{equation}
+    <p>The integrand on the LHS can be replaced with $(e^{2x} y)'$ which makes the integration easier because it's the integral of a derivative. The integral and derivative just cancel each other out.</p>
+    \begin{equation}
+    \int e^{2x} y' + 2e^{2x} y \text{ d}x = \int (e^{2x} y)' \text{ d}x = e^{2x} y
+    \end{equation}
+    <p>The only thing left to do is solve for $y$.</p>
+    \begin{equation}
+    \int e^{2x} y' + 2e^{2x} y \text{ d}x = \int 0e^{2x} \text{ d}x \qquad\qquad e^{2x} y = C \qquad\qquad y = Ce^{-2x}
+    \end{equation}
+    </div>
+    
+    <p>The above differential equation became much easier to solve after multiplying the entire differential equation by the integrating factor $e^{2x}$, but that leaves the question of how to come up with the integrating factor.</p>
+    <h3>How to Calculate Integrating Factor | <a href="https://www.youtube.com/watch?v=VKy8QLwadCY&list=PLXQ5vz32rm_TZ2eBVYzYZopCOfmuJAN3l&index=3" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Explanation Video</a></h3>
+    <div class="theory">
+    \begin{equation}
+    \text{The integrating factor for } y' + f(x)y = g(x) \text{ is } e^{\int f(x) \text{ d}x} = \text{exp}\left( \int f(x) \text{ d}x \right).
+    \end{equation}
+    </div>
+    
+    <p>Try to solve these other differential equations and use the videos as a guide if you get stuck.</p>
+    
+    <h3>Example 2 | <a href="https://www.youtube.com/watch?v=lvGGgFDFBKw&list=PLXQ5vz32rm_TZ2eBVYzYZopCOfmuJAN3l&index=4" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
+    <div class="example_solution">
+    <p>Find the general solution to the following differential equation.</p>
+    \begin{equation}
+    y' + \frac{1}{x}y = 0
+    \end{equation}
+    </div>
+    
+    <h3>Example 3 | <a href="https://www.youtube.com/watch?v=63cN8_kLfH4&list=PLXQ5vz32rm_TZ2eBVYzYZopCOfmuJAN3l&index=5" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
+    <div class="example_solution">
+    <p>Find the general solution to the following differential equation.</p>
+    \begin{equation}
+    y' - \tan(x)y = 0
+    \end{equation}
+    </div>
+    
+    <h3>Example 4 | <a href="https://www.youtube.com/watch?v=CwIrj1Yfp4A&list=PLXQ5vz32rm_TZ2eBVYzYZopCOfmuJAN3l&index=6" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
+    <div class="example_solution">
+    <p>Find the general solution to the following differential equation.</p>
+    \begin{equation}
+    xy' + 3y = 7
+    \end{equation}
+    </div>
+    
+    <h3>Example 5 | <a href="https://www.youtube.com/watch?v=arj4liJTAWs&list=PLXQ5vz32rm_TZ2eBVYzYZopCOfmuJAN3l&index=7" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
+    <div class="example_solution">
+    <p>Find the general solution to the following differential equation.</p>
+    \begin{equation}
+    3y' + xy = x
+    \end{equation}
+    </div>
+    
+    <h3>Example 6 | <a href="https://www.youtube.com/watch?v=53zEMqxxckM&list=PLXQ5vz32rm_TZ2eBVYzYZopCOfmuJAN3l&index=8" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
+    <div class="example_solution">
+    <p>Find the general solution to the following differential equation.</p>
+    \begin{equation}
+    y' + y = x^{3}
+    \end{equation}
+    </div>
+    
+    <h3>Integrating Factor Intuition | <a href="https://www.youtube.com/watch?v=VqmicNYaJXI&list=PLXQ5vz32rm_TZ2eBVYzYZopCOfmuJAN3l&index=11" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Explanation Video</a></h3>
+    <div class="theory">
+    <p>Solve the following differential equation using Integrating Factor.</p>
+    \begin{equation}
+    y' + f(x)y = g(x)
+    \end{equation}
+    <p>The integrating factor to use is $e^{\int f(x) \text{ d}x} = \text{exp}\big( \int f(x) \text{ d}x \big)$ which will allow for the $y'$ and $y$ to both turn into just $y$.</p>
+    \begin{equation}
+    \text{exp}\left( \int f(x) \text{ d}x \right) y' + f(x) \text{exp}\left( \int f(x) \text{ d}x \right) y = g(x) \text{exp}\left( \int f(x) \text{ d}x \right)
+    \end{equation}
+    <p>It's very difficult to see here, but the LHS can be simplified by using the product rule in reverse.</p>
+    \begin{equation}
+    \left(\text{exp}\left( \int f(x) \text{ d}x \right) y \right)' = \text{exp}\left( \int f(x) \text{ d}x \right) y' + \left(\text{exp}\left( \int f(x) \text{ d}x \right)\right)' y 
+    \end{equation}
+    <p>There's still the derivative of the exponential to do though.</p>
+    <p>The derivative of the exponential uses the chain rule. The derivative of the exponent cancels out the integral in the exponent.</p>
+    \begin{equation}
+    \left(\text{exp}\left( \int f(x) \text{ d}x \right)\right)' = \left( \int f(x) \text{ d}x \right)' \text{exp}\left( \int f(x) \text{ d}x \right) = f(x) \text{exp}\left( \int f(x) \text{ d}x \right)
+    \end{equation}
+    <p>Multiplying by the integrating factor $e^{\int f(x) \text{ d}x}$ actually made integrating the LHS easier.</p>
+    \begin{equation}
+    \text{exp}\left( \int f(x) \text{ d}x \right) y' + f(x) \text{exp}\left( \int f(x) \text{ d}x \right) y = g(x) \text{exp}\left( \int f(x) \text{ d}x \right)
+    \end{equation}
+    \begin{equation}
+    \left(\text{exp}\left( \int f(x) \text{ d}x \right) y \right)' = g(x) \text{exp}\left( \int f(x) \text{ d}x \right)
+    \end{equation}
+    \begin{equation}
+    \int \left(\text{exp}\left( \int f(x) \text{ d}x \right) y \right)' \text{ d}x = \int g(x) \text{exp}\left( \int f(x) \text{ d}x \right) \text{d}x
+    \end{equation}
+    \begin{equation}
+    \text{exp}\left( \int f(x) \text{ d}x \right) y = \int g(x) \text{exp}\left( \int f(x) \text{ d}x \right) \text{d}x
+    \end{equation}
+    <p>The LHS no longer has any $y'$ terms, just $y$. The only integrals left, even though they look like a headache, are only integrals of $x$, which are at least possible to do.</p>
+    \begin{equation}
+    y = \frac{\int g(x) \text{exp}\left( \int f(x) \text{ d}x \right) \text{d}x}{\text{exp}\left( \int f(x) \text{ d}x \right)}
+    \end{equation}
+    </div>
+    
+    <p>This formula will solve the problem, but it's often easier to do everything one step at a time, like in the example solutions, rather than all at once.</p>
 	
   </div>
 </div>

@@ -39,11 +39,45 @@
   
 <div id="left_empty_column"></div>
   <div id="right_content">
-    <h1>Initial Value Problems | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Topic Playlist</a></h1>
-	<p>put studd here</p>
-	
-	
-	
+    <h1>Initial Value Problems (IVPs) | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Topic Playlist</a></h1>
+	  <p>An IVP is an ODE paired with an initial condition specifying the value of the unknown function at a point. For a first order ODE, the initial condition is $y(x_{0})=y_{0}$ where $x_{0}$ and $y_{0}$ are some specified values. For a second order ODE, the initial condition is specified as $y(x_{0})=y_{0}$ and $y'(x_{0})=y'_{0}$ where $x_{0}$, $y_{0}$, and $y'_{0}$ are specified values. For an nth order ODE, the initial condition is specified as $y(x_{0})=y_{0}$, $y'(x_{0})=y'_{0}$, . . ., and $y^{(n)}(x_{0})=y^{(n)}_{0}$ where $x_{0}$, $y_{0}$, . . , and $y^{(n)}_{0}$ are specified values.</p>
+    
+    <p>Initial conditions for an ODE have an intuitive meaning in physics, like the velocity of a falling object or the movement of a mass attached to a spring with friction.</p>
+    
+    <h3>Example 1 | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
+    <div class="example_solution">
+    <p>The following ODE models the velocity of a falling object with air resistance, with $m$ the mass of the object, $k$ the drag coefficient, and $v(t)$ the velocity at time $t$. The second equation is after dividing by $m$.</p>
+    \begin{equation}
+    m\frac{\text{d}v}{\text{d}t} = -mg - kv \qquad \frac{\text{d}v}{\text{d}t} = -g - \frac{k}{m}v
+    \end{equation}
+    <p>For a concrete example $g = 9.8\dfrac{\text{m}}{\text{s}^{2}}$, $m = 4\text{kg}$, $k = 0.5\dfrac{\text{kg}}{\text{s}}$, and $v(0s) = 10\dfrac{\text{m}}{\text{s}}$. Using the general solution to the ODE and the initial condition, find the particular solution to the IVP.</p>
+    \begin{equation}
+    \frac{\text{d}v}{\text{d}t} = -9.8 - 0.125v \qquad v(0) = 10 \qquad\qquad v(t) = Ce^{-0.125t} - 78.4
+    \end{equation}
+    <p>Solution</p>
+    \begin{equation}
+    v(t) = 88.4e^{-0.125t} - 78.4
+    \end{equation}
+    <p>Most methods to solve ODEs apply an indefinite integral in the method, resulting in a constant of integration $C$ appearing. The reason the constant of integration $C$ is necessary in the general solution is so any initial condition can be solved for. From the physics points of view, we couldn't have figured out the velocity at any point in the future if we didn't know the velocity to begin with.</p>
+    </div>
+    
+    <h3>Example 2 | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
+    <div class="example_solution">
+    <p>The following ODE models a mass on a spring with friction, with $m$ the mass of the object, $b$ the friction coefficient, $k$ the spring constant, and $z(t)$ the position of the object at time $t$ relative to the rest position of the spring.</p>
+    \begin{equation}
+    mz'' + bz' + kz = 0
+    \end{equation}
+    <p>For a concrete example $m = 1\text{kg}$, $b = 0.1\dfrac{\text{kg}}{\text{s}}$, $k = 10\dfrac{\text{kg}}{\text{s}^{2}}$, $z(0s) = -0.3\text{m}$, and $z'(0s) = 1\dfrac{\text{m}}{\text{s}}$. Using the general solution to the ODE and the initial condition, find the particular solution to the IVP.</p>
+    \begin{equation}
+    z'' + 0.1z' + 10z = 0 \qquad z(0) = -0.3 \qquad z'(0) = 1 \qquad\qquad z(t) = c_{1} e^{-0.05 t} \sin(3.16188 t) + c_{2} e^{-0.05 t} \cos(3.16188 t)
+    \end{equation}
+    <p>Solution</p>
+    \begin{equation}
+    z(t) = e^{-0.05 t} \big(0.311523 \sin(3.16188 t) - 0.3 \cos(3.16188 t)\big)
+    \end{equation}
+    <p>Two constants of integration $c_{1}$ and $c_{2}$ are in the general solution for a 2nd order ODE, which are needed to solve for the initial condition. From a physics point of view, we needed to know both the starting position of the object and the starting velocity of the object to be able to predict the position of the object in the future.</p>
+    </div>
+
   </div>
 </div>
 </body>

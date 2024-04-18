@@ -40,19 +40,79 @@
 <div id="left_empty_column"></div>
   <div id="right_content">
     <h1>Existence and Uniqueness | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Topic Playlist</a></h1>
-	  <p>put studd here</p>
-    
-    <h3>Example  | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
-    <div class="theory">
-    <p></p>
+	  <p>These theorems are applicable to initial value problems</p>
     \begin{equation}
-    hfrfg
+    y' = f(x,y) \qquad y(x_{0}) = y_{0}
+    \end{equation}
+    <p>where the point $(x_{0},y_{0})$ is contained in an open rectangle $a < x < b$, $c < y < d$ called $R$.</p>
+    
+    <h3>Meaning of A implies B | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Explanation Video</a></h3>
+    <div class="theory">
+    <p>The meaning of $A \Rightarrow B$, which is read as "A implies B" or "if A then B", has a specific meaning in mathematics that doesn't quite match up with normal conversation.</p>
+    
+    <p>The short definition is when $A$ is a true statement, $B$ is a true statement. When $A$ is a false statement, $B$ could be either true or false.</p>
+    
+    <p>A more concrete example is statement $A$ is "I ran over your laptop with my car." and statement $B$ is "Your laptop won't turn on." where your laptop is a normal laptop.<br>
+    <b>&bull;</b> If statement $A$ is true, then statement $B$ is guaranteed to be true. Normal laptops do not turn on after being crushed under the wheel of a car.<br>
+    <b>&bull;</b> If statement $A$ is false, then statement $B$ could be true or false. Just because I didn't run over your laptop with my car doesn't mean your laptop won't turn on. There are many reasons your laptop won't turn on, like the battery is dead, you spilled water on it, and I ran over your laptop with my car.</p>
+    
+    <p>For $A \Rightarrow B$, when $A$ is a false statement, you know absolutely nothing about statement $B$.</p>
+    </div>
+    
+    
+    <h3>Existence Theorem  | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Explanation Video</a></h3>
+    <div class="theory">
+    <p style="text-align: center;">$f(x,y)$ is continuous on the open rectangle $R \qquad \Rightarrow \qquad$ the initial value problem has <b>at least one solution</b> on some open subinterval of $(a,b)$ that contains $x_{0}$.</p>
+    </div>
+    
+    <h3>Uniqueness Theorem  | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Explanation Video</a></h3>
+    <div class="theory">
+    <p style="text-align: center;">$f(x,y)$ and $\dfrac{\partial f}{\partial y}$ are continuous on the open rectangle $R \qquad \Rightarrow \qquad$ the initial value problem has <b>exactly one solution</b> on some open subinterval of $(a,b)$ that contains $x_{0}$.</p>
+    </div>
+    
+    <h3>Example 1 | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
+    <div class="example_solution">
+    <p>Determine when an initial value problem would exist or is unique based on the theorems. Use the <a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank" style="text-decoration: underline; color: blue;">Direction Field Plotter by Ariel Barton</a> to plot some integral curves. Solve the ODE. Investigate what happens when either $f(x,y)$ or $\dfrac{\partial f}{\partial y}$ are not continuous, if ever.</p>
+    \begin{equation}
+    y' = 2xy
+    \end{equation}
+    </div>
+    
+    <h3>Example 2 | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
+    <div class="example_solution">
+    <p>Determine when an initial value problem would exist or is unique based on the theorems. Use the <a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank" style="text-decoration: underline; color: blue;">Direction Field Plotter by Ariel Barton</a> to plot some integral curves. Solve the ODE and determine why the left half of the parabola doesn't solve the ODE. Investigate what happens when either $f(x,y)$ or $\dfrac{\partial f}{\partial y}$ are not continuous, if ever.</p>
+    \begin{equation}
+    y' = 2\sqrt{y}
+    \end{equation}
+    </div>
+    
+    <h3>Example 3 | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
+    <div class="example_solution">
+    <p>Determine when an initial value problem would exist or is unique based on the theorems. Use the <a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank" style="text-decoration: underline; color: blue;">Direction Field Plotter by Ariel Barton</a> to plot some integral curves. Solve the ODE. Investigate what happens when either $f(x,y)$ or $\dfrac{\partial f}{\partial y}$ are not continuous, if ever.</p>
+    \begin{equation}
+    xy' + y = 3x^{2}
+    \end{equation}
+    </div>
+    
+    <h3>Example 4 | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
+    <div class="example_solution">
+    <p>Determine when an initial value problem would exist or is unique based on the theorems, if ever. Use the <a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank" style="text-decoration: underline; color: blue;">Direction Field Plotter by Ariel Barton</a> to plot some integral curves. Solve the ODE. Investigate what happens when either $f(x,y)$ or $\dfrac{\partial f}{\partial y}$ are not continuous, if ever.</p>
+    \begin{equation}
+    y' = \frac{y+1}{x+1}
+    \end{equation}
+    </div>
+    
+    <h3>Example 5 | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
+    <div class="example_solution">
+    <p>Determine when an initial value problem would exist or is unique based on the theorems. Use the <a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank" style="text-decoration: underline; color: blue;">Direction Field Plotter by Ariel Barton</a> to plot some integral curves. Do <b>NOT</b> solve the ODE. Investigate what happens when either $f(x,y)$ or $\dfrac{\partial f}{\partial y}$ are not continuous, if ever.</p>
+    \begin{equation}
+    y' = \frac{1}{1-x^{2}-y^{2}}
     \end{equation}
     </div>
 	
-	  <h3>Example  | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
+	  <h3>Example 6 | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
     <div class="example_solution">
-    <p>Guess $y = mx$ and solve for $m$.</p>
+    <p>Determine when an initial value problem would exist or is unique based on the theorems. Use the <a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank" style="text-decoration: underline; color: blue;">Direction Field Plotter by Ariel Barton</a> to plot some integral curves. Investigate what happens when either $f(x,y)$ or $\dfrac{\partial f}{\partial y}$ are not continuous, if ever. Do <b>NOT</b> attempt to solve the ODE in general, but set $y = mx$ and solve for the approximate value of $m$ that satisfies the ODE.</p>
     \begin{equation}
     y' = \frac{x^{2}-y^{2}}{x^{2}+y^{2}}
     \end{equation}

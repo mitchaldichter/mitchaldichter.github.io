@@ -41,6 +41,8 @@ const table_of_contents_courses_section = `
   <h3 class="table_of_contents_h3">Additional Resources</h3>
   <ol>
     <li><a href="how_to_use_wolfram_alpha.html">WolframAlpha</a></li>
+    <li><a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank">Direction Field Plotter by Ariel Barton</a></li>
+    <li><a href="https://aeb019.hosted.uark.edu/pplane.html" target="_blank">Phase Plane Plotter by Ariel Barton</a></li>
   </ol>
   <br>
 `;
@@ -73,7 +75,7 @@ table_of_contents_array["Differential Equations"] = table_of_contents_courses_se
         <li><a href="direction_fields.html">Direction Fields</a></li>
         <li><a href="separable_equations.html">Separable Equations</a></li>
         <li><a href="integrating_factor.html">Integrating Factor</a></li>
-        <li><a href="differential_equations_substitution.html">Substitution</a></li>
+        <li><a href="differential_equations_substitution.html">Bernoulli Equations and Substitutions</a></li>
         <li><a href="exact_equations.html">Exact Equations</a></li>
         <li><a href="exact_equations_integrating_factor.html">Exact Equations with Integrating Factor</a></li>
         <li><a href="eulers_method.html">Euler's Method</a></li>
