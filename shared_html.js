@@ -4,7 +4,7 @@ function set_common_html(header_text) {
   document.getElementById("left_content").innerHTML = table_of_contents_array[header_text];
   document.getElementById("right_header").innerHTML = header_text;
   
-  if (window.screen.height > window.screen.width)
+  if (window.innerHeight > window.innerWidth)
   {
     document.getElementById("portrait_warning_div").style.display = "block";
   }
