@@ -57,6 +57,18 @@ li:before {
   font-weight: bold;
 }
 
+table {
+  border-collapse: collapse;
+}
+td, th {
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
 #left_header {
   float: left;
   width: 20%;
@@ -170,4 +182,10 @@ li:before {
   border-radius: 25px;
   border: 2px solid #FF0000;
   padding: 20px;
+}
+
+.center_img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
