@@ -45,9 +45,9 @@
 	<h3>Calculating the Integrating Factor for Inexact Equations | <a href="https://www.youtube.com/watch?v=i6QLcQDIEJM&list=PLXQ5vz32rm_S3nf9S02Q-5t2Xw6f4MUAr" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Explanation Playlist</a></h3>
 	<div class="theory">
   <p>Let's assume the following differential equation is not an exact equation.</p>
-  \begin{equation}
-  M(x,y) + N(x,y)y' = 0 \qquad\qquad \frac{\partial }{\partial x}N \neq \frac{\partial }{\partial y}M \qquad \text{since we said the equation is not exact.}
-  \end{equation}
+
+  <p style="text-align: center;">$\displaystyle M(x,y) + N(x,y)y' = 0 \qquad\qquad \frac{\partial }{\partial x}N \neq \frac{\partial }{\partial y}M \qquad$ since we said the equation is not exact.</p>
+
   <p>Multiply by an unknown function $\mu(x,y)$ to make the equation exact.</p>
   \begin{equation}
   \mu(x,y)M(x,y) + \mu(x,y)N(x,y)y' = 0
@@ -65,12 +65,15 @@
   \end{equation}
   <p>This is no easy way to find a solution to this partial differential equation, but <b>sometimes</b> the integrating factor is only a function of one variable instead of both variables. The equation become much simpler if we try $\mu(x,y)=\mu(x)$ as just a function of $x$ because $\displaystyle \frac{\partial \mu}{\partial y} = 0$ and solving for $\mu(x)$ is a differential equation of one variable instead of two variables. Rearranging gives a nice equation for $\mu$ and $\dfrac{\partial \mu}{\partial x} = \mu'(x)$.</p>
   \begin{equation}
-  \mu(x,y)=\mu(x) \Rightarrow \frac{\partial \mu}{\partial y} = 0 \qquad\qquad \frac{\partial \mu}{\partial x}N + \mu\frac{\partial N}{\partial x} = 0M + \mu\frac{\partial M}{\partial y} \qquad\qquad \frac{\mu'(x)}{\mu(x)}  = \frac{\dfrac{\partial M}{\partial y}-\dfrac{\partial N}{\partial x}}{N} \qquad \text{which must simplify to a function of } x
+  \mu(x,y)=\mu(x) \Rightarrow \frac{\partial \mu}{\partial y} = 0 \qquad\qquad \frac{\partial \mu}{\partial x}N + \mu\frac{\partial N}{\partial x} = 0M + \mu\frac{\partial M}{\partial y}
   \end{equation}
+  
+  <p style="text-align: center;">$\displaystyle \frac{\mu'(x)}{\mu(x)} = \frac{\dfrac{\partial M}{\partial y}-\dfrac{\partial N}{\partial x}}{N} \qquad$ which must simplify to a function of  $x$.</p>
+  
   <p>There's a similar equation when assuming $\mu(x,y)=\mu(y)$ with $\displaystyle \frac{\partial \mu}{\partial x} = 0$ and $\dfrac{\partial \mu}{\partial y} = \mu'(y).$</p>
-  \begin{equation}
-  \frac{\mu'(y)}{\mu(y)}  = \frac{\dfrac{\partial N}{\partial x}-\dfrac{\partial M}{\partial y}}{M} \qquad \text{which must simplify to a function of } y
-  \end{equation}
+  
+  <p style="text-align: center;">$\displaystyle \frac{\mu'(y)}{\mu(y)} = \frac{\dfrac{\partial N}{\partial x}-\dfrac{\partial M}{\partial y}}{M} \qquad$ which must simplify to a function of $y$.</p>
+  
   <p>However, sometimes there is no integrating factor that is function of just one of the variables, in which case finding the integrating factor becomes difficult to impossible.</p>
   </div>
   

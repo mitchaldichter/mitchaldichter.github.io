@@ -61,11 +61,20 @@
 	\end{equation}
 	<p>Now integrate the LHS with respect to $x$ and the RHS with respect to $y$.</p>
 	\begin{equation}
-	\int (1+x^2)\text{ d}x = \int y\text{ d}y \qquad\qquad x + \frac{x^{3}}{3} + C = \frac{y^{2}}{2}
+	\int (1+x^2)\text{ d}x = \int y\text{ d}y
+	\end{equation}
+  \begin{equation}
+	x + \frac{x^{3}}{3} + C = \frac{y^{2}}{2}
 	\end{equation}
 	<p>We can solve for $y(x)$ by multiplying by $2$ and taking the square root. (The constant of integration absorbs the $2$ along the way.)</p>
 	\begin{equation}
-	\frac{y^{2}}{2} = x + \frac{x^{3}}{3} + C \qquad\qquad y^{2} = 2x + \frac{2x^{3}}{3} + 2C = 2x + \frac{2x^{3}}{3} + C \qquad\qquad y(x) = \pm \sqrt{2x + \frac{2x^{3}}{3} + C}
+	\frac{y^{2}}{2} = x + \frac{x^{3}}{3} + C
+	\end{equation}
+  \begin{equation}
+	y^{2} = 2x + \frac{2x^{3}}{3} + 2C = 2x + \frac{2x^{3}}{3} + C
+	\end{equation}
+  \begin{equation}
+	y(x) = \pm \sqrt{2x + \frac{2x^{3}}{3} + C}
 	\end{equation}
 	</div>
 	
@@ -144,7 +153,16 @@
 	\end{equation}
 	<p>This is easier to see if $y$ is explicitly written as a function $y(x)$ and taking the derivative of the previous equation with respect to $x$.</p>
 	\begin{equation}
-	H\big(y(x)\big) = G(x) \qquad\qquad \frac{\text{d}}{\text{d}x} H\big(y(x)\big) = \frac{\text{d}}{\text{d}x} G(x) \qquad\qquad H'\big(y(x)\big)y'(x) = G'(x) \qquad\qquad h\big(y(x)\big)y'(x) = g(x)
+	H\big(y(x)\big) = G(x)
+	\end{equation}
+  \begin{equation}
+	\frac{\text{d}}{\text{d}x} H\big(y(x)\big) = \frac{\text{d}}{\text{d}x} G(x)
+	\end{equation}
+  \begin{equation}
+	H'\big(y(x)\big)y'(x) = G'(x)
+	\end{equation}
+  \begin{equation}
+	h\big(y(x)\big)y'(x) = g(x)
 	\end{equation}
 	<p>The $y'(x)$ appears from the chain rule applied to $H\big(y(x)\big)$. So really the integration is with respect to $x$ on both sides of the equation, but treating the $\displaystyle y'=\frac{\text{d}y}{\text{d}x}$ as a fraction for separating $x$ and $y$ to opposites sides of the equation works and is notationally convenient.</p>
 	</div>

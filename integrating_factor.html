@@ -52,12 +52,18 @@
     \end{equation}
     <p>The first idea anyone thinks of is to just try to integrate the whole thing.</p>
     \begin{equation}
-    \int y' \text{ d}x + \int 2y \text{ d}x = \int 0 \text{ d}x \qquad\qquad y + 2\int y \text{ d}x = C
+    \int y' \text{ d}x + \int 2y \text{ d}x = \int 0 \text{ d}x
+    \end{equation}
+    \begin{equation}
+    y + 2\int y \text{ d}x = C
     \end{equation}
     <p>The first and third integrals were possible because the antiderivative of $y'$ is just $y$ and the RHS is just the constant of integration $C$. The problem is the intergal of regular $y$ is left over, and we don't know what $y$ is, so we can't integrate. We've just traded one differential equation we can't solve for something worse we can't solve.</p>
     <p>There's a clever trick though. If the entire equation is multiplied by $e^{2x}$ then the integration becomes simpler.</p>
     \begin{equation}
-    e^{2x} y' + 2e^{2x} y = 0 e^{2x} = 0 \qquad\qquad \int e^{2x} y' + 2e^{2x} y \text{ d}x = \int 0 \text{ d}x
+    e^{2x} y' + 2e^{2x} y = 0 e^{2x} = 0
+    \end{equation}
+    \begin{equation}
+    \int e^{2x} y' + 2e^{2x} y \text{ d}x = \int 0 \text{ d}x
     \end{equation}
     <p>The LHS can be simplified by using the product rule in reverse.</p>
     \begin{equation}
@@ -69,16 +75,17 @@
     \end{equation}
     <p>The only thing left to do is solve for $y$.</p>
     \begin{equation}
-    \int e^{2x} y' + 2e^{2x} y \text{ d}x = \int 0e^{2x} \text{ d}x \qquad\qquad e^{2x} y = C \qquad\qquad y = Ce^{-2x}
+    \int e^{2x} y' + 2e^{2x} y \text{ d}x = \int 0e^{2x} \text{ d}x
+    \end{equation}
+    \begin{equation}
+    e^{2x} y = C \qquad\qquad y = Ce^{-2x}
     \end{equation}
     </div>
     
     <p>The above differential equation became much easier to solve after multiplying the entire differential equation by the integrating factor $e^{2x}$, but that leaves the question of how to come up with the integrating factor.</p>
     <h3>How to Calculate Integrating Factor | <a href="https://www.youtube.com/watch?v=VKy8QLwadCY&list=PLXQ5vz32rm_TZ2eBVYzYZopCOfmuJAN3l&index=3" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Explanation Video</a></h3>
     <div class="theory">
-    \begin{equation}
-    \text{The integrating factor for } y' + f(x)y = g(x) \text{ is } e^{\int f(x) \text{ d}x} = \text{exp}\left( \int f(x) \text{ d}x \right).
-    \end{equation}
+    <p style="text-align: center;">The integrating factor for $y' + f(x)y = g(x)$ is $\displaystyle e^{\int f(x) \text{ d}x} = \exp\left( \int f(x) \text{ d}x \right)$.</p>
     </div>
     
     <p>Try to solve these other differential equations and use the videos as a guide if you get stuck.</p>

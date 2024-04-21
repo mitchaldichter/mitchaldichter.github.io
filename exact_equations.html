@@ -60,12 +60,17 @@
   \begin{equation}
   \frac{\partial F}{\partial x} = 14xy^{3} - e^{x} \qquad\qquad \frac{\partial F}{\partial y} = 21x^{2}y^{2} + \cos(y)
   \end{equation}
-  \begin{equation}
-  \frac{\text{d}}{\text{d}x}F(x,y) = \frac{\partial F}{\partial x} + \frac{\partial F}{\partial y} y' = 14xy^{3} - e^{x} + \big( 21x^{2}y^{2} + \cos(y) \big) y'
-  \end{equation}
+  \begin{align}
+  \frac{\text{d}}{\text{d}x}F(x,y) &= \frac{\partial F}{\partial x} + \frac{\partial F}{\partial y} y' \\
+  &= 14xy^{3} - e^{x} + \big( 21x^{2}y^{2} + \cos(y) \big) y'
+  \end{align}
   <p>Computing $\displaystyle \frac{\text{d}}{\text{d}x}F(x,y)$ the normal way and using partial derivatives are exactly the same. The result is some of the terms are multiplied by $y'$ and others are not. These are often named $M(x,y)$ and $N(x,y)$. (<b>Warning</b>: Be careful with your textbook as these names are not standardized.)</p>
+  \begin{align}
+  \frac{\text{d}}{\text{d}x}F(x,y) &= \frac{\partial F}{\partial x} + \frac{\partial F}{\partial y} y' \\
+  &= M(x,y) + N(x,y)y'
+  \end{align}
   \begin{equation}
-  \frac{\text{d}}{\text{d}x}F(x,y) = \frac{\partial F}{\partial x} + \frac{\partial F}{\partial y} y' = M(x,y) + N(x,y)y' \qquad\quad M(x,y) = 14xy^{3} - e^{x} \qquad\qquad N(x,y) = 21x^{2}y^{2} + \cos(y)
+  M(x,y) = 14xy^{3} - e^{x} \qquad\qquad N(x,y) = 21x^{2}y^{2} + \cos(y)
   \end{equation}
   <p>Partial derivatives can do strange things, but for this course you can always assume that the order of the partial derivatives doesn't matter.</p>
   \begin{equation}
@@ -75,12 +80,8 @@
   \begin{equation}
   \frac{\partial }{\partial x}\frac{\partial }{\partial y}F = \frac{\partial }{\partial x}N \qquad \qquad \frac{\partial }{\partial y}\frac{\partial }{\partial x}F = \frac{\partial }{\partial y}M
   \end{equation}
-  \begin{equation}
-  \text{If } \frac{\partial }{\partial x}N = \frac{\partial }{\partial y}M \text{ then the mixed partial derivatives are equal, meaning } F(x,y) \text{ exists and the equation is exact.}
-  \end{equation}
-  \begin{equation}
-  \text{If } \frac{\partial }{\partial x}N \neq \frac{\partial }{\partial y}M \text{ then the mixed partial derivatives are not equal, } F(x,y) \text{ does not exist, and the equation is not exact.}
-  \end{equation}
+  <p style="text-align: center;">If $\displaystyle \frac{\partial }{\partial x}N = \frac{\partial }{\partial y}M$ then the mixed partial derivatives are equal, meaning $F(x,y)$ exists and the equation is exact.</p>
+  <p style="text-align: center;">If $\displaystyle \frac{\partial }{\partial x}N \neq \frac{\partial }{\partial y}M$ then the mixed partial derivatives are not equal, $F(x,y)$ does not exist, and the equation is not exact.</p>
   <p>If the differential equation is an exact equation, then you can work backwards to $F(x,y)$ by integrating $M(x,y)$ with respect to $x$ while treating $y$ as a constant and $N(x,y)$ with respect to $y$ while treating $x$ as a constant to calculate $F(x,y)$.</p>
   </div>
   
@@ -96,7 +97,7 @@
 	<div class="example_solution">
 	<p>Solve the initial value problem.</p>
   \begin{equation}
-  14xy^{3} + 21x^{2}y^{2}y' + \cos(y)y' - e^{x} = 0 \qquad\qquad y(4) = 3
+  14xy^{3} + 21x^{2}y^{2}y' + \cos(y)y' - e^{x} = 0 \qquad y(4) = 3
   \end{equation}
 	</div>
   
@@ -112,7 +113,7 @@
 	<div class="example_solution">
 	<p>Solve the initial value problem. (Try solving this as an <b>exact equation</b> and as a <b>separable</b> equation.</p>
   \begin{equation}
-  2x + 2yy' + 2xy' + 2y = 0 \qquad\qquad y(1) = -2
+  2x + 2yy' + 2xy' + 2y = 0 \qquad y(1) = -2
   \end{equation}
 	</div>
   
