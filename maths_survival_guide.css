@@ -137,6 +137,18 @@ li:before {
   clear: both;
 }
 
+#portrait_warning_div {
+  border-radius: 25px;
+  border: 2px solid black;
+  background: #FFCC00;
+  padding: 10px;
+  display: none;
+}
+
+#portrait_warning_p {
+  text-align: center;
+}
+
 .table_of_contents_h3 {
   margin-top: 0px;
   margin-bottom: 0px;
