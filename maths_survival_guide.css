@@ -161,6 +161,37 @@ tr:nth-child(even) {
   text-align: center;
 }
 
+.maths_survival_guide_header {
+  background-color: #EC745C;
+}
+
+.differential_equations_header {
+  background-color: #03A9F4;
+}
+
+.additional_resources_header {
+  background-color: Tomato;
+}
+
+.single_variable_calculus_integration_header {
+  background-color: MediumSeaGreen;
+}
+
+.single_variable_calculus_limits_and_derivatives_header {
+  background-color: #4285F4;
+}
+
+/*
+#ea4335
+#fbbc05
+#34a853
+#673ab7
+#3f51b5
+#673ab7
+#e91e63
+#f44336
+*/
+
 .table_of_contents_h3 {
   margin-top: 0px;
   margin-bottom: 0px;

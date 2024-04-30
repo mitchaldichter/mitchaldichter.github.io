@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>Differential Equations Euler's Method</title>
+
 <link rel="icon" type="image/png" sizes="32x32" href="images/profile_image_favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="images/profile_image_favicon-16x16.png">
-<title>Maths Survival Guide by Mitchal Dichter</title>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
 </script>
@@ -12,20 +13,15 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
-
-<script src="shared_html.js"></script>
-<script>
-  const header_text = "Differential Equations";
-</script>
 </head>
-<body <body onload="set_common_html(header_text)">
+<body>
 
 <div id="header_row">
-  <div id="left_header">
+  <div id="left_header" class="differential_equations_header">
     Table of Contents
   </div>
-  <div id="right_header">
-    <!--set by set_common_html(header_text)-->
+  <div id="right_header" class="differential_equations_header">
+    <!--Begin Header Text-->Differential Equations<!--End Header Text-->
   </div>
   <div id="profile_picture_div">
 	<img id="profile_picture_img" src="images/profile_image.png">
@@ -34,7 +30,76 @@
 
 <div id="content_row">
   <div id="left_content">
-  <!--set by set_common_html(header_text)-->
+    <!--Begin Table of Contents-->
+  <h3 class="table_of_contents_h3">Courses</h3>
+  <ol>
+    <!--<li>Single Variable Calculus
+      <ol>
+        <li><a href="limits_and_derivatives_overview.html">Limits and Derivatives</a></li>
+        <li><a href="integration_overview.html">Integration</a></li>
+        <li><a href="sequences_and_series_overview.html">Sequences and Series</a></li>
+      </ol>
+    </li>
+    <li><a href="multivariable_calculus_overview.html">Multivariable Calculus</a></li>
+    <li><a href="linear_algebra_overview.html">Linear Algebra</a></li>-->
+    <li><a href="differential_equations_overview.html">Differential Equations</a></li>
+  </ol>
+  <br>
+  <h3 class="table_of_contents_h3">Additional Resources</h3>
+  <ol>
+    <li><a href="how_to_use_wolfram_alpha.html">WolframAlpha</a></li>
+    <li><a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank">Direction Field Plotter by Ariel Barton</a></li>
+    <li><a href="https://aeb019.hosted.uark.edu/pplane.html" target="_blank">Phase Plane Plotter by Ariel Barton</a></li>
+  </ol>
+  <br>
+
+  <h3 class="table_of_contents_h3">Differential Equations</h3>
+  <ol>
+    <li>Introduction
+      <ol>
+        <li><a href="differential_equations_notation_and_definitions.html">Notation and Definitions</a></li>
+        <li><a href="differential_equations_verifying_solutions.html">Verifying Solutions</a></li>
+        <li><a href="initial_value_problems.html">Initial Values Problems</a></li>
+      </ol>
+    </li>
+    <li>First Order Differential Equations
+      <ol>
+        <li><a href="direction_fields.html">Direction Fields</a></li>
+        <li><a href="separable_equations.html">Separable Equations</a></li>
+        <li><a href="integrating_factor.html">Integrating Factor</a></li>
+        <li><a href="differential_equations_substitution.html">Bernoulli Equations and Substitutions</a></li>
+        <li><a href="exact_equations.html">Exact Equations</a></li>
+        <li><a href="exact_equations_integrating_factor.html">Exact Equations with Integrating Factor</a></li>
+        <li><a href="eulers_method.html">Euler's Method</a></li>
+        <li><a href="existence_and_uniqueness.html">Existence and Uniqueness</a></li>
+        <!--<li><a href="interval_of_validity.html">Interval of Validity</a></li>-->
+        <!--<li>Applications
+          <ol>
+            <li><a href=".html">Radioactive Decay and Population Growth</a></li>
+            <li><a href=".html">Mixing Tank Problem</a></li>
+            <li><a href=".html">Newton's Law of Cooling</a></li>
+            <li><a href=".html">Terminal Velocity</a></li>
+            <li><a href=".html">Continuously Compounded Interest</a></li>
+          </ol>
+        </li>-->
+      </ol>
+    </li>
+      <!--<li>Second Order Differential Equations
+        <ol>
+          <li>$ay''+by'+cy = 0$
+            <ol>
+              <li><a href=".html">Distinct Real Roots</a></li>
+              <li><a href=".html">Repeated Real Root</a></li>
+              <li><a href=".html">Imaginary Roots</a></li>
+            </ol>
+          </li>
+          <li><a href="method_of_undetermined_coefficients_second_order.html">Method of Undetermined Coefficients</a></li>
+          <li><a href="reduction_of_order_second_order.html">Reduction of Order</a></li>
+          <li><a href="variation_of_parameters_second_order.html">Variation of Parameters</a></li>
+        </ol>
+    </li>-->
+  </ol>
+<!--End Table of Contents-->
   </div>
   
 <div id="left_empty_column"></div>
@@ -46,21 +111,21 @@
       <p>Viewing this website in portrait orientation can cause problems with equations being longer than the screen width (you can scroll to the right), images being poorly sized, and the font size of maths text being much smaller than regular text. If your only option is a tablet or mobile device, your viewing experience will be better if you view this website in landscape orientation. You might need to refresh the page to fix any problems after rotating.</p>
     </div>
 
-    <h1>Euler's Method | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Topic Playlist</a></h1>
-	  <h3>Steps to Applying Euler's Method | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Explanation Video</a></h3>
+    <h1>Euler's Method | <a href="https://www.youtube.com/watch?v=7oX79yc4nhk&list=PLXQ5vz32rm_RWcAbeFlIHQQX-bGJBPCyN" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Topic Playlist</a></h1>
+	  <h3>Steps to Applying Euler's Method | <a href="https://www.youtube.com/watch?v=7oX79yc4nhk&list=PLXQ5vz32rm_RWcAbeFlIHQQX-bGJBPCyN" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Explanation Video</a></h3>
     <div class="theory">
     <p>Given an IVP with a step size</p>
     \begin{equation}
     y' = f(x,y) \qquad y(x_{0}) = y_{0} \qquad \text{step size } \Delta x
     \end{equation}
-    <p>The next $x_{n} = x_{n-1} + \Delta x$ and the next $y_{n} = y_{n-1} + \Delta x f(x_{n-1},y_{n-1})$ and you iterate.</p>
+    <p>The next $x_{n+1} = x_{n} + \Delta x$ and the next $y_{n+1} = y_{n} + \Delta x f(x_{n},y_{n})$ and you iterate.</p>
     \begin{align}
     y_{new} &= y_{old} + (\text{change in $x$}) \frac{\text{change in $y$}}{\text{change in $x$}} \\
     &= y_{old} + (\text{change in $y$})
     \end{align}
     </div>
     
-    <h3>Example 1 | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
+    <h3>Example 1 | <a href="https://www.youtube.com/watch?v=zJYmqxBhoeY&list=PLXQ5vz32rm_RWcAbeFlIHQQX-bGJBPCyN&index=2" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
     <div class="example_solution">
     <p>Apply Euler's method to the ODE.</p>
     \begin{equation}
@@ -69,7 +134,7 @@
     <p>Check your work using <a href="https://www.wolframalpha.com/input?i=use+Euler+method+y%27+%3D+1%2F2*y%2C+y%280%29+%3D+1%2C+from+0+to+5%2C+h+%3D+1" target="_blank" style="text-decoration: underline; color: blue;">WolframAlpha</a>.</p>
     </div>
     
-    <h3>Example 2 | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
+    <h3>Example 2 | <a href="https://www.youtube.com/watch?v=CJ7zIytD6_A&list=PLXQ5vz32rm_RWcAbeFlIHQQX-bGJBPCyN&index=3" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
     <div class="example_solution">
     <p>Apply Euler's method to the ODE.</p>
     \begin{equation}
@@ -78,13 +143,13 @@
     <p>Check your work using <a href="https://www.wolframalpha.com/input?i=use+Euler+method+y%27+%3D+-xy%2C+y%280%29+%3D+1%2C+from+0+to+5%2C+h+%3D+0.2" target="_blank" style="text-decoration: underline; color: blue;">WolframAlpha</a>.</p>
     </div>
     
-    <h3>Example 3 | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
+    <h3>Example 3 | <a href="https://www.youtube.com/watch?v=wdRg7NU4WtY&list=PLXQ5vz32rm_RWcAbeFlIHQQX-bGJBPCyN&index=4" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
     <div class="example_solution">
     <p>Apply Euler's method to the ODE.</p>
     \begin{equation}
-    \frac{\text{d}y}{\text{d}t} = y(y-3) \qquad y(2) = 1 \qquad \Delta t = 0.1
+    \frac{\text{d}y}{\text{d}t} = y(3-y) \qquad y(2) = 1 \qquad \Delta t = 0.1
     \end{equation}
-    <p>Check your work using <a href="https://www.wolframalpha.com/input?i=use+Euler+method+y%27+%3D+y%28y-3%29%2C+y%282%29+%3D+1%2C+from+0+to+3%2C+h+%3D+0.1" target="_blank" style="text-decoration: underline; color: blue;">WolframAlpha</a>.</p>
+    <p>Check your work using <a href="https://www.wolframalpha.com/input?i=use+Euler+method+y%27+%3D+y%283-y%29%2C+y%282%29+%3D+1%2C+from+2+to+3%2C+h+%3D+0.1" target="_blank" style="text-decoration: underline; color: blue;">WolframAlpha</a>.</p>
     </div>
 	
   </div>

@@ -1,42 +1,11 @@
-function set_common_html(header_text) {
-  document.getElementById("left_header").style.backgroundColor = background_color_array[header_text];
-  document.getElementById("right_header").style.backgroundColor = background_color_array[header_text];
-  document.getElementById("left_content").innerHTML = table_of_contents_array[header_text];
-  document.getElementById("right_header").innerHTML = header_text;
-  
-  if (window.innerHeight > window.innerWidth)
-  {
-    document.getElementById("portrait_warning_div").style.display = "block";
-  }
-  else 
-  {
-    document.getElementById("portrait_warning_div").style.display = "none";
-  }
-  
-  screen.orientation.addEventListener("change", (event) => {
-    location.reload();
-  });
-}
+import os
 
+exclude_HTMLs = [
+"index.html",
+"Strogatz_errata.html",
+"combining.html",]
 
-const background_color_array = [];
-background_color_array["Maths Survival Guide"] = "#EC745C";
-background_color_array["Single Variable Calculus: Limits and Derivatives"] = "MediumSeaGreen";
-background_color_array["Single Variable Calculus: Integration"] = "MediumSeaGreen";
-background_color_array["Differential Equations"] = "#03a9f4";
-background_color_array["Additional Resources"] = "Tomato";
-background_color_array["temp1"] = "#4285f4";
-background_color_array["temp2"] = "#ea4335";
-background_color_array["temp3"] = "#fbbc05";
-background_color_array["temp4"] = "#34a853";
-background_color_array["temp5"] = "#673ab7";
-background_color_array["temp7"] = "#3f51b5";
-background_color_array["temp8"] = "#673ab7";
-background_color_array["temp9"] = "#e91e63";
-background_color_array["temp0"] = "#f44336";
-
-
-const table_of_contents_courses_section = `
+table_of_contents_courses_section = """
   <h3 class="table_of_contents_h3">Courses</h3>
   <ol>
     <!--<li>Single Variable Calculus
@@ -58,22 +27,23 @@ const table_of_contents_courses_section = `
     <li><a href="https://aeb019.hosted.uark.edu/pplane.html" target="_blank">Phase Plane Plotter by Ariel Barton</a></li>
   </ol>
   <br>
-`;
-const table_of_contents_array = [];
-table_of_contents_array["Maths Survival Guide"] = table_of_contents_courses_section;
-table_of_contents_array["Single Variable Calculus: Limits and Derivatives"] = table_of_contents_courses_section + `
+"""
+
+table_of_contents_array = {}
+table_of_contents_array["Maths Survival Guide"] = table_of_contents_courses_section
+table_of_contents_array["Single Variable Calculus: Limits and Derivatives"] = table_of_contents_courses_section + """
   <h3 class="table_of_contents_h3">Single Variable Calculus: Limits and Derivatives</h3>
   <ol>
     <li><a href=".html">stuff</a></li>
   </ol>
-`;
-table_of_contents_array["Single Variable Calculus: Integration"] = table_of_contents_courses_section + `
+"""
+table_of_contents_array["Single Variable Calculus: Integration"] = table_of_contents_courses_section + """
   <h3 class="table_of_contents_h3">Single Variable Calculus: Integration</h3>
   <ol>
     <li><a href="integration_by_parts.html">Integration by Parts</a></li>
   </ol>
-`;
-table_of_contents_array["Differential Equations"] = table_of_contents_courses_section + `
+"""
+table_of_contents_array["Differential Equations"] = table_of_contents_courses_section + """
   <h3 class="table_of_contents_h3">Differential Equations</h3>
   <ol>
     <li>Introduction
@@ -93,7 +63,8 @@ table_of_contents_array["Differential Equations"] = table_of_contents_courses_se
         <li><a href="exact_equations_integrating_factor.html">Exact Equations with Integrating Factor</a></li>
         <li><a href="eulers_method.html">Euler's Method</a></li>
         <li><a href="existence_and_uniqueness.html">Existence and Uniqueness</a></li>
-        <li>Applications
+        <!--<li><a href="interval_of_validity.html">Interval of Validity</a></li>-->
+        <!--<li>Applications
           <ol>
             <li><a href=".html">Radioactive Decay and Population Growth</a></li>
             <li><a href=".html">Mixing Tank Problem</a></li>
@@ -101,10 +72,10 @@ table_of_contents_array["Differential Equations"] = table_of_contents_courses_se
             <li><a href=".html">Terminal Velocity</a></li>
             <li><a href=".html">Continuously Compounded Interest</a></li>
           </ol>
-        </li>
+        </li>-->
       </ol>
     </li>
-      <li>Second Order Differential Equations
+      <!--<li>Second Order Differential Equations
         <ol>
           <li>$ay''+by'+cy = 0$
             <ol>
@@ -117,7 +88,33 @@ table_of_contents_array["Differential Equations"] = table_of_contents_courses_se
           <li><a href="reduction_of_order_second_order.html">Reduction of Order</a></li>
           <li><a href="variation_of_parameters_second_order.html">Variation of Parameters</a></li>
         </ol>
-    </li>
+    </li>-->
   </ol>
-`;
-table_of_contents_array["Additional Resources"] = table_of_contents_courses_section;
+"""
+table_of_contents_array["Additional Resources"] = table_of_contents_courses_section
+
+begin_header_comment = "<!--Begin Header Text-->"
+end_header_comment = "<!--End Header Text-->"
+begin_toc_comment =  "<!--Begin Table of Contents-->"
+end_toc_comment =  "<!--End Table of Contents-->"
+for element in os.listdir():
+  if ".html" in element and element not in exclude_HTMLs:
+    HTML_file = open(element, "r")
+    HTML_lines = HTML_file.read()
+    HTML_file.close()
+    
+    begin_header_index = HTML_lines.find(begin_header_comment) + len(begin_header_comment)
+    end_header_index = HTML_lines.find(end_header_comment)
+    header_text = HTML_lines[begin_header_index:end_header_index]
+    
+    begin_toc_index = HTML_lines.find(begin_toc_comment) + len(begin_toc_comment)
+    end_toc_index = HTML_lines.find(end_toc_comment)
+    pre_toc_text = HTML_lines[:begin_toc_index]
+    post_toc_text = HTML_lines[end_toc_index:]
+    
+    new_HTML_text = pre_toc_text + table_of_contents_array[header_text] + post_toc_text
+    
+    HTML_file = open(element, "w")
+    HTML_lines = HTML_file.write(new_HTML_text)
+    HTML_file.close()
+    

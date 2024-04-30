@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>Differential Equations Verifying Solutions</title>
+
 <link rel="icon" type="image/png" sizes="32x32" href="images/profile_image_favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="images/profile_image_favicon-16x16.png">
-<title>Maths Survival Guide by Mitchal Dichter</title>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
 </script>
@@ -12,20 +13,15 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
-
-<script src="shared_html.js"></script>
-<script>
-  const header_text = "Differential Equations";
-</script>
 </head>
-<body <body onload="set_common_html(header_text)">
+<body>
 
 <div id="header_row">
-  <div id="left_header">
+  <div id="left_header" class="differential_equations_header">
     Table of Contents
   </div>
-  <div id="right_header">
-    <!--set by set_common_html(header_text)-->
+  <div id="right_header" class="differential_equations_header">
+    <!--Begin Header Text-->Differential Equations<!--End Header Text-->
   </div>
   <div id="profile_picture_div">
 	<img id="profile_picture_img" src="images/profile_image.png">
@@ -34,7 +30,76 @@
 
 <div id="content_row">
   <div id="left_content">
-  <!--set by set_common_html(header_text)-->
+    <!--Begin Table of Contents-->
+  <h3 class="table_of_contents_h3">Courses</h3>
+  <ol>
+    <!--<li>Single Variable Calculus
+      <ol>
+        <li><a href="limits_and_derivatives_overview.html">Limits and Derivatives</a></li>
+        <li><a href="integration_overview.html">Integration</a></li>
+        <li><a href="sequences_and_series_overview.html">Sequences and Series</a></li>
+      </ol>
+    </li>
+    <li><a href="multivariable_calculus_overview.html">Multivariable Calculus</a></li>
+    <li><a href="linear_algebra_overview.html">Linear Algebra</a></li>-->
+    <li><a href="differential_equations_overview.html">Differential Equations</a></li>
+  </ol>
+  <br>
+  <h3 class="table_of_contents_h3">Additional Resources</h3>
+  <ol>
+    <li><a href="how_to_use_wolfram_alpha.html">WolframAlpha</a></li>
+    <li><a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank">Direction Field Plotter by Ariel Barton</a></li>
+    <li><a href="https://aeb019.hosted.uark.edu/pplane.html" target="_blank">Phase Plane Plotter by Ariel Barton</a></li>
+  </ol>
+  <br>
+
+  <h3 class="table_of_contents_h3">Differential Equations</h3>
+  <ol>
+    <li>Introduction
+      <ol>
+        <li><a href="differential_equations_notation_and_definitions.html">Notation and Definitions</a></li>
+        <li><a href="differential_equations_verifying_solutions.html">Verifying Solutions</a></li>
+        <li><a href="initial_value_problems.html">Initial Values Problems</a></li>
+      </ol>
+    </li>
+    <li>First Order Differential Equations
+      <ol>
+        <li><a href="direction_fields.html">Direction Fields</a></li>
+        <li><a href="separable_equations.html">Separable Equations</a></li>
+        <li><a href="integrating_factor.html">Integrating Factor</a></li>
+        <li><a href="differential_equations_substitution.html">Bernoulli Equations and Substitutions</a></li>
+        <li><a href="exact_equations.html">Exact Equations</a></li>
+        <li><a href="exact_equations_integrating_factor.html">Exact Equations with Integrating Factor</a></li>
+        <li><a href="eulers_method.html">Euler's Method</a></li>
+        <li><a href="existence_and_uniqueness.html">Existence and Uniqueness</a></li>
+        <!--<li><a href="interval_of_validity.html">Interval of Validity</a></li>-->
+        <!--<li>Applications
+          <ol>
+            <li><a href=".html">Radioactive Decay and Population Growth</a></li>
+            <li><a href=".html">Mixing Tank Problem</a></li>
+            <li><a href=".html">Newton's Law of Cooling</a></li>
+            <li><a href=".html">Terminal Velocity</a></li>
+            <li><a href=".html">Continuously Compounded Interest</a></li>
+          </ol>
+        </li>-->
+      </ol>
+    </li>
+      <!--<li>Second Order Differential Equations
+        <ol>
+          <li>$ay''+by'+cy = 0$
+            <ol>
+              <li><a href=".html">Distinct Real Roots</a></li>
+              <li><a href=".html">Repeated Real Root</a></li>
+              <li><a href=".html">Imaginary Roots</a></li>
+            </ol>
+          </li>
+          <li><a href="method_of_undetermined_coefficients_second_order.html">Method of Undetermined Coefficients</a></li>
+          <li><a href="reduction_of_order_second_order.html">Reduction of Order</a></li>
+          <li><a href="variation_of_parameters_second_order.html">Variation of Parameters</a></li>
+        </ol>
+    </li>-->
+  </ol>
+<!--End Table of Contents-->
   </div>
   
 <div id="left_empty_column"></div>

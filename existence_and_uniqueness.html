@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>Differential Equations Existence and Uniqueness</title>
+
 <link rel="icon" type="image/png" sizes="32x32" href="images/profile_image_favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="images/profile_image_favicon-16x16.png">
-<title>Maths Survival Guide by Mitchal Dichter</title>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
 </script>
@@ -12,20 +13,15 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
-
-<script src="shared_html.js"></script>
-<script>
-  const header_text = "Differential Equations";
-</script>
 </head>
-<body <body onload="set_common_html(header_text)">
+<body>
 
 <div id="header_row">
-  <div id="left_header">
+  <div id="left_header" class="differential_equations_header">
     Table of Contents
   </div>
-  <div id="right_header">
-    <!--set by set_common_html(header_text)-->
+  <div id="right_header" class="differential_equations_header">
+    <!--Begin Header Text-->Differential Equations<!--End Header Text-->
   </div>
   <div id="profile_picture_div">
 	<img id="profile_picture_img" src="images/profile_image.png">
@@ -34,7 +30,76 @@
 
 <div id="content_row">
   <div id="left_content">
-  <!--set by set_common_html(header_text)-->
+    <!--Begin Table of Contents-->
+  <h3 class="table_of_contents_h3">Courses</h3>
+  <ol>
+    <!--<li>Single Variable Calculus
+      <ol>
+        <li><a href="limits_and_derivatives_overview.html">Limits and Derivatives</a></li>
+        <li><a href="integration_overview.html">Integration</a></li>
+        <li><a href="sequences_and_series_overview.html">Sequences and Series</a></li>
+      </ol>
+    </li>
+    <li><a href="multivariable_calculus_overview.html">Multivariable Calculus</a></li>
+    <li><a href="linear_algebra_overview.html">Linear Algebra</a></li>-->
+    <li><a href="differential_equations_overview.html">Differential Equations</a></li>
+  </ol>
+  <br>
+  <h3 class="table_of_contents_h3">Additional Resources</h3>
+  <ol>
+    <li><a href="how_to_use_wolfram_alpha.html">WolframAlpha</a></li>
+    <li><a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank">Direction Field Plotter by Ariel Barton</a></li>
+    <li><a href="https://aeb019.hosted.uark.edu/pplane.html" target="_blank">Phase Plane Plotter by Ariel Barton</a></li>
+  </ol>
+  <br>
+
+  <h3 class="table_of_contents_h3">Differential Equations</h3>
+  <ol>
+    <li>Introduction
+      <ol>
+        <li><a href="differential_equations_notation_and_definitions.html">Notation and Definitions</a></li>
+        <li><a href="differential_equations_verifying_solutions.html">Verifying Solutions</a></li>
+        <li><a href="initial_value_problems.html">Initial Values Problems</a></li>
+      </ol>
+    </li>
+    <li>First Order Differential Equations
+      <ol>
+        <li><a href="direction_fields.html">Direction Fields</a></li>
+        <li><a href="separable_equations.html">Separable Equations</a></li>
+        <li><a href="integrating_factor.html">Integrating Factor</a></li>
+        <li><a href="differential_equations_substitution.html">Bernoulli Equations and Substitutions</a></li>
+        <li><a href="exact_equations.html">Exact Equations</a></li>
+        <li><a href="exact_equations_integrating_factor.html">Exact Equations with Integrating Factor</a></li>
+        <li><a href="eulers_method.html">Euler's Method</a></li>
+        <li><a href="existence_and_uniqueness.html">Existence and Uniqueness</a></li>
+        <!--<li><a href="interval_of_validity.html">Interval of Validity</a></li>-->
+        <!--<li>Applications
+          <ol>
+            <li><a href=".html">Radioactive Decay and Population Growth</a></li>
+            <li><a href=".html">Mixing Tank Problem</a></li>
+            <li><a href=".html">Newton's Law of Cooling</a></li>
+            <li><a href=".html">Terminal Velocity</a></li>
+            <li><a href=".html">Continuously Compounded Interest</a></li>
+          </ol>
+        </li>-->
+      </ol>
+    </li>
+      <!--<li>Second Order Differential Equations
+        <ol>
+          <li>$ay''+by'+cy = 0$
+            <ol>
+              <li><a href=".html">Distinct Real Roots</a></li>
+              <li><a href=".html">Repeated Real Root</a></li>
+              <li><a href=".html">Imaginary Roots</a></li>
+            </ol>
+          </li>
+          <li><a href="method_of_undetermined_coefficients_second_order.html">Method of Undetermined Coefficients</a></li>
+          <li><a href="reduction_of_order_second_order.html">Reduction of Order</a></li>
+          <li><a href="variation_of_parameters_second_order.html">Variation of Parameters</a></li>
+        </ol>
+    </li>-->
+  </ol>
+<!--End Table of Contents-->
   </div>
   
 <div id="left_empty_column"></div>
@@ -46,14 +111,14 @@
       <p>Viewing this website in portrait orientation can cause problems with equations being longer than the screen width (you can scroll to the right), images being poorly sized, and the font size of maths text being much smaller than regular text. If your only option is a tablet or mobile device, your viewing experience will be better if you view this website in landscape orientation. You might need to refresh the page to fix any problems after rotating.</p>
     </div>
 
-    <h1>Existence and Uniqueness | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Topic Playlist</a></h1>
+    <h1>Existence and Uniqueness | <a href="https://www.youtube.com/watch?v=A8q8un3uZYI&list=PLXQ5vz32rm_SZRyyHv8Qt6BfeRh5aqpkl" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Topic Playlist</a></h1>
 	  <p>These theorems are applicable to initial value problems</p>
     \begin{equation}
     y' = f(x,y) \qquad y(x_{0}) = y_{0}
     \end{equation}
     <p>where the point $(x_{0},y_{0})$ is contained in an open rectangle $a < x < b$, $c < y < d$ called $R$.</p>
     
-    <h3>Meaning of A implies B | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Explanation Video</a></h3>
+    <h3>Meaning of A implies B | <a href="https://www.youtube.com/watch?v=A8q8un3uZYI&list=PLXQ5vz32rm_SZRyyHv8Qt6BfeRh5aqpkl" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Explanation Video</a></h3>
     <div class="theory">
     <p>The meaning of $A \Rightarrow B$, which is read as "A implies B" or "if A then B", has a specific meaning in mathematics that doesn't quite match up with normal conversation.</p>
     
@@ -67,17 +132,17 @@
     </div>
     
     
-    <h3>Existence Theorem  | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Explanation Video</a></h3>
+    <h3>Existence Theorem  | <a href="https://www.youtube.com/watch?v=bVPJ63Fmt60&list=PLXQ5vz32rm_SZRyyHv8Qt6BfeRh5aqpkl&index=2" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Explanation Video</a></h3>
     <div class="theory">
     <p style="text-align: center;">$f(x,y)$ is continuous on the open rectangle $R \qquad \Rightarrow \qquad$ the initial value problem has <b>at least one solution</b> on some open subinterval of $(a,b)$ that contains $x_{0}$.</p>
     </div>
     
-    <h3>Uniqueness Theorem  | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Explanation Video</a></h3>
+    <h3>Uniqueness Theorem  | <a href="https://www.youtube.com/watch?v=NhddPF2Pe_o&list=PLXQ5vz32rm_SZRyyHv8Qt6BfeRh5aqpkl&index=3" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Explanation Video</a></h3>
     <div class="theory">
     <p style="text-align: center;">$f(x,y)$ and $\dfrac{\partial f}{\partial y}$ are continuous on the open rectangle $R \qquad \Rightarrow \qquad$ the initial value problem has <b>exactly one solution</b> on some open subinterval of $(a,b)$ that contains $x_{0}$.</p>
     </div>
     
-    <h3>Example 1 | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
+    <h3>Example 1 | <a href="https://www.youtube.com/watch?v=Up7i6-sqyCI&list=PLXQ5vz32rm_SZRyyHv8Qt6BfeRh5aqpkl&index=4" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
     <div class="example_solution">
     <p>Determine when an initial value problem would exist or is unique based on the theorems. Use the <a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank" style="text-decoration: underline; color: blue;">Direction Field Plotter by Ariel Barton</a> to plot some integral curves. Solve the ODE. Investigate what happens when either $f(x,y)$ or $\dfrac{\partial f}{\partial y}$ are not continuous, if ever.</p>
     \begin{equation}
@@ -85,7 +150,7 @@
     \end{equation}
     </div>
     
-    <h3>Example 2 | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
+    <h3>Example 2 | <a href="https://www.youtube.com/watch?v=gfw3wOidYX4&list=PLXQ5vz32rm_SZRyyHv8Qt6BfeRh5aqpkl&index=5" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
     <div class="example_solution">
     <p>Determine when an initial value problem would exist or is unique based on the theorems. Use the <a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank" style="text-decoration: underline; color: blue;">Direction Field Plotter by Ariel Barton</a> to plot some integral curves. Solve the ODE and determine why the left half of the parabola doesn't solve the ODE. Investigate what happens when either $f(x,y)$ or $\dfrac{\partial f}{\partial y}$ are not continuous, if ever.</p>
     \begin{equation}
@@ -93,7 +158,7 @@
     \end{equation}
     </div>
     
-    <h3>Example 3 | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
+    <h3>Example 3 | <a href="https://www.youtube.com/watch?v=Q6YnmRdIgPI&list=PLXQ5vz32rm_SZRyyHv8Qt6BfeRh5aqpkl&index=7" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
     <div class="example_solution">
     <p>Determine when an initial value problem would exist or is unique based on the theorems. Use the <a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank" style="text-decoration: underline; color: blue;">Direction Field Plotter by Ariel Barton</a> to plot some integral curves. Solve the ODE. Investigate what happens when either $f(x,y)$ or $\dfrac{\partial f}{\partial y}$ are not continuous, if ever.</p>
     \begin{equation}
@@ -101,7 +166,7 @@
     \end{equation}
     </div>
     
-    <h3>Example 4 | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
+    <h3>Example 4 | <a href="https://www.youtube.com/watch?v=F6-6K85R9tk&list=PLXQ5vz32rm_SZRyyHv8Qt6BfeRh5aqpkl&index=9" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
     <div class="example_solution">
     <p>Determine when an initial value problem would exist or is unique based on the theorems, if ever. Use the <a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank" style="text-decoration: underline; color: blue;">Direction Field Plotter by Ariel Barton</a> to plot some integral curves. Solve the ODE. Investigate what happens when either $f(x,y)$ or $\dfrac{\partial f}{\partial y}$ are not continuous, if ever.</p>
     \begin{equation}
@@ -109,7 +174,7 @@
     \end{equation}
     </div>
     
-    <h3>Example 5 | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
+    <h3>Example 5 | <a href="https://www.youtube.com/watch?v=igCe4rdJdbo&list=PLXQ5vz32rm_SZRyyHv8Qt6BfeRh5aqpkl&index=10" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
     <div class="example_solution">
     <p>Determine when an initial value problem would exist or is unique based on the theorems. Use the <a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank" style="text-decoration: underline; color: blue;">Direction Field Plotter by Ariel Barton</a> to plot some integral curves. Do <b>NOT</b> solve the ODE. Investigate what happens when either $f(x,y)$ or $\dfrac{\partial f}{\partial y}$ are not continuous, if ever.</p>
     \begin{equation}
@@ -117,7 +182,7 @@
     \end{equation}
     </div>
 	
-	  <h3>Example 6 | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
+	  <h3>Example 6 | <a href="https://www.youtube.com/watch?v=0fdIdvg7ZRE&list=PLXQ5vz32rm_SZRyyHv8Qt6BfeRh5aqpkl&index=12" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
     <div class="example_solution">
     <p>Determine when an initial value problem would exist or is unique based on the theorems. Use the <a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank" style="text-decoration: underline; color: blue;">Direction Field Plotter by Ariel Barton</a> to plot some integral curves. Investigate what happens when either $f(x,y)$ or $\dfrac{\partial f}{\partial y}$ are not continuous, if ever. Do <b>NOT</b> attempt to solve the ODE in general, but set $y = mx$ and solve for the approximate value of $m$ that satisfies the ODE.</p>
     \begin{equation}
