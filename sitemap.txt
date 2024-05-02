@@ -11,6 +11,7 @@ https://mitchaldichter.com/how_to_use_wolfram_alpha.html
 https://mitchaldichter.com/index.html
 https://mitchaldichter.com/initial_value_problems.html
 https://mitchaldichter.com/integrating_factor.html
+https://mitchaldichter.com/interval_of_validity.html
 https://mitchaldichter.com/Maths_Survival_Guide.html
 https://mitchaldichter.com/separable_equations.html
 https://mitchaldichter.com/Strogatz_errata.html

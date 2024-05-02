@@ -63,7 +63,7 @@ table_of_contents_array["Differential Equations"] = table_of_contents_courses_se
         <li><a href="exact_equations_integrating_factor.html">Exact Equations with Integrating Factor</a></li>
         <li><a href="eulers_method.html">Euler's Method</a></li>
         <li><a href="existence_and_uniqueness.html">Existence and Uniqueness</a></li>
-        <!--<li><a href="interval_of_validity.html">Interval of Validity</a></li>-->
+        <li><a href="interval_of_validity.html">Interval of Validity</a></li>
         <!--<li>Applications
           <ol>
             <li><a href=".html">Radioactive Decay and Population Growth</a></li>
