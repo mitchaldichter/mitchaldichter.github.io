@@ -56,6 +56,7 @@ table_of_contents_array["Differential Equations"] = table_of_contents_courses_se
     <li>First Order Differential Equations
       <ol>
         <li><a href="direction_fields.html">Direction Fields</a></li>
+        <!--<li><a href="equilibria_and_phase_lines.html">Equilibria and Phase Lines</a></li>-->
         <li><a href="separable_equations.html">Separable Equations</a></li>
         <li><a href="integrating_factor.html">Integrating Factor</a></li>
         <li><a href="differential_equations_substitution.html">Bernoulli Equations and Substitutions</a></li>
@@ -67,6 +68,7 @@ table_of_contents_array["Differential Equations"] = table_of_contents_courses_se
         <!--<li>Applications
           <ol>
             <li><a href=".html">Radioactive Decay and Population Growth</a></li>
+            <li><a href=".html">Logistic Equation</a></li>
             <li><a href=".html">Mixing Tank Problem</a></li>
             <li><a href=".html">Newton's Law of Cooling</a></li>
             <li><a href=".html">Terminal Velocity</a></li>
@@ -79,16 +81,16 @@ table_of_contents_array["Differential Equations"] = table_of_contents_courses_se
         <ol>
           <li>$ay''+by'+cy = 0$
             <ol>
-              <li><a href=".html">Distinct Real Roots</a></li>
-              <li><a href=".html">Repeated Real Root</a></li>
-              <li><a href=".html">Imaginary Roots</a></li>
+              <li><a href="second_order_distinct_real_roots.html">Distinct Real Roots</a></li>
+              <li><a href="second_order_repeated_real_root.html">Repeated Real Root</a></li>
+              <li><a href="second_order_imaginary_roots.html">Imaginary Roots</a></li>
             </ol>
           </li>
-          <li><a href="method_of_undetermined_coefficients_second_order.html">Method of Undetermined Coefficients</a></li>
+          <!--<li><a href="method_of_undetermined_coefficients_second_order.html">Method of Undetermined Coefficients</a></li>
           <li><a href="reduction_of_order_second_order.html">Reduction of Order</a></li>
-          <li><a href="variation_of_parameters_second_order.html">Variation of Parameters</a></li>
+          <li><a href="variation_of_parameters_second_order.html">Variation of Parameters</a></li>-->
         </ol>
-    </li>-->
+    </li>
   </ol>
 """
 table_of_contents_array["Additional Resources"] = table_of_contents_courses_section
