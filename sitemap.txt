@@ -13,5 +13,8 @@ https://mitchaldichter.com/initial_value_problems.html
 https://mitchaldichter.com/integrating_factor.html
 https://mitchaldichter.com/interval_of_validity.html
 https://mitchaldichter.com/Maths_Survival_Guide.html
+https://mitchaldichter.com/second_order_distinct_real_roots.html
+https://mitchaldichter.com/second_order_imaginary_roots.html
+https://mitchaldichter.com/second_order_repeated_real_root.html
 https://mitchaldichter.com/separable_equations.html
 https://mitchaldichter.com/Strogatz_errata.html

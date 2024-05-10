@@ -77,7 +77,7 @@ table_of_contents_array["Differential Equations"] = table_of_contents_courses_se
         </li>-->
       </ol>
     </li>
-      <!--<li>Second Order Differential Equations
+      <li>Second Order Differential Equations
         <ol>
           <li>$ay''+by'+cy = 0$
             <ol>
