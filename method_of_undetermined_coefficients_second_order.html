@@ -114,10 +114,93 @@
     </div>
 
     <h1>Method of Undetermined Coefficients | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Topic Playlist</a></h1>
-	<p>put studd here</p>
-	
-	
-	
+	  <p>This method can be used to solve differential equations of the form $ay''+by'+cy=g(x)$ where $g(x)$ is restricted to combinations of polynomials, exponentials, and function of sine and cosine. The method is really just a lookup table of guesses.</p>
+	  
+	  <h3>Simplest Case | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Explanation Video</a></h3>
+    <div class="theory">
+      <p>In the <b>simplest</b> cases, the guess for the particular solution is a polynomial, an exponential, or a combination of sine and cosine.</p>
+      
+      <table style="margin-left: auto; margin-right: auto;">
+        <tr>
+          <th>ODE</th>
+          <th>$y_{p}(x)$ Guess</th>
+        </tr>
+        <tr>
+          <td>$ay''+by'+cy= 2x^{3}-1$</td>
+          <td>$Ax^{3}+Bx^{2}+Cx+D$</td>
+        </tr>
+        <tr>
+          <td>$ay''+by'+cy= 4e^{7x}$</td>
+          <td>$Ae^{7x}$</td>
+        </tr>
+        <tr>
+          <td>$ay''+by'+cy= 13\sin(2x)$</td>
+          <td>$A\cos(2x)+B\sin(2x)$</td>
+        </tr>
+      </table>
+      
+      <p>The capital letters $A,B,C,\ldots$ in the guesses are the undetermined coefficients, which is the name for the method. After guessing the form of the particular solution, the guess is plugged into the ODE and $A,B,C,\ldots$ are solved for to get the LHS to equal the RHS.</p>
+    </div>
+    
+    <h3>Example 1 | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
+    <div class="example_solution">
+    <p>Find the particular solution to the following differential equation.</p>
+    \begin{equation}
+    y'' - y' - 12y = 2x^{3}-1
+    \end{equation}
+    </div>
+    
+    <h3>Example 2 | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
+    <div class="example_solution">
+    <p>Find the particular solution to the following differential equation.</p>
+    \begin{equation}
+    y'' - y' - 12y = 4e^{7x}
+    \end{equation}
+    </div>
+    
+    <h3>Example 3 | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Solution Video</a></h3>
+    <div class="example_solution">
+    <p>Find the particular solution to the following differential equation.</p>
+    \begin{equation}
+    y'' - y' - 12y = 13\sin(2x)
+    \end{equation}
+    </div>
+    
+    <h3>When the Initial Guess is a Homogeneous Solution | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Explanation Video</a></h3>
+    <div class="theory">
+      <p>Sometimes the <b>RHS is a general solution</b>. In that case, the normal guess is multiplied by $x$ until the guess is no longer a general solution.</p>
+      
+      <table style="margin-left: auto; margin-right: auto;">
+        <tr>
+          <th>ODE</th>
+          <th>General Solution</th>
+          <th>$y_{p}(x)$ Guess</th>
+        </tr>
+        <tr>
+          <td>$y''+y'= 2x^{3}-1$</td>
+          <td>$c_{1}e^{0x}+c_{2}e^{-x}=c_{1}+c_{2}e^{-x}$</td>
+          <td>$x(Ax^{3}+Bx^{2}+Cx+D)$</td>
+        </tr>
+        <tr>
+          <td>$y''-4y'-21y= 4e^{7x}$</td>
+          <td>$c_{1}e^{7x}+c_{2}e^{-3x}$</td>
+          <td>$Axe^{7x}$</td>
+        </tr>
+        <tr>
+          <td>$y''-14y'+49y= 4e^{7x}$</td>
+          <td>$c_{1}e^{7x}+c_{2}xe^{7x}$</td>
+          <td>$Ax^{2}e^{7x}$</td>
+        </tr>
+        <tr>
+          <td>$y''+4y= 13\sin(2x)$</td>
+          <td>$c_{1}\cos(2x)+c_{2}\sin(2x)$</td>
+          <td>$Ax\cos(2x)+Bx\sin(2x)$</td>
+        </tr>
+      </table>
+      
+      <p>The capital letters $A,B,C,\ldots$ in the guesses are the undetermined coefficients, which is the name for the method. After guessing the form of the particular solution, the guess is plugged into the ODE and $A,B,C,\ldots$ are solved for to get the LHS to equal the RHS.</p>
+    </div>
+	  
   </div>
 </div>
 </body>
