@@ -123,7 +123,7 @@
       <table style="margin-left: auto; margin-right: auto;">
         <tr>
           <th>ODE</th>
-          <th>$y_{p}(x)$ Guess</th>
+          <th>Initial $y_{p}(x)$ Guess</th>
         </tr>
         <tr>
           <td>$ay''+by'+cy= 2x^{3}-1$</td>
@@ -231,6 +231,114 @@
     \begin{equation}
     y''+4y= 13\sin(2x)
     \end{equation}
+    </div>
+    
+    <h3>Adding Guesses Together | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Explanation Video</a></h3>
+    <div class="theory">
+      <p>If the RHS $g(x)$ is a sum of the functions that can be guessed for, $y_{p}(x)$ is just a sum of all those guesses.</p>
+      
+      <table style="margin-left: auto; margin-right: auto;">
+        <tr>
+          <th>ODE</th>
+          <th>Initial $y_{p}(x)$ Guess</th>
+        </tr>
+        <tr>
+          <td>$ay''+by'+cy= 2x^{3}-1 + 4e^{7x} + 13\sin(2x)$</td>
+          <td>$Ax^{3}+Bx^{2}+Cx+D + Ae^{7x} + A\cos(2x)+B\sin(2x)$</td>
+        </tr>
+      </table>
+      
+      <p>Keep in mind that the particular solution can still require modification depending on the homogeneous solutions.</p>
+      
+      <table style="margin-left: auto; margin-right: auto;">
+        <tr>
+          <th>ODE and General Solution</th>
+          <th>$y_{p}(x)$ Guess</th>
+        </tr>
+        <tr>
+          <td>$y''+y'= 2x^{3}-1 + 4e^{7x} + 13\sin(2x)$<br>$y_{h}(x) = c_{1}e^{0x}+c_{2}e^{-x}=c_{1}+c_{2}e^{-x}$</td>
+          <td>$x(Ax^{3}+Bx^{2}+Cx+D) + Ee^{7x} + F\cos(2x)+G\sin(2x)$</td>
+        </tr>
+        <tr>
+          <td>$y''-4y'-21y= 2x^{3}-1 + 4e^{7x} + 13\sin(2x)$<br>$y_{h}(x) = c_{1}e^{7x}+c_{2}e^{-3x}$</td>
+          <td>$Ax^{3}+Bx^{2}+Cx+D + Exe^{7x} + F\cos(2x)+G\sin(2x)$</td>
+        </tr>
+        <tr>
+          <td>$y''-14y'+49y= 2x^{3}-1 + 4e^{7x} + 13\sin(2x)$<br>$y_{h}(x) = c_{1}e^{7x}+c_{2}xe^{7x}$</td>
+          <td>$Ax^{3}+Bx^{2}+Cx+D + Ex^{2}e^{7x} + F\cos(2x)+G\sin(2x)$</td>
+        </tr>
+        <tr>
+          <td>$y''+4y= 2x^{3}-1 + 4e^{7x} + 13\sin(2x)$<br>$y_{h}(x) = c_{1}\cos(2x)+c_{2}\sin(2x)$</td>
+          <td>$Ax^{3}+Bx^{2}+Cx+D + Ee^{7x} + Fx\cos(2x)+Gx\sin(2x)$</td>
+        </tr>
+      </table>
+      
+    </div>
+    
+    <h3>Multiplying Guesses Together | <a href="" target="_blank"><img class="inline_youtube_icon" src="images/youtube_icon.svg"> Explanation Video</a></h3>
+    <div class="theory">
+      <p>If the RHS $g(x)$ is a product of the functions that can be guessed for, $y_{p}(x)$ is just a product of all those guesses.</p>
+      
+      <table style="margin-left: auto; margin-right: auto;">
+        <tr>
+          <th>ODE</th>
+          <th>Initial $y_{p}(x)$ Guess</th>
+        </tr>
+        <tr>
+          <td>$ay''+by'+cy= (x^{2}-4) e^{7x} \sin(2x)$</td>
+          <td>$(Ax^{2}+Bx+C) e^{7x} \big(D\cos(2x)+E\sin(2x)\big)$<br>$C$ could be replaced with 1.</td>
+        </tr>
+      </table>
+      
+      <p>You only have to multiply the guess by $x$ if, after multiplying everything out, one of the terms is a constant times a homogeneous solution.</p>
+      
+      <table style="margin-left: auto; margin-right: auto;">
+        <tr>
+          <th>ODE and General Solution</th>
+          <th>$y_{p}(x)$ Guess</th>
+        </tr>
+        <tr>
+          <td>$y''-y'-12y = (x^{2}-4) e^{7x} \sin(2x)$<br>$y_{h}(x) = c_{1}e^{-3x}+c_{2}e^{4x}$</td>
+          <td>$(Ax^{2}+Bx+C) e^{7x} \big(D\cos(2x)+E\sin(2x)\big)$</td>
+        </tr>
+        <tr>
+          <td>$y''+y' = (x^{2}-4) e^{7x}$<br>$y_{h}(x) = c_{1}+c_{2}e^{-x}$</td>
+          <td>$x(Ax^{2}+Bx+C) e^{7x}$</td>
+        </tr>
+        <tr>
+          <td>$y''+y' = (x^{2}-4) e^{7x} \sin(2x)$<br>$y_{h}(x) = c_{1}+c_{2}e^{-x}$</td>
+          <td>$(Ax^{2}+Bx+C) e^{7x} \big(D\cos(2x)+E\sin(2x)\big)$</td>
+        </tr>
+        <tr>
+          <td>$y''-7y' = e^{7x} \sin(2x)$<br>$y_{h}(x) = c_{1}+c_{2}e^{7x}$</td>
+          <td>$e^{7x} \big(A\cos(2x)+B\sin(2x)\big)$</td>
+        </tr>
+        <tr>
+          <td>$y''-7y' = (x^{2}-4) e^{7x}$<br>$y_{h}(x) = c_{1}+c_{2}e^{7x}$</td>
+          <td>$x(Ax^{2}+Bx+C) e^{7x}$</td>
+        </tr>
+        <tr>
+          <td>$y''-7y' = (x^{2}-4) e^{7x} \sin(2x)$<br>$y_{h}(x) = c_{1}+c_{2}e^{7x}$</td>
+          <td>$(Ax^{2}+Bx+C) e^{7x} \big(D\cos(2x)+E\sin(2x)\big)$</td>
+        </tr>
+        <tr>
+          <td>$y''+8y'+25y = (x^{2}-4) e^{-4x} \sin(2x)$<br>$y_{h}(x) = c_{1}e^{-4x}\cos(3x)+c_{2}e^{-4x}\sin(3x)$</td>
+          <td>$(Ax^{2}+Bx+C) e^{-4x} \big(D\cos(2x)+E\sin(2x)\big)$</td>
+        </tr>
+        <tr>
+          <td>$y''+8y'+25y = (x^{2}-4) e^{-4x} \sin(3x)$<br>$y_{h}(x) = c_{1}e^{-4x}\cos(3x)+c_{2}e^{-4x}\sin(3x)$</td>
+          <td>$x(Ax^{2}+Bx+C) e^{-4x} \big(D\cos(3x)+E\sin(3x)\big)$</td>
+        </tr>
+        <tr>
+          <td>$y''+8y'+25y = (x^{2}-4) e^{-4x}$<br>$y_{h}(x) = c_{1}e^{-4x}\cos(3x)+c_{2}e^{-4x}\sin(3x)$</td>
+          <td>$(Ax^{2}+Bx+C) e^{-4x}$</td>
+        </tr>
+        <tr>
+          <td>$y''+8y'+25y = (x^{2}-4) \sin(3x)$<br>$y_{h}(x) = c_{1}e^{-4x}\cos(3x)+c_{2}e^{-4x}\sin(3x)$</td>
+          <td>$(Ax^{2}+Bx+C) \big(D\cos(3x)+E\sin(3x)\big)$</td>
+        </tr>
+      </table>
+      
     </div>
 	  
   </div>
