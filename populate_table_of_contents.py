@@ -86,8 +86,8 @@ table_of_contents_array["Differential Equations"] = table_of_contents_courses_se
               <li><a href="second_order_imaginary_roots.html">Imaginary Roots</a></li>
             </ol>
           </li>
-          <!--<li><a href="method_of_undetermined_coefficients_second_order.html">Method of Undetermined Coefficients</a></li>
-          <li><a href="reduction_of_order_second_order.html">Reduction of Order</a></li>
+          <li><a href="method_of_undetermined_coefficients_second_order.html">Method of Undetermined Coefficients</a></li>
+          <!--<li><a href="reduction_of_order_second_order.html">Reduction of Order</a></li>
           <li><a href="variation_of_parameters_second_order.html">Variation of Parameters</a></li>-->
         </ol>
     </li>
