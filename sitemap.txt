@@ -1,3 +1,4 @@
+https://mitchaldichter.com/
 https://mitchaldichter.com/differential_equations_notation_and_definitions.html
 https://mitchaldichter.com/differential_equations_overview.html
 https://mitchaldichter.com/differential_equations_substitution.html
@@ -8,7 +9,6 @@ https://mitchaldichter.com/exact_equations.html
 https://mitchaldichter.com/exact_equations_integrating_factor.html
 https://mitchaldichter.com/existence_and_uniqueness.html
 https://mitchaldichter.com/how_to_use_wolfram_alpha.html
-https://mitchaldichter.com/index.html
 https://mitchaldichter.com/initial_value_problems.html
 https://mitchaldichter.com/integrating_factor.html
 https://mitchaldichter.com/interval_of_validity.html
