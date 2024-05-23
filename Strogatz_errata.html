@@ -5,17 +5,10 @@
 <link rel="icon" type="image/png" sizes="32x32" href="images/book_cover_favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="images/book_cover_favicon-16x16.png">
 <title>Strogatz Errata by Mitchal Dichter</title>
-<script>
-window.MathJax = {
-  tex: {
-    inlineMath: [['$','$'], ['\\(','\\)']]
-  },
-  loader: {
-    load: ['[tex]/noerrors']
-  }
-};
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
 </script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async id="MathJax-script"></script>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full"></script>
 <style>
 #left_column {
   float: left ;
