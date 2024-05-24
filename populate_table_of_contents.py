@@ -80,7 +80,7 @@ table_of_contents_array["Differential Equations"] = table_of_contents_courses_se
     </li>
       <li>Second Order Differential Equations
         <ol>
-          <li>Simplest Case
+          <li>$ay''+by'+cy = 0$
             <ol>
               <li><a href="second_order_distinct_real_roots.html">Distinct Real Roots</a></li>
               <li><a href="second_order_repeated_real_root.html">Repeated Real Root</a></li>
