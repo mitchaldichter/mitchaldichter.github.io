@@ -124,9 +124,69 @@ window.MathJax = {
     </div>
 
     <h1>Reduction of Order | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Topic Playlist</a></h1>
-	  <p>put studd here</p>
-	
-	
+	  <p>This method is useful for finding a second homogenous solution to a linear second order ODE when one homogeneous solution is known. This already happened for the $ay''+by'+cy = 0$ <a href="second_order_repeated_real_root.html"><u>Repeated Real Root</u></a> case. When the only known solution was $e^{rx}$ where $r$ was the repeated real root of the characteristic equation $ar^{2}+br+c = 0$, the second solution $xe^{rx}$ can be obtained using reduction of order.</p>
+	  
+    <h2>Example 1 for Repeated Real Root | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
+    <div class="example_solution">
+    <p>Find the second homogeneous solution to the ODE when you are given only one homogeneous solution.</p>
+    \begin{equation}
+    y'' - 8y' + 16y = 0 \qquad y_{1}(x) = e^{4x}
+    \end{equation}
+    Do this by guessing the second homogeneous solution is of the form $y_{2}(x) = v(x)e^{4x}$ where $e^{4x}$ comes from the first homogeneous solution.
+    </div>
+    
+	  <h2>Reducing the Order of an ODE | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
+    <div class="theory">
+    <p>Reduction of order uses a guess $y_{2}(x) = v(x)y_{1}(x)$ which results in a new ODE for the function $v(x)$ with $v''(x)$ and $v'(x)$ terms, but no $v(x)$ term. There is no $v(x)$ term because the half of the product rule for the guess $v(x)y_{1}(x)$ that takes the derivative of $y_{1}(x)$ acts like the first homogeneous solution when plugged into the ODE.</p>
+    \begin{equation}
+    y''+p(x)y'+q(x)y=0 \qquad y_{2}(x)=v(x)y_{1}(x)
+    \end{equation}
+    \begin{equation}
+    y_{2}''+p(x)y_{2}'+q(x)y_{2}=(vy_{1})''+p(x)(vy_{1})'+q(x)vy_{1}=0 
+    \end{equation}
+    \begin{equation}
+    v''y_{1}+2v'y_{1}'+vy_{1}''+p(x)(v'y_{1}+vy_{1}')+q(x)vy_{1}=0
+    \end{equation}
+    \begin{equation}
+    y_{1}v''+(2y_{1}'+p(x)y_{1})v'+(y_{1}''+p(x)y_{1}'+q(x)y_{1})v=0
+    \end{equation}
+    \begin{equation}
+    y_{1}v''+(2y_{1}'+p(x)y_{1})v'+0v=0
+    \end{equation}
+    The $(y_{1}''+p(x)y_{1}'+q(x)y_{1})v$ was replaced by $0v$ because $y_{1}$ is a homogeneous solution to the original ODE, and the original ODE is exactly what is in the parentheses, so all the $v(x)$ terms disappear.
+    \begin{equation}
+    y_{1}v''+(2y_{1}'+p(x)y_{1})v'=0
+    \end{equation}
+    Even though this is a second order ODE, we can use first order solution methods because there is no $v(x)$ term. To make it look like a first order ODE, we can replace $v'(x)=w(x)$ so it's not as confusing.
+    \begin{equation}
+    w(x) = v'(x) \qquad y_{1}w'+(2y_{1}'+p(x)y_{1})w=0
+    \end{equation}
+    Since $p(x)$ and $y_{1}(x)$ are known, we can solve for $w(x)$, which can be used to find $v(x)$, which can be used to find the $y_{2}(x)$ guess we started with.
+    </div>
+    
+    <h2>Example 2 for Cauchy–Euler equation | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
+    <div class="example_solution">
+    <p>Find the general solution to the ODE.</p>
+    \begin{equation}
+    x^{2}y'' - 3xy' + 3y = 0 \qquad y_{1}=x
+    \end{equation}
+    </div>
+    
+    <h2>Example 3 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
+    <div class="example_solution">
+    <p>Find the general solution to the ODE.</p>
+    \begin{equation}
+    x^{2}\big(\ln|x|\big)^{2}y''-2x\ln|x|y'+\big(2+\ln|x|\big)y=0 \qquad y_{1}=\ln|x|
+    \end{equation}
+    </div>
+    
+    <h2>Example 4 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
+    <div class="example_solution">
+    <p>Find the general solution to the ODE.</p>
+    \begin{equation}
+    (2x + 1)xy'' − 2(2x^{2} − 1)y' − 4(x + 1)y = 0 \qquad y_{1}=e^{2x}
+    \end{equation}
+    </div>
 	
   </div>
 </div>
