@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Differential Equations Variation of Parameters</title>
+<title>Wro&nacute;skian</title>
 
-<meta name="description" content="Variation of Parameters is a method to find the particular solution of a non-homogeneous linear ODE when the homogeneous solutions are known, which is more powerful than the Method of Undetermined Coefficients since this can solve for any non-homogeneous term if the integrals can be evaluated. The formula requires the homogenous solutions and evaluating some integrals. This page is focused on second order ODEs, but the method applies to higher order ODEs as well.">
+<meta name="description" content="The Wro&nacute;skian is useful for determining the linear independence of a set of n homogenous solutions to an nth order linear ODE. The Wro&nacute;skian is a determinant of the n homogenous solutions and their first (n-1) derivatives. The Wro&nacute;skian is used in the Variation of Parameters formula and is Abel's Identity.">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" sizes="32x32" href="images/profile_image_favicon-32x32.png">
@@ -123,62 +123,107 @@ window.MathJax = {
       <p>Viewing this website in portrait orientation can cause problems with equations being longer than the screen width (you can scroll to the right), images being poorly sized, and the font size of maths text being much smaller than regular text. If your only option is a tablet or mobile device, your viewing experience will be better if you view this website in landscape orientation. You might need to refresh the page to fix any problems after rotating.</p>
     </div>
 
-    <h1>Variation of Parameters | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Topic Playlist</a></h1>
-	  <p>Variation of Parameters is a method to find the particular solution of a non-homogeneous linear ODE when the homogeneous solutions are known, which is more powerful than the Method of Undetermined Coefficients since this can solve for any non-homogeneous term if the integrals can be evaluated. The formula requires the homogenous solutions and evaluating some integrals. This page is focused on second order ODEs, but the method applies to higher order ODEs as well.</p>
-	  
-	  <h2>Variation of Parameters Formula | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
+    <h1>Wro&nacute;skian | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Topic Playlist</a></h1>
+	  <p>The Wro&nacute;skian is useful for determining the linear independence of a set of n homogenous solutions to an nth order linear ODE. The Wro&nacute;skian is a determinant of the n homogenous solutions and their first (n-1) derivatives. The Wro&nacute;skian is used in the Variation of Parameters formula and is Abel's Identity.</p>
+    
+    <h2>Definition | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
     <div class="theory">
-    <p>Given a non-homogeneous linear ODE with its two homogeneous solutions $y_{1}(x)$ and $y_{2}(x)$,</p>
+    <p>Given $n$ functions $y_{1}(x)$ to $y_{n}(x)$, the Wro&nacute;skian is defined as,</p>
     \begin{equation}
-    y''+p(x)y'+q(x)y=g(x)
+    W(y_{1},y_{2},\ldots,y_{n}) = \text{det}
+    \begin{bmatrix}
+    y_{1} & y_{2} & \ldots & y_{n} \\
+    y_{1}' & y_{2}' & \ldots & y_{n}' \\
+    \vdots & \vdots &  & \vdots \\
+    y_{1}^{(n-1)} & y_{2}^{(n-1)} & \ldots & y_{n}^{(n-1)}
+    \end{bmatrix}
     \end{equation}
-    <p>The formula for the particular solution $y_{p}(x)$ is,</p>
+    <p>For just two functions, the Wro&nacute;skian evaluates to,</p>
     \begin{equation}
-    y_{p}(x) =  - y_{1}(x)\int \frac{y_{2}(x)g(x)}{W(y_{1},y_{2})}\text{d}x + y_{2}(x)\int \frac{y_{1}(x)g(x)}{W(y_{1},y_{2})}\text{d}x
+    W(y_{1},y_{2}) = \text{det}
+    \begin{bmatrix}
+    y_{1} & y_{2} \\
+    y_{1}' & y_{2}'
+    \end{bmatrix} = y_{1}y_{2}' - y_{1}'y_{2}
     \end{equation}
-    <p>Where $W(y_{1},y_{2})$ is the Wro&nacute;skian.</p>
     </div>
     
+    <h2>Solving IVPs | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
+    <div class="theory">
+    <p>When solving an IVP of the form,</p>
+    \begin{equation}
+    y'' +p(x)y' +q(x)y = 0 \qquad y(x_{0}) = y_{0} \qquad y'(x_{0}) = y'_{0}
+    \end{equation}
+    <p>We'd like to verify that we can solve for any initial condition and that the two homogeneous solutions $y_{1}(x)$ and $y_{2}(x)$ we found are fundamentally different from each other. By writing the equations for the initial conditions as a matrix equation, we can use the tools of linear algebra to figure out.</p>
+    \begin{equation}
+    y(x) = c_{1}y_{1}(x)+c_{2}y_{2}(x)
+    \end{equation}
+    \begin{equation}
+    y(x_{0}) = c_{1}y_{1}(x_{0})+c_{2}y_{2}(x_{0}) = y_{0}
+    \end{equation}
+    \begin{equation}
+    y'(x_{0}) = c_{1}y_{1}'(x_{0})+c_{2}y_{2}'(x_{0}) = y'_{0}
+    \end{equation}
+    \begin{equation}
+    \begin{bmatrix}
+    y_{1}(x_{0}) & y_{2}(x_{0}) \\
+    y_{1}'(x_{0}) & y_{2}'(x_{0})
+    \end{bmatrix}\begin{bmatrix}
+    c_{1} \\
+    c_{2}
+    \end{bmatrix} = \begin{bmatrix}
+    y_{0} \\
+    y'_{0}
+    \end{bmatrix}
+    \end{equation}
+    <p>The determinant of the matrix is the Wro&nacute;skian $W(y_{1},y_{2})$ evaluated at $x=x_{0}$, and the matrix equation is guaranteed to have a solution if and only if the determinant of the matrix is nonzero. Another name for this is the two homogenous solutions $y_{1}(x)$ and $y_{2}(x)$ are linearly independent functions and form a fundamental set of solutions to the differential equation.</p>
+    </div>
+    
+    <h2>Fundamental Set of Solutions | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
+    <div class="theory">
+    <p>Given $y_{1}(x),y_{2}(x),\ldots,y_{n}(x)$ solve an IVP with ODE</p>
+    \begin{equation}
+    y^{(n)} + p_{n-1}(x)y^{(n-1)} + p_{n-2}(x)y^{(n-2)} + \cdots + p_{0}(x)y = 0
+    \end{equation}
+    <p>If $W(y_{1},y_{2},\ldots,y_{n}) \neq 0$ except at isolated points in an interval $I$, then the set of functions $y_{1},y_{2},\ldots,y_{n}$ form a fundamental set of solutions on the interval $I$.</p>
+    
+    <p>Reading this very carefully, the theorem doesn't say the functions $y_{1}(x),y_{2}(x),\ldots,y_{n}(x)$ will be linearly dependent if the $W(y_{1},y_{2},\ldots,y_{n}) = 0$ in an interval $I$ instead of just isolated points. In fact, the set of functions can be linearly independent if $W(y_{1},y_{2},\ldots,y_{n}) = 0$ in an interval $I$.</p>
+    
+    <p>The only thing the theorem guarantees is $y_{1}(x),y_{2}(x),\ldots,y_{n}(x)$ are linearly independent if $W(y_{1},y_{2},\ldots,y_{n}) \neq 0$ except at isolated points in an interval $I$. If $W(y_{1},y_{2},\ldots,y_{n}) = 0$ in an interval $I$, the set of functions $y_{1}(x),y_{2}(x),\ldots,y_{n}(x)$ may or may not be linearly independent in the interval $I$.</p>
+    </div>
+	  
     <h2>Example 1 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
     <div class="example_solution">
-    <p>Find the particular solution to the following differential equation.</p>
+    <p>Calculate the Wro&nacute;skian and determine what interval the theorem guarantees linear independence.</p>
     \begin{equation}
-    x^{2}y''-2xy'+2y=\sqrt{x} \qquad y_{1} = x \quad y_{2} = x^{2}
+    y'' - 3y' + 2y = 0 \qquad W(e^{x},e^{2x})
     \end{equation}
     </div>
     
     <h2>Example 2 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
     <div class="example_solution">
-    <p>Find the particular solution to the following differential equation.</p>
+    <p>Calculate the Wro&nacute;skian and determine what interval the theorem guarantees linear independence.</p>
     \begin{equation}
-    y'' + 4y = \tan(x) \qquad y_{1} = \cos(2x) \quad y_{2} = \sin(2x)
+    y'' + y = 0 \qquad W\big(\cos(x),\sin(x)\big)
     \end{equation}
     </div>
     
     <h2>Example 3 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
     <div class="example_solution">
-    <p>Find the particular solution to the following differential equation.</p>
+    <p>Calculate the Wro&nacute;skian and determine what interval the theorem guarantees linear independence, and compare that to where the functions are actually linearly independent.</p>
     \begin{equation}
-    x^{2}y'' - 2xy' - (x^{2}-2)y = 3x^{3} \qquad y_{1} = e^{x} \quad y_{2} = e^{-x}
+    W\big(x^{2},x|x|\big)
     \end{equation}
     </div>
     
-    <h2>Variation of Parameters Derivation | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
-    <div class="theory">
-    <p>Given a non-homogeneous linear ODE with its two homogeneous solutions $y_{1}(x)$ and $y_{2}(x)$,</p>
+    <h2>Example 4 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
+    <div class="example_solution">
+    <p>Calculate the Wro&nacute;skian and determine what interval the theorem guarantees linear independence, and compare that to where the functions are actually linearly independent.</p>
     \begin{equation}
-    y''+p(x)y'+q(x)y=g(x)
-    \end{equation}
-    <p>The derivation of the formula is based on two assumptions that just happen to work. The first assumption is to make up two unknown functions $u_{1}(x)$ and $u_{2}(x)$ that satisfy the following equation.</p>
-    \begin{equation}
-    y_{p}(x) =  u_{1}(x)y_{1}(x) + u_{2}(x)y_{2}(x) = u_{1}y_{1} + u_{2}y_{2}
-    \end{equation}
-    <p>Since there's one equation but two unknown functions $u_{1}(x)$ and $u_{2}(x)$, another equation is assumed so that there are two equations and two unknowns, so there could still be a way to solve for the unknown $u_{1}(x)$ and $u_{2}(x)$ functions.</p>
-    \begin{equation}
-    u_{1}'y_{1} + u_{2}'y_{2} = 0
+    W\left(\sin(x),\cos\left(x-\frac{\pi}{2}\right)\right)
     \end{equation}
     </div>
-	  
+	
   </div>
 </div>
 </body>

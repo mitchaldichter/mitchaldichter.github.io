@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Differential Equations Variation of Parameters</title>
+<title>Cauchy-Euler Equations</title>
 
-<meta name="description" content="Variation of Parameters is a method to find the particular solution of a non-homogeneous linear ODE when the homogeneous solutions are known, which is more powerful than the Method of Undetermined Coefficients since this can solve for any non-homogeneous term if the integrals can be evaluated. The formula requires the homogenous solutions and evaluating some integrals. This page is focused on second order ODEs, but the method applies to higher order ODEs as well.">
+<meta name="description" content="A Cauchy-Euler equation is a linear homogeneous ordinary differential equation with every nth derivative of the unknown function multiplied by a constant and the independent variable to the power n. Similarly to Bernoulli equations, Cauchy-Euler equations are a rare case of a solvable complicated ODE that the equation has been named. One of their uses is solving Laplace's equation in polar coordinates.">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" sizes="32x32" href="images/profile_image_favicon-32x32.png">
@@ -123,62 +123,59 @@ window.MathJax = {
       <p>Viewing this website in portrait orientation can cause problems with equations being longer than the screen width (you can scroll to the right), images being poorly sized, and the font size of maths text being much smaller than regular text. If your only option is a tablet or mobile device, your viewing experience will be better if you view this website in landscape orientation. You might need to refresh the page to fix any problems after rotating.</p>
     </div>
 
-    <h1>Variation of Parameters | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Topic Playlist</a></h1>
-	  <p>Variation of Parameters is a method to find the particular solution of a non-homogeneous linear ODE when the homogeneous solutions are known, which is more powerful than the Method of Undetermined Coefficients since this can solve for any non-homogeneous term if the integrals can be evaluated. The formula requires the homogenous solutions and evaluating some integrals. This page is focused on second order ODEs, but the method applies to higher order ODEs as well.</p>
-	  
-	  <h2>Variation of Parameters Formula | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
-    <div class="theory">
-    <p>Given a non-homogeneous linear ODE with its two homogeneous solutions $y_{1}(x)$ and $y_{2}(x)$,</p>
-    \begin{equation}
-    y''+p(x)y'+q(x)y=g(x)
-    \end{equation}
-    <p>The formula for the particular solution $y_{p}(x)$ is,</p>
-    \begin{equation}
-    y_{p}(x) =  - y_{1}(x)\int \frac{y_{2}(x)g(x)}{W(y_{1},y_{2})}\text{d}x + y_{2}(x)\int \frac{y_{1}(x)g(x)}{W(y_{1},y_{2})}\text{d}x
-    \end{equation}
-    <p>Where $W(y_{1},y_{2})$ is the Wro&nacute;skian.</p>
-    </div>
+    <h1>Cauchy-Euler Equations | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Topic Playlist</a></h1>
+	  <p>A Cauchy-Euler equation is a linear homogeneous ordinary differential equation with every $y^{(n)}(x)$ derivative of the unknown function multiplied by a constant and the independent variable $x^{n}$. Similarly to Bernoulli equations, Cauchy-Euler equations are a rare case of a solvable complicated ODE that the equation has been named. One of their uses is solving Laplace's equation in polar coordinates.</p>
     
+    <h2>Definition | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
+    <div class="theory">
+    <p>A Cauchy-Euler equation is an ODE of the form,</p>
+    \begin{equation}
+    a_{n}x^{n}y^{(n)}(x)+a_{n-1}x^{n-1}y^{(n-1)}(x)+ \cdots +a_{0}y(x) = 0
+    \end{equation}
+    <p>One way to solve them is guessing a homogenous solution of the form $y(x)=x^{r}$ and determining $r$, similar to guessing $y(x)=e^{rx}$ for equations of the form $ay''+by'+cy=0$. Another method is a clever change of variables.</p>
+    <p>The solutions are often defined only for $x>0$, but can be extended to everything except $x=0$ by replacing $x$ with $|x|$.</p>
+    </div>
+	  
     <h2>Example 1 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
     <div class="example_solution">
-    <p>Find the particular solution to the following differential equation.</p>
+    <p>Find the general solution to the ODE by determining $r$ for the guess $y(x)=x^{r}$.</p>
     \begin{equation}
-    x^{2}y''-2xy'+2y=\sqrt{x} \qquad y_{1} = x \quad y_{2} = x^{2}
+    x^{2}y'' - 3xy' + 3y = 0
     \end{equation}
     </div>
     
     <h2>Example 2 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
     <div class="example_solution">
-    <p>Find the particular solution to the following differential equation.</p>
+    <p>Find the general solution to the ODE by using the change of variables $x=e^{u}$ where $x > 0$.</p>
     \begin{equation}
-    y'' + 4y = \tan(x) \qquad y_{1} = \cos(2x) \quad y_{2} = \sin(2x)
+    x^{2}y'' - 3xy' + 3y = 0
+    \end{equation}
+    </div>
+    
+    <h2>Distinct, Repeated, and Imaginary Roots | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
+    <div class="theory">
+    <p>Find the general solution to the ODE by using the change of variables $x=e^{u}$ in general when the roots are distinct, the roots are repeated, and the roots are imaginary.</p>
+    \begin{equation}
+    ax^{2}y'' + bxy' + cy = 0
+    \end{equation}
+    </div>
+    
+    <h2>Extend Solution to Negative Values | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
+    <div class="theory">
+    <p>Show that using $|x|=e^{u}$ works for all $x \neq 0$.</p>
+    \begin{equation}
+    ax^{2}y'' + bxy' + cy = 0
     \end{equation}
     </div>
     
     <h2>Example 3 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
     <div class="example_solution">
-    <p>Find the particular solution to the following differential equation.</p>
+    <p>Draw some solution curves of the Cauchy-Euler equations for $x > 0$ when the roots are distinct $(r_{1} \neq r_{2})$, the roots are repeated $(r_{1} = r_{2})$, and the roots are imaginary $(r_{1} = \lambda+\mu i, r_{2} = \lambda-\mu i)$.</p>
     \begin{equation}
-    x^{2}y'' - 2xy' - (x^{2}-2)y = 3x^{3} \qquad y_{1} = e^{x} \quad y_{2} = e^{-x}
+    ax^{2}y'' + bxy' + cy = 0
     \end{equation}
     </div>
-    
-    <h2>Variation of Parameters Derivation | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
-    <div class="theory">
-    <p>Given a non-homogeneous linear ODE with its two homogeneous solutions $y_{1}(x)$ and $y_{2}(x)$,</p>
-    \begin{equation}
-    y''+p(x)y'+q(x)y=g(x)
-    \end{equation}
-    <p>The derivation of the formula is based on two assumptions that just happen to work. The first assumption is to make up two unknown functions $u_{1}(x)$ and $u_{2}(x)$ that satisfy the following equation.</p>
-    \begin{equation}
-    y_{p}(x) =  u_{1}(x)y_{1}(x) + u_{2}(x)y_{2}(x) = u_{1}y_{1} + u_{2}y_{2}
-    \end{equation}
-    <p>Since there's one equation but two unknown functions $u_{1}(x)$ and $u_{2}(x)$, another equation is assumed so that there are two equations and two unknowns, so there could still be a way to solve for the unknown $u_{1}(x)$ and $u_{2}(x)$ functions.</p>
-    \begin{equation}
-    u_{1}'y_{1} + u_{2}'y_{2} = 0
-    \end{equation}
-    </div>
-	  
+	
   </div>
 </div>
 </body>
