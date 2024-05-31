@@ -14,6 +14,7 @@ https://mitchaldichter.com/integrating_factor.html
 https://mitchaldichter.com/interval_of_validity.html
 https://mitchaldichter.com/Maths_Survival_Guide.html
 https://mitchaldichter.com/method_of_undetermined_coefficients_second_order.html
+https://mitchaldichter.com/reduction_of_order_second_order.html
 https://mitchaldichter.com/second_order_distinct_real_roots.html
 https://mitchaldichter.com/second_order_imaginary_roots.html
 https://mitchaldichter.com/second_order_repeated_real_root.html

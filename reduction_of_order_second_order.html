@@ -86,30 +86,52 @@ window.MathJax = {
         <li><a href="interval_of_validity.html">Interval of Validity</a></li>
         <!--<li>Applications
           <ol>
-            <li><a href=".html">Radioactive Decay and Population Growth</a></li>
-            <li><a href=".html">Logistic Equation</a></li>
-            <li><a href=".html">Mixing Tank Problem</a></li>
-            <li><a href=".html">Newton's Law of Cooling</a></li>
-            <li><a href=".html">Terminal Velocity</a></li>
-            <li><a href=".html">Continuously Compounded Interest</a></li>
+            <li><a href="radioactive_decay_and_population_growth.html">Radioactive Decay and Population Growth</a></li>
+            <li><a href="logistic_equation.html">Logistic Equation</a></li>
+            <li><a href="mixing_tank_problem.html">Mixing Tank Problem</a></li>
+            <li><a href="newtons_law_of_cooling.html">Newton's Law of Cooling</a></li>
+            <li><a href="terminal_velocity.html">Terminal Velocity</a></li>
+            <li><a href="continuously_compounded interest.html">Continuously Compounded Interest</a></li>
           </ol>
         </li>-->
       </ol>
     </li>
-      <li>Second Order Differential Equations
-        <ol>
-          <li>$ay''+by'+cy = 0$
-            <ol>
-              <li><a href="second_order_distinct_real_roots.html">Distinct Real Roots</a></li>
-              <li><a href="second_order_repeated_real_root.html">Repeated Real Root</a></li>
-              <li><a href="second_order_imaginary_roots.html">Imaginary Roots</a></li>
-            </ol>
-          </li>
-          <li><a href="method_of_undetermined_coefficients_second_order.html">Method of Undetermined Coefficients</a></li>
-          <!--<li><a href="reduction_of_order_second_order.html">Reduction of Order</a></li>
-          <li><a href="variation_of_parameters_second_order.html">Variation of Parameters</a></li>-->
-        </ol>
+    <li>Second Order Differential Equations
+      <ol>
+        <li>$ay''+by'+cy = 0$
+          <ol>
+            <li><a href="second_order_distinct_real_roots.html">Distinct Real Roots</a></li>
+            <li><a href="second_order_repeated_real_root.html">Repeated Real Root</a></li>
+            <li><a href="second_order_imaginary_roots.html">Imaginary Roots</a></li>
+          </ol>
+        </li>
+        <!--<li>Spring-Mass-Damper
+          <ol>
+            <li><a href="under_over_critically_damped.html">Under Damped, Over Damped, Critically Damped</a></li>
+            <li><a href="undamped_oscillations_and_resonance.html">Undamped Oscillations and Resonance</a></li>
+          </ol>
+        </li>-->
+        <li><a href="method_of_undetermined_coefficients_second_order.html">Method of Undetermined Coefficients</a></li>
+        <li><a href="reduction_of_order_second_order.html">Reduction of Order</a></li>
+        <!--<li><a href="Wronskian.html">Wro&nacute;skian</a></li>
+        <li><a href="variation_of_parameters_second_order.html">Variation of Parameters</a></li>
+        <li><a href="Cauchy_Euler_equation_second_order.html">Cauchy-Euler Equations</a></li>-->
+      </ol>
     </li>
+    <!--<li>Higher Order Differential Equations
+      <ol>
+        <li><a href="linear_homogeneous_concepts_higher_order.html">Linear Homogeneous Concepts</a></li>
+        <li><a href="linear_constant_coefficient_higher_order.html">Linear Constant Coefficient</a></li>
+        <li><a href="method_of_undetermined_coefficients_higher_order.html">Method of Undetermined Coefficients</a></li>
+        <li><a href="variation_of_parameters_higher_order.html">Variation of Parameters</a></li>
+      </ol>
+    </li>
+    <li>Laplace Transform
+      <li><a href="laplace_transform_definition.html">Definition</a></li>
+    </li>
+    <li>Systems of First Order ODEs
+      <li><a href="ode_system_simplest_case.html">Simplest Case</a></li>
+    </li>-->
   </ol>
 <!--End Table of Contents-->
   </div>
@@ -172,18 +194,18 @@ window.MathJax = {
     v''y_{1}+2v'y_{1}'+vy_{1}''+p(x)(v'y_{1}+vy_{1}')+q(x)vy_{1}=0
     \end{equation}
     \begin{equation}
-    y_{1}v''+(2y_{1}'+p(x)y_{1})v'+(y_{1}''+p(x)y_{1}'+q(x)y_{1})v=0
+    y_{1}v''+\big(2y_{1}'+p(x)y_{1}\big)v'+\big(y_{1}''+p(x)y_{1}'+q(x)y_{1}\big)v=0
     \end{equation}
     \begin{equation}
-    y_{1}v''+(2y_{1}'+p(x)y_{1})v'+0v=0
+    y_{1}v''+\big(2y_{1}'+p(x)y_{1}\big)v'+0v=0
     \end{equation}
-    The $(y_{1}''+p(x)y_{1}'+q(x)y_{1})v$ was replaced by $0v$ because $y_{1}$ is a homogeneous solution to the original ODE, and the original ODE is exactly what is in the parentheses, so all the $v(x)$ terms disappear.
+    The $\big(y_{1}''+p(x)y_{1}'+q(x)y_{1}\big)v$ was replaced by $0v$ because $y_{1}$ is a homogeneous solution to the original ODE, and the original ODE is exactly what is in the parentheses, so all the $v(x)$ terms disappear.
     \begin{equation}
-    y_{1}v''+(2y_{1}'+p(x)y_{1})v'=0
+    y_{1}v''+\big(2y_{1}'+p(x)y_{1}\big)v'=0
     \end{equation}
     Even though this is a second order ODE, we can use first order solution methods because there is no $v(x)$ term. To make it look like a first order ODE, we can replace $v'(x)=w(x)$ so it's not as confusing.
     \begin{equation}
-    w(x) = v'(x) \qquad y_{1}w'+(2y_{1}'+p(x)y_{1})w=0
+    w(x) = v'(x) \qquad y_{1}w'+\big(2y_{1}'+p(x)y_{1}\big)w=0
     \end{equation}
     Since $p(x)$ and $y_{1}(x)$ are known, we can solve for $w(x)$, which can be used to find $v(x)$, which can be used to find the $y_{2}(x)$ guess we started with.
     </div>
