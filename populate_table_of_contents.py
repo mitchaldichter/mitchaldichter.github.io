@@ -1,6 +1,7 @@
 import os
 
 exclude_HTMLs = [
+"thumbnail.html",
 "index.html",
 "Strogatz_errata.html",
 "combining.html",]
@@ -78,6 +79,7 @@ table_of_contents_array["Differential Equations"] = table_of_contents_courses_se
         </li>-->
       </ol>
     </li>
+    <li><a href="Wronskian.html">Wro&nacute;skian</a></li>
     <li>Second Order Differential Equations
       <ol>
         <li>$ay''+by'+cy = 0$
@@ -95,8 +97,7 @@ table_of_contents_array["Differential Equations"] = table_of_contents_courses_se
         </li>-->
         <li><a href="method_of_undetermined_coefficients_second_order.html">Method of Undetermined Coefficients</a></li>
         <li><a href="reduction_of_order_second_order.html">Reduction of Order</a></li>
-        <!--<li><a href="Wronskian.html">Wro&nacute;skian</a></li>
-        <li><a href="variation_of_parameters_second_order.html">Variation of Parameters</a></li>
+        <!--<li><a href="variation_of_parameters_second_order.html">Variation of Parameters</a></li>
         <li><a href="Cauchy_Euler_equation_second_order.html">Cauchy-Euler Equations</a></li>-->
       </ol>
     </li>
