@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Differential Equations Bernoulli Equations and Substitutions</title>
+<title>Differential Equations Terminal Velocity</title>
 
-<meta name="description" content="Some ODEs can be solved by substituting a new function of the independent and dependent variables into the ODE, which can miraculously make the ODE easier to solve. One class of ODEs that can be solved this way are Bernoulli equations, but other substitutions can work as well.">
+<meta name="description" content="The force of drag on a falling object can be approximated as proportional to the current velocity of the object. This can be written as a first order ordinary differential equation. The terminal velocity is when the force of drag is equal and opposite to the force of gravity and the velocity of the falling object does not change.">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" sizes="32x32" href="images/profile_image_favicon-32x32.png">
@@ -146,112 +146,43 @@ window.MathJax = {
       <p>Viewing this website in portrait orientation can cause problems with equations being longer than the screen width (you can scroll to the right), images being poorly sized, and the font size of maths text being much smaller than regular text. If your only option is a tablet or mobile device, your viewing experience will be better if you view this website in landscape orientation. You might need to refresh the page to fix any problems after rotating.</p>
     </div>
 
-    <h1>Bernoulli Equations and Substitutions | <a href="https://www.youtube.com/watch?v=HR9-AlFpmiY&list=PLXQ5vz32rm_STdBP6jkBzAhG3Pnfuoi6k" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Topic Playlist</a></h1>
-	  <p>In general, no one alive or dead can find the solution to a nonlinear differential equation. The reason so much time is spent studying linear differential equations is not because nonlinear differential equations are less important, it's that nonlinear differential equations are nearly impossible to solve. Sometimes though, specific forms of nonlinear differential equations can be solved. This is so rare that the differential equations will be named. One of those types of equations is Bernoulli equations.</p>
-    
-    <h2>Bernoulli Substitution | <a href="https://www.youtube.com/watch?v=HR9-AlFpmiY&list=PLXQ5vz32rm_STdBP6jkBzAhG3Pnfuoi6k" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
+    <h1>Terminal Velocity | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Topic Playlist</a></h1>
+	  <p>The force of drag on a falling object can be approximated as proportional to the current velocity of the object. This can be written as a first order ordinary differential equation. The terminal velocity is when the force of drag is equal and opposite to the force of gravity and the velocity of the falling object does not change.</p>
+	  
+	  <h2>Sum of Forces on Falling Object | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
     <div class="theory">
-    <p>A Bernoulli differential equation has the following form,</p>
-	  \begin{equation}
-    y' + p(x)y = g(x)y^{n}
-    \end{equation}
-	  <p>where $n$ is any real number except 0 or 1 because $n=0$ means the RHS is just $g(x)y^{0}=g(x)$ and $n=1$ is also linear by combining the $p(x)y$ and $g(x)y$ into one $(p(x)-g(x))y$ term.</p>
-    
-    <p>Using the substitution $u = y^{1-n}$ results in a linear differential equation.</p>
+    <p>The force of gravity and the force of drag sum to equal mass times acceleration from Newton's Law with mass $m$ and drag coefficient $\gamma$, where $v(t)$ is the velocity at time $t$.</p>
     \begin{equation}
-    u = y^{1-n} \qquad u' = (1-n)y^{-n}y'
+    mv' = mg - \gamma v
     \end{equation}
-    \begin{equation}
-    y' + p(x)y = g(x)y^{n} \qquad u' + (1-n)p(x)u = (1-n)g(x)
-    \end{equation}
+    <p>In this ODE, positive velocity means the object is gaining altitude and negative velocity means the object is falling towards the ground.</p>
     </div>
     
-    <h2>Bernoulli Example 1 | <a href="https://www.youtube.com/watch?v=fo0KLVAHnIg&list=PLXQ5vz32rm_STdBP6jkBzAhG3Pnfuoi6k&index=2" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
+    <h2>Example 1 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
     <div class="example_solution">
-    <p>Find the general solution to the Bernoulli differential equation.</p>
+    <p>Draw a direction for the following ODE for a falling object and determine the terminal velocity.</p>
     \begin{equation}
-    y' - 3y = -y^{2}
+    cf
     \end{equation}
     </div>
     
-    <h2>Bernoulli Example 2 | <a href="https://www.youtube.com/watch?v=whcVGiOIlZY&list=PLXQ5vz32rm_STdBP6jkBzAhG3Pnfuoi6k&index=3" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
+    <h2>Example 2 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
     <div class="example_solution">
-    <p>Find the general solution to the Bernoulli differential equation.</p>
+    <p>Solve the following ODE for a falling object and calculate the limit as $t$ goes to infinity to determine the terminal velocity.</p>
     \begin{equation}
-    y' - \frac{y}{x} = -x^{2}y^{-3}
+    cf
     \end{equation}
     </div>
     
-    <h2>Bernoulli Example 3 | <a href="https://www.youtube.com/watch?v=u0lHGFSKkxw&list=PLXQ5vz32rm_STdBP6jkBzAhG3Pnfuoi6k&index=4" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
+    <h2>Example 3 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
     <div class="example_solution">
-    <p>Find the general solution to the Bernoulli differential equation.</p>
+    <p>Draw a phase line for the following ODE for a falling object and determine the equilibrium solution and its stability.</p>
     \begin{equation}
-    y' + y = \sqrt{y}
+    cf
     \end{equation}
     </div>
     
-    <h2>Bernoulli Example 4 | <a href="https://www.youtube.com/watch?v=b1EeG9-h0JE&list=PLXQ5vz32rm_STdBP6jkBzAhG3Pnfuoi6k&index=5" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
-    <div class="example_solution">
-    <p>Find the general solution to the Bernoulli differential equation.</p>
-    \begin{equation}
-    y' + y = e^{x} y^{\frac{3}{7}}
-    \end{equation}
-    </div>
-    
-    <p>Another common substitution problem is $u = \dfrac{y}{x}$ but the problems always seem a little made up.</p>
-    <h2>$u = \dfrac{y}{x}$ Substitution | <a href="https://www.youtube.com/watch?v=wBU0w4NkQfU&list=PLXQ5vz32rm_STdBP6jkBzAhG3Pnfuoi6k&index=6" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
-    <div class="theory">
-    \begin{equation}
-    u = \frac{y}{x} \qquad xu = y \qquad xu' + u = y'
-    \end{equation}
-    \begin{equation}
-    y' = F\left(\frac{y}{x}\right) \qquad xu' + u = F(u)
-    \end{equation}
-    </div>
-    
-    <h2>$u = \dfrac{y}{x}$ Example 1 | <a href="https://www.youtube.com/watch?v=vRvlPXY1Tnk&list=PLXQ5vz32rm_STdBP6jkBzAhG3Pnfuoi6k&index=7" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
-    <div class="example_solution">
-    <p>Find the general solution to the following differential equation.</p>
-    \begin{equation}
-    x^{2}y' = y^{2} + xy
-    \end{equation}
-    </div>
-    
-    <h2>$u = \dfrac{y}{x}$ Example 2 | <a href="https://www.youtube.com/watch?v=b1DPwuizGb4&list=PLXQ5vz32rm_STdBP6jkBzAhG3Pnfuoi6k&index=8" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
-    <div class="example_solution">
-    <p>Find the general solution to the following differential equation.</p>
-    \begin{equation}
-    x^{2}y' = y^{2} + xy + x^{2}
-    \end{equation}
-    </div>
-    
-    <p>Lastly, some differential equations were intentionally made for a particular substitution.</p>
-    
-    <h2>Contrived Example 1 | <a href="https://www.youtube.com/watch?v=oO8TNm621XA&list=PLXQ5vz32rm_STdBP6jkBzAhG3Pnfuoi6k&index=9" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
-    <div class="example_solution">
-    <p>Find the general solution to the following differential equation.</p>
-    \begin{equation}
-    yy' + x = \sqrt{x^{2}+y^{2}}
-    \end{equation}
-    </div>
-    
-    <h2>Contrived Example 2 | <a href="https://www.youtube.com/watch?v=3LNz2JQQUTA&list=PLXQ5vz32rm_STdBP6jkBzAhG3Pnfuoi6k&index=10" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
-    <div class="example_solution">
-    <p>Find the general solution to the following differential equation.</p>
-    \begin{equation}
-    y' = (x+y+4)^{2}
-    \end{equation}
-    </div>
-    
-    <!--<h2>Cauchy-Euler Example 1 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
-    <div class="example_solution">
-    <p>Find the general solution to the ODE by using the change of variables $x=e^{u}$ where $x > 0$.</p>
-    \begin{equation}
-    x^{2}y'' - 3xy' + 3y = 0
-    \end{equation}
-    <b>Note</b>: This example is also on the <a href="Cauchy_Euler_equation_second_order.html"><u>Cauchy-Euler Equations</u></a> page.
-    </div>-->
-	
+	  
   </div>
 </div>
 </body>

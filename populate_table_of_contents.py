@@ -74,7 +74,7 @@ table_of_contents_array["Differential Equations"] = table_of_contents_courses_se
             <li><a href="mixing_tank_problem.html">Mixing Tank Problem</a></li>
             <li><a href="newtons_law_of_cooling.html">Newton's Law of Cooling</a></li>
             <li><a href="terminal_velocity.html">Terminal Velocity</a></li>
-            <li><a href="continuously_compounded interest.html">Continuously Compounded Interest</a></li>
+            <li><a href="continuous_compounded_interest.html">Continuous Compounded Interest</a></li>
           </ol>
         </li>-->
       </ol>
@@ -91,14 +91,15 @@ table_of_contents_array["Differential Equations"] = table_of_contents_courses_se
         </li>
         <!--<li>Spring-Mass-Damper
           <ol>
+            <li><a href="equivalent_RLC_circuit.html">Equivalent RLC Circuit</a></li>
             <li><a href="under_over_critically_damped.html">Under Damped, Over Damped, Critically Damped</a></li>
             <li><a href="undamped_oscillations_and_resonance.html">Undamped Oscillations and Resonance</a></li>
           </ol>
         </li>-->
         <li><a href="method_of_undetermined_coefficients_second_order.html">Method of Undetermined Coefficients</a></li>
         <li><a href="reduction_of_order_second_order.html">Reduction of Order</a></li>
-        <!--<li><a href="variation_of_parameters_second_order.html">Variation of Parameters</a></li>
-        <li><a href="Cauchy_Euler_equation_second_order.html">Cauchy-Euler Equations</a></li>-->
+        <li><a href="variation_of_parameters_second_order.html">Variation of Parameters</a></li>
+        <!--<li><a href="Cauchy_Euler_equation_second_order.html">Cauchy-Euler Equations</a></li>-->
       </ol>
     </li>
     <!--<li>Higher Order Differential Equations
