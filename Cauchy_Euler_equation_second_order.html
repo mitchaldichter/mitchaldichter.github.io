@@ -158,6 +158,23 @@ window.MathJax = {
     <p>One way to solve them is guessing a homogenous solution of the form $y(x)=x^{r}$ and determining $r$, similar to guessing $y(x)=e^{rx}$ for equations of the form $ay''+by'+cy=0$. Another method is a clever change of variables.</p>
     <p>The solutions are often defined only for $x>0$, but can be extended to everything except $x=0$ by replacing $x$ with $|x|$.</p>
     </div>
+    
+    <h2>Distinct, Repeated, and Imaginary Roots | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
+    <div class="theory">
+    <p>Similar to constant coefficient, there are three cases when solving the polynomial for $r$ after substituting $y(x) = x^{r}$ into the ODE.</p>
+    <p>Distinct Real Roots $r_{1}$ and $r_{2}$</p>
+    \begin{equation}
+    y_{1}(x) = x^{r_{1}} \qquad y_{2}(x) = x^{r_{2}}
+    \end{equation}
+    <p>Repeated Real Root $r$</p>
+    \begin{equation}
+    y_{1}(x) = x^{r} \qquad y_{2}(x) = \ln(x)x^{r}
+    \end{equation}
+    <p>Imaginary Roots $\alpha \pm \beta i$</p>
+    \begin{equation}
+    y_{1}(x) = x^{\alpha}\cos\big(\beta\ln(x)\big) \qquad y_{2}(x) = x^{\alpha}\sin\big(\beta\ln(x)\big)
+    \end{equation}
+    </div>
 	  
     <h2>Example 1 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
     <div class="example_solution">
@@ -169,31 +186,31 @@ window.MathJax = {
     
     <h2>Example 2 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
     <div class="example_solution">
-    <p>Find the general solution to the ODE by using the change of variables $x=e^{u}$ where $x > 0$.</p>
+    <p>Find the general solution to the ODE.</p>
     \begin{equation}
-    x^{2}y'' - 3xy' + 3y = 0
-    \end{equation}
-    </div>
-    
-    <h2>Distinct, Repeated, and Imaginary Roots | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
-    <div class="theory">
-    <p>Find the general solution to the ODE by using the change of variables $x=e^{u}$ in general when the roots are distinct, the roots are repeated, and the roots are imaginary.</p>
-    \begin{equation}
-    ax^{2}y'' + bxy' + cy = 0
-    \end{equation}
-    </div>
-    
-    <h2>Extend Solution to Negative Values | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
-    <div class="theory">
-    <p>Show that using $|x|=e^{u}$ works for all $x \neq 0$.</p>
-    \begin{equation}
-    ax^{2}y'' + bxy' + cy = 0
+    x^{2}y'' + 3xy' + y = 0
     \end{equation}
     </div>
     
     <h2>Example 3 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
     <div class="example_solution">
-    <p>Draw some solution curves of the Cauchy-Euler equations for $x > 0$ when the roots are distinct $(r_{1} \neq r_{2})$, the roots are repeated $(r_{1} = r_{2})$, and the roots are imaginary $(r_{1} = \lambda+\mu i, r_{2} = \lambda-\mu i)$.</p>
+    <p>Find the general solution to the ODE.</p>
+    \begin{equation}
+    x^{2}y'' + 3xy' + 2y = 0
+    \end{equation}
+    </div>
+    
+    <h2>Deriving the repeated real root solution | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
+    <div class="theory">
+    <p>Find the general solution to the ODE for a repeated real root using reduction of order.</p>
+    \begin{equation}
+    ax^{2}y'' + bxy' + cy = 0
+    \end{equation}
+    </div>
+    
+    <h2>Deriving the imaginary roots solution | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
+    <div class="theory">
+    <p>Find the general solution to the ODE for imagniary roots by using the change of variables $u = \ln(x)$ and $z(u) = y(x)$ to make a constant coefficient ODE.</p>
     \begin{equation}
     ax^{2}y'' + bxy' + cy = 0
     \end{equation}

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Differential Equations title</title>
+<title>Differential Equations Radioactive Decay and Population Growth</title>
 
-<meta name="description" content="description">
+<meta name="description" content="One of the simplest models for a differential equation is when the rate of growth or decay of a thing is proportional to the current quantity of the thing. The mass of a radioactive substance over time and the population of an organism over time are typical examples.">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" sizes="32x32" href="images/profile_image_favicon-32x32.png">
@@ -146,26 +146,74 @@ window.MathJax = {
       <p>Viewing this website in portrait orientation can cause problems with equations being longer than the screen width (you can scroll to the right), images being poorly sized, and the font size of maths text being much smaller than regular text. If your only option is a tablet or mobile device, your viewing experience will be better if you view this website in landscape orientation. You might need to refresh the page to fix any problems after rotating.</p>
     </div>
 
-    <h1>Topic Name | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Topic Playlist</a></h1>
-	  <p>description</p>
+    <h1>Growth and Decay | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Topic Playlist</a></h1>
+	  <p>One of the simplest models for a differential equation is when the rate of growth or decay of a thing is proportional to the current quantity of the thing. The mass of a radioactive substance over time and the population of an organism over time are typical examples.</p>
 	  
-	  <h2>theory | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
+	  <h2>Radioactive Decay | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
     <div class="theory">
-    <p>paragraph</p>
+    <p>The rate of decay of a radioactive substance is proportional to the mass of the radioactive substance. The typical measurement is the half-life, which is the length of time that half of the radioactive substance will decay. The ODE is typically written as,</p>
     \begin{equation}
-    a+b
+    Q' = -kQ
     \end{equation}
+    <p>where $Q(t)$ is the mass of radioactive substance at time $t$ and $k$ is the rate of radioactive decay. The convention is for $k$ to be a positive number, so the RHS is written as $-kQ$ meaning the rate of change, $Q'$, is always negative.</p>
     </div>
     
-    <h2>Example  | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
+    <h2>Radioactive Decay Example 1 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
     <div class="example_solution">
-    <p>desc</p>
+    <p>Draw a direction field for the radioactive decay of a substance assuming you start with $Q(0) > 0$ for a positive mass and decay rate $k=0.5$.</p>
     \begin{equation}
-    cf
+    Q' = -0.5Q
     \end{equation}
     </div>
     
+    <h2>Radioactive Decay Example 2 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
+    <div class="example_solution">
+    <p>Solve the initial value problem.</p>
+    \begin{equation}
+    Q' = -0.5Q \qquad Q(0) = 10
+    \end{equation}
+    </div>
     
+    <h2>Radioactive Decay Example 3 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
+    <div class="example_solution">
+    <p>Determine the half-life for the following ODE for the radioactive decay of a substance.</p>
+    \begin{equation}
+    Q' = -3Q \qquad Q(0) = Q_{0}
+    \end{equation}
+    </div>
+    
+    <h2>Population Growth | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
+    <div class="theory">
+    <p>The rate of growth of a organism, such as bacteria in milk, can be modelled as proportional to the current amount of bacteria in the milk. The model works well as long as the amount of bacteria is small compared the the quantity of milk. The ODE is typically written as,</p>
+    \begin{equation}
+    P' = kP
+    \end{equation}
+    <p>where $P(t)$ is the mass of radioactive substance at time $t$ and $k$ is the rate of population growth. The convention is for $k$ to be a positive number, so the RHS $P'$ is always positive because the population of bacteria in the milk is always increasing.</p>
+    </div>
+    
+    <h2>Population Growth Example 1 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
+    <div class="example_solution">
+    <p>Draw a direction field for the population growth of bacteria with initial population $P(0) > 0$ and growth rate $k=10$.</p>
+    \begin{equation}
+    P' = 10P
+    \end{equation}
+    </div>
+    
+    <h2>Population Growth Example 2 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
+    <div class="example_solution">
+    <p>Solve the initial value problem.</p>
+    \begin{equation}
+    P' = 10P \qquad P(0) = 0.7
+    \end{equation}
+    </div>
+    
+    <h2>Population Growth Example 3 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
+    <div class="example_solution">
+    <p>Solve for $k$ if $P(0)=3$ and $P(2)=8$.</p>
+    \begin{equation}
+    P' = kP \qquad P(0)=3 \quad P(2)=8
+    \end{equation}
+    </div>
 	  
   </div>
 </div>
