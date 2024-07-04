@@ -165,6 +165,10 @@ tr:nth-child(even) {
   background-color: #EC745C;
 }
 
+.linear_algebra_header {
+  background-color: #EA4335;
+}
+
 .differential_equations_header {
   background-color: #03A9F4;
 }
@@ -181,13 +185,15 @@ tr:nth-child(even) {
   background-color: #4285F4;
 }
 
+.multivariable_calculus_header {
+  background-color: #fbbc05;
+}
+
 /*
-#ea4335
 #fbbc05
 #34a853
 #673ab7
 #3f51b5
-#673ab7
 #e91e63
 #f44336
 */

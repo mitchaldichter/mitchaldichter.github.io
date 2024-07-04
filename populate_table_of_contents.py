@@ -45,6 +45,13 @@ table_of_contents_array["Single Variable Calculus: Integration"] = table_of_cont
     <li><a href="partial_fraction_decomposition.html">Partial Fraction Decomposition</a></li>
   </ol>
 """
+table_of_contents_array["Linear Algebra"] = table_of_contents_courses_section + """
+  <h3 class="table_of_contents_h3">Linear Algebra</h3>
+  <ol>
+    <li><a href="systems_of_linear_equations.html">Systems of Linear Equations</a></li>
+    <li><a href="matrix_multiplication.html">Matrix Multiplication</a></li>
+  </ol>
+"""
 table_of_contents_array["Differential Equations"] = table_of_contents_courses_section + """
   <h3 class="table_of_contents_h3">Differential Equations</h3>
   <ol>
@@ -58,7 +65,7 @@ table_of_contents_array["Differential Equations"] = table_of_contents_courses_se
     <li>First Order Differential Equations
       <ol>
         <li><a href="direction_fields.html">Direction Fields</a></li>
-        <!--<li><a href="equilibria_and_phase_lines.html">Equilibria and Phase Lines</a></li>-->
+        <li><a href="equilibria_stability_and_phase_lines.html">Equilibria, Stability, and Phase Lines</a></li>
         <li><a href="separable_equations.html">Separable Equations</a></li>
         <li><a href="integrating_factor.html">Integrating Factor</a></li>
         <li><a href="differential_equations_substitution.html">Bernoulli Equations and Substitutions</a></li>
@@ -116,6 +123,13 @@ table_of_contents_array["Differential Equations"] = table_of_contents_courses_se
     <li>Systems of First Order ODEs
       <li><a href="ode_system_simplest_case.html">Simplest Case</a></li>
     </li>-->
+  </ol>
+"""
+table_of_contents_array["Multivariable Calculus"] = table_of_contents_courses_section + """
+  <h3 class="table_of_contents_h3">Multivariable Calculus</h3>
+  <ol>
+    <li><a href="divergence.html">Divergence</a></li>
+    <li><a href="curl.html">Curl</a></li>
   </ol>
 """
 table_of_contents_array["Additional Resources"] = table_of_contents_courses_section
