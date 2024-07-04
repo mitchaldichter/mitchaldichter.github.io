@@ -76,8 +76,8 @@ table_of_contents_array["Differential Equations"] = table_of_contents_courses_se
         <li><a href="interval_of_validity.html">Interval of Validity</a></li>
         <li>Applications
           <ol>
-            <!--<li><a href="radioactive_decay_and_population_growth.html">Radioactive Decay and Population Growth</a></li>
-            <li><a href="logistic_equation.html">Logistic Equation</a></li>
+            <li><a href="radioactive_decay_and_population_growth.html">Radioactive Decay and Population Growth</a></li>
+            <!--<li><a href="logistic_equation.html">Logistic Equation</a></li>
             <li><a href="mixing_tank_problem.html">Mixing Tank Problem</a></li>
             <li><a href="newtons_law_of_cooling.html">Newton's Law of Cooling</a></li>
             <li><a href="terminal_velocity.html">Terminal Velocity</a></li>-->

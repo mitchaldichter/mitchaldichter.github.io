@@ -1,5 +1,6 @@
 https://mitchaldichter.com/
 https://mitchaldichter.com/Cauchy_Euler_equation_second_order.html
+https://mitchaldichter.com/continuous_compound_interest.html
 https://mitchaldichter.com/differential_equations_notation_and_definitions.html
 https://mitchaldichter.com/differential_equations_overview.html
 https://mitchaldichter.com/differential_equations_substitution.html
@@ -16,6 +17,7 @@ https://mitchaldichter.com/integrating_factor.html
 https://mitchaldichter.com/interval_of_validity.html
 https://mitchaldichter.com/Maths_Survival_Guide.html
 https://mitchaldichter.com/method_of_undetermined_coefficients_second_order.html
+https://mitchaldichter.com/radioactive_decay_and_population_growth.html
 https://mitchaldichter.com/reduction_of_order_second_order.html
 https://mitchaldichter.com/second_order_distinct_real_roots.html
 https://mitchaldichter.com/second_order_imaginary_roots.html
