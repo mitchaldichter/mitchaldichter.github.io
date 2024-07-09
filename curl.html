@@ -3,7 +3,7 @@
 <head>
 <title>Curl</title>
 
-<meta name="description" content="">
+<meta name="description" content="An intuitive description of the curl in vector calculus is a vector operator that quantifies how much a vector field is rotating about a point and the direction of rotation. For a vector field in the xy-plane, the curl is often interpreted as a scalar function of x and y or as a vector pointing in the z direction. For a vector field in three-dimensional space, the curl is a three dimensional vector. The direction of rotation at point in the vector field follows the right hand rule with the curl vector at that point. If the curl at a point in a vector field is zero, then there is zero rotation at that point.">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" sizes="32x32" href="images/profile_image_favicon-32x32.png">
@@ -81,7 +81,47 @@ window.MathJax = {
     </div>
 
     <h1>Curl | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Topic Playlist</a></h1>
-    <p></p>
+    <p>An intuitive description of the curl in vector calculus is a vector operator that quantifies how much a vector field is rotating about a point and the direction of rotation. For a vector field in the $xy$-plane, the curl is often interpreted as a scalar function of $x$ and $y$ or as a vector pointing in the $z$ direction. For a vector field in three-dimensional space, the curl is a three dimensional vector. The direction of rotation at point in the vector field follows the right hand rule with the curl vector at that point. If the curl at a point in a vector field is zero, then there is zero rotation at that point.</p>
+    
+    <h2>Definition | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
+    <div class="theory">
+    <h3>Two-dimensional vector field $\vec{F}(x,y)$</h3>
+    <p>For a vector field $\vec{F}(x,y)$,</p>
+    \begin{equation}
+    \vec{F}(x,y) = \langle P(x,y),Q(x,y) \rangle
+    \end{equation}
+    <p>The $\text{curl}(\vec{F})$ interpreted as a scalar is,</p>
+    \begin{equation}
+    \text{curl}(\vec{F}) = \nabla \times \vec{F} = \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}
+    \end{equation}
+    <p>The $\text{curl}(\vec{F})$ interpreted as a vector in the $z$ direction is,</p>
+    \begin{equation}
+    \text{curl}(\vec{F}) = \nabla \times \vec{F} = \left\langle 0, 0, \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right\rangle
+    \end{equation}
+    
+    <h3>Three-dimensional vector field $\vec{F}(x,y,z)$</h3>
+    <p>For a vector field $\vec{F}(x,y,z)$,</p>
+    \begin{equation}
+    \vec{F}(x,y,z) = \langle P(x,y,z),Q(x,y,z),R(x,y,z) \rangle
+    \end{equation}
+    <p>The $\text{curl}(\vec{F})$ is a vector valued function,</p>
+    \begin{equation}
+    \text{curl}(\vec{F}) = \nabla \times \vec{F} = \left\langle \frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z}, \frac{\partial P}{\partial z} - \frac{\partial R}{\partial x}, \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right\rangle
+    \end{equation}
+    
+    <p>An easier way to remember the formula for the $\text{curl}(\vec{F})$ is,</p>
+    \begin{equation}
+    \text{curl}(\vec{F}) = \nabla \times \vec{F} = \text{det}\begin{bmatrix}
+    \vec{i} & \vec{j} & \vec{k} \\
+    \dfrac{\partial }{\partial x} & \dfrac{\partial }{\partial y} & \dfrac{\partial }{\partial z} \\
+    P & Q & R
+    \end{bmatrix}
+    \end{equation}
+    <p>This is the cross product of the $\nabla$ vector and $\vec{F}$.</p>
+    \begin{equation}
+    \nabla \times \vec{F} = \Bigg\langle \frac{\partial }{\partial x},\frac{\partial }{\partial y},\frac{\partial }{\partial z} \Bigg\rangle \times \Bigg\langle P(x,y,z),Q(x,y,z),R(x,y,z) \Bigg\rangle
+    \end{equation}
+    </div>
 	
     <h2>Example 1 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
     <div class="example_solution">

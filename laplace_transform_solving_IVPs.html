@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Differential Equations title</title>
+<title>Laplace Transform Solving Initial Value Problems</title>
 
-<meta name="description" content="description">
+<meta name="description" content="Initial value problems (IVPs) can be solved using the Laplace Transform. The Laplace Transform of derivative of the unknown function y(t) is turned into Y(s). Solving for Y(s) are applying the inverse Laplace Transform will give the solution to the initial IVP.">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" sizes="32x32" href="images/profile_image_favicon-32x32.png">
@@ -146,26 +146,37 @@ window.MathJax = {
       <p>Viewing this website in portrait orientation can cause problems with equations being longer than the screen width (you can scroll to the right), images being poorly sized, and the font size of maths text being much smaller than regular text. If your only option is a tablet or mobile device, your viewing experience will be better if you view this website in landscape orientation. You might need to refresh the page to fix any problems after rotating.</p>
     </div>
 
-    <h1>Topic Name | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Topic Playlist</a></h1>
-	  <p>description</p>
+    <h1>Solving Initial Value Problems | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Topic Playlist</a></h1>
+	  <p>Initial value problems (IVPs) can be solved using the Laplace Transform. The Laplace Transform of derivative of the unknown function $y^{(n)}(t)$ is turned into $Y(s)$. Solving for $Y(s)$ are applying the inverse Laplace Transform will give the solution to the initial IVP.</p>
 	  
-	  <h2>theory | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
+	  <h2>Laplace Transform $\mathcal{L}\{ y^{(n)}(t)  \}$ | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
     <div class="theory">
-    <p>paragraph</p>
+    <p>The Laplace Transform of $y(t)$, $y'(t)$, and $y''(t)$ are</p>
     \begin{equation}
-    a+b
+    \mathcal{L}\{ y(t) \} = Y(s)
     \end{equation}
+    \begin{equation}
+    \mathcal{L}\{ y'(t) \} = sY(s) - y(0)
+    \end{equation}
+    \begin{equation}
+    \mathcal{L}\{ y''(t) \} = s^{2}Y(s) - sy(0) - y'(0)
+    \end{equation}
+    <p>where $y(0)$ and $y'(0)$ are from the initial conditions of the initial value problem.</p>
+    
+    <p>In general, the Laplace Transform of $y^{(n)}(t)$ is</p>
+    \begin{equation}
+    \mathcal{L}\{ y^{(n)}(t) \} = s^{n}Y(s) - s^{n-1}y(0) - s^{n-2}y'(0) - \cdots - sy^{(n-2)}(0) - y^{(n-1)}(0)
+    \end{equation}
+    <p>where $y(0),y'(0),\ldots,y^{(n-1)}(0)$ are from the initial conditions of the initial value problem.</p>
     </div>
     
     <h2>Example  | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
     <div class="example_solution">
-    <p>desc</p>
+    <p>Solve the IVP using the Laplace Transform.</p>
     \begin{equation}
-    cf
+    y''
     \end{equation}
     </div>
-    
-    
 	  
   </div>
 </div>

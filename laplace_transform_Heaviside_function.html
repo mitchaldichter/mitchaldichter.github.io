@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Differential Equations Mixing Tank Problems</title>
+<title>Laplace Transform Heaviside Function</title>
 
-<meta name="description" content="The most common differential equation mixing problem is a tank of water with salt water being poured in at the same rate water is flowing out of the tank. There are a few variations which are all typical homework exercises in an introductory differential equations course. A real world application is polluted water flowing into a large lake which also has an outlet, solving the ODE to determine how polluted the water will be over time.">
+<meta name="description" content="The Heaviside function is a step function jumping from height zero to height one at the origin. It's useful in modelling circuits when there's an instantaneous change, like flipping a switch from open to closed in a circuit.">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" sizes="32x32" href="images/profile_image_favicon-32x32.png">
@@ -75,7 +75,7 @@ window.MathJax = {
     <li>First Order Differential Equations
       <ol>
         <li><a href="direction_fields.html">Direction Fields</a></li>
-        <li><a href="equilibria_stability_and_phase_lines.html">Equilibria, Stability, and Phase Lines</a></li>
+        <!--<li><a href="equilibria_and_phase_lines.html">Equilibria and Phase Lines</a></li>-->
         <li><a href="separable_equations.html">Separable Equations</a></li>
         <li><a href="integrating_factor.html">Integrating Factor</a></li>
         <li><a href="differential_equations_substitution.html">Bernoulli Equations and Substitutions</a></li>
@@ -84,16 +84,16 @@ window.MathJax = {
         <li><a href="eulers_method.html">Euler's Method</a></li>
         <li><a href="existence_and_uniqueness.html">Existence and Uniqueness</a></li>
         <li><a href="interval_of_validity.html">Interval of Validity</a></li>
-        <li>Applications
+        <!--<li>Applications
           <ol>
             <li><a href="radioactive_decay_and_population_growth.html">Radioactive Decay and Population Growth</a></li>
-            <!--<li><a href="logistic_equation.html">Logistic Equation</a></li>
+            <li><a href="logistic_equation.html">Logistic Equation</a></li>
             <li><a href="mixing_tank_problem.html">Mixing Tank Problem</a></li>
             <li><a href="newtons_law_of_cooling.html">Newton's Law of Cooling</a></li>
-            <li><a href="terminal_velocity.html">Terminal Velocity</a></li>-->
-            <li><a href="continuous_compound_interest.html">Continuous Compound Interest</a></li>
+            <li><a href="terminal_velocity.html">Terminal Velocity</a></li>
+            <li><a href="continuous_compounded_interest.html">Continuous Compounded Interest</a></li>
           </ol>
-        </li>
+        </li>-->
       </ol>
     </li>
     <li><a href="Wronskian.html">Wro&nacute;skian</a></li>
@@ -116,7 +116,7 @@ window.MathJax = {
         <li><a href="method_of_undetermined_coefficients_second_order.html">Method of Undetermined Coefficients</a></li>
         <li><a href="reduction_of_order_second_order.html">Reduction of Order</a></li>
         <li><a href="variation_of_parameters_second_order.html">Variation of Parameters</a></li>
-        <li><a href="Cauchy_Euler_equation_second_order.html">Cauchy-Euler Equations</a></li>
+        <!--<li><a href="Cauchy_Euler_equation_second_order.html">Cauchy-Euler Equations</a></li>-->
       </ol>
     </li>
     <!--<li>Higher Order Differential Equations
@@ -146,32 +146,148 @@ window.MathJax = {
       <p>Viewing this website in portrait orientation can cause problems with equations being longer than the screen width (you can scroll to the right), images being poorly sized, and the font size of maths text being much smaller than regular text. If your only option is a tablet or mobile device, your viewing experience will be better if you view this website in landscape orientation. You might need to refresh the page to fix any problems after rotating.</p>
     </div>
 
-    <h1>Mixing Tank Problems | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Topic Playlist</a></h1>
-	  <p>The most common differential equation mixing problem is a tank of water with salt water being poured in at the same rate water is flowing out of the tank. There are a few variations which are all typical homework exercises in an introductory differential equations course. A real world application is polluted water flowing into a large lake which also has an outlet, solving the ODE to determine how polluted the water will be over time.</p>
+    <h1>Heaviside function | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Topic Playlist</a></h1>
+	  <p>The Heaviside function is a step function jumping from height zero to height one at the origin. It's useful in modelling circuits when there's an instantaneous change, like flipping a switch from open to closed in a circuit.</p>
+	  
+	  <h2>Definition and Uses for Piecewise Defined $f(t)$ | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
+    <div class="theory">
+    <p>A piecewise defined function $f(t)$ can be written using the Heaviside function $H(t)$ to make the calculation of the Laplace Transform easier.</p>
+    
+    \begin{equation}
+    f(t) = \begin{cases}
+    e^{t} & 0 < t \leq 2 \\
+    t-1 & 2 < t \leq 3 \\
+    \sin(t) & 3 < t
+    \end{cases}
+    \end{equation}
+    
+    <img src="images/piecewise_f.svg" alt="step example 1" class="center_img" width="388" height="195">
+    
+    <p>The Heaviside function is a step function.</p>
+    \begin{equation}
+    H(t) = \begin{cases}
+    0 & t < 0 \\
+    1 & 0 \leq t
+    \end{cases}
+    \end{equation}
+    
+    <img src="images/Heaviside_1.svg" alt="step example 1" class="center_img" width="443" height="195">
+    
+    <p>The Heaviside function can be shifted to jump at $t=c$ by changing the Heaviside function input to $H(t-c)$.</p>
+    
+    \begin{equation}
+    H(t-c) = \begin{cases}
+    0 & t-c < 0 \\
+    1 & 0 \leq t-c
+    \end{cases} = \begin{cases}
+    0 & t < c \\
+    1 & c \leq t
+    \end{cases}
+    \end{equation}
+    
+    <img src="images/Heaviside_2.svg" alt="step example 1" class="center_img" width="443" height="206">
+    
+    <p>The Heaviside function can be flipped so it's 1 on the left and 0 on the right with $1-H(t-c)$.</p>
+    
+    \begin{equation}
+    1-H(t-c) = \begin{cases}
+    1-0 & t < c \\
+    1-1 & c \leq t
+    \end{cases} = \begin{cases}
+    1 & t < c \\
+    0 & c \leq t
+    \end{cases}
+    \end{equation}
+    
+    <img src="images/Heaviside_3.svg" alt="step example 1" class="center_img" width="443" height="206">
+    
+    <p>Two Heaviside functions can be subtracted from each other to be 1 in a range $c < t < d$ with $H(t-c) - H(t-d)$.</p>
+    
+    \begin{equation}
+    H(t-c) - H(t-d) = \begin{cases}
+    0 & t < c \\
+    1 & c \leq t < d \\
+    0 & d \leq t
+    \end{cases}
+    \end{equation}
+    
+    <img src="images/Heaviside_4.svg" alt="step example 1" class="center_img" width="443" height="213">
+    
+    
+    <p>By using Heaviside functions, the piecewise defined function $f(t)$ can be written in a form that's easier to apply the Laplace Transform.</p>
+    
+    \begin{align}
+    f(t) &= \begin{cases}
+    e^{t} & 0 < t \leq 2 \\
+    t-1 & 2 < t \leq 3 \\
+    \sin(t) & 3 < t
+    \end{cases} \\
+    &= e^{t}\big( 1-H(t-2) \big) \\
+    &\qquad+ (t-1)\big( H(t-3)-H(t-2) \big) \\
+    &\qquad+ \sin(t)H(t-3)
+    \end{align}
+    </div>
     
     <h2>Example 1 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
     <div class="example_solution">
-    <p>A tank initially containing 500L of fresh water has salt water flowing into it at a rate of 10L per minute with a concentration of 0.3kg of salt per 1L of water. The tank has a drain at the bottom also flowing at 10L per minute. Write an ODE for the kg of salt $Q(t)$ in the tank at time $t$ where $t$ is in minutes. Assume the tank is thoroughly mixed so the salt in the tank is even distributed throughout the entire tank.</p>
+    <p>Calculate the Laplace Transform for $H(t)$.</p>
+    \begin{equation}
+    \mathcal{L}\{ H(t) \} = \int_{0}^{\infty} H(t) e^{-st} \text{d}t
+    \end{equation}
     </div>
     
     <h2>Example 2 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
     <div class="example_solution">
-    <p>A tank initially containing 500L of fresh water has salt water flowing into it at a rate of 10L per minute with a concentration of 0.3kg of salt per 1L of water. The tank has a drain at the bottom also flowing at 10L per minute. When will the concentration of salt in the tank be within 2% of the limiting value?</p>
+    <p>Calculate the Laplace Transform for $H(t-c)f(t)$.</p>
+    \begin{equation}
+    \mathcal{L}\{ H(t-c) \} = \int_{0}^{\infty} H(t-c) e^{-st} \text{d}t
+    \end{equation}
+    </div>
+    
+    <h2>Laplace Transform $\mathcal{L}\{ H(t-c) f(t) \}$ | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
+    <div class="theory">
+    <p>Use a substitution $\tau = t-c$ to change the bounds back to the normal 0 to $\infty$.</p>
+    
+    \begin{equation}
+    \mathcal{L}\{ H(t-c) f(t) \} = \int_{0}^{\infty} H(t-c) f(t) e^{-st} \text{d}t = \int_{c}^{\infty} f(t) e^{-st} \text{d}t
+    \end{equation}
+    
     </div>
     
     <h2>Example 3 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
     <div class="example_solution">
-    <p>A tank initially containing 700L of fresh water has salt water flowing into it at a rate of 8L per minute with the concentration of salt varying over time given by $2 + \sin(t)$ kg salt per 1L of water. The tank has a drain at the bottom also flowing at 8L per minute. Write an ODE for the kg of salt $Q(t)$ in the tank at time $t$.</p>
+    <p>Calculate the Laplace Transform for $H(t-3)(t+1)$.</p>
+    \begin{equation}
+    \mathcal{L}\{ H(t-3)(t+1) \}
+    \end{equation}
     </div>
     
     <h2>Example 4 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
     <div class="example_solution">
-    <p>A tank initially containing 300L of fresh water has salt water flowing into it at a rate of 5L per minute with a concentration of 0.4kg of salt per 1L of water. The tank has a drain at the bottom also flowing at 5L per minute. After 10 minutes, the salt water flowing into the tank is replaced with fresh water. Calculate how much salt is in the tank after 5 minutes after fresh water started flowing into the tank.</p>
+    <p>Calculate the Laplace Transform for $H(t-3)e^{5t}$.</p>
+    \begin{equation}
+    \mathcal{L}\{ H(t-3)e^{5t} \}
+    \end{equation}
     </div>
     
     <h2>Example 5 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
     <div class="example_solution">
-    <p>A tank initially containing 250L of fresh water has salt water flowing into it at a rate of 2L per minute with a concentration of 0.25kg of salt per 1L of water. The tank has a drain at the bottom flowing at 1L per minute, so the volume of water in the tank is increasing over time. Write an ODE for the kg of salt $Q(t)$ in the tank at time $t$.</p>
+    <p>Calculate the Laplace Transform for $H(t-3)\cos(t)$.</p>
+    \begin{equation}
+    \mathcal{L}\{ H(t-3)\cos(t) \}
+    \end{equation}
+    </div>
+    
+    <h2>Example 6 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
+    <div class="example_solution">
+    <p>Calculate the Laplace Transform for a piecewise defined function $f(t)$.</p>
+    \begin{equation}
+    \mathcal{L}\{ f(t) \} \qquad f(t) = \begin{cases}
+    e^{t} & 0 < t \leq 2 \\
+    t-1 & 2 < t \leq 3 \\
+    \sin(t) & 3 < t
+    \end{cases}
+    \end{equation}
     </div>
 	  
   </div>

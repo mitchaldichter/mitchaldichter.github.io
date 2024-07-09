@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Differential Equations Mixing Tank Problems</title>
+<title>Laplace Transform Dirac Delta Function</title>
 
-<meta name="description" content="The most common differential equation mixing problem is a tank of water with salt water being poured in at the same rate water is flowing out of the tank. There are a few variations which are all typical homework exercises in an introductory differential equations course. A real world application is polluted water flowing into a large lake which also has an outlet, solving the ODE to determine how polluted the water will be over time.">
+<meta name="description" content="The Dirac delta function is used to represent a unit impulse. This can approximate an almost instantaneous event, such two billiard balls hitting each other. It's an unusual function because because it's like a box with zero width but infinite height that has a total area of zero.">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" sizes="32x32" href="images/profile_image_favicon-32x32.png">
@@ -75,7 +75,7 @@ window.MathJax = {
     <li>First Order Differential Equations
       <ol>
         <li><a href="direction_fields.html">Direction Fields</a></li>
-        <li><a href="equilibria_stability_and_phase_lines.html">Equilibria, Stability, and Phase Lines</a></li>
+        <!--<li><a href="equilibria_and_phase_lines.html">Equilibria and Phase Lines</a></li>-->
         <li><a href="separable_equations.html">Separable Equations</a></li>
         <li><a href="integrating_factor.html">Integrating Factor</a></li>
         <li><a href="differential_equations_substitution.html">Bernoulli Equations and Substitutions</a></li>
@@ -84,16 +84,16 @@ window.MathJax = {
         <li><a href="eulers_method.html">Euler's Method</a></li>
         <li><a href="existence_and_uniqueness.html">Existence and Uniqueness</a></li>
         <li><a href="interval_of_validity.html">Interval of Validity</a></li>
-        <li>Applications
+        <!--<li>Applications
           <ol>
             <li><a href="radioactive_decay_and_population_growth.html">Radioactive Decay and Population Growth</a></li>
-            <!--<li><a href="logistic_equation.html">Logistic Equation</a></li>
+            <li><a href="logistic_equation.html">Logistic Equation</a></li>
             <li><a href="mixing_tank_problem.html">Mixing Tank Problem</a></li>
             <li><a href="newtons_law_of_cooling.html">Newton's Law of Cooling</a></li>
-            <li><a href="terminal_velocity.html">Terminal Velocity</a></li>-->
-            <li><a href="continuous_compound_interest.html">Continuous Compound Interest</a></li>
+            <li><a href="terminal_velocity.html">Terminal Velocity</a></li>
+            <li><a href="continuous_compounded_interest.html">Continuous Compounded Interest</a></li>
           </ol>
-        </li>
+        </li>-->
       </ol>
     </li>
     <li><a href="Wronskian.html">Wro&nacute;skian</a></li>
@@ -116,7 +116,7 @@ window.MathJax = {
         <li><a href="method_of_undetermined_coefficients_second_order.html">Method of Undetermined Coefficients</a></li>
         <li><a href="reduction_of_order_second_order.html">Reduction of Order</a></li>
         <li><a href="variation_of_parameters_second_order.html">Variation of Parameters</a></li>
-        <li><a href="Cauchy_Euler_equation_second_order.html">Cauchy-Euler Equations</a></li>
+        <!--<li><a href="Cauchy_Euler_equation_second_order.html">Cauchy-Euler Equations</a></li>-->
       </ol>
     </li>
     <!--<li>Higher Order Differential Equations
@@ -146,32 +146,55 @@ window.MathJax = {
       <p>Viewing this website in portrait orientation can cause problems with equations being longer than the screen width (you can scroll to the right), images being poorly sized, and the font size of maths text being much smaller than regular text. If your only option is a tablet or mobile device, your viewing experience will be better if you view this website in landscape orientation. You might need to refresh the page to fix any problems after rotating.</p>
     </div>
 
-    <h1>Mixing Tank Problems | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Topic Playlist</a></h1>
-	  <p>The most common differential equation mixing problem is a tank of water with salt water being poured in at the same rate water is flowing out of the tank. There are a few variations which are all typical homework exercises in an introductory differential equations course. A real world application is polluted water flowing into a large lake which also has an outlet, solving the ODE to determine how polluted the water will be over time.</p>
+    <h1>Dirac delta function | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Topic Playlist</a></h1>
+	  <p>The Dirac delta function is used to represent a unit impulse. This can approximate an almost instantaneous event, such two billiard balls hitting each other. It's an unusual function because because it's like a box with zero width but infinite height that has a total area of zero.</p>
+	  
+	  <h2>Definition | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
+    <div class="theory">
+    <p>Imagine making a box with width and height so that the area of the box $=$ (width)(height) $=$ 1.</p>
+    
+    <img src="images/boxes_1.svg" alt="unit box example 1" class="center_img" width="380" height="250">
+    
+    <p>The base of the box has center $t=0$ with the sides at $t=\dfrac{-1}{2n}$ and $\dfrac{1}{2n}$ so the total width is $\dfrac{1}{n}$, which makes area $=$ (width)(height) $=$ $\dfrac{1}{n} n = 1$.</p>
+    
+    <img src="images/boxes_2.svg" alt="unit box example 2" class="center_img" width="358" height="257">
+    
+    <p>The integral of the box $B(t)$ and the function $f(t)$ is approximately the value of the $f(t)$ at $t=0$ because $f(t)$ doesn't change much for $\dfrac{-1}{2n} < t < \dfrac{1}{2n}$.</p>
+    \begin{equation}
+    \int_{-\infty}^{\infty} B(t)f(t) \text{d}t = \int_{-1/2n}^{1/2n} \frac{1}{n}f(t) \text{d}t \approx \int_{-1/2n}^{1/2n} \frac{1}{n}f(0) \text{d}t = f(0)
+    \end{equation}
+    
+    <p>If the box keeps getting thinner and taller while keeping a unit area, the integral will keep getting closer to $f(0)$.</p>
+    
+    <p>Intuitively, the Dirac delta function, $\delta(t)$, is a box with zero width and infinite height with unit area located at $t=0$. The integral of $\delta(t)$ and $f(t)$ is no longer approximately but exactly equal to $f(0)$.</p>
+    
+    \begin{equation}
+    \int_{-\infty}^{\infty} \delta(t)f(t) \text{d}t = f(0)
+    \end{equation}
+    </div>
     
     <h2>Example 1 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
     <div class="example_solution">
-    <p>A tank initially containing 500L of fresh water has salt water flowing into it at a rate of 10L per minute with a concentration of 0.3kg of salt per 1L of water. The tank has a drain at the bottom also flowing at 10L per minute. Write an ODE for the kg of salt $Q(t)$ in the tank at time $t$ where $t$ is in minutes. Assume the tank is thoroughly mixed so the salt in the tank is even distributed throughout the entire tank.</p>
+    <p>Show that integrating $\delta(t-c)$ times $f(t)$ is equal to $f(c)$, where $c$ is a constant.</p>
+    \begin{equation}
+    \int_{-\infty}^{\infty} \delta(t-c)f(t) \text{d}t = f(c)
+    \end{equation}
     </div>
     
     <h2>Example 2 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
     <div class="example_solution">
-    <p>A tank initially containing 500L of fresh water has salt water flowing into it at a rate of 10L per minute with a concentration of 0.3kg of salt per 1L of water. The tank has a drain at the bottom also flowing at 10L per minute. When will the concentration of salt in the tank be within 2% of the limiting value?</p>
+    <p>Calculate the Laplace Transform for $\delta(t-c)$.</p>
+    \begin{equation}
+    \mathcal{L}\{ \delta(t-c) \} = \int_{0}^{\infty} \delta(t-c) e^{-st} \text{d}t
+    \end{equation}
     </div>
     
     <h2>Example 3 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
     <div class="example_solution">
-    <p>A tank initially containing 700L of fresh water has salt water flowing into it at a rate of 8L per minute with the concentration of salt varying over time given by $2 + \sin(t)$ kg salt per 1L of water. The tank has a drain at the bottom also flowing at 8L per minute. Write an ODE for the kg of salt $Q(t)$ in the tank at time $t$.</p>
-    </div>
-    
-    <h2>Example 4 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
-    <div class="example_solution">
-    <p>A tank initially containing 300L of fresh water has salt water flowing into it at a rate of 5L per minute with a concentration of 0.4kg of salt per 1L of water. The tank has a drain at the bottom also flowing at 5L per minute. After 10 minutes, the salt water flowing into the tank is replaced with fresh water. Calculate how much salt is in the tank after 5 minutes after fresh water started flowing into the tank.</p>
-    </div>
-    
-    <h2>Example 5 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
-    <div class="example_solution">
-    <p>A tank initially containing 250L of fresh water has salt water flowing into it at a rate of 2L per minute with a concentration of 0.25kg of salt per 1L of water. The tank has a drain at the bottom flowing at 1L per minute, so the volume of water in the tank is increasing over time. Write an ODE for the kg of salt $Q(t)$ in the tank at time $t$.</p>
+    <p>Calculate the Laplace Transform for $\delta(t-c)f(t)$.</p>
+    \begin{equation}
+    \mathcal{L}\{ \delta(t-c) f(t) \} = \int_{0}^{\infty} \delta(t-c) f(t) e^{-st} \text{d}t
+    \end{equation}
     </div>
 	  
   </div>
