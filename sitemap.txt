@@ -24,5 +24,6 @@ https://mitchaldichter.com/second_order_imaginary_roots.html
 https://mitchaldichter.com/second_order_repeated_real_root.html
 https://mitchaldichter.com/separable_equations.html
 https://mitchaldichter.com/Strogatz_errata.html
+https://mitchaldichter.com/terminal_velocity.html
 https://mitchaldichter.com/variation_of_parameters_second_order.html
 https://mitchaldichter.com/Wronskian.html
