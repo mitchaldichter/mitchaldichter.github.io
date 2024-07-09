@@ -3,6 +3,7 @@ import os
 exclude_HTMLs = [
 "thumbnail.html",
 "index.html",
+"business_card_page.html",
 "Strogatz_errata.html",
 "combining.html",]
 
@@ -119,6 +120,8 @@ table_of_contents_array["Differential Equations"] = table_of_contents_courses_se
     </li>
     <li>Laplace Transform
       <li><a href="laplace_transform_definition.html">Definition</a></li>
+      <li><a href="laplace_transform_Dirac_delta_function.html">Dirac delta function</a></li>
+      <li><a href="laplace_transform_Heaviside_function.html">Heaviside function</a></li>
     </li>
     <li>Systems of First Order ODEs
       <li><a href="ode_system_simplest_case.html">Simplest Case</a></li>

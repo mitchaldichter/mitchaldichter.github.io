@@ -7,7 +7,8 @@ exclude_HTMLs = [
 "integration_by_parts.html",
 "integration_overview.html",
 "limits_and_derivatives_overview.html",
-"thumbnail.html",]
+"thumbnail.html",
+"business_card_page.html",]
 
 try:
   os.remove("sitemap.txt")

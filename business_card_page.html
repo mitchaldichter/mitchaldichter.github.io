@@ -24,21 +24,6 @@ window.MathJax = {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
 
-<script>
-function business_card_id() {
-  let params = new URLSearchParams(document.location.search);
-  let id = parseInt(params.get("id"));
-
-  if(id == 1) {
-    document.getElementById("img_1").style.display = "block";
-  } else if(id == 2) {
-    document.getElementById("img_2").style.display = "block";
-  }
-}
-
-//alert("id=" + id);
-</script>
-
 <script type="text/javascript" src="shared_code.js"></script>
 </head>
 <body onload="portrait_warning_visibility()">
@@ -62,161 +47,43 @@ function business_card_id() {
       <p>Viewing this website in portrait orientation can cause problems with equations being longer than the screen width (you can scroll to the right), images being poorly sized, and the font size of maths text being much smaller than regular text. If your only option is a tablet or mobile device, your viewing experience will be better if you view this website in landscape orientation. You might need to refresh the page to fix any problems after rotating.</p>
     </div>
     
-    <img id="img_1" src="images/slope_fields_plot_1.svg" alt="business card 1" style="display: none;" width="464" height="496" onload="business_card_id()">
-    
-    <img id="img_2" src="images/slope_fields_plot_2.svg" alt="business card 2" style="display: none;" width="464" height="496" onload="business_card_id()">
+    <div id="content_div">
+      
+    </div>
+    <script>
+    let params = new URLSearchParams(document.location.search);
+    let id = parseInt(params.get("id"));
 
-    <h1>How to use <a href="https://www.wolframalpha.com/" target="_blank">WolframAlpha</a></h1>
-    <p>A lot of students don't realize this, but WolframAlpha can be used to <b>check</b> your work on maths homework. I say <b>check</b> because you don't want to use WolframAlpha to do your homework for you. If students don't actually do the homework themselves, those students tend to do very badly on exams because they didn't practice by doing the homework. Copying answers from anywhere will complete the assignment but you won't retain much for the exam. Despite homework counting for around 10% of the course usually, about 90% of learning happens when doing the homework. Don't sabotage yourself by not doing your homework.</p>
-    
-    <p>WolframAlpha can do a lot a common problems if you know how to type the problem in correctly. One major difficulty is WolframAlpha will try to simplify the answer in a way a person would not, making the result significantly different from what a person would write. Also, complicated problems can exceed the free computation time limit and you may not get an answer. You can get around this by paying for a subscription, which also tries to provide step by step solutions, but the steps can be counter intuitive sometimes. However, the free version of WolframAlpha is often good enough.</p>
-    
-    <h2>Example 1 | <a href="https://www.wolframalpha.com/input?i=solve+x+%3D+1+%2B+1%2Fy+for+y" target="_blank">WolframAlpha Solving Equations for $y$</a></h2>
-    <div class="example_solution">
-    <p>The above link leads to WolframeAlpha with the following input.</p>
-    <pre>solve x = 1 + 1/y for y</pre>
-    <p>Part of the output is</p>
-    \begin{equation}
-    y = \frac{1}{x-1} \text{ and } x \neq 1
-    \end{equation}
-    </div>
-    
-    <h2>Example 2 | <a href="https://www.wolframalpha.com/input?i=derivative+of+x%5E4+sin%28x%29+e%5Ex+with+respect+to+x" target="_blank">WolframAlpha General Differentiation</a></h2>
-    <div class="example_solution">
-    <p>The above link leads to WolframeAlpha with the following input.</p>
-    <pre>derivative of x^4 sin(x) e^x with respect to x</pre>
-    <p>Part of the output is</p>
-    \begin{equation}
-    \frac{\text{d}}{\text{d}x} (x^{4} \sin(x) e^{x}) = e^{x} x^{3} ((x + 4) \sin(x) + x \cos(x))
-    \end{equation}
-    </div>
-    
-    <h2>Example 3 | <a href="https://www.wolframalpha.com/input?i=integral+of+x%5E4+sin%28x%29+e%5Ex+dx" target="_blank">WolframAlpha Indefinite Integration</a></h2>
-    <div class="example_solution">
-    <p>The above link leads to WolframeAlpha with the following input.</p>
-    <pre>integral of x^4 sin(x) e^x dx</pre>
-    <p>Part of the output is</p>
-    \begin{equation}
-    \int x^{4} \sin(x) e^{x} \text{ d}x = \frac{1}{2} e^{x} ((x^{4} - 6 x^{2} + 12 x - 6) \sin(x) - (x^{4} - 4 x^{3} + 6 x^{2} - 6) \cos(x)) + \text{ constant}
-    \end{equation}
-    </div>
-    
-    <h2>Example 4 | <a href="https://www.wolframalpha.com/input?i=integral+from+3+to+7+of+x%2F%28x%5E2%2B1%29+dx" target="_blank">WolframAlpha Definite Integration</a></h2>
-    <div class="example_solution">
-    <p>The above link leads to WolframeAlpha with the following input.</p>
-    <pre>integral from 3 to 7 of x/(x^2+1) dx</pre>
-    <p>Part of the output is</p>
-    \begin{equation}
-    \int_{3}^{7} \frac{x}{x^{2}+1} \text{ d}x = \frac{\ln(5)}{2}
-    \end{equation}
-    </div>
-    
-    <h2>Example 4 | <a href="https://www.wolframalpha.com/input?i=plot+direction+field+for+y%27+%2B+xy+%3D+0" target="_blank">WolframAlpha Plotting Direction Fields</a></h2>
-    <div class="example_solution">
-    <p>The above link leads to WolframeAlpha with the following input.</p>
-    <pre>plot direction field for y' + xy = 0</pre>
-    <p>For legal reasons I have not shown the output here, but WolframAlpha does make direction field plots similar to your textbook.</p>
-    </div>
-    
-    <h2>Example 5 | <a href="https://www.wolframalpha.com/input?i=y%27+%2B+xy+%3D+0" target="_blank">WolframAlpha General Solution to an ODE</a></h2>
-    <div class="example_solution">
-    <p>The above link leads to WolframeAlpha with the following input.</p>
-    <pre>y' + xy = 0</pre>
-    <p>Part of the output is</p>
-    \begin{equation}
-    y(x) = c_{1} e^{-x^{2}/2}
-    \end{equation}
-    </div>
-    
-    <h2>Example 6 | <a href="https://www.wolframalpha.com/input?i=y%27+%2B+xy+%3D+7x+with+y%280%29+%3D+2" target="_blank">WolframAlpha First Order ODE Initial Value Problem</a></h2>
-    <div class="example_solution">
-    <p>The above link leads to WolframeAlpha with the following input.</p>
-    <pre>y' + xy = 7x with y(0) = 2</pre>
-    <p>Part of the output is</p>
-    \begin{equation}
-    y(x) = 7 - 5 e^{-x^{2}/2}
-    \end{equation}
-    </div>
-    
-    <h2>Example 7 | <a href="https://www.wolframalpha.com/input/?i=use+Euler+method+y%27+%3D+2*x-y%2C+y%280%29+%3D+0%2C+from+0+to+1%2C+h+%3D+0.01" target="_blank">WolframAlpha Perform Euler's Method</a></h2>
-    <div class="example_solution">
-    <p>The above link leads to WolframeAlpha with the following input.</p>
-    <pre>use Euler method y' = 2*x-y, y(0) = 0, from 0 to 1, h = 0.1</pre>
-    <p>Part of the output is</p>
-    <table>
-      <tr>
-        <th>step</th>
-        <th>x</th>
-        <th>y</th>
-      </tr>
-      <tr>
-        <td>0</td>
-        <td>0.0</td>
-        <td>0.0</td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>0.1</td>
-        <td>0.0</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>0.2</td>
-        <td>0.02</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>0.3</td>
-        <td>0.058</td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td>0.4</td>
-        <td>0.1122</td>
-      </tr>
-      <tr>
-        <td>5</td>
-        <td>0.5</td>
-        <td>0.18098</td>
-      </tr>
-      <tr>
-        <td>6</td>
-        <td>0.6</td>
-        <td>0.262882</td>
-      </tr>
-      <tr>
-        <td>7</td>
-        <td>0.7</td>
-        <td>0.356594</td>
-      </tr>
-      <tr>
-        <td>8</td>
-        <td>0.8</td>
-        <td>0.460934</td>
-      </tr>
-      <tr>
-        <td>9</td>
-        <td>0.9</td>
-        <td>0.574841</td>
-      </tr>
-      <tr>
-        <td>10</td>
-        <td>1.0</td>
-        <td>0.697357</td>
-      </tr>
-    </table>
-    </div>
-    
-    <h2>Example 8 | <a href="https://www.wolframalpha.com/input?i=y%27%27%2By%3D0%2C+y%27%280%29%3D-1%2Cy%280%29%3D4" target="_blank">WolframAlpha Second Order ODE Initial Value Problem</a></h2>
-    <div class="example_solution">
-    <p>The above link leads to WolframeAlpha with the following input.</p>
-    <pre>y''+y=0, y'(0)=-1, y(0)=4</pre>
-    <p>Part of the output is</p>
-    \begin{equation}
-    y(x) = 4\cos(x)-\sin(x)
-    \end{equation}
-    </div>
-	
+    if(id == 1) {
+      document.getElementById("content_div").innerHTML = `<img src="screenshots/Capture1.PNG" width="75%">
+        <h1>Popular Pages</h1>
+        <p>Recommendations based on what other website visitors have been viewing.</p>
+        <hr>
+        <a href="https://www.youtube.com/playlist?list=PLXQ5vz32rm_QrF--tlOvaWHeEW8QVOCU3" target="_blank"><img src="screenshots/Capture3.PNG" width="75%"></a>
+        <a href="https://mitchaldichter.com/exact_equations.html" target="_blank"><img src="screenshots/Capture1.PNG" width="75%"></a>
+        <br>
+        <br>
+        <hr>
+        <br>
+        <a href="https://www.youtube.com/playlist?list=PLXQ5vz32rm_S3nf9S02Q-5t2Xw6f4MUAr" target="_blank"><img src="screenshots/Capture4.PNG" width="75%"></a>
+        <a href="https://mitchaldichter.com/exact_equations_integrating_factor.html" target="_blank"><img src="screenshots/Capture2.PNG" width="75%"></a>`;
+    }
+    else if(id == 2) {
+      document.getElementById("content_div").innerHTML = `<img src="screenshots/Capture2.PNG" width="75%">
+        <h1>Popular Pages</h1>
+        <p>Recommendations based on what other website visitors have been viewing.</p>
+        <hr>
+        <a href="https://www.youtube.com/playlist?list=PLXQ5vz32rm_QrF--tlOvaWHeEW8QVOCU3" target="_blank"><img src="screenshots/Capture3.PNG" width="75%"></a>
+        <a href="https://mitchaldichter.com/exact_equations.html" target="_blank"><img src="screenshots/Capture1.PNG" width="75%"></a>
+        <br>
+        <br>
+        <hr>
+        <br>
+        <a href="https://www.youtube.com/playlist?list=PLXQ5vz32rm_S3nf9S02Q-5t2Xw6f4MUAr" target="_blank"><img src="screenshots/Capture4.PNG" width="75%"></a>
+        <a href="https://mitchaldichter.com/exact_equations_integrating_factor.html" target="_blank"><img src="screenshots/Capture2.PNG" width="75%"></a>`;
+    }
+    </script>
+
   </div>
 </div>
 </body>
