@@ -173,7 +173,7 @@ tr:nth-child(even) {
   background-color: #03A9F4;
 }
 
-.additional_resources_header {
+.additional_resources_header, .business_card_page_header {
   background-color: Tomato;
 }
 
