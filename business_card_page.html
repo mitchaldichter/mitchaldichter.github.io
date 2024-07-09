@@ -53,6 +53,7 @@ window.MathJax = {
     <script>
     let params = new URLSearchParams(document.location.search);
     let id = parseInt(params.get("id"));
+    //alert("id="+id);
 
     if(id == 1) {
       document.getElementById("content_div").innerHTML = `<img src="screenshots/Capture1.PNG" width="75%">
@@ -71,6 +72,20 @@ window.MathJax = {
     else if(id == 2) {
       document.getElementById("content_div").innerHTML = `<img src="screenshots/Capture2.PNG" width="75%">
         <h1>Popular Pages</h1>
+        <p>Recommendations based on what other website visitors have been viewing.</p>
+        <hr>
+        <a href="https://www.youtube.com/playlist?list=PLXQ5vz32rm_QrF--tlOvaWHeEW8QVOCU3" target="_blank"><img src="screenshots/Capture3.PNG" width="75%"></a>
+        <a href="https://mitchaldichter.com/exact_equations.html" target="_blank"><img src="screenshots/Capture1.PNG" width="75%"></a>
+        <br>
+        <br>
+        <hr>
+        <br>
+        <a href="https://www.youtube.com/playlist?list=PLXQ5vz32rm_S3nf9S02Q-5t2Xw6f4MUAr" target="_blank"><img src="screenshots/Capture4.PNG" width="75%"></a>
+        <a href="https://mitchaldichter.com/exact_equations_integrating_factor.html" target="_blank"><img src="screenshots/Capture2.PNG" width="75%"></a>`;
+    }
+    else {
+      document.getElementById("content_div").innerHTML = `<img src="screenshots/Capture1.PNG" width="75%">
+        <h1>Navigate to the main site</h1>
         <p>Recommendations based on what other website visitors have been viewing.</p>
         <hr>
         <a href="https://www.youtube.com/playlist?list=PLXQ5vz32rm_QrF--tlOvaWHeEW8QVOCU3" target="_blank"><img src="screenshots/Capture3.PNG" width="75%"></a>
