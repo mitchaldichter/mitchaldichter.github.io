@@ -3,7 +3,7 @@
 <head>
 <title>RLC Circuit ODE</title>
 
-<meta name="description" content="">
+<meta name="description" content="The ideal models of a resistor, capacitor, and inductor (RLC) connected in series with a battery result in an ODE with the same form as a spring-mass-damper system. All the behaviours and analysis can be applied directly to analysing an RLC circuit in series.">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" sizes="32x32" href="images/profile_image_favicon-32x32.png">
@@ -153,25 +153,37 @@ window.MathJax = {
       <p>Viewing this website in portrait orientation can cause problems with equations being longer than the screen width (you can scroll to the right), images being poorly sized, and the font size of maths text being much smaller than regular text. If your only option is a tablet or mobile device, your viewing experience will be better if you view this website in landscape orientation. You might need to refresh the page to fix any problems after rotating.</p>
     </div>
 
-    <h1>RLC Circuit ODE | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Topic Playlist</a></h1>
-	  <p></p>
+    <h1>RLC Circuit | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Topic Playlist</a></h1>
+	  <p>The ideal models of a resistor, capacitor, and inductor (RLC) connected in series with a battery result in an ODE with the same form as a spring-mass-damper system. All the behaviours and analysis can be applied directly to analysing an RLC circuit in series.</p>
 	  
-	  <h2>Simplifying $\mathcal{L}^{-1}\{ F(s) \}$ | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
+	  <h2>Circuit Diagram and ODE | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
     <div class="theory">
-    <p>The inverse Laplace Transform of $F(s)$ is a contour integral in the complex plane,</p>
-    \begin{equation}
-    \mathcal{L}^{-1}\{ F(s) \} = \frac{1}{2\pi i} \cint_{\gamma} F(s)e^{st}\text{d}s
-    \end{equation}
+    <p>For the following RLC circuit,</p>
     
-    <p>Since students in an introductory differentials equations course haven't taken a complex analysis course, the method to perform the inverse Laplace Transform is to use the Table of Laplace Transforms in the opposite direction, starting with a function of $s$, algebraicly manipulate the function so each term is in the Table of Laplace Transforms, then converting each term $F(s)$ back into its matching $f(t) = \mathcal{L}^{-1}\{ F(s) \}$ to solve the initial value problem.</p>
+    <img src="images/RLC_circuit.svg" alt="RLC circuit diagram" class="center_img" width="405" height="289">
+    
+    <p>The ODE governing its behaviour is,</p>
+    \begin{equation}
+    LQ'' + RQ' + \frac{1}{C}Q = E(t)
+    \end{equation}
+    <p>where R, L, C, and E(t) are the resistance, inductance, capacitance, and impressed voltage as a function of time.</p>
+    
+    <p>Most math textbooks do not explain the physics of the model in depth and instead just state equations to use for each component. There are many physics based explanations online if that is of interest.</p>
     </div>
     
-    <h2>Example  | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
+    <h2>ODE Derivation | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
     <div class="example_solution">
-    <p>Calculate the inverse Laplace Transform of the following function.</p>
-    \begin{equation}
-    s
-    \end{equation}
+    <p>Make the ODE for the RLC circuit given the following relationships:</p>
+    
+    <p>Voltage drop across a capacitor $= \dfrac{Q(t)}{C}$ where $Q(t)$ is the charge stored on the capacitor.</p>
+    
+    <p>Voltage drop across a resistor $= RI(t)$ where $I(t)$ is the current flowing through the resistor.</p>
+    
+    <p>Voltage drop across an inductor $= L\dfrac{\text{d}I}{\text{d}t} = LI'(t)$.</p>
+    
+    <p>The rate of change of charge, $Q'(t)$, on the capacitor is the current $I(t)$.</p>
+    
+    <p>Kirchhoff's Voltage Law states the sum of voltages around a loop is zero.</p>
     </div>
 	  
   </div>
