@@ -117,16 +117,21 @@ table_of_contents_array["Differential Equations"] = table_of_contents_courses_se
         <li><a href="method_of_undetermined_coefficients_higher_order.html">Method of Undetermined Coefficients</a></li>
         <li><a href="variation_of_parameters_higher_order.html">Variation of Parameters</a></li>
       </ol>
-    </li>
+    </li>-->
     <li>Laplace Transform
-      <li><a href="laplace_transform_definition.html">Definition</a></li>
-      <li><a href="laplace_transform_Dirac_delta_function.html">Dirac delta function</a></li>
-      <li><a href="laplace_transform_Heaviside_function.html">Heaviside function</a></li>
+      <ol>
+        <!--<li><a href="laplace_transform_definition.html">Definition</a></li>
+        <li><a href="laplace_transform_Dirac_delta_function.html">Dirac delta function</a></li>
+        <li><a href="laplace_transform_Heaviside_function.html">Heaviside function</a></li>-->
+        <li><a href="laplace_transform_table_of_transforms_and_WolframAlpha.html">Lookup Table and WolframAlpha</a></li>
+      </ol>
     </li>
-    <li>Systems of First Order ODEs
+    <!--<li>Systems of First Order ODEs
       <li><a href="ode_system_simplest_case.html">Simplest Case</a></li>
     </li>-->
   </ol>
+  <br>
+  <br>
 """
 table_of_contents_array["Multivariable Calculus"] = table_of_contents_courses_section + """
   <h3 class="table_of_contents_h3">Multivariable Calculus</h3>

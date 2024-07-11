@@ -3,7 +3,7 @@
 <head>
 <title>Laplace Transform Table of Transforms</title>
 
-<meta name="description" content="This page contains a list of Laplace Transforms for common functions. Rather than computing the Laplace transform for every time, looking up the transform in the table is much easier. The table can also be used to perform the inverse Laplace Transform.">
+<meta name="description" content="This page contains a list of Laplace Transforms for common functions. Rather than computing the Laplace transform every time, looking up the transform in the table is much easier. The table can also be used to perform the inverse Laplace Transform.">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" sizes="32x32" href="images/profile_image_favicon-32x32.png">
@@ -132,16 +132,21 @@ th, td {
         <li><a href="method_of_undetermined_coefficients_higher_order.html">Method of Undetermined Coefficients</a></li>
         <li><a href="variation_of_parameters_higher_order.html">Variation of Parameters</a></li>
       </ol>
-    </li>
+    </li>-->
     <li>Laplace Transform
-      <li><a href="laplace_transform_definition.html">Definition</a></li>
-      <li><a href="laplace_transform_Dirac_delta_function.html">Dirac delta function</a></li>
-      <li><a href="laplace_transform_Heaviside_function.html">Heaviside function</a></li>
+      <ol>
+        <!--<li><a href="laplace_transform_definition.html">Definition</a></li>
+        <li><a href="laplace_transform_Dirac_delta_function.html">Dirac delta function</a></li>
+        <li><a href="laplace_transform_Heaviside_function.html">Heaviside function</a></li>-->
+        <li><a href="laplace_transform_table_of_transforms_and_WolframAlpha.html">Lookup Table and WolframAlpha</a></li>
+      </ol>
     </li>
-    <li>Systems of First Order ODEs
+    <!--<li>Systems of First Order ODEs
       <li><a href="ode_system_simplest_case.html">Simplest Case</a></li>
     </li>-->
   </ol>
+  <br>
+  <br>
 <!--End Table of Contents-->
   </div>
   
@@ -154,37 +159,137 @@ th, td {
       <p>Viewing this website in portrait orientation can cause problems with equations being longer than the screen width (you can scroll to the right), images being poorly sized, and the font size of maths text being much smaller than regular text. If your only option is a tablet or mobile device, your viewing experience will be better if you view this website in landscape orientation. You might need to refresh the page to fix any problems after rotating.</p>
     </div>
 
-    <h1>Table of Laplace Transforms | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Topic Playlist</a></h1>
-	  <p>This page contains a list of Laplace Transforms for common functions. Rather than computing the Laplace transform for every time, looking up the transform in the table is much easier. The table can also be used to perform the inverse Laplace Transform.</p>
+    <h1>Table of Laplace Transforms</h1>
+	  <p>This page contains a list of Laplace Transforms for common functions. Rather than computing the Laplace transform every time, looking up the transform in the table is much easier. The table can also be used to perform the inverse Laplace Transform. If you need the Laplace Transform for a function not included in the table, you can use WolframAlpha to compute it. Keep in mind that even a simple function can have complicated Laplace Transform.</p>
+    
+    <h2><a href="https://www.wolframalpha.com/input?i=LaplaceTransform%5B+sqrt%28t%29%2C+t%2C+s%5D" target="_blank">WolframAlpha Laplace Transform Example 1</a></h2>
+    <div class="example_solution">
+    <p>The above link leads to WolframeAlpha with the following input.</p>
+    <pre>LaplaceTransform[ sqrt(t), t, s]</pre>
+    <p>Part of the output is</p>
+    \begin{equation}
+    \frac{\sqrt{\pi}}{2 s^{3/2}}
+    \end{equation}
+    </div>
+    
+    <h2><a href="https://www.wolframalpha.com/input?i=LaplaceTransform%5B+HeavisideTheta%5Bt-4%5D*e%5E%283t%29%2C+t%2C+s%5D" target="_blank">WolframAlpha Laplace Transform Example 2</a></h2>
+    <div class="example_solution">
+    <p>The above link leads to WolframeAlpha with the following input.</p>
+    <pre>LaplaceTransform[ HeavisideTheta[t-4]*e^(3t), t, s]</pre>
+    <p>Part of the output is</p>
+    \begin{equation}
+    \frac{e^{12 - 4 s}}{s - 3}
+    \end{equation}
+    </div>
+    
+    <h2><a href="https://www.wolframalpha.com/input?i=LaplaceTransform%5B+DiracDelta%5Bt-2%5D*e%5E%28-3t%29%2C+t%2C+s%5D" target="_blank">WolframAlpha Laplace Transform Example 3</a></h2>
+    <div class="example_solution">
+    <p>The above link leads to WolframeAlpha with the following input.</p>
+    <pre>LaplaceTransform[ DiracDelta[t-2]*e^(-3t), t, s]</pre>
+    <p>Part of the output is</p>
+    \begin{equation}
+    e^{-2(s+3)}
+    \end{equation}
+    </div>
+    
+    <h2><a href="https://www.wolframalpha.com/input?i=InverseLaplaceTransform%5B+e%5E%28-3s%29*2%2F%28s%5E2%2B4%29%2C+s%2C+t%5D" target="_blank">WolframAlpha Inverse Laplace Transform Example 1</a></h2>
+    <div class="example_solution">
+    <p>The above link leads to WolframeAlpha with the following input.</p>
+    <pre>InverseLaplaceTransform[ e^(-3s)*2/(s^2+4), s, t]</pre>
+    <p>Part of the output is</p>
+    \begin{equation}
+    \theta(t - 3) \sin\big(2 (t - 3)\big)
+    \end{equation}
+    <p>Where $\theta(t)$ is the Heaviside function.</p>
+    </div>
+    
+    <h2><a href="https://www.wolframalpha.com/input?i=InverseLaplaceTransform%5B+3*e%5E%28-5s%29%2C+s%2C+t%5D" target="_blank">WolframAlpha Inverse Laplace Transform Example 2</a></h2>
+    <div class="example_solution">
+    <p>The above link leads to WolframeAlpha with the following input.</p>
+    <pre>InverseLaplaceTransform[ 3*e^(-5s), s, t]</pre>
+    <p>Part of the output is</p>
+    \begin{equation}
+    3 \delta(t - 5)
+    \end{equation}
+    <p>Where $\delta(t)$ is the Dirac delta function.</p>
+    </div>
 	  
-	  <h2>Table of Laplace Transforms | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
+    <h2>Common Functions and their Laplace Transforms</h2>
     <div class="theory">
-    <table style="margin-left: auto; margin-right: auto;">
+      <table style="margin-left: auto; margin-right: auto;">
         <tr>
           <th>$f(t) = \mathcal{L}^{-1}\{ F(s) \}$</th>
           <th>$\mathcal{L}\{ f(t) \} = F(s)$</th>
         </tr>
         <tr>
-          <td>$ay''+by'+cy= 2x^{3}-1$</td>
-          <td>$Ax^{3}+Bx^{2}+Cx+D$</td>
+          <td>$cf(t)$</td>
+          <td>$cF(s)$</td>
         </tr>
         <tr>
-          <td>$ay''+by'+cy= 4e^{7x}$</td>
-          <td>$Ae^{7x}$</td>
+          <td>$1$</td>
+          <td>$\dfrac{1}{s}$</td>
         </tr>
         <tr>
-          <td>$ay''+by'+cy= 13\sin(2x)$</td>
-          <td>$A\cos(2x)+B\sin(2x)$</td>
+          <td>$e^{at}$</td>
+          <td>$\dfrac{1}{s-a}$</td>
+        </tr>
+        <tr>
+          <td>$t^{n} \text{ for } n=1,2,3,\ldots$</td>
+          <td>$\dfrac{n!}{s^{n+1}}$</td>
+        </tr>
+        <tr>
+          <td>$\sin(at)$</td>
+          <td>$\dfrac{a}{s^{2}+a^{2}}$</td>
+        </tr>
+        <tr>
+          <td>$\cos(at)$</td>
+          <td>$\dfrac{s}{s^{2}+a^{2}}$</td>
+        </tr>
+        <tr>
+          <td>$t\sin(at)$</td>
+          <td>$\dfrac{2as}{(s^{2}+a^{2})^{2}}$</td>
+        </tr>
+        <tr>
+          <td>$t\cos(at)$</td>
+          <td>$\dfrac{s^{2}-a^{2}}{(s^{2}+a^{2})^{2}}$</td>
+        </tr>
+        <tr>
+          <td>$e^{at}\sin(bt)$</td>
+          <td>$\dfrac{b}{(s-a)^{2}+b^{2}}$</td>
+        </tr>
+        <tr>
+          <td>$e^{at}\cos(bt)$</td>
+          <td>$\dfrac{s-a}{(s-a)^{2}+b^{2}}$</td>
+        </tr>
+        <tr>
+          <td>$t^{n}e^{at} \text{ for } n=1,2,3,\ldots$</td>
+          <td>$\dfrac{n!}{(s-a)^{n+1}}$</td>
+        </tr>
+        <tr>
+          <td>$H(t-c)$</td>
+          <td>$\dfrac{e^{-cs}}{s}$</td>
+        </tr>
+        <tr>
+          <td>$\delta(t-c)$</td>
+          <td>$e^{-cs}$</td>
+        </tr>
+        <tr>
+          <td>$H(t-c)f(t-c)$</td>
+          <td>$e^{-cs}F(s)$</td>
+        </tr>
+        <tr>
+          <td>$f'(t)$</td>
+          <td>$sF(s)-f(0)$</td>
+        </tr>
+        <tr>
+          <td>$f''(t)$</td>
+          <td>$s^{2}F(s)-sf(0)-f'(0)$</td>
+        </tr>
+        <tr>
+          <td>$f^{(n)}(t)$</td>
+          <td>$s^{n}F(s)-s^{n-1}f(0)-s^{n-2}f'(0)- \cdots -sf^{(n-2)}(0)-f^{(n-1)}(0)$</td>
         </tr>
       </table>
-    </div>
-    
-    <h2>Example  | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
-    <div class="example_solution">
-    <p>Solve the IVP using the Laplace Transform.</p>
-    \begin{equation}
-    y''
-    \end{equation}
     </div>
 	  
   </div>
