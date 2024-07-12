@@ -3,7 +3,7 @@
 <head>
 <title>Undamped Oscillations and Resonance</title>
 
-<meta name="description" content="">
+<meta name="description" content="Resonance in a mechanical system, such as a mass-spring-damper system, is when an oscillating force being applied to the system causes a greater amplitude oscillation in the system over time. The frequency causing the maximal amplitude is often called the resonant frequency. Resonance can be catastrophic, such as the Tacoma Narrows bridge that oscillated so strongly due to just 64 km/h winds that the bridge deck tore apart.">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" sizes="32x32" href="images/profile_image_favicon-32x32.png">
@@ -154,24 +154,18 @@ window.MathJax = {
     </div>
 
     <h1>Undamped Oscillations and Resonance | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Topic Playlist</a></h1>
-	  <p></p>
+	  <p>Resonance in a mechanical system, such as a mass-spring-damper system, is when an oscillating force being applied to the system causes a greater amplitude oscillation in the system over time. The frequency causing the maximal amplitude is often called the resonant frequency. Resonance can be catastrophic, such as the Tacoma Narrows bridge that oscillated so strongly due to just 64 km/h winds that the bridge deck tore apart.</p>
 	  
-	  <h2>Simplifying $\mathcal{L}^{-1}\{ F(s) \}$ | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
+	  <h2>Undamped Resonance</h2>
     <div class="theory">
-    <p>The inverse Laplace Transform of $F(s)$ is a contour integral in the complex plane,</p>
-    \begin{equation}
-    \mathcal{L}^{-1}\{ F(s) \} = \frac{1}{2\pi i} \cint_{\gamma} F(s)e^{st}\text{d}s
-    \end{equation}
-    
-    <p>Since students in an introductory differentials equations course haven't taken a complex analysis course, the method to perform the inverse Laplace Transform is to use the Table of Laplace Transforms in the opposite direction, starting with a function of $s$, algebraicly manipulate the function so each term is in the Table of Laplace Transforms, then converting each term $F(s)$ back into its matching $f(t) = \mathcal{L}^{-1}\{ F(s) \}$ to solve the initial value problem.</p>
+    <p>With no friction, the mass-spring with a forcing function matching the natural frequency will grow to infinite amplitude according to the model.</p>
+    <img src="images/undamped_resonance.PNG" alt="undamped_resonance_plots" class="center_img" width="446" height="325">
     </div>
     
-    <h2>Example  | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
-    <div class="example_solution">
-    <p>Calculate the inverse Laplace Transform of the following function.</p>
-    \begin{equation}
-    s
-    \end{equation}
+    <h2>Damped Resonance</h2>
+    <div class="theory">
+    <p>Even with damping, a forcing function can still causes a oscillation that grows to much greater than the amplitude of the forcing function. The forcing function frequency that causes the maximal amplitude is called the resonant frequency of the mass-spring-damper system.</p>
+    <img src="images/damped_resonance.PNG" alt="damped resonance plots" class="center_img" width="412" height="350">
     </div>
 	  
   </div>
