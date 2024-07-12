@@ -3,7 +3,7 @@
 <head>
 <title>Underdamped, Overdamped, and Critically Damped Spring Mass Damper System</title>
 
-<meta name="description" content="">
+<meta name="description" content="A mass-spring-damper with no forcing term has three solution behaviours called underdamped, overdamped, and critically damped. An underdamped system oscillate about the equilibrium and is slow to decay to equilibrium. An overdamped system decays to the equilibrium without oscillating. A critically damped system separates the underdamped and overdamped cases, and solutions move as quickly as possible toward equilibrium without oscillating about the equilibrium.">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" sizes="32x32" href="images/profile_image_favicon-32x32.png">
@@ -154,24 +154,24 @@ window.MathJax = {
     </div>
 
     <h1>Underdamped, Overdamped, and Critically Damped Spring Mass Damper System | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Topic Playlist</a></h1>
-	  <p></p>
-	  
-	  <h2>Simplifying $\mathcal{L}^{-1}\{ F(s) \}$ | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
-    <div class="theory">
-    <p>The inverse Laplace Transform of $F(s)$ is a contour integral in the complex plane,</p>
-    \begin{equation}
-    \mathcal{L}^{-1}\{ F(s) \} = \frac{1}{2\pi i} \cint_{\gamma} F(s)e^{st}\text{d}s
-    \end{equation}
+	  <p>A mass-spring-damper with no forcing term has three solution behaviours called underdamped, overdamped, and critically damped. An underdamped system oscillate about the equilibrium and is slow to decay to equilibrium. An overdamped system decays to the equilibrium without oscillating. A critically damped system separates the underdamped and overdamped cases, and solutions move as quickly as possible toward equilibrium without oscillating about the equilibrium.</p>
     
-    <p>Since students in an introductory differentials equations course haven't taken a complex analysis course, the method to perform the inverse Laplace Transform is to use the Table of Laplace Transforms in the opposite direction, starting with a function of $s$, algebraicly manipulate the function so each term is in the Table of Laplace Transforms, then converting each term $F(s)$ back into its matching $f(t) = \mathcal{L}^{-1}\{ F(s) \}$ to solve the initial value problem.</p>
+	  <h2>Underdamped | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
+    <div class="theory">
+    <p>This is the imaginary root case. A practical application is airplane wings that oscillate can be made lighter versus a stiffer construction.</p>
+    <img src="images/under_damped.PNG" alt="direction field example 1" class="center_img" width="496" height="318">
     </div>
     
-    <h2>Example  | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
-    <div class="example_solution">
-    <p>Calculate the inverse Laplace Transform of the following function.</p>
-    \begin{equation}
-    s
-    \end{equation}
+    <h2>Overdamped | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
+    <div class="theory">
+    <p>This is the two distinct real roots case. This is desirable in systems where overshooting could be disastrous, such as extremely large and heavy doors with built in dampers.</p>
+    <img src="images/over_damped.PNG" alt="direction field example 1" class="center_img" width="485" height="245">
+    </div>
+    
+    <h2>Critically Damped | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
+    <div class="theory">
+    <p>This is the case separating underdampd and overdamped at a specific damping coefficient relative to the mass and spring constant. This can be desirable in automobile suspensions driving over a bump so there are no oscillations but with minimum stiffness.</p>
+    <img src="images/critically_damped.PNG" alt="critically damped plots" class="center_img" width="532" height="283">
     </div>
 	  
   </div>
