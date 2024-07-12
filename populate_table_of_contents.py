@@ -21,39 +21,40 @@ table_of_contents_courses_section = """
     <li><a href="linear_algebra_overview.html">Linear Algebra</a></li>-->
     <li><a href="differential_equations_overview.html">Differential Equations</a></li>
   </ol>
-  <br>
+  """
+  
+table_of_contents_additional_resources_section = """
   <h3 class="table_of_contents_h3">Additional Resources</h3>
   <ol>
     <li><a href="how_to_use_wolfram_alpha.html">WolframAlpha</a></li>
     <li><a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank">Direction Field Plotter by Ariel Barton</a></li>
     <li><a href="https://aeb019.hosted.uark.edu/pplane.html" target="_blank">Phase Plane Plotter by Ariel Barton</a></li>
   </ol>
-  <br>
-"""
+  """
 
 table_of_contents_array = {}
-table_of_contents_array["Maths Survival Guide"] = table_of_contents_courses_section
-table_of_contents_array["Single Variable Calculus: Limits and Derivatives"] = table_of_contents_courses_section + """
+table_of_contents_array["Maths Survival Guide"] = ""
+table_of_contents_array["Single Variable Calculus: Limits and Derivatives"] = """
   <h3 class="table_of_contents_h3">Single Variable Calculus: Limits and Derivatives</h3>
   <ol>
     <li><a href=".html">stuff</a></li>
   </ol>
-"""
-table_of_contents_array["Single Variable Calculus: Integration"] = table_of_contents_courses_section + """
+  """
+table_of_contents_array["Single Variable Calculus: Integration"] = """
   <h3 class="table_of_contents_h3">Single Variable Calculus: Integration</h3>
   <ol>
     <li><a href="integration_by_parts.html">Integration by Parts</a></li>
     <li><a href="partial_fraction_decomposition.html">Partial Fraction Decomposition</a></li>
   </ol>
-"""
-table_of_contents_array["Linear Algebra"] = table_of_contents_courses_section + """
+  """
+table_of_contents_array["Linear Algebra"] = """
   <h3 class="table_of_contents_h3">Linear Algebra</h3>
   <ol>
     <li><a href="systems_of_linear_equations.html">Systems of Linear Equations</a></li>
     <li><a href="matrix_multiplication.html">Matrix Multiplication</a></li>
   </ol>
-"""
-table_of_contents_array["Differential Equations"] = table_of_contents_courses_section + """
+  """
+table_of_contents_array["Differential Equations"] = """
   <h3 class="table_of_contents_h3">Differential Equations</h3>
   <ol>
     <li>Introduction
@@ -130,17 +131,18 @@ table_of_contents_array["Differential Equations"] = table_of_contents_courses_se
       <li><a href="ode_system_simplest_case.html">Simplest Case</a></li>
     </li>-->
   </ol>
-  <br>
-  <br>
-"""
-table_of_contents_array["Multivariable Calculus"] = table_of_contents_courses_section + """
+  """
+table_of_contents_array["Multivariable Calculus"] = """
   <h3 class="table_of_contents_h3">Multivariable Calculus</h3>
   <ol>
     <li><a href="divergence.html">Divergence</a></li>
     <li><a href="curl.html">Curl</a></li>
   </ol>
-"""
-table_of_contents_array["Additional Resources"] = table_of_contents_courses_section
+  """
+table_of_contents_array["Additional Resources"] = ""
+
+for page in table_of_contents_array:
+  table_of_contents_array[page] = table_of_contents_courses_section + "<br>" + table_of_contents_array[page] + "<br>"  + table_of_contents_additional_resources_section + "<br><br>" 
 
 begin_header_comment = "<!--Begin Header Text-->"
 end_header_comment = "<!--End Header Text-->"
