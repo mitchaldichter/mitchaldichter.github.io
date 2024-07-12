@@ -25,7 +25,10 @@ https://mitchaldichter.com/second_order_distinct_real_roots.html
 https://mitchaldichter.com/second_order_imaginary_roots.html
 https://mitchaldichter.com/second_order_repeated_real_root.html
 https://mitchaldichter.com/separable_equations.html
+https://mitchaldichter.com/spring_mass_damper_equivalent_RLC_circuit.html
 https://mitchaldichter.com/Strogatz_errata.html
 https://mitchaldichter.com/terminal_velocity.html
+https://mitchaldichter.com/undamped_oscillations_and_resonance.html
+https://mitchaldichter.com/under_over_critically_damped.html
 https://mitchaldichter.com/variation_of_parameters_second_order.html
 https://mitchaldichter.com/Wronskian.html
