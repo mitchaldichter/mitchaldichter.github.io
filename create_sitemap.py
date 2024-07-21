@@ -6,8 +6,7 @@ exclude_HTMLs = [
 "partial_fraction_decomposition.html",
 "integration_by_parts.html",
 "integration_overview.html",
-"limits_and_derivatives_overview.html",
-"thumbnail.html",]
+"limits_and_derivatives_overview.html",]
 
 try:
   os.remove("sitemap.txt")

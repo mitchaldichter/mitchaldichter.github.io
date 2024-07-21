@@ -1,9 +1,6 @@
 import os
 
 exclude_HTMLs = [
-"thumbnail.html",
-"index.html",
-"business_card_page.html",
 "Strogatz_errata.html",
 "combining.html",]
 
