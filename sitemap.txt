@@ -16,7 +16,6 @@ https://mitchaldichter.com/initial_value_problems.html
 https://mitchaldichter.com/integrating_factor.html
 https://mitchaldichter.com/interval_of_validity.html
 https://mitchaldichter.com/laplace_transform_table_of_transforms_and_WolframAlpha.html
-https://mitchaldichter.com/Maths_Survival_Guide.html
 https://mitchaldichter.com/method_of_undetermined_coefficients_second_order.html
 https://mitchaldichter.com/mixing_tank_problem.html
 https://mitchaldichter.com/radioactive_decay_and_population_growth.html
