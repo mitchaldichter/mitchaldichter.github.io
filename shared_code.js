@@ -7,8 +7,8 @@ function portrait_warning_visibility() {
   {
     document.getElementById("portrait_warning_div").style.display = "none";
   }
-  
-  screen.orientation.addEventListener("change", (event) => {
-    location.reload();
-  });
 }
+
+screen.orientation.addEventListener("change", (event) => {
+  location.reload();
+});
