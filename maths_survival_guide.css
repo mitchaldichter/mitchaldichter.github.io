@@ -21,6 +21,11 @@ p {
   line-height: 175%;
 }
 
+img {
+  max-width: 90%;
+  height: auto;
+}
+
 a {
   font-color: black;
 }
@@ -201,6 +206,10 @@ tr:nth-child(even) {
 .table_of_contents_h3 {
   margin-top: 0px;
   margin-bottom: 0px;
+}
+
+.overview_link_color {
+  color: #0096FF;
 }
 
 .inline_youtube_icon {

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Differential Equations Stable Non-isolated Fixed Points, Unstable Non-isolated Fixed Points, and Constant Solution</title>
+
+<meta name="description" content="The cases with at least one zero eigenvalue is one of several solution types for a two dimensional system of linear, constant coefficient, homogeneous differential equations. The types of solutions are called stable non-isolated fixed points, unstable non-isolated fixed points, and constant solution.">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="32x32" href="images/profile_image_favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/profile_image_favicon-16x16.png">
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$','$'], ['\\(','\\)']]
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/noerrors']
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script"></script>
+<link rel="stylesheet" href="maths_survival_guide.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="header_row">
+  <div id="left_header" class="differential_equations_header">
+    Table of Contents
+  </div>
+  <div id="right_header" class="differential_equations_header">
+    <!--Begin Header Text-->Differential Equations<!--End Header Text-->
+  </div>
+  <div id="profile_picture_div">
+	<img id="profile_picture_img" alt="channel logo" src="images/profile_image100x100.webp">
+  </div>
+</div>
+
+<div id="content_row">
+  <div id="left_content">
+    <!--Begin Table of Contents-->
+  <h3 class="table_of_contents_h3">Courses</h3>
+  <ol>
+    <!--<li>Single Variable Calculus
+      <ol>
+        <li><a href="limits_and_derivatives_overview.html">Limits and Derivatives</a></li>
+        <li><a href="integration_overview.html">Integration</a></li>
+        <li><a href="sequences_and_series_overview.html">Sequences and Series</a></li>
+      </ol>
+    </li>
+    <li><a href="multivariable_calculus_overview.html">Multivariable Calculus</a></li>
+    <li><a href="linear_algebra_overview.html">Linear Algebra</a></li>-->
+    <li><a href="differential_equations_overview.html">Differential Equations</a></li>
+  </ol>
+  <br>
+  <h3 class="table_of_contents_h3">Differential Equations</h3>
+  <ol>
+    <li>Introduction
+      <ol>
+        <li><a href="differential_equations_notation_and_definitions.html">Notation and Definitions</a></li>
+        <li><a href="differential_equations_verifying_solutions.html">Verifying Solutions</a></li>
+        <li><a href="initial_value_problems.html">Initial Values Problems</a></li>
+      </ol>
+    </li>
+    <li>First Order Differential Equations
+      <ol>
+        <li><a href="direction_fields.html">Direction Fields</a></li>
+        <li><a href="equilibria_stability_and_phase_lines.html">Equilibria, Stability, and Phase Lines</a></li>
+        <li><a href="separable_equations.html">Separable Equations</a></li>
+        <li><a href="integrating_factor.html">Integrating Factor</a></li>
+        <li><a href="differential_equations_substitution.html">Bernoulli Equations and Substitutions</a></li>
+        <li><a href="exact_equations.html">Exact Equations</a></li>
+        <li><a href="exact_equations_integrating_factor.html">Exact Equations with Integrating Factor</a></li>
+        <li><a href="eulers_method.html">Euler's Method</a></li>
+        <li><a href="existence_and_uniqueness.html">Existence and Uniqueness</a></li>
+        <li><a href="interval_of_validity.html">Interval of Validity</a></li>
+        <li>Applications
+          <ol>
+            <li><a href="radioactive_decay_and_population_growth.html">Radioactive Decay and Population Growth</a></li>
+            <!--<li><a href="logistic_equation.html">Logistic Equation</a></li>-->
+            <li><a href="mixing_tank_problem.html">Mixing Tank Problem</a></li>
+            <!--<li><a href="newtons_law_of_cooling.html">Newton's Law of Cooling</a></li>-->
+            <li><a href="terminal_velocity.html">Terminal Velocity</a></li>
+            <li><a href="continuous_compound_interest.html">Continuous Compound Interest</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="Wronskian.html">Wro&nacute;skian</a></li>
+    <li>Second Order Differential Equations
+      <ol>
+        <li>$ay''+by'+cy = 0$
+          <ol>
+            <li><a href="second_order_distinct_real_roots.html">Distinct Real Roots</a></li>
+            <li><a href="second_order_repeated_real_root.html">Repeated Real Root</a></li>
+            <li><a href="second_order_imaginary_roots.html">Imaginary Roots</a></li>
+          </ol>
+        </li>
+        <li>Spring-Mass-Damper
+          <ol>
+            <li><a href="spring_mass_damper_equivalent_RLC_circuit.html">Equivalent RLC Circuit</a></li>
+            <li><a href="under_over_critically_damped.html">Underdamped, Overdamped, Critically Damped</a></li>
+            <li><a href="undamped_oscillations_and_resonance.html">Undamped Oscillations and Resonance</a></li>
+          </ol>
+        </li>
+        <li><a href="method_of_undetermined_coefficients_second_order.html">Method of Undetermined Coefficients</a></li>
+        <li><a href="reduction_of_order_second_order.html">Reduction of Order</a></li>
+        <li><a href="variation_of_parameters_second_order.html">Variation of Parameters</a></li>
+        <li><a href="Cauchy_Euler_equation_second_order.html">Cauchy-Euler Equations</a></li>
+      </ol>
+    </li>
+    <!--<li>Higher Order Differential Equations
+      <ol>
+        <li><a href="linear_homogeneous_concepts_higher_order.html">Linear Homogeneous Concepts</a></li>
+        <li><a href="linear_constant_coefficient_higher_order.html">Linear Constant Coefficient</a></li>
+        <li><a href="method_of_undetermined_coefficients_higher_order.html">Method of Undetermined Coefficients</a></li>
+        <li><a href="variation_of_parameters_higher_order.html">Variation of Parameters</a></li>
+      </ol>
+    </li>-->
+    <li>Laplace Transform
+      <ol>
+        <!--<li><a href="laplace_transform_definition.html">Definition</a></li>
+        <li><a href="laplace_transform_Dirac_delta_function.html">Dirac delta function</a></li>
+        <li><a href="laplace_transform_Heaviside_function.html">Heaviside function</a></li>-->
+        <li><a href="laplace_transform_table_of_transforms_and_WolframAlpha.html">Lookup Table and WolframAlpha</a></li>
+      </ol>
+    </li>
+    <li>Systems of ODEs
+      <ol>
+        <li>Simplest Case $\begin{bmatrix}x' \\ y'\end{bmatrix} = \begin{bmatrix}a & b \\ c & d \end{bmatrix}\begin{bmatrix}x \\ y\end{bmatrix}$</li>
+        <ol>
+          <li><a href="ode_system_distinct_real_eigenvalues.html">Distinct Real Eigenvalues</a></li>
+          <li><a href="ode_system_repeated_eigenvalue.html">Repeated Eigenvalue</a></li>
+          <li><a href="ode_system_imaginary_eigenvalues.html">Imaginary Eigenvalues</a></li>
+          <li><a href="ode_system_zero_eigenvalue_cases.html">Zero Eigenvalue Cases</a></li>
+          <li><a href="ode_system_poincare_diagram.html">Poincar&eacute; Diagram</a></li>
+        </ol>
+      </ol>
+    </li>
+  </ol>
+  <br>
+  <h3 class="table_of_contents_h3">Additional Resources</h3>
+  <ol>
+    <li><a href="how_to_use_wolfram_alpha.html">WolframAlpha Examples</a></li>
+    <li><a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank" style="text-decoration: underline; color: blue;">Direction Field Plotter by Ariel Barton</a></li>
+    <li><a href="https://aeb019.hosted.uark.edu/pplane.html" target="_blank" style="text-decoration: underline; color: blue;">Phase Plane Plotter by Ariel Barton</a></li>
+  </ol>
+  <br><br><!--End Table of Contents-->
+  </div>
+  
+<div id="left_empty_column"></div>
+  <div id="right_content">
+    <div id="portrait_warning_div">
+      <p id="portrait_warning_p"><b>NARROW DISPLAY WARNING</b></p>
+      <hr color="black">
+      <p>You are most likely using a tablet or mobile device in portrait orientation. This website is best viewed using a typical computer screen with the browser window maximized.</p>
+      <p>Viewing this website in portrait orientation can cause problems with equations being longer than the screen width (you can scroll to the right), images being poorly sized, and the font size of maths text being much smaller than regular text. If your only option is a tablet or mobile device, your viewing experience will be better if you view this website in landscape orientation. You might need to refresh the page to fix any problems after rotating.</p>
+    </div>
+
+    <h1>Zero Eigenvalue Cases | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Topic Playlist</a></h1>
+	  <p>The cases with at least one zero eigenvalue is one of several solution types for a two dimensional system of linear, constant coefficient, homogeneous differential equations. The types of solutions are called stable non-isolated fixed points, unstable non-isolated fixed points, and constant solution.</p>
+	  
+	  <h2>Solution | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Explanation Video</a></h2>
+    <div class="theory">
+    <p>When the system,</p>
+    \begin{equation}
+    \vec{x}' = A\vec{x} \qquad 0 = \lambda_{1} \neq \lambda_{2}
+    \end{equation}
+    
+    <p>has a zero eigenvalue and a nonzero eigenvalue, the solution is the same as for distinct real nonzero eigenvalues.</p>
+    
+    \begin{equation}
+    \vec{x}(t) = c_{1}\vec{v}_{1} + c_{2}e^{\lambda_{2}t}\vec{v}_{2}
+    \end{equation}
+    
+    <p>Where the eigenvectors are $\vec{v}_{1}$ and $\vec{v}_{2}$.</p>
+    
+    <p>When both eigenvalues are zero, the solution is the same as a star with only one possible 2x2 coefficient matrix with every vector being an eigenvector.</p>
+    \begin{equation*}
+    \begin{bmatrix}
+    x' \\
+    y'
+    \end{bmatrix} = \begin{bmatrix}
+    0 & 0 \\
+    0 & 0
+    \end{bmatrix}\begin{bmatrix}
+    x \\
+    y
+    \end{bmatrix}
+    \end{equation*}
+    
+    \begin{equation}
+    \begin{bmatrix}
+    x(t) \\
+    y(t)
+    \end{bmatrix} = c_{1}\begin{bmatrix}
+    1 \\
+    0
+    \end{bmatrix}
+    + c_{2}\begin{bmatrix}
+    0 \\
+    1
+    \end{bmatrix} = \begin{bmatrix}
+    c_{1} \\
+    c_{2}
+    \end{bmatrix}
+    \end{equation}
+    </div>
+    
+    <h2>Phase Portraits | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Explanation Video</a></h2>
+    <div class="theory">
+    <p>For the $0 = \lambda_{1} \neq \lambda_{2}$ case, the solution is called non-isolated fixed points and the stability is determined by the sign of the nonzero eigenvalue. Unlike a typical solution where the only stationary solution is the origin, all points along the eigendirection for the zero eigenvalue are stationary, so the fixed points are non-isolated.</p>
+    
+    <p>For positive nonzero eigenvalue, the solution type is unstable non-isolated fixed points. Notice one of the eigendirections does not have any arrows since initial conditions on that eigendirection are stationary.</p>
+    <img src="images/unstable_non_isolated_fixed_points.webp" alt="unstable non-isolated fixed points" class="center_img" width="311" height="308">
+    
+    <p>For negative nonzero eigenvalue, the solution type is stable non-isolated fixed points. Notice one of the eigendirections does not have any arrows since initial conditions on that eigendirection are stationary.</p>
+    <img src="images/stable_non_isolated_fixed_points.webp" alt="stable non-isolated fixed points" class="center_img" width="289" height="308">
+    
+    <p>For the $0 = \lambda_{1} = \lambda_{2}$, the solution type is a constant solution since the derivatives are always zero. Solutions do not change from the initial condition.</p>
+    <img src="images/constant.webp" alt="constant solution" class="center_img" width="285" height="304">
+    </div>
+    
+    <h2>Example 1 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
+    <div class="example_solution">
+    <p>Solve the following IVP, then draw a phase portrait.</p>
+    \begin{equation*}
+    \begin{bmatrix}
+    x' \\
+    y'
+    \end{bmatrix} = \begin{bmatrix}
+    0 & 0 \\
+    0 & 0
+    \end{bmatrix}\begin{bmatrix}
+    x \\
+    y
+    \end{bmatrix} \quad \begin{bmatrix}
+    x(0) \\
+    y(0)
+    \end{bmatrix} = \begin{bmatrix}
+    3 \\
+    -1
+    \end{bmatrix}
+    \end{equation*}
+    </div>
+    
+    <h2>Example 2 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
+    <div class="example_solution">
+    <p>Solve the following IVP, then draw a phase portrait with the eigendirections and the solution trajectory forward and backward in time.</p>
+    \begin{equation*}
+    \begin{bmatrix}
+    x' \\
+    y'
+    \end{bmatrix} = \begin{bmatrix}
+    1 & 2 \\
+    0 & 0
+    \end{bmatrix}\begin{bmatrix}
+    x \\
+    y
+    \end{bmatrix} \quad \begin{bmatrix}
+    x(0) \\
+    y(0)
+    \end{bmatrix} = \begin{bmatrix}
+    7 \\
+    1
+    \end{bmatrix}
+    \end{equation*}
+    </div>
+    
+    <h2>Example 3 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
+    <div class="example_solution">
+    <p>Solve the following IVP, then draw a phase portrait with the eigendirections and the solution trajectory forward and backward in time.</p>
+    \begin{equation*}
+    \begin{bmatrix}
+    x' \\
+    y'
+    \end{bmatrix} = \begin{bmatrix}
+    -1 & 2 \\
+    0 & 0
+    \end{bmatrix}\begin{bmatrix}
+    x \\
+    y
+    \end{bmatrix} \quad \begin{bmatrix}
+    x(0) \\
+    y(0)
+    \end{bmatrix} = \begin{bmatrix}
+    1 \\
+    -1
+    \end{bmatrix}
+    \end{equation*}
+    </div>
+	  
+  </div>
+</div>
+</body>
+</html>
