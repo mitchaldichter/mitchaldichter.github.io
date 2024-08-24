@@ -127,16 +127,25 @@ window.MathJax = {
         <li><a href="laplace_transform_table_of_transforms_and_WolframAlpha.html">Lookup Table and WolframAlpha</a></li>
       </ol>
     </li>
-    <!--<li>Systems of First Order ODEs
-      <li><a href="ode_system_simplest_case.html">Simplest Case</a></li>
-    </li>-->
+    <li>Systems of ODEs
+      <ol>
+        <li>Simplest Case $\begin{bmatrix}x' \\ y'\end{bmatrix} = \begin{bmatrix}a & b \\ c & d \end{bmatrix}\begin{bmatrix}x \\ y\end{bmatrix}$</li>
+        <ol>
+          <!--<li><a href="ode_system_distinct_real_eigenvalues.html">Distinct Real Eigenvalues</a></li>
+          <li><a href="ode_system_repeated_eigenvalue.html">Repeated Eigenvalue</a></li>
+          <li><a href="ode_system_imaginary_eigenvalues.html">Imaginary Eigenvalues</a></li>
+          <li><a href="ode_system_zero_eigenvalue_cases.html">Zero Eigenvalue Cases</a></li>-->
+          <li><a href="ode_system_poincare_diagram.html">Poincar&eacute; Diagram</a></li>
+        </ol>
+      </ol>
+    </li>
   </ol>
   <br>
   <h3 class="table_of_contents_h3">Additional Resources</h3>
   <ol>
-    <li><a href="how_to_use_wolfram_alpha.html">WolframAlpha</a></li>
-    <li><a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank">Direction Field Plotter by Ariel Barton</a></li>
-    <li><a href="https://aeb019.hosted.uark.edu/pplane.html" target="_blank">Phase Plane Plotter by Ariel Barton</a></li>
+    <li><a href="how_to_use_wolfram_alpha.html">WolframAlpha Examples</a></li>
+    <li><a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank" style="text-decoration: underline; color: blue;">Direction Field Plotter by Ariel Barton</a></li>
+    <li><a href="https://aeb019.hosted.uark.edu/pplane.html" target="_blank" style="text-decoration: underline; color: blue;">Phase Plane Plotter by Ariel Barton</a></li>
   </ol>
   <br><br><!--End Table of Contents-->
   </div>
@@ -150,10 +159,10 @@ window.MathJax = {
       <p>Viewing this website in portrait orientation can cause problems with equations being longer than the screen width (you can scroll to the right), images being poorly sized, and the font size of maths text being much smaller than regular text. If your only option is a tablet or mobile device, your viewing experience will be better if you view this website in landscape orientation. You might need to refresh the page to fix any problems after rotating.</p>
     </div>
 
-    <h1>Heaviside function | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Topic Playlist</a></h1>
+    <h1>Heaviside function | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Topic Playlist</a></h1>
 	  <p>The Heaviside function is a step function jumping from height zero to height one at the origin. It's useful in modelling circuits when there's an instantaneous change, like flipping a switch from open to closed in a circuit.</p>
 	  
-	  <h2>Definition and Uses for Piecewise Defined $f(t)$ | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
+	  <h2>Definition and Uses for Piecewise Defined $f(t)$ | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Explanation Video</a></h2>
     <div class="theory">
     <p>A piecewise defined function $f(t)$ can be written using the Heaviside function $H(t)$ to make the calculation of the Laplace Transform easier.</p>
     
@@ -232,7 +241,7 @@ window.MathJax = {
     \end{align}
     </div>
     
-    <h2>Example 1 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
+    <h2>Example 1 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
     <div class="example_solution">
     <p>Calculate the Laplace Transform for $H(t)$.</p>
     \begin{equation}
@@ -240,7 +249,7 @@ window.MathJax = {
     \end{equation}
     </div>
     
-    <h2>Example 2 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
+    <h2>Example 2 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
     <div class="example_solution">
     <p>Calculate the Laplace Transform for $H(t-c)f(t)$.</p>
     \begin{equation}
@@ -248,7 +257,7 @@ window.MathJax = {
     \end{equation}
     </div>
     
-    <h2>Laplace Transform $\mathcal{L}\{ H(t-c) f(t) \}$ | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
+    <h2>Laplace Transform $\mathcal{L}\{ H(t-c) f(t) \}$ | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Explanation Video</a></h2>
     <div class="theory">
     <p>Use a substitution $\tau = t-c$ to change the bounds back to the normal 0 to $\infty$.</p>
     
@@ -258,7 +267,7 @@ window.MathJax = {
     
     </div>
     
-    <h2>Example 3 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
+    <h2>Example 3 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
     <div class="example_solution">
     <p>Calculate the Laplace Transform for $H(t-3)(t+1)$.</p>
     \begin{equation}
@@ -266,7 +275,7 @@ window.MathJax = {
     \end{equation}
     </div>
     
-    <h2>Example 4 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
+    <h2>Example 4 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
     <div class="example_solution">
     <p>Calculate the Laplace Transform for $H(t-3)e^{5t}$.</p>
     \begin{equation}
@@ -274,7 +283,7 @@ window.MathJax = {
     \end{equation}
     </div>
     
-    <h2>Example 5 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
+    <h2>Example 5 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
     <div class="example_solution">
     <p>Calculate the Laplace Transform for $H(t-3)\cos(t)$.</p>
     \begin{equation}
@@ -282,7 +291,7 @@ window.MathJax = {
     \end{equation}
     </div>
     
-    <h2>Example 6 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
+    <h2>Example 6 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
     <div class="example_solution">
     <p>Calculate the Laplace Transform for a piecewise defined function $f(t)$.</p>
     \begin{equation}

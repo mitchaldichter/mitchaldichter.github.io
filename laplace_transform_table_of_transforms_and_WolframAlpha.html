@@ -133,16 +133,25 @@ th, td {
         <li><a href="laplace_transform_table_of_transforms_and_WolframAlpha.html">Lookup Table and WolframAlpha</a></li>
       </ol>
     </li>
-    <!--<li>Systems of First Order ODEs
-      <li><a href="ode_system_simplest_case.html">Simplest Case</a></li>
-    </li>-->
+    <li>Systems of ODEs
+      <ol>
+        <li>Simplest Case $\begin{bmatrix}x' \\ y'\end{bmatrix} = \begin{bmatrix}a & b \\ c & d \end{bmatrix}\begin{bmatrix}x \\ y\end{bmatrix}$</li>
+        <ol>
+          <!--<li><a href="ode_system_distinct_real_eigenvalues.html">Distinct Real Eigenvalues</a></li>
+          <li><a href="ode_system_repeated_eigenvalue.html">Repeated Eigenvalue</a></li>
+          <li><a href="ode_system_imaginary_eigenvalues.html">Imaginary Eigenvalues</a></li>
+          <li><a href="ode_system_zero_eigenvalue_cases.html">Zero Eigenvalue Cases</a></li>-->
+          <li><a href="ode_system_poincare_diagram.html">Poincar&eacute; Diagram</a></li>
+        </ol>
+      </ol>
+    </li>
   </ol>
   <br>
   <h3 class="table_of_contents_h3">Additional Resources</h3>
   <ol>
-    <li><a href="how_to_use_wolfram_alpha.html">WolframAlpha</a></li>
-    <li><a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank">Direction Field Plotter by Ariel Barton</a></li>
-    <li><a href="https://aeb019.hosted.uark.edu/pplane.html" target="_blank">Phase Plane Plotter by Ariel Barton</a></li>
+    <li><a href="how_to_use_wolfram_alpha.html">WolframAlpha Examples</a></li>
+    <li><a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank" style="text-decoration: underline; color: blue;">Direction Field Plotter by Ariel Barton</a></li>
+    <li><a href="https://aeb019.hosted.uark.edu/pplane.html" target="_blank" style="text-decoration: underline; color: blue;">Phase Plane Plotter by Ariel Barton</a></li>
   </ol>
   <br><br><!--End Table of Contents-->
   </div>
@@ -156,10 +165,10 @@ th, td {
       <p>Viewing this website in portrait orientation can cause problems with equations being longer than the screen width (you can scroll to the right), images being poorly sized, and the font size of maths text being much smaller than regular text. If your only option is a tablet or mobile device, your viewing experience will be better if you view this website in landscape orientation. You might need to refresh the page to fix any problems after rotating.</p>
     </div>
     
-    <h1>Table of Laplace Transforms and WolframAlpha | <a href="https://www.youtube.com/watch?v=tIUZ8FpDnuA&list=PLXQ5vz32rm_QaBwR38R7PcJ6hqMeBxPF0" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Topic Playlist</a></h1>
-	  <p>This page contains a list of Laplace Transforms for common functions. Rather than computing the Laplace transform every time, looking up the transform in the table is much easier. The table can also be used to perform the inverse Laplace Transform. If you need the Laplace Transform for a function not included in the table, you can use WolframAlpha to compute it. Keep in mind that even a simple function can have a complicated Laplace Transform.</p>
+    <h1>Table of Laplace Transforms and WolframAlpha | <a href="https://www.youtube.com/watch?v=tIUZ8FpDnuA&list=PLXQ5vz32rm_QaBwR38R7PcJ6hqMeBxPF0" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Topic Playlist</a></h1>
+	  <p>This page contains a list of Laplace Transforms for common functions. Rather than computing the Laplace transform every time, looking up the transform in the table is much easier. The table can also be used to perform the inverse Laplace Transform. If you need the Laplace Transform for a function not included in the table, you can use <a href="https://www.wolframalpha.com/input?i=LaplaceTransform%5B+e%5Et%2C+t%2C+s%5D" target="_blank" style="text-decoration: underline; color: blue;">WolframAlpha LaplaceTransform[ f(t), t, s]</a> to compute it. Keep in mind that even a simple function can have a complicated Laplace Transform.</p>
     
-    <h2><a href="https://www.wolframalpha.com/input?i=LaplaceTransform%5B+sqrt%28t%29%2C+t%2C+s%5D" target="_blank">WolframAlpha Laplace Transform Example 1</a></h2>
+    <h2><a href="https://www.wolframalpha.com/input?i=LaplaceTransform%5B+sqrt%28t%29%2C+t%2C+s%5D" target="_blank" style="text-decoration: underline; color: blue;">WolframAlpha Laplace Transform Example 1</a></h2>
     <div class="example_solution">
     <p>The above link leads to WolframAlpha with the following input.</p>
     <pre>LaplaceTransform[ sqrt(t), t, s]</pre>
@@ -169,7 +178,7 @@ th, td {
     \end{equation}
     </div>
     
-    <h2><a href="https://www.wolframalpha.com/input?i=LaplaceTransform%5B+HeavisideTheta%5Bt-4%5D*e%5E%283t%29%2C+t%2C+s%5D" target="_blank">WolframAlpha Laplace Transform Example 2</a></h2>
+    <h2><a href="https://www.wolframalpha.com/input?i=LaplaceTransform%5B+HeavisideTheta%5Bt-4%5D*e%5E%283t%29%2C+t%2C+s%5D" target="_blank" style="text-decoration: underline; color: blue;">WolframAlpha Laplace Transform Example 2</a></h2>
     <div class="example_solution">
     <p>The above link leads to WolframAlpha with the following input.</p>
     <pre>LaplaceTransform[ HeavisideTheta[t-4]*e^(3t), t, s]</pre>
@@ -179,7 +188,7 @@ th, td {
     \end{equation}
     </div>
     
-    <h2><a href="https://www.wolframalpha.com/input?i=LaplaceTransform%5B+DiracDelta%5Bt-2%5D*e%5E%28-3t%29%2C+t%2C+s%5D" target="_blank">WolframAlpha Laplace Transform Example 3</a></h2>
+    <h2><a href="https://www.wolframalpha.com/input?i=LaplaceTransform%5B+DiracDelta%5Bt-2%5D*e%5E%28-3t%29%2C+t%2C+s%5D" target="_blank" style="text-decoration: underline; color: blue;">WolframAlpha Laplace Transform Example 3</a></h2>
     <div class="example_solution">
     <p>The above link leads to WolframAlpha with the following input.</p>
     <pre>LaplaceTransform[ DiracDelta[t-2]*e^(-3t), t, s]</pre>
@@ -189,7 +198,7 @@ th, td {
     \end{equation}
     </div>
     
-    <h2><a href="https://www.wolframalpha.com/input?i=InverseLaplaceTransform%5B+e%5E%28-3s%29*2%2F%28s%5E2%2B4%29%2C+s%2C+t%5D" target="_blank">WolframAlpha Inverse Laplace Transform Example 1</a></h2>
+    <h2><a href="https://www.wolframalpha.com/input?i=InverseLaplaceTransform%5B+e%5E%28-3s%29*2%2F%28s%5E2%2B4%29%2C+s%2C+t%5D" target="_blank" style="text-decoration: underline; color: blue;">WolframAlpha Inverse Laplace Transform Example 1</a></h2>
     <div class="example_solution">
     <p>The above link leads to WolframAlpha with the following input.</p>
     <pre>InverseLaplaceTransform[ e^(-3s)*2/(s^2+4), s, t]</pre>
@@ -200,7 +209,7 @@ th, td {
     <p>Where $\theta(t)$ is the Heaviside function.</p>
     </div>
     
-    <h2><a href="https://www.wolframalpha.com/input?i=InverseLaplaceTransform%5B+3*e%5E%28-5s%29%2C+s%2C+t%5D" target="_blank">WolframAlpha Inverse Laplace Transform Example 2</a></h2>
+    <h2><a href="https://www.wolframalpha.com/input?i=InverseLaplaceTransform%5B+3*e%5E%28-5s%29%2C+s%2C+t%5D" target="_blank" style="text-decoration: underline; color: blue;">WolframAlpha Inverse Laplace Transform Example 2</a></h2>
     <div class="example_solution">
     <p>The above link leads to WolframAlpha with the following input.</p>
     <pre>InverseLaplaceTransform[ 3*e^(-5s), s, t]</pre>

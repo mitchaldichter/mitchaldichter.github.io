@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Multivariable Calculus Landing Page</title>
+<title>Linear Algebra Landing Page</title>
 
-<meta name="description" content="Example problems and video solutions for a multivariable calculus course.">
+<meta name="description" content="Example problems and video solutions for a first course in linear algebra.">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" sizes="32x32" href="images/profile_image_favicon-32x32.png">
@@ -23,15 +23,17 @@ window.MathJax = {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+
+<script type="text/javascript" src="shared_code.js"></script>
 </head>
-<body>
+<body onload="portrait_warning_visibility()">
 
 <div id="header_row">
-  <div id="left_header" class="multivariable_calculus_header">
+  <div id="left_header" class="linear_algebra_header">
     Table of Contents
   </div>
-  <div id="right_header" class="multivariable_calculus_header">
-    <!--Begin Header Text-->Multivariable Calculus<!--End Header Text-->
+  <div id="right_header" class="linear_algebra_header">
+    <!--Begin Header Text-->Linear Algebra<!--End Header Text-->
   </div>
   <div id="profile_picture_div">
 	<img id="profile_picture_img" alt="channel logo" src="images/profile_image100x100.webp">
@@ -55,20 +57,21 @@ window.MathJax = {
     <li><a href="differential_equations_overview.html">Differential Equations</a></li>
   </ol>
   <br>
-  <h3 class="table_of_contents_h3">Additional Resources</h3>
+  <h3 class="table_of_contents_h3">Linear Algebra</h3>
   <ol>
-    <li><a href="how_to_use_wolfram_alpha.html">WolframAlpha</a></li>
-    <li><a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank">Direction Field Plotter by Ariel Barton</a></li>
-    <li><a href="https://aeb019.hosted.uark.edu/pplane.html" target="_blank">Phase Plane Plotter by Ariel Barton</a></li>
+    <li><a href="systems_of_linear_equations.html">Systems of Linear Equations</a></li>
+    <li><a href="matrix_multiplication.html">Matrix Multiplication</a></li>
+    <li><a href="vectors.html">Vectors</a></li>
+    <li><a href="eigenvalues_and_eigenvectors.html">Eigenvalues and Eigenvectors</a></li>
   </ol>
   <br>
-
-  <h3 class="table_of_contents_h3">Multivariable Calculus</h3>
+  <h3 class="table_of_contents_h3">Additional Resources</h3>
   <ol>
-    <li><a href="divergence.html">Divergence</a></li>
-    <li><a href="curl.html">Curl</a></li>
+    <li><a href="how_to_use_wolfram_alpha.html">WolframAlpha Examples</a></li>
+    <li><a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank" style="text-decoration: underline; color: blue;">Direction Field Plotter by Ariel Barton</a></li>
+    <li><a href="https://aeb019.hosted.uark.edu/pplane.html" target="_blank" style="text-decoration: underline; color: blue;">Phase Plane Plotter by Ariel Barton</a></li>
   </ol>
-<!--End Table of Contents-->
+  <br><br><!--End Table of Contents-->
   </div>
   
 <div id="left_empty_column"></div>
@@ -80,8 +83,17 @@ window.MathJax = {
       <p>Viewing this website in portrait orientation can cause problems with equations being longer than the screen width (you can scroll to the right), images being poorly sized, and the font size of maths text being much smaller than regular text. If your only option is a tablet or mobile device, your viewing experience will be better if you view this website in landscape orientation. You might need to refresh the page to fix any problems after rotating.</p>
     </div>
 
-    <h1>Landing Page</h1>
-	  <p>Please use the Table of Contents on the left to find a topic related to your coursework. When you hover over links to pages, the text will become <u>underlined</u>.</p>
+    <h1>Overview</h1>
+	  <p>Welcome to the Linear Algebra course. The Table of Contents on the left has all the topics for the course, with expanded descriptions below. When you hover over the link to a page, the text will become <u>underlined</u>.</p>
+    
+    <h2>Expanded Table of Contents</h2>
+    <p><b>Introduction</b></p>
+      <p style="padding-left: 1em;"><a href=".html"><b class="overview_link_color">&#129149;</b></a> &mdash; </p>
+      <p style="padding-left: 1em;"><a href=".html"><b class="overview_link_color">&#129149;</b></a> &mdash; </p>
+      <p style="padding-left: 1em;"><a href=".html"><b class="overview_link_color">&#129149;</b></a> &mdash; </p>
+      <p style="padding-left: 1em;"><a href=".html"><b class="overview_link_color">&#129149;</b></a> &mdash; </p>
+      
+    
   </div>
 </div>
 </body>

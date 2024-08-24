@@ -127,16 +127,25 @@ window.MathJax = {
         <li><a href="laplace_transform_table_of_transforms_and_WolframAlpha.html">Lookup Table and WolframAlpha</a></li>
       </ol>
     </li>
-    <!--<li>Systems of First Order ODEs
-      <li><a href="ode_system_simplest_case.html">Simplest Case</a></li>
-    </li>-->
+    <li>Systems of ODEs
+      <ol>
+        <li>Simplest Case $\begin{bmatrix}x' \\ y'\end{bmatrix} = \begin{bmatrix}a & b \\ c & d \end{bmatrix}\begin{bmatrix}x \\ y\end{bmatrix}$</li>
+        <ol>
+          <!--<li><a href="ode_system_distinct_real_eigenvalues.html">Distinct Real Eigenvalues</a></li>
+          <li><a href="ode_system_repeated_eigenvalue.html">Repeated Eigenvalue</a></li>
+          <li><a href="ode_system_imaginary_eigenvalues.html">Imaginary Eigenvalues</a></li>
+          <li><a href="ode_system_zero_eigenvalue_cases.html">Zero Eigenvalue Cases</a></li>-->
+          <li><a href="ode_system_poincare_diagram.html">Poincar&eacute; Diagram</a></li>
+        </ol>
+      </ol>
+    </li>
   </ol>
   <br>
   <h3 class="table_of_contents_h3">Additional Resources</h3>
   <ol>
-    <li><a href="how_to_use_wolfram_alpha.html">WolframAlpha</a></li>
-    <li><a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank">Direction Field Plotter by Ariel Barton</a></li>
-    <li><a href="https://aeb019.hosted.uark.edu/pplane.html" target="_blank">Phase Plane Plotter by Ariel Barton</a></li>
+    <li><a href="how_to_use_wolfram_alpha.html">WolframAlpha Examples</a></li>
+    <li><a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank" style="text-decoration: underline; color: blue;">Direction Field Plotter by Ariel Barton</a></li>
+    <li><a href="https://aeb019.hosted.uark.edu/pplane.html" target="_blank" style="text-decoration: underline; color: blue;">Phase Plane Plotter by Ariel Barton</a></li>
   </ol>
   <br><br><!--End Table of Contents-->
   </div>
@@ -150,24 +159,24 @@ window.MathJax = {
       <p>Viewing this website in portrait orientation can cause problems with equations being longer than the screen width (you can scroll to the right), images being poorly sized, and the font size of maths text being much smaller than regular text. If your only option is a tablet or mobile device, your viewing experience will be better if you view this website in landscape orientation. You might need to refresh the page to fix any problems after rotating.</p>
     </div>
 
-    <h1>Direction Fields | <a href="https://www.youtube.com/watch?v=Qb6qHSr5Vuw&list=PLXQ5vz32rm_QyMPjul94u1VfgDHckgknC" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Topic Playlist</a></h1>
+    <h1>Direction Fields | <a href="https://www.youtube.com/watch?v=Qb6qHSr5Vuw&list=PLXQ5vz32rm_QyMPjul94u1VfgDHckgknC" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Topic Playlist</a></h1>
 	  <p>Given an ODE $y'=f(x,y)$, a direction field is a graph in the $xy$-plane with individual lines drawn at many points. The points are usually drawn at the vertices of a grid. The slope of a line drawn at point $(x,y)$ has the slope determined by the ODE at point $(x,y)$.</p>
 	
-	  <h2>Example 1 | <a href="https://www.youtube.com/watch?v=Qb6qHSr5Vuw&list=PLXQ5vz32rm_QyMPjul94u1VfgDHckgknC" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
+	  <h2>Example 1 | <a href="https://www.youtube.com/watch?v=Qb6qHSr5Vuw&list=PLXQ5vz32rm_QyMPjul94u1VfgDHckgknC" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
     <div class="example_solution">
     <p>Draw a direction field for $y'=x^{2}-x-2$ with axis bounds between -5 and 5. Use the <a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank" style="text-decoration: underline; color: blue;">Direction Field Plotter by Ariel Barton</a> to plot the direction field and some integral curves by clicking on the plot with your mouse.</p>
     
     <img src="images/slope_fields_plot_1.svg" alt="direction field example 1" class="center_img" width="464" height="496">
     </div>
     
-    <h2>Example 2 | <a href="https://www.youtube.com/watch?v=3KHaaP97q_o&list=PLXQ5vz32rm_QyMPjul94u1VfgDHckgknC&index=2" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
+    <h2>Example 2 | <a href="https://www.youtube.com/watch?v=3KHaaP97q_o&list=PLXQ5vz32rm_QyMPjul94u1VfgDHckgknC&index=2" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
     <div class="example_solution">
     <p>Draw a direction field for $y'=y(3-y)$ with axis bounds between -5 and 5. Use the <a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank" style="text-decoration: underline; color: blue;">Direction Field Plotter by Ariel Barton</a> to plot the direction field and some integral curves by clicking on the plot with your mouse.</p>
     
     <img src="images/slope_fields_plot_2.svg" alt="direction field example 2" class="center_img" width="464" height="496">
     </div>
     
-    <h2>Example 3 | <a href="https://www.youtube.com/watch?v=2AlbCSeijuc&list=PLXQ5vz32rm_QyMPjul94u1VfgDHckgknC&index=3" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
+    <h2>Example 3 | <a href="https://www.youtube.com/watch?v=2AlbCSeijuc&list=PLXQ5vz32rm_QyMPjul94u1VfgDHckgknC&index=3" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
     <div class="example_solution">
     <p>Draw a direction field for $y'=-2xy$ with axis bounds between -5 and 5. Use the <a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank" style="text-decoration: underline; color: blue;">Direction Field Plotter by Ariel Barton</a> to plot the direction field and some integral curves by clicking on the plot with your mouse.</p>
     

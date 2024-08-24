@@ -127,16 +127,25 @@ window.MathJax = {
         <li><a href="laplace_transform_table_of_transforms_and_WolframAlpha.html">Lookup Table and WolframAlpha</a></li>
       </ol>
     </li>
-    <!--<li>Systems of First Order ODEs
-      <li><a href="ode_system_simplest_case.html">Simplest Case</a></li>
-    </li>-->
+    <li>Systems of ODEs
+      <ol>
+        <li>Simplest Case $\begin{bmatrix}x' \\ y'\end{bmatrix} = \begin{bmatrix}a & b \\ c & d \end{bmatrix}\begin{bmatrix}x \\ y\end{bmatrix}$</li>
+        <ol>
+          <!--<li><a href="ode_system_distinct_real_eigenvalues.html">Distinct Real Eigenvalues</a></li>
+          <li><a href="ode_system_repeated_eigenvalue.html">Repeated Eigenvalue</a></li>
+          <li><a href="ode_system_imaginary_eigenvalues.html">Imaginary Eigenvalues</a></li>
+          <li><a href="ode_system_zero_eigenvalue_cases.html">Zero Eigenvalue Cases</a></li>-->
+          <li><a href="ode_system_poincare_diagram.html">Poincar&eacute; Diagram</a></li>
+        </ol>
+      </ol>
+    </li>
   </ol>
   <br>
   <h3 class="table_of_contents_h3">Additional Resources</h3>
   <ol>
-    <li><a href="how_to_use_wolfram_alpha.html">WolframAlpha</a></li>
-    <li><a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank">Direction Field Plotter by Ariel Barton</a></li>
-    <li><a href="https://aeb019.hosted.uark.edu/pplane.html" target="_blank">Phase Plane Plotter by Ariel Barton</a></li>
+    <li><a href="how_to_use_wolfram_alpha.html">WolframAlpha Examples</a></li>
+    <li><a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank" style="text-decoration: underline; color: blue;">Direction Field Plotter by Ariel Barton</a></li>
+    <li><a href="https://aeb019.hosted.uark.edu/pplane.html" target="_blank" style="text-decoration: underline; color: blue;">Phase Plane Plotter by Ariel Barton</a></li>
   </ol>
   <br><br><!--End Table of Contents-->
   </div>
@@ -150,23 +159,23 @@ window.MathJax = {
       <p>Viewing this website in portrait orientation can cause problems with equations being longer than the screen width (you can scroll to the right), images being poorly sized, and the font size of maths text being much smaller than regular text. If your only option is a tablet or mobile device, your viewing experience will be better if you view this website in landscape orientation. You might need to refresh the page to fix any problems after rotating.</p>
     </div>
 
-    <h1>Notation and Definitions | <a href="https://www.youtube.com/watch?v=CsV2X6P2wkM&list=PLXQ5vz32rm_RngsvUCcl_gJKElZiG9qA0&index=1" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Topic Playlist</a></h1>
+    <h1>Notation and Definitions | <a href="https://www.youtube.com/watch?v=CsV2X6P2wkM&list=PLXQ5vz32rm_RngsvUCcl_gJKElZiG9qA0&index=1" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Topic Playlist</a></h1>
     
-    <h2>What's a differential equation? | <a href="https://www.youtube.com/watch?v=CsV2X6P2wkM&list=PLXQ5vz32rm_RngsvUCcl_gJKElZiG9qA0&index=1" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
+    <h2>What's a differential equation? | <a href="https://www.youtube.com/watch?v=CsV2X6P2wkM&list=PLXQ5vz32rm_RngsvUCcl_gJKElZiG9qA0&index=1" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Explanation Video</a></h2>
 	  <div class="theory">
     <p>A differential equation is an equation that has an unknown function and its derivatives present. The simplest example is $y'(x) = y(x)$ with $y(x)$ an unknown function.</p>
     
     <p>A non-example is $y'(x) = x$ which is not usually considered a differential equation since $y(x)$ is not present.</p>
     </div>
     
-    <h2>Ordinary Differential Equation (ODE) vs. Partial Differential Equation (PDE) | <a href="https://www.youtube.com/watch?v=-LSQbm0CmhY&list=PLXQ5vz32rm_RngsvUCcl_gJKElZiG9qA0&index=2" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
+    <h2>Ordinary Differential Equation (ODE) vs. Partial Differential Equation (PDE) | <a href="https://www.youtube.com/watch?v=-LSQbm0CmhY&list=PLXQ5vz32rm_RngsvUCcl_gJKElZiG9qA0&index=2" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Explanation Video</a></h2>
     <div class="theory">
     <p>An <b>ODE</b> is a differential equation where the unknown function is a function of a single variable, like $y(x)$.</p>
     
     <p>A <b>PDE</b> is a differential equation where the unknown function is a function of a multiple variables, like $f(x,y)$ or $f(x,y,z)$. An example is the temperature at every point $(x,y)$ on a flat metal plate or the density of air at every point $(x,y,z)$ in a music hall.</p>
     </div>
     
-    <h2>Different ways to write derivatives | <a href="https://www.youtube.com/watch?v=IxF_Hmj9eT0&list=PLXQ5vz32rm_RngsvUCcl_gJKElZiG9qA0&index=3" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
+    <h2>Different ways to write derivatives | <a href="https://www.youtube.com/watch?v=IxF_Hmj9eT0&list=PLXQ5vz32rm_RngsvUCcl_gJKElZiG9qA0&index=3" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Explanation Video</a></h2>
     <div class="theory">
     <p>There's three common ways to write derivatives of a single variable function $y(x)$. Which one to use is personal preference, but people usually pick the one that requires the least writing and is easiest to read.</p>
     \begin{equation}
@@ -187,7 +196,7 @@ window.MathJax = {
     \end{equation}
     </div>
     
-    <h2>Order of a differential equation | <a href="https://www.youtube.com/watch?v=fEP_Umh5Kus&list=PLXQ5vz32rm_RngsvUCcl_gJKElZiG9qA0&index=4" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
+    <h2>Order of a differential equation | <a href="https://www.youtube.com/watch?v=fEP_Umh5Kus&list=PLXQ5vz32rm_RngsvUCcl_gJKElZiG9qA0&index=4" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Explanation Video</a></h2>
     <div class="theory">
     <p>The <b>order</b> of a differential equation is the highest derivative of the unknown function present.</p>
     \begin{align}
@@ -202,7 +211,7 @@ window.MathJax = {
     \end{align}
     </div>
     
-    <h2>Linear vs. Nonlinear ODEs | <a href="https://www.youtube.com/watch?v=xUwmjkf0v7U&list=PLXQ5vz32rm_RngsvUCcl_gJKElZiG9qA0&index=5" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
+    <h2>Linear vs. Nonlinear ODEs | <a href="https://www.youtube.com/watch?v=xUwmjkf0v7U&list=PLXQ5vz32rm_RngsvUCcl_gJKElZiG9qA0&index=5" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Explanation Video</a></h2>
     <div class="theory">
     <p>A <b>linear</b> differential equation has the following form.</p>
     \begin{equation}
@@ -228,7 +237,7 @@ window.MathJax = {
     \end{align}
     </div>
     
-    <h2>Implicit vs. Explicit Solution | <a href="https://www.youtube.com/watch?v=MdUmcS0ti2I&list=PLXQ5vz32rm_RngsvUCcl_gJKElZiG9qA0&index=6" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
+    <h2>Implicit vs. Explicit Solution | <a href="https://www.youtube.com/watch?v=MdUmcS0ti2I&list=PLXQ5vz32rm_RngsvUCcl_gJKElZiG9qA0&index=6" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Explanation Video</a></h2>
     <div class="theory">
     <p>An <b>explicit</b> solution to an ODE is $y(x)=f(x)$. Ideally, we want to solve for $y$ in terms of $x$, but that is not always possible.</p>
     

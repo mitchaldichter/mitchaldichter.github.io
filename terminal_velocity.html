@@ -127,16 +127,25 @@ window.MathJax = {
         <li><a href="laplace_transform_table_of_transforms_and_WolframAlpha.html">Lookup Table and WolframAlpha</a></li>
       </ol>
     </li>
-    <!--<li>Systems of First Order ODEs
-      <li><a href="ode_system_simplest_case.html">Simplest Case</a></li>
-    </li>-->
+    <li>Systems of ODEs
+      <ol>
+        <li>Simplest Case $\begin{bmatrix}x' \\ y'\end{bmatrix} = \begin{bmatrix}a & b \\ c & d \end{bmatrix}\begin{bmatrix}x \\ y\end{bmatrix}$</li>
+        <ol>
+          <!--<li><a href="ode_system_distinct_real_eigenvalues.html">Distinct Real Eigenvalues</a></li>
+          <li><a href="ode_system_repeated_eigenvalue.html">Repeated Eigenvalue</a></li>
+          <li><a href="ode_system_imaginary_eigenvalues.html">Imaginary Eigenvalues</a></li>
+          <li><a href="ode_system_zero_eigenvalue_cases.html">Zero Eigenvalue Cases</a></li>-->
+          <li><a href="ode_system_poincare_diagram.html">Poincar&eacute; Diagram</a></li>
+        </ol>
+      </ol>
+    </li>
   </ol>
   <br>
   <h3 class="table_of_contents_h3">Additional Resources</h3>
   <ol>
-    <li><a href="how_to_use_wolfram_alpha.html">WolframAlpha</a></li>
-    <li><a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank">Direction Field Plotter by Ariel Barton</a></li>
-    <li><a href="https://aeb019.hosted.uark.edu/pplane.html" target="_blank">Phase Plane Plotter by Ariel Barton</a></li>
+    <li><a href="how_to_use_wolfram_alpha.html">WolframAlpha Examples</a></li>
+    <li><a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank" style="text-decoration: underline; color: blue;">Direction Field Plotter by Ariel Barton</a></li>
+    <li><a href="https://aeb019.hosted.uark.edu/pplane.html" target="_blank" style="text-decoration: underline; color: blue;">Phase Plane Plotter by Ariel Barton</a></li>
   </ol>
   <br><br><!--End Table of Contents-->
   </div>
@@ -150,10 +159,10 @@ window.MathJax = {
       <p>Viewing this website in portrait orientation can cause problems with equations being longer than the screen width (you can scroll to the right), images being poorly sized, and the font size of maths text being much smaller than regular text. If your only option is a tablet or mobile device, your viewing experience will be better if you view this website in landscape orientation. You might need to refresh the page to fix any problems after rotating.</p>
     </div>
 
-    <h1>Terminal Velocity | <a href="https://www.youtube.com/watch?v=9eSroDI-DmY&list=PLXQ5vz32rm_TQK-YmzIoHzd8OsIBH6NCT" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Topic Playlist</a></h1>
+    <h1>Terminal Velocity | <a href="https://www.youtube.com/watch?v=9eSroDI-DmY&list=PLXQ5vz32rm_TQK-YmzIoHzd8OsIBH6NCT" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Topic Playlist</a></h1>
 	  <p>The force of drag on a falling object can be approximated as proportional to the current velocity of the object. This can be written as a first order ordinary differential equation. The terminal velocity is when the force of drag is equal and opposite to the force of gravity and the velocity of the falling object does not change.</p>
 	  
-	  <h2>Sum of Forces on Falling Object | <a href="https://www.youtube.com/watch?v=9eSroDI-DmY&list=PLXQ5vz32rm_TQK-YmzIoHzd8OsIBH6NCT" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
+	  <h2>Sum of Forces on Falling Object | <a href="https://www.youtube.com/watch?v=9eSroDI-DmY&list=PLXQ5vz32rm_TQK-YmzIoHzd8OsIBH6NCT" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Explanation Video</a></h2>
     <div class="theory">
     <p>The force of gravity and the force of drag sum to equal mass times acceleration from Newton's Law with mass $m$ and drag coefficient $\gamma$, where $v(t)$ is the velocity at time $t$ and the drag on the mass is proportional to its velocity.</p>
     \begin{equation}
@@ -162,12 +171,12 @@ window.MathJax = {
     <p>In this ODE, positive velocity means the object is gaining altitude and negative velocity means the object is falling towards the ground.</p>
     </div>
     
-    <h2>Example 1 | <a href="https://www.youtube.com/watch?v=IPY3kozOPSw&list=PLXQ5vz32rm_TQK-YmzIoHzd8OsIBH6NCT&index=2" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
+    <h2>Example 1 | <a href="https://www.youtube.com/watch?v=IPY3kozOPSw&list=PLXQ5vz32rm_TQK-YmzIoHzd8OsIBH6NCT&index=2" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
     <div class="example_solution">
     <p>Write the ODE for a mass $m = 4\text{kg}$, and drag coefficient $k = 0.5\dfrac{\text{kg}}{\text{s}}$. Draw a direction field and determine the terminal velocity. Use $g = 9.8\dfrac{\text{m}}{\text{s}^{2}}$ for Earth's gravity and assume drag is proportional to velocity.</p>
     </div>
     
-    <h2>Example 2 | <a href="https://www.youtube.com/watch?v=tflVunAOptM&list=PLXQ5vz32rm_TQK-YmzIoHzd8OsIBH6NCT&index=3" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
+    <h2>Example 2 | <a href="https://www.youtube.com/watch?v=tflVunAOptM&list=PLXQ5vz32rm_TQK-YmzIoHzd8OsIBH6NCT&index=3" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
     <div class="example_solution">
     <p>Solve the following ODE for a falling object and calculate the limit as $t$ goes to infinity to determine the terminal velocity.</p>
     \begin{equation}

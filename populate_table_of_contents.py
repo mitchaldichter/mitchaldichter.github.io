@@ -23,9 +23,9 @@ table_of_contents_courses_section = """
 table_of_contents_additional_resources_section = """
   <h3 class="table_of_contents_h3">Additional Resources</h3>
   <ol>
-    <li><a href="how_to_use_wolfram_alpha.html">WolframAlpha</a></li>
-    <li><a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank">Direction Field Plotter by Ariel Barton</a></li>
-    <li><a href="https://aeb019.hosted.uark.edu/pplane.html" target="_blank">Phase Plane Plotter by Ariel Barton</a></li>
+    <li><a href="how_to_use_wolfram_alpha.html">WolframAlpha Examples</a></li>
+    <li><a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank" style="text-decoration: underline; color: blue;">Direction Field Plotter by Ariel Barton</a></li>
+    <li><a href="https://aeb019.hosted.uark.edu/pplane.html" target="_blank" style="text-decoration: underline; color: blue;">Phase Plane Plotter by Ariel Barton</a></li>
   </ol>
   """
 
@@ -49,6 +49,8 @@ table_of_contents_array["Linear Algebra"] = """
   <ol>
     <li><a href="systems_of_linear_equations.html">Systems of Linear Equations</a></li>
     <li><a href="matrix_multiplication.html">Matrix Multiplication</a></li>
+    <li><a href="vectors.html">Vectors</a></li>
+    <li><a href="eigenvalues_and_eigenvectors.html">Eigenvalues and Eigenvectors</a></li>
   </ol>
   """
 table_of_contents_array["Differential Equations"] = """
@@ -124,9 +126,18 @@ table_of_contents_array["Differential Equations"] = """
         <li><a href="laplace_transform_table_of_transforms_and_WolframAlpha.html">Lookup Table and WolframAlpha</a></li>
       </ol>
     </li>
-    <!--<li>Systems of First Order ODEs
-      <li><a href="ode_system_simplest_case.html">Simplest Case</a></li>
-    </li>-->
+    <li>Systems of ODEs
+      <ol>
+        <li>Simplest Case $\\begin{bmatrix}x' \\\\ y'\\end{bmatrix} = \\begin{bmatrix}a & b \\\\ c & d \\end{bmatrix}\\begin{bmatrix}x \\\\ y\\end{bmatrix}$</li>
+        <ol>
+          <!--<li><a href="ode_system_distinct_real_eigenvalues.html">Distinct Real Eigenvalues</a></li>
+          <li><a href="ode_system_repeated_eigenvalue.html">Repeated Eigenvalue</a></li>
+          <li><a href="ode_system_imaginary_eigenvalues.html">Imaginary Eigenvalues</a></li>
+          <li><a href="ode_system_zero_eigenvalue_cases.html">Zero Eigenvalue Cases</a></li>-->
+          <li><a href="ode_system_poincare_diagram.html">Poincar&eacute; Diagram</a></li>
+        </ol>
+      </ol>
+    </li>
   </ol>
   """
 table_of_contents_array["Multivariable Calculus"] = """

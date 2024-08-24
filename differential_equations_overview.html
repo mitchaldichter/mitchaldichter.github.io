@@ -23,8 +23,10 @@ window.MathJax = {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+
+<script type="text/javascript" src="shared_code.js"></script>
 </head>
-<body>
+<body onload="portrait_warning_visibility()">
 
 <div id="header_row">
   <div id="left_header" class="differential_equations_header">
@@ -127,16 +129,25 @@ window.MathJax = {
         <li><a href="laplace_transform_table_of_transforms_and_WolframAlpha.html">Lookup Table and WolframAlpha</a></li>
       </ol>
     </li>
-    <!--<li>Systems of First Order ODEs
-      <li><a href="ode_system_simplest_case.html">Simplest Case</a></li>
-    </li>-->
+    <li>Systems of ODEs
+      <ol>
+        <li>Simplest Case $\begin{bmatrix}x' \\ y'\end{bmatrix} = \begin{bmatrix}a & b \\ c & d \end{bmatrix}\begin{bmatrix}x \\ y\end{bmatrix}$</li>
+        <ol>
+          <!--<li><a href="ode_system_distinct_real_eigenvalues.html">Distinct Real Eigenvalues</a></li>
+          <li><a href="ode_system_repeated_eigenvalue.html">Repeated Eigenvalue</a></li>
+          <li><a href="ode_system_imaginary_eigenvalues.html">Imaginary Eigenvalues</a></li>
+          <li><a href="ode_system_zero_eigenvalue_cases.html">Zero Eigenvalue Cases</a></li>-->
+          <li><a href="ode_system_poincare_diagram.html">Poincar&eacute; Diagram</a></li>
+        </ol>
+      </ol>
+    </li>
   </ol>
   <br>
   <h3 class="table_of_contents_h3">Additional Resources</h3>
   <ol>
-    <li><a href="how_to_use_wolfram_alpha.html">WolframAlpha</a></li>
-    <li><a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank">Direction Field Plotter by Ariel Barton</a></li>
-    <li><a href="https://aeb019.hosted.uark.edu/pplane.html" target="_blank">Phase Plane Plotter by Ariel Barton</a></li>
+    <li><a href="how_to_use_wolfram_alpha.html">WolframAlpha Examples</a></li>
+    <li><a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank" style="text-decoration: underline; color: blue;">Direction Field Plotter by Ariel Barton</a></li>
+    <li><a href="https://aeb019.hosted.uark.edu/pplane.html" target="_blank" style="text-decoration: underline; color: blue;">Phase Plane Plotter by Ariel Barton</a></li>
   </ol>
   <br><br><!--End Table of Contents-->
   </div>
@@ -150,8 +161,71 @@ window.MathJax = {
       <p>Viewing this website in portrait orientation can cause problems with equations being longer than the screen width (you can scroll to the right), images being poorly sized, and the font size of maths text being much smaller than regular text. If your only option is a tablet or mobile device, your viewing experience will be better if you view this website in landscape orientation. You might need to refresh the page to fix any problems after rotating.</p>
     </div>
 
-    <h1>Landing Page</h1>
-	  <p>Please use the Table of Contents on the left to find a topic related to your coursework. When you hover over links to pages, the text will become <u>underlined</u>.</p>
+    <h1>Overview</h1>
+	  <p>Welcome to the Differential Equations course. The Table of Contents on the left has all the topics for the course, with expanded descriptions below. When you hover over the link to a page, the text will become <u>underlined</u>.</p>
+    
+    <h2>Expanded Table of Contents</h2>
+    
+    <p><b>Introduction</b></p>
+      <p style="padding-left: 1em;"><a href="differential_equations_notation_and_definitions.html"><b class="overview_link_color">Notation and Definitions&#129149;</b></a> &mdash; Covers terminology and notation used in differential equations. Defines a differential equations, Ordinary Differential Equation (ODE) vs. Partial Differential Equation (PDE), different notations to write derivatives, order of a differential equation, Linear vs. Nonlinear, and Implicit vs. Explicit Solutions.</p>
+      <p style="padding-left: 1em;"><a href="differential_equations_verifying_solutions.html"><b class="overview_link_color">Verifying Solutions&#129149;</b></a> &mdash; Shows how to verify a function is a solution to an ODE by substituting the function into the ODE, calculate the derivatives, and see if the LHS and RHS are equal to each other.</p>
+      <p style="padding-left: 1em;"><a href="initial_value_problems.html"><b class="overview_link_color">Initial Values Problems&#129149;</b></a> &mdash; An initial value problem (IVP) is a differential equation with an initial condition. Real world examples are the velocity of an object falling through the atmosphere where the velocity at time zero is given and a mass spring damper system with the initial position and velocity of the mass at time zero.</p>
+
+    <p><b>First Order Differential Equations</b></p>
+      <p style="padding-left: 1em;"><a href="direction_fields.html"><b class="overview_link_color">Direction Fields&#129149;</b></a> &mdash; Direction fields, also called slope fields, are a plot of the slopes of an ODE at different points by drawing a line with the slope equal to the value of the derivative of the unknown function at the point. The direction field lines give an idea of the behaviour of solutions at different initial conditions.</p>
+      <p style="padding-left: 1em;"><a href="equilibria_stability_and_phase_lines.html"><b class="overview_link_color">Equilibria, Stability, and Phase Lines&#129149;</b></a> &mdash; First order ordinary differential equations that are autonomous can have equilibria points where a constant value is a solution to the differential equation. The long term behaviour of solutions to the ODE can be determined by drawing a phase line and analysing the stability of the equilibrium points. Equilibrium points can be stable, unstable, or semistable.</p>
+      <p style="padding-left: 1em;"><a href="separable_equations.html"><b class="overview_link_color">Separable Equations&#129149;</b></a> &mdash; Separable equations are first order ODEs that can be rearranged so all the dependent variables are on one side of the equation and all the independent variables are on the other side of the equation. The name of the method comes from separating the dependent and independent variables on different sides of the equation. A separable equation can be integrated to solve the ODE.</p>
+      <p style="padding-left: 1em;"><a href="integrating_factor.html"><b class="overview_link_color">Integrating Factor&#129149;</b></a> &mdash; An integrating factor is a function that multiplies a differential equation to make the differential equation easier to solve. For first order linear ODEs, there is a clever trick to calculate an integrating factor to make the ODEs solvable by direct integration.</p>
+      <p style="padding-left: 1em;"><a href="differential_equations_substitution.html"><b class="overview_link_color">Bernoulli Equations and Substitutions&#129149;</b></a> &mdash; Some ODEs can be solved by substituting a new function of the independent and dependent variables into the ODE, which can miraculously make the ODE easier to solve. One class of ODEs that can be solved this way are Bernoulli equations, but other substitutions can work as well.</p>
+      <p style="padding-left: 1em;"><a href="exact_equations.html"><b class="overview_link_color">Exact Equations&#129149;</b></a> &mdash; An exact ODE is a type of ODE that often occurs in physics. The ODE conserves some quantity, such as energy or mass or rotational inertia, which is why these equations often occur in physics. These ODEs can be solved by finding a potential function.</p>
+      <p style="padding-left: 1em;"><a href="exact_equations_integrating_factor.html"><b class="overview_link_color">Exact Equations with Integrating Factor&#129149;</b></a> &mdash; Some first order ODEs are not exact, but can be made exact after multiplying by an integrating factor. The equation to calculate the integrating factor is a virtually impossible to solve partial differential equation in its general form, but is a much easier to solve ordinary differential equation when the integrating factor is a function of just one variable.</p>
+      <p style="padding-left: 1em;"><a href="eulers_method.html"><b class="overview_link_color">Euler's Method&#129149;</b></a> &mdash; Euler's method is a way to approximate the solution to an initial value problem with a piecewise linear function going through the initial condition. The idea is each segment of the piecewise linear function follows the direction field of the ODE. The approximation becomes more accurate the shorter the piecewise intervals are. This page is for initial value problems with first order ODEs.</p>
+      <p style="padding-left: 1em;"><a href="existence_and_uniqueness.html"><b class="overview_link_color">Existence and Uniqueness&#129149;</b></a> &mdash; The Existence and Uniqueness Theorems give conditions for when an initial value problem is guaranteed to have at least one solution and exactly one solution, respectively. The theorems do not say how far away from the initial condition those solutions will still exist and be unique, only that there is some region around the initial condition where the solution will exist and be unique.</p>
+      <p style="padding-left: 1em;"><a href="interval_of_validity.html"><b class="overview_link_color">Interval of Validity&#129149;</b></a> &mdash; The interval of validity for an initial value problem is the interval over which the solution is valid. For first order linear ODEs, the interval of validity can be determined without solving the ODE. For nonlinear first order ODEs, the interval of validity can be found by solving the initial value problem.</p>
+      <p style="padding-left: 1em;"><b>Applications</b></p>
+        <p style="padding-left: 2em;"><a href="radioactive_decay_and_population_growth.html"><b class="overview_link_color">Radioactive Decay and Population Growth&#129149;</b></a> &mdash; One of the simplest models for a differential equation is when the rate of growth or decay of a thing is proportional to the current quantity of the thing. The mass of a radioactive substance over time and the population of an organism over time are typical examples.</p>
+        <!--<p style="padding-left: 2em;"><a href="logistic_equation.html"><b class="overview_link_color">Logistic Equation&#129149;</b></a> &mdash; grgh</p>-->
+        <p style="padding-left: 2em;"><a href="mixing_tank_problem.html"><b class="overview_link_color">Mixing Tank Problem&#129149;</b></a> &mdash; The most common differential equation mixing problem is a tank of water with salt water being poured in at the same rate water is flowing out of the tank. There are a few variations which are all typical homework exercises in an introductory differential equations course. A real world application is polluted water flowing into a large lake which also has an outlet, solving the ODE to determine how polluted the water will be over time.</p>
+        <!--<p style="padding-left: 2em;"><a href="newtons_law_of_cooling.html"><b class="overview_link_color">Newton's Law of Cooling&#129149;</b></a> &mdash; grgh</p>-->
+        <p style="padding-left: 2em;"><a href="terminal_velocity.html"><b class="overview_link_color">Terminal Velocity&#129149;</b></a> &mdash; The force of drag on a falling object can be approximated as proportional to the current velocity of the object. This can be written as a first order ordinary differential equation. The terminal velocity is when the force of drag is equal and opposite to the force of gravity and the velocity of the falling object does not change.</p>
+        <p style="padding-left: 2em;"><a href="continuous_compound_interest.html"><b class="overview_link_color">Continuous Compound Interest&#129149;</b></a> &mdash; Bernoulli investigated what happens to a savings account with interest when the compounding occurs infinitely often. The problem results in a formula for Euler's number $e$ and can be written as a differential equation as the the number of compoundings goes to infinity.</p>
+    
+    <p><a href="Wronskian.html"><b class="overview_link_color">Wro&nacute;skian&#129149;</b></a> &mdash; The Wro&nacute;skian is useful for determining the linear independence of a set of n homogenous solutions to an nth order linear ODE. The Wro&nacute;skian is a determinant of the n homogenous solutions and their first (n-1) derivatives. The Wro&nacute;skian is used in the Variation of Parameters formula and in Abel's Identity.</p>
+      
+    <p><b>Second Order Differential Equations</b></p>
+      <p style="padding-left: 1em;"><b>$ay''+by'+cy = 0$</b> &mdash; The simplest second order ODE is constant coefficient, linear, and homogenous. The general solution can be found by substituting an exponential into the ODE, forming the characteristic polynomial, and solving for the roots. There are three cases that can occur for the roots. The following pages focus on second order ODEs, but the method applies to higher order ODEs as well.</p>
+        <p style="padding-left: 2em;"><a href="second_order_distinct_real_roots.html"><b class="overview_link_color">Distinct Real Roots&#129149;</b></a> &mdash; This page is for distinct roots, which will be real if the coefficients are also real.</p>
+        <p style="padding-left: 2em;"><a href="second_order_repeated_real_root.html"><b class="overview_link_color">Repeated Real Root&#129149;</b></a> &mdash; This page is for a repeated root, which forms a slightly different form of general solution.</p>
+        <p style="padding-left: 2em;"><a href="second_order_imaginary_roots.html"><b class="overview_link_color">Imaginary Roots&#129149;</b></a> &mdash; This page is for imaginary roots, which will be a complex conjugate pair if the coefficients are real.</p>
+      <p style="padding-left: 1em;"><b>Spring-Mass-Damper</b></p>
+        <p style="padding-left: 2em;"><a href="spring_mass_damper_equivalent_RLC_circuit.html"><b class="overview_link_color">Equivalent RLC Circuit&#129149;</b></a> &mdash; The ideal models of a resistor, capacitor, and inductor (RLC) connected in series with a battery result in an ODE with the same form as a spring-mass-damper system. All the behaviours and analysis can be applied directly to analysing an RLC circuit in series.</p>
+        <p style="padding-left: 2em;"><a href="under_over_critically_damped.html"><b class="overview_link_color">Underdamped, Overdamped, Critically Damped&#129149;</b></a> &mdash; A mass-spring-damper with no forcing term has three solution behaviours called underdamped, overdamped, and critically damped. An underdamped system oscillate about the equilibrium and is slow to decay to equilibrium. An overdamped system decays to the equilibrium without oscillating. A critically damped system separates the underdamped and overdamped cases, and solutions move as quickly as possible toward equilibrium without oscillating about the equilibrium.</p>
+        <p style="padding-left: 2em;"><a href="undamped_oscillations_and_resonance.html"><b class="overview_link_color">Undamped Oscillations and Resonance&#129149;</b></a> &mdash; Resonance in a mechanical system, such as a mass-spring-damper system, is when an oscillating force being applied to the system causes a greater amplitude oscillation in the system over time. The frequency causing the maximal amplitude is often called the resonant frequency. Resonance can be catastrophic, such as the Tacoma Narrows bridge that oscillated so strongly due to just 64 km/h winds that the bridge deck tore apart. <a href="https://en.wikipedia.org/wiki/Tacoma_Narrows_Bridge_(1940)#Film_of_collapse" target="_blank" style="text-decoration: underline; color: blue;">Wikipedia: 1940 Tacoma Narrows Bridge Film of Collapse</a></p>
+      <p style="padding-left: 1em;"><a href="method_of_undetermined_coefficients_second_order.html"><b class="overview_link_color">Method of Undetermined Coefficients&#129149;</b></a> &mdash; The Method of Undetermined Coefficients can be used to solve linear, constant coefficient, non-homogeneous ODEs when the non-homogenous term is sums and products of polynomials, exponentials, sines, and cosines. This page focuses on second order ODEs, but the method applies to higher order ODEs as well.</p>
+      <p style="padding-left: 1em;"><a href="reduction_of_order_second_order.html"><b class="overview_link_color">Reduction of Order&#129149;</b></a> &mdash; Reduction of Order is a method to find another linearly independent solution of a linear homogenous ODE if one homogeneous solution is already known. This method can be used to derive the second solution to the constant coefficient, linear, second order, homogenous ODE in the case with repeated real roots.</p>
+      <p style="padding-left: 1em;"><a href="variation_of_parameters_second_order.html"><b class="overview_link_color">Variation of Parameters&#129149;</b></a> &mdash; Variation of Parameters is a method to find the particular solution of a non-homogeneous linear ODE when the homogeneous solutions are known, which is more powerful than the Method of Undetermined Coefficients since this can solve for any non-homogeneous term if the integrals can be evaluated. The formula requires the homogenous solutions and evaluating some integrals. This page is focused on second order ODEs, but the method applies to higher order ODEs as well.</p>
+      <p style="padding-left: 1em;"><a href="Cauchy_Euler_equation_second_order.html"><b class="overview_link_color">Cauchy-Euler Equations&#129149;</b></a> &mdash; A Cauchy-Euler equation is a linear homogeneous ordinary differential equation with every nth derivative of the unknown function multiplied by a constant and the independent variable to the power n. Similarly to Bernoulli equations, Cauchy-Euler equations are a rare case of a solvable complicated ODE that the equation has been named. One of their uses is solving Laplace's equation in polar coordinates.</p>
+
+      <!--<p><b>Higher Order Differential Equations</b></p>
+        <p style="padding-left: 1em;"><a href="linear_homogeneous_concepts_higher_order.html"><b class="overview_link_color">Linear Homogeneous Concepts&#129149;</b></a> &mdash; grgh</p>
+        <p style="padding-left: 1em;"><a href="linear_constant_coefficient_higher_order.html"><b class="overview_link_color">Linear Constant Coefficient&#129149;</b></a> &mdash; grgh</p>
+        <p style="padding-left: 1em;"><a href="method_of_undetermined_coefficients_higher_order.html"><b class="overview_link_color">Method of Undetermined Coefficients&#129149;</b></a> &mdash; grgh</p>
+        <p style="padding-left: 1em;"><a href="variation_of_parameters_higher_order.html"><b class="overview_link_color">Variation of Parameters&#129149;</b></a> &mdash; grgh</p>
+      -->
+      <p><b>Laplace Transform</b></p>
+        <!--<p style="padding-left: 1em;"><a href="laplace_transform_definition.html"><b class="overview_link_color">Definition&#129149;</b></a> &mdash; grgh</p>
+        <p style="padding-left: 1em;"><a href="laplace_transform_Dirac_delta_function.html"><b class="overview_link_color">Dirac delta function&#129149;</b></a> &mdash; grgh</p>
+        <p style="padding-left: 1em;"><a href="laplace_transform_Heaviside_function.html"><b class="overview_link_color">Heaviside function&#129149;</b></a> &mdash; grgh</p>-->
+        <p style="padding-left: 1em;"><a href="laplace_transform_table_of_transforms_and_WolframAlpha.html"><b class="overview_link_color">Lookup Table and WolframAlpha&#129149;</b></a> &mdash; This page contains a list of Laplace Transforms for common functions. Rather than computing the Laplace transform every time, looking up the transform in the table is much easier. The table can also be used to perform the inverse Laplace Transform. If you need the Laplace Transform for a function not included in the table, you can use <a href="https://www.wolframalpha.com/input?i=LaplaceTransform%5B+e%5Et%2C+t%2C+s%5D" target="_blank" style="text-decoration: underline; color: blue;">WolframAlpha LaplaceTransform[ f(t), t, s]</a> to compute it. Keep in mind that even a simple function can have a complicated Laplace Transform.</p>
+      
+      <p><b>Systems of ODEs</b></p>
+        <p style="padding-left: 1em;"><b>Simplest Case &nbsp;&nbsp; $\begin{bmatrix}x' \\ y'\end{bmatrix} = \begin{bmatrix}a & b \\ c & d \end{bmatrix}\begin{bmatrix}x \\ y\end{bmatrix}$</b></p>
+          <!--<p style="padding-left: 2em;"><a href="ode_system_distinct_real_eigenvalues.html"><b class="overview_link_color">Distinct Real Eigenvalues&#129149;</b></a> &mdash; The distinct real nonzero eigenvalues case has solutions called stable nodes, unstable nodes, and saddles.</p>
+          <p style="padding-left: 2em;"><a href="ode_system_repeated_eigenvalue.html"><b class="overview_link_color">Repeated Eigenvalue&#129149;</b></a> &mdash; The repeated real nonzero eigenvalues case has solutions called stable stars, unstable stars, stable degenerate nodes, and unstable degenerate nodes.</p>
+          <p style="padding-left: 2em;"><a href="ode_system_imaginary_eigenvalues.html"><b class="overview_link_color">Imaginary Eigenvalues&#129149;</b></a> &mdash; The imaginary eigenvalues case has solutions called stable spirals, unstable spirals, and centers.</p>
+          <p style="padding-left: 2em;"><a href="ode_system_zero_eigenvalue_cases.html"><b class="overview_link_color">Zero Eigenvalue Cases&#129149;</b></a> &mdash; The cases with at least one zero eigenvalue has solutions called stable non-isolated fixed points, unstable non-isolated fixed points, and constant solution.</p>-->
+          <p style="padding-left: 2em;"><a href="ode_system_poincare_diagram.html"><b class="overview_link_color">Poincar&eacute; Diagram&#129149;</b></a> &mdash; The solution of a two dimensional system of linear, constant coefficient, homogeneous differential equations can be classified using the trace and the determinant of the coefficient matrix. A plot of the trace and determinant has regions where certain solutions types occur, such as saddles and spirals. The diagram is called a Poincaré Diagram, mapping the four-dimensional space of all 2x2 matrices to a two-dimensional space.</p>
+    
   </div>
 </div>
 </body>

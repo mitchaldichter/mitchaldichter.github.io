@@ -127,16 +127,25 @@ window.MathJax = {
         <li><a href="laplace_transform_table_of_transforms_and_WolframAlpha.html">Lookup Table and WolframAlpha</a></li>
       </ol>
     </li>
-    <!--<li>Systems of First Order ODEs
-      <li><a href="ode_system_simplest_case.html">Simplest Case</a></li>
-    </li>-->
+    <li>Systems of ODEs
+      <ol>
+        <li>Simplest Case $\begin{bmatrix}x' \\ y'\end{bmatrix} = \begin{bmatrix}a & b \\ c & d \end{bmatrix}\begin{bmatrix}x \\ y\end{bmatrix}$</li>
+        <ol>
+          <!--<li><a href="ode_system_distinct_real_eigenvalues.html">Distinct Real Eigenvalues</a></li>
+          <li><a href="ode_system_repeated_eigenvalue.html">Repeated Eigenvalue</a></li>
+          <li><a href="ode_system_imaginary_eigenvalues.html">Imaginary Eigenvalues</a></li>
+          <li><a href="ode_system_zero_eigenvalue_cases.html">Zero Eigenvalue Cases</a></li>-->
+          <li><a href="ode_system_poincare_diagram.html">Poincar&eacute; Diagram</a></li>
+        </ol>
+      </ol>
+    </li>
   </ol>
   <br>
   <h3 class="table_of_contents_h3">Additional Resources</h3>
   <ol>
-    <li><a href="how_to_use_wolfram_alpha.html">WolframAlpha</a></li>
-    <li><a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank">Direction Field Plotter by Ariel Barton</a></li>
-    <li><a href="https://aeb019.hosted.uark.edu/pplane.html" target="_blank">Phase Plane Plotter by Ariel Barton</a></li>
+    <li><a href="how_to_use_wolfram_alpha.html">WolframAlpha Examples</a></li>
+    <li><a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank" style="text-decoration: underline; color: blue;">Direction Field Plotter by Ariel Barton</a></li>
+    <li><a href="https://aeb019.hosted.uark.edu/pplane.html" target="_blank" style="text-decoration: underline; color: blue;">Phase Plane Plotter by Ariel Barton</a></li>
   </ol>
   <br><br><!--End Table of Contents-->
   </div>
@@ -150,10 +159,10 @@ window.MathJax = {
       <p>Viewing this website in portrait orientation can cause problems with equations being longer than the screen width (you can scroll to the right), images being poorly sized, and the font size of maths text being much smaller than regular text. If your only option is a tablet or mobile device, your viewing experience will be better if you view this website in landscape orientation. You might need to refresh the page to fix any problems after rotating.</p>
     </div>
 
-    <h1>Laplace Transform | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Topic Playlist</a></h1>
+    <h1>Laplace Transform | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Topic Playlist</a></h1>
 	  <p>The Laplace Transform can be used to transform a linear initial value problem into another problem that can often be solved using only algebra and then applying the inverse Laplace Transform to find the solution to original initial value problem. The Laplace transform is useful in modelling circuits when an electrical pulse occurs or a switch is flipped.</p>
 	  
-	  <h2>Definition | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
+	  <h2>Definition | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Explanation Video</a></h2>
     <div class="theory">
     <p>The Laplace Transform of a function $f(t)$, usually written as $F(s)$, is defined as</p>
     \begin{equation}
@@ -162,7 +171,7 @@ window.MathJax = {
     <p>There are some restrictions on the input function $f(t)$, such as not growing so fast that the integral evaluates to infinity, but most functions have a Laplace Transform.</p>
     </div>
     
-    <h2>Example 1 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
+    <h2>Example 1 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
     <div class="example_solution">
     <p>Calculate the Laplace Transform for the function.</p>
     \begin{equation}
@@ -170,7 +179,7 @@ window.MathJax = {
     \end{equation}
     </div>
     
-    <h2>Example 2 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
+    <h2>Example 2 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
     <div class="example_solution">
     <p>Calculate the Laplace Transform for the function.</p>
     \begin{equation}
@@ -178,7 +187,7 @@ window.MathJax = {
     \end{equation}
     </div>
     
-    <h2>Example 3 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
+    <h2>Example 3 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
     <div class="example_solution">
     <p>Calculate the Laplace Transform for the function.</p>
     \begin{equation}
@@ -187,7 +196,7 @@ window.MathJax = {
      <p>where $n$ is a positive integer.</p>
     </div>
     
-    <h2>Example 4 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
+    <h2>Example 4 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
     <div class="example_solution">
     <p>Calculate the Laplace Transform for the function.</p>
     \begin{equation}

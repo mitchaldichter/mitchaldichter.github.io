@@ -127,16 +127,25 @@ window.MathJax = {
         <li><a href="laplace_transform_table_of_transforms_and_WolframAlpha.html">Lookup Table and WolframAlpha</a></li>
       </ol>
     </li>
-    <!--<li>Systems of First Order ODEs
-      <li><a href="ode_system_simplest_case.html">Simplest Case</a></li>
-    </li>-->
+    <li>Systems of ODEs
+      <ol>
+        <li>Simplest Case $\begin{bmatrix}x' \\ y'\end{bmatrix} = \begin{bmatrix}a & b \\ c & d \end{bmatrix}\begin{bmatrix}x \\ y\end{bmatrix}$</li>
+        <ol>
+          <!--<li><a href="ode_system_distinct_real_eigenvalues.html">Distinct Real Eigenvalues</a></li>
+          <li><a href="ode_system_repeated_eigenvalue.html">Repeated Eigenvalue</a></li>
+          <li><a href="ode_system_imaginary_eigenvalues.html">Imaginary Eigenvalues</a></li>
+          <li><a href="ode_system_zero_eigenvalue_cases.html">Zero Eigenvalue Cases</a></li>-->
+          <li><a href="ode_system_poincare_diagram.html">Poincar&eacute; Diagram</a></li>
+        </ol>
+      </ol>
+    </li>
   </ol>
   <br>
   <h3 class="table_of_contents_h3">Additional Resources</h3>
   <ol>
-    <li><a href="how_to_use_wolfram_alpha.html">WolframAlpha</a></li>
-    <li><a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank">Direction Field Plotter by Ariel Barton</a></li>
-    <li><a href="https://aeb019.hosted.uark.edu/pplane.html" target="_blank">Phase Plane Plotter by Ariel Barton</a></li>
+    <li><a href="how_to_use_wolfram_alpha.html">WolframAlpha Examples</a></li>
+    <li><a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank" style="text-decoration: underline; color: blue;">Direction Field Plotter by Ariel Barton</a></li>
+    <li><a href="https://aeb019.hosted.uark.edu/pplane.html" target="_blank" style="text-decoration: underline; color: blue;">Phase Plane Plotter by Ariel Barton</a></li>
   </ol>
   <br><br><!--End Table of Contents-->
   </div>
@@ -150,10 +159,10 @@ window.MathJax = {
       <p>Viewing this website in portrait orientation can cause problems with equations being longer than the screen width (you can scroll to the right), images being poorly sized, and the font size of maths text being much smaller than regular text. If your only option is a tablet or mobile device, your viewing experience will be better if you view this website in landscape orientation. You might need to refresh the page to fix any problems after rotating.</p>
     </div>
 
-    <h1>Separable Equations | <a href="https://www.youtube.com/watch?v=Iz1Fvzf8wak&list=PLXQ5vz32rm_SOY7EmgXInS4b9hMqToWZx" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Topic Playlist</a></h1>
+    <h1>Separable Equations | <a href="https://www.youtube.com/watch?v=Iz1Fvzf8wak&list=PLXQ5vz32rm_SOY7EmgXInS4b9hMqToWZx" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Topic Playlist</a></h1>
 	<p>This method can be used to solve <b>some</b> first order linear ODEs. If the differential equation is for the function $y(x)$, the goal is to separate the independent variable $x$ to one side of the equation and the dependent variable $y(x)$ to the other side of the equation. As a notational convenience, the $\displaystyle y'=\frac{\text{d}y}{\text{d}x}$ can be treated like a fraction.</p>
 	
-	<h2>Example 1 | <a href="https://www.youtube.com/watch?v=Iz1Fvzf8wak&list=PLXQ5vz32rm_SOY7EmgXInS4b9hMqToWZx" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
+	<h2>Example 1 | <a href="https://www.youtube.com/watch?v=Iz1Fvzf8wak&list=PLXQ5vz32rm_SOY7EmgXInS4b9hMqToWZx" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
 	<div class="example_solution">
 	<p>Find the general solution to the following differential equation.</p>
 	\begin{equation}
@@ -186,7 +195,7 @@ window.MathJax = {
 	
 	<p>Not all differential equation are <b>separable equation</b>. The below differential equation is not separable.</p>
 	
-	<h2>Example 2 | <a href="https://www.youtube.com/watch?v=nuZZoRHVteY&list=PLXQ5vz32rm_SOY7EmgXInS4b9hMqToWZx&index=2" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
+	<h2>Example 2 | <a href="https://www.youtube.com/watch?v=nuZZoRHVteY&list=PLXQ5vz32rm_SOY7EmgXInS4b9hMqToWZx&index=2" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
 	<div class="example_solution">
 	<p>Determine if this ODE is a separable differential equation and why.</p>
 	\begin{equation}
@@ -203,7 +212,7 @@ window.MathJax = {
 	
 	<p>Try the following examples on your own.</p>
 	
-	<h2>Example 3 | <a href="https://www.youtube.com/watch?v=WYq65QRtft8&list=PLXQ5vz32rm_SOY7EmgXInS4b9hMqToWZx&index=3" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
+	<h2>Example 3 | <a href="https://www.youtube.com/watch?v=WYq65QRtft8&list=PLXQ5vz32rm_SOY7EmgXInS4b9hMqToWZx&index=3" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
 	<div class="example_solution">
 	<p>Determine if this ODE is a separable differential equation. If yes, find the general solution.</p>
 	\begin{equation}
@@ -211,7 +220,7 @@ window.MathJax = {
 	\end{equation}
 	</div>
 	
-	<h2>Example 4 | <a href="https://www.youtube.com/watch?v=1TpwcmJCsF4&list=PLXQ5vz32rm_SOY7EmgXInS4b9hMqToWZx&index=4" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
+	<h2>Example 4 | <a href="https://www.youtube.com/watch?v=1TpwcmJCsF4&list=PLXQ5vz32rm_SOY7EmgXInS4b9hMqToWZx&index=4" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
 	<div class="example_solution">
 	<p>Determine if this ODE is a separable differential equation. If yes, find the general solution.</p>
 	\begin{equation}
@@ -219,7 +228,7 @@ window.MathJax = {
 	\end{equation}
 	</div>
 	
-	<h2>Example 5 | <a href="https://www.youtube.com/watch?v=DmpvglnguuE&list=PLXQ5vz32rm_SOY7EmgXInS4b9hMqToWZx&index=5" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
+	<h2>Example 5 | <a href="https://www.youtube.com/watch?v=DmpvglnguuE&list=PLXQ5vz32rm_SOY7EmgXInS4b9hMqToWZx&index=5" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
 	<div class="example_solution">
 	<p>Determine if this ODE is a separable differential equation. If yes, find the general solution. (Warning: This will be an <b>implicit</b> solution.)</p>
 	\begin{equation}
@@ -227,7 +236,7 @@ window.MathJax = {
 	\end{equation}
 	</div>
 	
-	<h2>Example 6 | <a href="https://www.youtube.com/watch?v=pXFwsYR2r0k&list=PLXQ5vz32rm_SOY7EmgXInS4b9hMqToWZx&index=6" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
+	<h2>Example 6 | <a href="https://www.youtube.com/watch?v=pXFwsYR2r0k&list=PLXQ5vz32rm_SOY7EmgXInS4b9hMqToWZx&index=6" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
 	<div class="example_solution">
 	<p>Determine if this ODE is a separable differential equation. If yes, find the general solution. (Hint: Factor the LHS.)</p>
 	\begin{equation}
@@ -235,7 +244,7 @@ window.MathJax = {
 	\end{equation}
 	</div>
   
-  <h2>Example 7 | <a href="https://www.youtube.com/watch?v=pkx7JmEZUdw&list=PLXQ5vz32rm_SOY7EmgXInS4b9hMqToWZx&index=7" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Solution Video</a></h2>
+  <h2>Example 7 | <a href="https://www.youtube.com/watch?v=pkx7JmEZUdw&list=PLXQ5vz32rm_SOY7EmgXInS4b9hMqToWZx&index=7" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
 	<div class="example_solution">
 	<p>Determine if this ODE is a separable differential equation. If yes, find the general solution. (Warning: You will have to use partial fraction decomposition to integrate and there are five distinct solutions.)</p>
 	\begin{equation}
@@ -245,7 +254,7 @@ window.MathJax = {
 	
 	<p>You might remember that $\displaystyle \frac{\text{d}y}{\text{d}x}$ isn't a fraction, but treating $y'$ like a fraction in this case does work. What's really going on goes back to implicit differentiation.</p>
 	
-	<h2>Why does treating $\displaystyle \frac{\text{d}y}{\text{d}x}$ like a fraction work? | <a href="https://www.youtube.com/watch?v=gB8IeroZfHM&list=PLXQ5vz32rm_SOY7EmgXInS4b9hMqToWZx&index=10" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg" width="50" height="32"> Explanation Video</a></h2>
+	<h2>Why does treating $\displaystyle \frac{\text{d}y}{\text{d}x}$ like a fraction work? | <a href="https://www.youtube.com/watch?v=gB8IeroZfHM&list=PLXQ5vz32rm_SOY7EmgXInS4b9hMqToWZx&index=10" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Explanation Video</a></h2>
 	<div class="theory">
 	<p>A first order differential equation is separable if it can be rewritten into the below form.</p>
 	\begin{equation}
