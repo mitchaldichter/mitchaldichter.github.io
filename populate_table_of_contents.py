@@ -128,14 +128,15 @@ table_of_contents_array["Differential Equations"] = """
     </li>
     <li>Systems of ODEs
       <ol>
-        <li>Simplest Case $\\begin{bmatrix}x' \\\\ y'\\end{bmatrix} = \\begin{bmatrix}a & b \\\\ c & d \\end{bmatrix}\\begin{bmatrix}x \\\\ y\\end{bmatrix}$</li>
-        <ol>
-          <!--<li><a href="ode_system_distinct_real_eigenvalues.html">Distinct Real Eigenvalues</a></li>
-          <li><a href="ode_system_repeated_eigenvalue.html">Repeated Eigenvalue</a></li>
-          <li><a href="ode_system_imaginary_eigenvalues.html">Imaginary Eigenvalues</a></li>
-          <li><a href="ode_system_zero_eigenvalue_cases.html">Zero Eigenvalue Cases</a></li>-->
-          <li><a href="ode_system_poincare_diagram.html">Poincar&eacute; Diagram</a></li>
-        </ol>
+        <li>Simplest Case $\\begin{bmatrix}x' \\\\ y'\\end{bmatrix} = \\begin{bmatrix}a & b \\\\ c & d \\end{bmatrix}\\begin{bmatrix}x \\\\ y\\end{bmatrix}$
+          <ol>
+            <!--<li><a href="ode_system_distinct_real_eigenvalues.html">Distinct Real Eigenvalues</a></li>
+            <li><a href="ode_system_repeated_eigenvalue.html">Repeated Eigenvalue</a></li>
+            <li><a href="ode_system_imaginary_eigenvalues.html">Imaginary Eigenvalues</a></li>
+            <li><a href="ode_system_zero_eigenvalue_cases.html">Zero Eigenvalue Cases</a></li>-->
+            <li><a href="ode_system_poincare_diagram.html">Poincar&eacute; Diagram</a></li>
+            </ol>
+        </li>
       </ol>
     </li>
   </ol>
