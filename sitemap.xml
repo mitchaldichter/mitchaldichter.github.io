@@ -17,154 +17,180 @@
 <!--main page-->
   <url>
     <loc>https://mitchaldichter.com/</loc>
-    <lastmod>2024-08-23</lastmod>
+    <lastmod>2024-09-13</lastmod>
   </url>
 
 <!--wolfram alpha-->
   <url>
     <loc>https://mitchaldichter.com/how_to_use_wolfram_alpha.html</loc>
-    <lastmod>2024-08-23</lastmod>
+    <lastmod>2024-09-13</lastmod>
   </url>
 
 <!--differential equations-->
   <url>
     <loc>https://mitchaldichter.com/Cauchy_Euler_equation_second_order.html</loc>
-    <lastmod>2024-08-23</lastmod>
+    <lastmod>2024-09-13</lastmod>
   </url>
   <url>
     <loc>https://mitchaldichter.com/continuous_compound_interest.html</loc>
-    <lastmod>2024-08-23</lastmod>
+    <lastmod>2024-09-13</lastmod>
   </url>
   <url>
     <loc>https://mitchaldichter.com/differential_equations_notation_and_definitions.html</loc>
-    <lastmod>2024-08-23</lastmod>
+    <lastmod>2024-09-13</lastmod>
   </url>
   <url>
     <loc>https://mitchaldichter.com/differential_equations_overview.html</loc>
-    <lastmod>2024-08-23</lastmod>
+    <lastmod>2024-09-13</lastmod>
   </url>
   <url>
     <loc>https://mitchaldichter.com/differential_equations_substitution.html</loc>
-    <lastmod>2024-08-23</lastmod>
+    <lastmod>2024-09-13</lastmod>
   </url>
   <url>
     <loc>https://mitchaldichter.com/differential_equations_verifying_solutions.html</loc>
-    <lastmod>2024-08-23</lastmod>
+    <lastmod>2024-09-13</lastmod>
   </url>
   <url>
     <loc>https://mitchaldichter.com/direction_fields.html</loc>
-    <lastmod>2024-08-23</lastmod>
+    <lastmod>2024-09-13</lastmod>
   </url>
   <url>
     <loc>https://mitchaldichter.com/equilibria_stability_and_phase_lines.html</loc>
-    <lastmod>2024-08-23</lastmod>
+    <lastmod>2024-09-13</lastmod>
   </url>
   <url>
     <loc>https://mitchaldichter.com/eulers_method.html</loc>
-    <lastmod>2024-08-23</lastmod>
+    <lastmod>2024-09-13</lastmod>
   </url>
   <url>
     <loc>https://mitchaldichter.com/exact_equations.html</loc>
-    <lastmod>2024-08-23</lastmod>
+    <lastmod>2024-09-13</lastmod>
   </url>
   <url>
     <loc>https://mitchaldichter.com/exact_equations_integrating_factor.html</loc>
-    <lastmod>2024-08-23</lastmod>
+    <lastmod>2024-09-13</lastmod>
   </url>
   <url>
     <loc>https://mitchaldichter.com/existence_and_uniqueness.html</loc>
-    <lastmod>2024-08-23</lastmod>
+    <lastmod>2024-09-13</lastmod>
   </url>
   <url>
     <loc>https://mitchaldichter.com/initial_value_problems.html</loc>
-    <lastmod>2024-08-23</lastmod>
+    <lastmod>2024-09-13</lastmod>
   </url>
   <url>
     <loc>https://mitchaldichter.com/integrating_factor.html</loc>
-    <lastmod>2024-08-23</lastmod>
+    <lastmod>2024-09-13</lastmod>
   </url>
   <url>
     <loc>https://mitchaldichter.com/interval_of_validity.html</loc>
-    <lastmod>2024-08-23</lastmod>
+    <lastmod>2024-09-13</lastmod>
   </url>
   <url>
     <loc>https://mitchaldichter.com/laplace_transform_table_of_transforms_and_WolframAlpha.html</loc>
-    <lastmod>2024-08-23</lastmod>
+    <lastmod>2024-09-13</lastmod>
   </url>
   <url>
     <loc>https://mitchaldichter.com/method_of_undetermined_coefficients_second_order.html</loc>
-    <lastmod>2024-08-23</lastmod>
+    <lastmod>2024-09-13</lastmod>
   </url>
   <url>
     <loc>https://mitchaldichter.com/mixing_tank_problem.html</loc>
-    <lastmod>2024-08-23</lastmod>
+    <lastmod>2024-09-13</lastmod>
   </url>
   <url>
     <loc>https://mitchaldichter.com/radioactive_decay_and_population_growth.html</loc>
-    <lastmod>2024-08-23</lastmod>
+    <lastmod>2024-09-13</lastmod>
   </url>
   <url>
     <loc>https://mitchaldichter.com/reduction_of_order_second_order.html</loc>
-    <lastmod>2024-08-23</lastmod>
+    <lastmod>2024-09-13</lastmod>
   </url>
   <url>
     <loc>https://mitchaldichter.com/second_order_distinct_real_roots.html</loc>
-    <lastmod>2024-08-23</lastmod>
+    <lastmod>2024-09-13</lastmod>
   </url>
   <url>
     <loc>https://mitchaldichter.com/second_order_imaginary_roots.html</loc>
-    <lastmod>2024-08-23</lastmod>
+    <lastmod>2024-09-13</lastmod>
   </url>
   <url>
     <loc>https://mitchaldichter.com/second_order_repeated_real_root.html</loc>
-    <lastmod>2024-08-23</lastmod>
+    <lastmod>2024-09-13</lastmod>
   </url>
   <url>
     <loc>https://mitchaldichter.com/separable_equations.html</loc>
-    <lastmod>2024-08-23</lastmod>
+    <lastmod>2024-09-13</lastmod>
   </url>
   <url>
     <loc>https://mitchaldichter.com/spring_mass_damper_equivalent_RLC_circuit.html</loc>
-    <lastmod>2024-08-23</lastmod>
+    <lastmod>2024-09-13</lastmod>
   </url>
   <url>
     <loc>https://mitchaldichter.com/terminal_velocity.html</loc>
-    <lastmod>2024-08-23</lastmod>
+    <lastmod>2024-09-13</lastmod>
   </url>
   <url>
     <loc>https://mitchaldichter.com/undamped_oscillations_and_resonance.html</loc>
-    <lastmod>2024-08-23</lastmod>
+    <lastmod>2024-09-13</lastmod>
   </url>
   <url>
     <loc>https://mitchaldichter.com/under_over_critically_damped.html</loc>
-    <lastmod>2024-08-23</lastmod>
+    <lastmod>2024-09-13</lastmod>
   </url>
   <url>
     <loc>https://mitchaldichter.com/variation_of_parameters_second_order.html</loc>
-    <lastmod>2024-08-23</lastmod>
+    <lastmod>2024-09-13</lastmod>
   </url>
   <url>
     <loc>https://mitchaldichter.com/Wronskian.html</loc>
-    <lastmod>2024-08-23</lastmod>
+    <lastmod>2024-09-13</lastmod>
   </url>
   <url>
     <loc>https://mitchaldichter.com/ode_system_poincare_diagram.html</loc>
-    <lastmod>2024-08-23</lastmod>
+    <lastmod>2024-09-13</lastmod>
   </url>
   <!--<url>
     <loc>https://mitchaldichter.com/ode_system_distinct_real_eigenvalues.html</loc>
-    <lastmod>2024-08-23</lastmod>
+    <lastmod>2024-09-13</lastmod>
   </url>
   <url>
     <loc>https://mitchaldichter.com/ode_system_repeated_eigenvalue.html</loc>
-    <lastmod>2024-08-23</lastmod>
+    <lastmod>2024-09-13</lastmod>
   </url>
   <url>
     <loc>https://mitchaldichter.com/ode_system_imaginary_eigenvalues.html</loc>
-    <lastmod>2024-08-23</lastmod>
+    <lastmod>2024-09-13</lastmod>
   </url>
   <url>
     <loc>https://mitchaldichter.com/ode_system_zero_eigenvalue_cases.html</loc>
-    <lastmod>2024-08-23</lastmod>
+    <lastmod>2024-09-13</lastmod>
   </url>-->
+  
+  <!--miscellaneous-->
+  <url>
+    <loc>https://mitchaldichter.com/miscellaneous_overview.html</loc>
+    <lastmod>2024-09-13</lastmod>
+  </url>
+  <url>
+    <loc>https://mitchaldichter.com/vectors_fundamentals.html</loc>
+    <lastmod>2024-09-13</lastmod>
+  </url>
+  <url>
+    <loc>https://mitchaldichter.com/vectors_dot_product.html</loc>
+    <lastmod>2024-09-13</lastmod>
+  </url>
+  <url>
+    <loc>https://mitchaldichter.com/vectors_cross_product.html</loc>
+    <lastmod>2024-09-13</lastmod>
+  </url>
+  <url>
+    <loc>https://mitchaldichter.com/normal_to_plane.html</loc>
+    <lastmod>2024-09-13</lastmod>
+  </url>
+  <url>
+    <loc>https://mitchaldichter.com/polar_coordinates.html</loc>
+    <lastmod>2024-09-13</lastmod>
+  </url>
 </urlset>

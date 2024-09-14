@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Vectors Dot Product</title>
+
+<meta name="description" content="In maths, the dot product, or inner product, can be used to find the angle between a pair of vectors, test if a pair of vectors is parallel or perpendicular, and find the projection of a vector onto another vector. The name "dot product" is comes from the dot operator that is used to represent the operation. Another name is scalar product which emphasizes the output is a scalar.">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="32x32" href="images/profile_image_favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/profile_image_favicon-16x16.png">
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$','$'], ['\\(','\\)']]
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/noerrors']
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script"></script>
+<link rel="stylesheet" href="maths_survival_guide.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+
+<script type="text/javascript" src="shared_code.js"></script>
+</head>
+<body>
+
+<div id="header_row">
+  <div id="left_header" class="miscellaneous_topics_header">
+    Table of Contents
+  </div>
+  <div id="right_header" class="miscellaneous_topics_header">
+    <!--Begin Header Text-->Miscellaneous Topics<!--End Header Text-->
+  </div>
+  <div id="profile_picture_div">
+	<img id="profile_picture_img" alt="channel logo" src="images/profile_image100x100.webp">
+  </div>
+</div>
+
+<div id="content_row">
+  <div id="left_content">
+    <!--Begin Table of Contents-->
+  <h3 class="table_of_contents_h3">Courses</h3>
+  <ol>
+    <!--<li>Single Variable Calculus
+      <ol>
+        <li><a href="limits_and_derivatives_overview.html">Limits and Derivatives</a></li>
+        <li><a href="integration_overview.html">Integration</a></li>
+        <li><a href="sequences_and_series_overview.html">Sequences and Series</a></li>
+      </ol>
+    </li>
+    <li><a href="multivariable_calculus_overview.html">Multivariable Calculus</a></li>
+    <li><a href="linear_algebra_overview.html">Linear Algebra</a></li>-->
+    <li><a href="differential_equations_overview.html">Differential Equations</a></li>
+    <li><a href="miscellaneous_overview.html">Miscellaneous Topics</a></li>
+  </ol>
+  <br>
+  <h3 class="table_of_contents_h3">Miscellaneous Topics</h3>
+  <ol>
+    <li>Vectors
+      <ol>
+        <li><a href="vectors_fundamentals.html">Fundamentals</a></li>
+        <li><a href="vectors_dot_product.html">$\vec{a} \cdot \vec{b}$&nbsp;&nbsp;Dot Product</a></li>
+        <li><a href="vectors_cross_product.html">$\vec{a} \times \vec{b}$&nbsp;&nbsp;Cross Product</a></li>
+        <li><a href="normal_to_plane.html">Normal $\vec{n}$ to Plane</a></li>
+      </ol>
+    </li>
+    <li>Coordinate Systems
+      <ol>
+        <li><a href="polar_coordinates.html">Polar $(r,\theta)$</a></li>
+        <!--<li><a href="cylindrical_coordinates.html">Cylindrical $(r,\theta,z)$</a></li>
+        <li><a href="spherical_coordinates.html">Spherical $(r,\theta,\phi)$</a></li>-->
+      </ol>
+    </li>
+    <!--<li>Parametric Equations
+      <ol>
+        <li><a href="parametric_paths.html">1D Paths</a></li>
+        <li><a href="parametric_surfaces.html">2D Surfaces</a></li>
+      </ol>
+    </li>-->
+  </ol>
+<br>
+  <h3 class="table_of_contents_h3">Additional Resources</h3>
+  <ol>
+    <li><a href="how_to_use_wolfram_alpha.html">WolframAlpha Examples</a></li>
+    <li><a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank" style="text-decoration: underline; color: blue;">Direction Field Plotter by Ariel Barton</a></li>
+    <li><a href="https://aeb019.hosted.uark.edu/pplane.html" target="_blank" style="text-decoration: underline; color: blue;">Phase Plane Plotter by Ariel Barton</a></li>
+  </ol>
+  <br><br><!--End Table of Contents-->
+  </div>
+  
+<div id="left_empty_column"></div>
+  <div id="right_content">
+    <div id="portrait_warning_div">
+      <p id="portrait_warning_p"><b>NARROW DISPLAY WARNING</b></p>
+      <hr color="black">
+      <p>You are most likely using a tablet or mobile device in portrait orientation. This website is best viewed using a typical computer screen with the browser window maximized.</p>
+      <p>Viewing this website in portrait orientation can cause problems with equations being longer than the screen width (you can scroll to the right), images being poorly sized, and the font size of maths text being much smaller than regular text. If your only option is a tablet or mobile device, your viewing experience will be better if you view this website in landscape orientation. You might need to refresh the page to fix any problems after rotating.</p>
+    </div>
+
+    <h1>Vectors Dot Product | <a href="https://www.youtube.com/watch?v=XiVEzIfaNiU&list=PLXQ5vz32rm_Typ9Qxas6ryo8DNTVBxKM2&index=2" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Topic Playlist</a></h1>
+    <p>In maths, the dot product, or inner product, can be used to find the angle between a pair of vectors, test if a pair of vectors is parallel or perpendicular, and find the projection of a vector onto another vector. The name "dot product" is comes from the dot operator that is used to represent the operation. Another name is scalar product which emphasizes the output is a scalar.</p>
+    
+    <h2>Definition and&nbsp;&nbsp;$\vec{a} \cdot \vec{b} = |\vec{a}||\vec{b}|\cos(\theta)$ | <a href="https://www.youtube.com/watch?v=XiVEzIfaNiU&list=PLXQ5vz32rm_Typ9Qxas6ryo8DNTVBxKM2&index=2" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Explanation Video</a></h2>
+    <div class="theory">
+    <h3>Definition</h3>
+    <p>The dot product of $\vec{a}$ and $\vec{b}$ is the sum of all multiplying all pairs of components in $\vec{a}$ and $\vec{b}$.</p>
+    
+    <p>In two dimensional space using vector notation,</p>
+    \begin{equation}
+    \vec{a} \cdot \vec{b} = \langle a_{1},a_{2} \rangle \cdot \langle b_{1},b_{2} \rangle = a_{1}b_{1} + a_{2}b_{2}
+    \end{equation}
+    <p>In two dimensional space using matrix notation,</p>
+    \begin{equation}
+    \vec{a} \cdot \vec{b} = \begin{bmatrix}
+    a_{1} \\
+    a_{2}
+    \end{bmatrix}^{T} \begin{bmatrix}
+    b_{1} \\
+    b_{2}
+    \end{bmatrix} = \begin{bmatrix}
+    a_{1} & a_{2}
+    \end{bmatrix} \begin{bmatrix}
+    b_{1} \\
+    b_{2}
+    \end{bmatrix} = \begin{bmatrix}
+    a_{1}b_{1} + a_{2}b_{2}
+    \end{bmatrix}
+    \end{equation}
+    
+    <p>In three dimensional space using vector notation,</p>
+    \begin{equation}
+    \vec{a} \cdot \vec{b} = \langle a_{1},a_{2},a_{3} \rangle \cdot \langle b_{1},b_{2},b_{3} \rangle = a_{1}b_{1} + a_{2}b_{2} + a_{3}b_{3}
+    \end{equation}
+    <p>In three dimensional space using matrix notation,</p>
+    \begin{equation}
+    \vec{a} \cdot \vec{b} = \begin{bmatrix}
+    a_{1} \\
+    a_{2} \\
+    a_{3}
+    \end{bmatrix}^{T} \begin{bmatrix}
+    b_{1} \\
+    b_{2} \\
+    b_{3}
+    \end{bmatrix} = \begin{bmatrix}
+    a_{1} & a_{2} & a_{3}
+    \end{bmatrix} \begin{bmatrix}
+    b_{1} \\
+    b_{2} \\
+    b_{3}
+    \end{bmatrix} = \begin{bmatrix}
+    a_{1}b_{1} + a_{2}b_{2} + a_{3}b_{3}
+    \end{bmatrix}
+    \end{equation}
+    
+    <h3>Derivation of&nbsp;&nbsp;$\vec{a} \cdot \vec{b} = |\vec{a}||\vec{b}|\cos(\theta)$</h3>
+    <p>The dot product is used is because of the relationship,</p>
+    \begin{equation}
+    |\vec{a} - \vec{b}|^{2} = |\vec{a}||\vec{b}|\cos(\theta)
+    \end{equation}
+    <p>Where $0 \leq \theta \leq \pi$ is the angle formed by the vectors $\vec{a}$ and $\vec{b}$.</p>
+    <img src="images/a_b_angle.png" alt="a dot b angle" class="center_img" width="219" height="202">
+    
+    <p>This can be proved in two dimensions using the Law of Cosines.</p>
+    
+    <img src="images/a_b_law_of_cosines.png" alt="a b law of cosines" class="center_img" width="688" height="220">
+    
+    <p>Starting with the Law of Cosines with the triangle side lengths as the lengths of vectors.</p>
+    \begin{equation}
+    |\vec{a} - \vec{b}|^{2} = |\vec{a}|^{2} + |\vec{b}|^{2} - 2|\vec{a}||\vec{b}|\cos(\theta)
+    \end{equation}
+    <p>Expand out some of the terms.</p>
+    \begin{equation}
+    |\langle a_{1}-b_{1},a_{2}-b_{2}\rangle|^{2} = \left(\sqrt{a_{1}^{2}+a_{2}^{2}}\right)^{2} + \left(\sqrt{b_{1}^{2}+b_{2}^{2}}\right)^{2} - 2|\vec{a}||\vec{b}|\cos(\theta)
+    \end{equation}
+    \begin{equation}
+    (a_{1}-b_{1})^{2}+(a_{2}-b_{2})^{2} = a_{1}^{2}+a_{2}^{2} + b_{1}^{2}+b_{2}^{2} - 2|\vec{a}||\vec{b}|\cos(\theta)
+    \end{equation}
+    \begin{equation}
+    a_{1}^{2}-2a_{1}b_{1}+b_{1}^{2}+a_{2}^{2}-2a_{2}b_{2}+b_{2}^{2} = a_{1}^{2}+a_{2}^{2} + b_{1}^{2}+b_{2}^{2} - 2|\vec{a}||\vec{b}|\cos(\theta)
+    \end{equation}
+    <p>Cancel out common terms.</p>
+    \begin{equation}
+    -2a_{1}b_{1}-2a_{2}b_{2} =  - 2|\vec{a}||\vec{b}|\cos(\theta)
+    \end{equation}
+    <p>Divide both sides by $-2$.</p>
+    \begin{equation}
+    a_{1}b_{1} + a_{2}b_{2} = |\vec{a}||\vec{b}|\cos(\theta)
+    \end{equation}
+    <p>Finally, rewrite the LHS as the dot product.</p>
+    \begin{equation}
+    \vec{a} \cdot \vec{b} = |\vec{a}||\vec{b}|\cos(\theta)
+    \end{equation}
+    
+    <p>To prove $\vec{a} \cdot \vec{b} = |\vec{a}||\vec{b}|\cos(\theta)$ in three or more dimensions, there are multiple ways, but one uses a change of basis to the plane containing $\vec{a}$ and $\vec{b}$ which reduces the problem to a two-dimensional space which was just proved.</p>
+    </div>
+    
+    <h2>Testing for Orthogonal and Parallel | <a href="https://www.youtube.com/watch?v=XiVEzIfaNiU&list=PLXQ5vz32rm_Typ9Qxas6ryo8DNTVBxKM2&index=2&t=666s" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Explanation Video</a></h2>
+    <div class="theory">
+    <p>Since $\vec{a} \cdot \vec{b} = |\vec{a}||\vec{b}|\cos(\theta)$, there are some easy tests to check if two vectors are orthogonal or pointing in the same direction, and pointing in opposite directions.</p>
+    
+    <img src="images/a_b_orthogonal_parallel.png" alt="vectors orthogonal parallel" class="center_img" width="535" height="188">
+    
+    <p>If $\vec{a}$ and $\vec{b}$ form a right angle with each other, called orthogonal, then the dot product is zero.</p>
+    <p>If $\vec{a}$ and $\vec{b}$ point in the same direction, then the dot product is $|\vec{a}||\vec{b}|$.</p>
+    <p>If $\vec{a}$ and $\vec{b}$ point in opposite directions, then the dot product is $-|\vec{a}||\vec{b}|$.</p>
+    
+    </div>
+    
+    <h2>Projection of $\vec{b}$ onto $\vec{a}$ | <a href="https://www.youtube.com/watch?v=XiVEzIfaNiU&list=PLXQ5vz32rm_Typ9Qxas6ryo8DNTVBxKM2&index=2&t=1026s" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Explanation Video</a></h2>
+    <div class="theory">
+    <p>For two vectors $\vec{a}$ and $\vec{b}$, sometimes it's useful to find how much of a vector $\vec{b}$ is in the direction of $\vec{a}$. The <b>scalar projection</b> of $\vec{b}$ onto $\vec{a}$ is the length of the side of a right triangle with hypotenuse $\vec{b}$ and base in the direction of $\vec{a}$. It does not matter if $\vec{a}$ and $\vec{b}$ form an acute or obtuse angle. The projection will be exactly the same.</p>
+    
+    <img src="images/a_b_projection_positive_negative.png" alt="project b onto a positive negative" class="center_img" width="919" height="270">
+    
+    <p>The dot product can be used to find the scalar projection $\vec{b}$ onto $\vec{a}$ because that length is $|\vec{b}|\cos(\theta)$.</p>
+    
+    <img src="images/a_b_projection.png" alt="project b onto a" class="center_img" width="671" height="310">
+    
+    <p>The <b>vector projection</b> of $\vec{b}$ onto $\vec{a}$ is a vector instead of a scalar. This can be calculated by multiplying the scalar projection by a length 1 vector, called a unit vector, in the direction of $\vec{a}$. Dividing $\vec{a}$ by its length will make a unit vector in the direction of $\vec{a}$.</p>
+    </div>
+      
+  </div>
+</div>
+</body>
+</html>

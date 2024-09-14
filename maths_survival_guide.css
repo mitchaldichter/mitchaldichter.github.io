@@ -170,6 +170,10 @@ tr:nth-child(even) {
   background-color: #EC745C;
 }
 
+.miscellaneous_topics_header {
+  background-color: #EC745C;
+}
+
 .linear_algebra_header {
   background-color: #EA4335;
 }

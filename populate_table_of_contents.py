@@ -17,9 +17,11 @@ table_of_contents_courses_section = """
     <li><a href="multivariable_calculus_overview.html">Multivariable Calculus</a></li>
     <li><a href="linear_algebra_overview.html">Linear Algebra</a></li>-->
     <li><a href="differential_equations_overview.html">Differential Equations</a></li>
+    <li><a href="miscellaneous_overview.html">Miscellaneous Topics</a></li>
   </ol>
   """
-  
+#    <li><a href="miscellaneous_overview.html">Miscellaneous</a></li>
+
 table_of_contents_additional_resources_section = """
   <h3 class="table_of_contents_h3">Additional Resources</h3>
   <ol>
@@ -30,7 +32,34 @@ table_of_contents_additional_resources_section = """
   """
 
 table_of_contents_array = {}
-table_of_contents_array["Maths Survival Guide"] = ""
+table_of_contents_array["Miscellaneous Topics"] = """
+  <h3 class="table_of_contents_h3">Miscellaneous Topics</h3>
+  <ol>
+    <li>Vectors
+      <ol>
+        <li><a href="vectors_fundamentals.html">Fundamentals</a></li>
+        <li><a href="vectors_dot_product.html">$\\vec{a} \\cdot \\vec{b}$&nbsp;&nbsp;Dot Product</a></li>
+        <li><a href="vectors_cross_product.html">$\\vec{a} \\times \\vec{b}$&nbsp;&nbsp;Cross Product</a></li>
+        <li><a href="normal_to_plane.html">Normal $\\vec{n}$ to Plane</a></li>
+      </ol>
+    </li>
+    <li>Coordinate Systems
+      <ol>
+        <li><a href="polar_coordinates.html">Polar $(r,\\theta)$</a></li>
+        <!--<li><a href="cylindrical_coordinates.html">Cylindrical $(r,\\theta,z)$</a></li>
+        <li><a href="spherical_coordinates.html">Spherical $(r,\\theta,\\phi)$</a></li>-->
+      </ol>
+    </li>
+    <!--<li>Parametric Equations
+      <ol>
+        <li><a href="parametric_paths.html">1D Paths</a></li>
+        <li><a href="parametric_surfaces.html">2D Surfaces</a></li>
+      </ol>
+    </li>-->
+  </ol>
+"""
+#misc ends up in index.html between Courses and Additional Resources
+table_of_contents_array["Maths Survival Guide"] = table_of_contents_array["Miscellaneous Topics"]
 table_of_contents_array["Single Variable Calculus: Limits and Derivatives"] = """
   <h3 class="table_of_contents_h3">Single Variable Calculus: Limits and Derivatives</h3>
   <ol>
@@ -139,6 +168,16 @@ table_of_contents_array["Differential Equations"] = """
         </li>
       </ol>
     </li>
+    <!--<li>Preview of Dynamical Systems
+      <ol>
+        <li><a href="dynamical_systems_brief_outline.html">Brief Outline</a></li>
+        <li><a href="bifurcations.html">Bifurcations</a></li>
+        <li><a href="simple_pendulum.html">Simple Pendulum</a></li>
+        <li><a href="van_der_Pol_oscillator.html">van der Pol Oscillator</a></li>
+        <li><a href="logistic_map_and_Henon_map.html">Logistic map and H&eacute;non map</a></li>
+        <li><a href="rossler_attractor.html">R&ouml;ssler Attractor</a></li>
+      </ol>
+    </li>-->
   </ol>
   """
 table_of_contents_array["Multivariable Calculus"] = """
@@ -148,6 +187,7 @@ table_of_contents_array["Multivariable Calculus"] = """
     <li><a href="curl.html">Curl</a></li>
   </ol>
   """
+#blank because Additional Resources is included in all pages
 table_of_contents_array["Additional Resources"] = ""
 
 for page in table_of_contents_array:

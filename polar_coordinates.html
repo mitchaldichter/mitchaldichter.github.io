@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Polar Coordinates</title>
+
+<meta name="description" content="In polar coordinates, a point in the plane is described with (r,theta) where r is the distance of the point from the origin and theta is the angle anti-clockwise from the positive half of the horizontal axis. Polar coordinates are most useful for any shape that has some sort of radial symmetry about the origin, such as circles and spirals.">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="32x32" href="images/profile_image_favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/profile_image_favicon-16x16.png">
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$','$'], ['\\(','\\)']]
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/noerrors']
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script"></script>
+<link rel="stylesheet" href="maths_survival_guide.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+
+<script type="text/javascript" src="shared_code.js"></script>
+</head>
+<body>
+
+<div id="header_row">
+  <div id="left_header" class="miscellaneous_topics_header">
+    Table of Contents
+  </div>
+  <div id="right_header" class="miscellaneous_topics_header">
+    <!--Begin Header Text-->Miscellaneous Topics<!--End Header Text-->
+  </div>
+  <div id="profile_picture_div">
+	<img id="profile_picture_img" alt="channel logo" src="images/profile_image100x100.webp">
+  </div>
+</div>
+
+<div id="content_row">
+  <div id="left_content">
+    <!--Begin Table of Contents-->
+  <h3 class="table_of_contents_h3">Courses</h3>
+  <ol>
+    <!--<li>Single Variable Calculus
+      <ol>
+        <li><a href="limits_and_derivatives_overview.html">Limits and Derivatives</a></li>
+        <li><a href="integration_overview.html">Integration</a></li>
+        <li><a href="sequences_and_series_overview.html">Sequences and Series</a></li>
+      </ol>
+    </li>
+    <li><a href="multivariable_calculus_overview.html">Multivariable Calculus</a></li>
+    <li><a href="linear_algebra_overview.html">Linear Algebra</a></li>-->
+    <li><a href="differential_equations_overview.html">Differential Equations</a></li>
+    <li><a href="miscellaneous_overview.html">Miscellaneous Topics</a></li>
+  </ol>
+  <br>
+  <h3 class="table_of_contents_h3">Miscellaneous Topics</h3>
+  <ol>
+    <li>Vectors
+      <ol>
+        <li><a href="vectors_fundamentals.html">Fundamentals</a></li>
+        <li><a href="vectors_dot_product.html">$\vec{a} \cdot \vec{b}$&nbsp;&nbsp;Dot Product</a></li>
+        <li><a href="vectors_cross_product.html">$\vec{a} \times \vec{b}$&nbsp;&nbsp;Cross Product</a></li>
+        <li><a href="normal_to_plane.html">Normal $\vec{n}$ to Plane</a></li>
+      </ol>
+    </li>
+    <li>Coordinate Systems
+      <ol>
+        <li><a href="polar_coordinates.html">Polar $(r,\theta)$</a></li>
+        <!--<li><a href="cylindrical_coordinates.html">Cylindrical $(r,\theta,z)$</a></li>
+        <li><a href="spherical_coordinates.html">Spherical $(r,\theta,\phi)$</a></li>-->
+      </ol>
+    </li>
+    <!--<li>Parametric Equations
+      <ol>
+        <li><a href="parametric_paths.html">1D Paths</a></li>
+        <li><a href="parametric_surfaces.html">2D Surfaces</a></li>
+      </ol>
+    </li>-->
+  </ol>
+<br>
+  <h3 class="table_of_contents_h3">Additional Resources</h3>
+  <ol>
+    <li><a href="how_to_use_wolfram_alpha.html">WolframAlpha Examples</a></li>
+    <li><a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank" style="text-decoration: underline; color: blue;">Direction Field Plotter by Ariel Barton</a></li>
+    <li><a href="https://aeb019.hosted.uark.edu/pplane.html" target="_blank" style="text-decoration: underline; color: blue;">Phase Plane Plotter by Ariel Barton</a></li>
+  </ol>
+  <br><br><!--End Table of Contents-->
+  </div>
+  
+<div id="left_empty_column"></div>
+  <div id="right_content">
+    <div id="portrait_warning_div">
+      <p id="portrait_warning_p"><b>NARROW DISPLAY WARNING</b></p>
+      <hr color="black">
+      <p>You are most likely using a tablet or mobile device in portrait orientation. This website is best viewed using a typical computer screen with the browser window maximized.</p>
+      <p>Viewing this website in portrait orientation can cause problems with equations being longer than the screen width (you can scroll to the right), images being poorly sized, and the font size of maths text being much smaller than regular text. If your only option is a tablet or mobile device, your viewing experience will be better if you view this website in landscape orientation. You might need to refresh the page to fix any problems after rotating.</p>
+    </div>
+
+    <h1>Polar Coordinates | <a href="https://www.youtube.com/watch?v=ohYdj8shXM8&list=PLXQ5vz32rm_SwtTrnI6GW20HeRn-ed-Ot" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Topic Playlist</a></h1>
+    <p>In polar coordinates, a point in the plane is described with $(r,\theta)$ where $r$ is the distance of the point from the origin and $\theta$ is the angle anti-clockwise from the positive half of the horizontal axis. Polar coordinates are most useful for any shape that has some sort of radial symmetry about the origin, such as circles and spirals.</p>
+    
+    <h2>Why is radians from 0 to $2\pi$? | <a href="https://www.youtube.com/watch?v=ohYdj8shXM8&list=PLXQ5vz32rm_SwtTrnI6GW20HeRn-ed-Ot" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Explanation Video</a></h2>
+    <div class="theory">
+    <p>One way to measure an angle is using degrees from 0&deg; to 360&deg;. The reason 360 was used is because many integer divide 360 exactly, which is convenient for calculations.</p>
+    <p style="text-align: center;">360 is divided by each of 2, 3, 4, 5, 6, 8, 9, 10, 12, 15, 18, 20, 24, 30, 36, 40, 45, 60, 72, 90, 120, 180</p>
+    
+    <p>The definition of radians goes back to physics where Euler in 1765 choose to use radians so the formula for angular velocity had a nice definition of $\omega = \dfrac{v}{r}$ without the need for a dimensional constant $\eta$ in $\omega = \dfrac{v}{\eta r}$.</p>
+    
+    <p>An angle measured in radians is the arclength of a wedge of a circle of radius one where the pointy part of the wedge forms the angle, which is called the angle is subtended by the arc.</p>
+    
+    <img src="images/Circle_radians.gif" alt="circle arclength radians" class="center_img" width="450" height="450">
+    <p>GIF courtesy of <a href="https://en.wikipedia.org/wiki/File:Circle_radians.gif" target="_blank" style="text-decoration: underline; color: blue;">Wikipedia</a>.</p>
+    
+    <p>A circle of radius $r = 1$ has a circumference of $2\pi r = 2\pi$, which is why:<br>
+    <br>
+    &nbsp;&nbsp;An angle of $2\pi$ radians rotates all the way back around to the positive horizontal axis because the entire circumference of the unit circle is $2\pi$.<br>
+    &nbsp;&nbsp;An angle of $\pi$ radian rotates halfway around to the negative horizontal axis because half the circumference of the unit circle is $\dfrac{1}{2}2\pi = \pi$.<br>
+    &nbsp;&nbsp;An angle of $\dfrac{\pi}{2}$ radian rotates to the positive vertical axis because a quarter of the circumference of the unit circle is $\dfrac{1}{4}2\pi = \dfrac{\pi}{2}$.<br>
+    &nbsp;&nbsp;An angle of $\dfrac{3\pi}{2}$ radian  rotates to the negative horizontal axis because three quarters of the circumference of the unit circle is $\dfrac{3}{4}2\pi = \dfrac{3\pi}{2}$.<br>
+    &nbsp;&nbsp;An angle of $\dfrac{\pi}{4}$ radian rotates to the middle of the first quadrant, one eighth around, because one eighth of the circumference of the unit circle is $\dfrac{1}{8}2\pi = \dfrac{\pi}{4}$.</p>
+    </div>
+    
+    <h2>Translating Cartesian $(x,y)$ to and from Polar $(r,\theta)$ | <a href="https://www.youtube.com/watch?v=ohYdj8shXM8&list=PLXQ5vz32rm_SwtTrnI6GW20HeRn-ed-Ot&index=1&t=485s" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Explanation Video</a></h2>
+    <div class="theory">
+    <p>Translating from Cartesian to polar coordinates can be done using trigonometry.</p>
+    
+    \begin{equation}
+    r = \sqrt{x^{2}+y^{2}} \qquad \theta = \text{atan2}(y,x)
+    \end{equation}
+    
+    \begin{equation}
+    x = r\cos(\theta) \qquad y = r\sin(\theta)
+    \end{equation}
+    
+    <p>The $\text{atan2}(y,x)$ function is the arctangent function $\text{arctan}\left(\dfrac{y}{x}\right)$ that is aware of the signs of $x$ and $y$ so that the output angle is in the correct quadrant. Using $\text{arctan}\left(\dfrac{y}{x}\right)$ can require adding $\pi$ to the output so the output angle lies in the same quadrant as the point $(x,y)$.</p>
+    
+    <img src="images/xy_polar.svg" alt="xy polar triangle" class="center_img" width="402" height="282">
+    </div>
+    
+    <h2>Common Polar Examples | <a href="https://www.youtube.com/watch?v=K1MzwcKRKkQ&list=PLXQ5vz32rm_SwtTrnI6GW20HeRn-ed-Ot&index=2" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Plotting Video</a></h2>
+    <div class="example_solution">
+    <a href="https://www.youtube.com/watch?v=K1MzwcKRKkQ&list=PLXQ5vz32rm_SwtTrnI6GW20HeRn-ed-Ot&index=2" target="_blank"><img src="images/common_polar_plots.PNG" alt="overview page of common polar plots" class="center_img" width="603" height="373"></a>
+    </div>
+    
+    <h2>Limacon and Cardioid Examples | <a href="https://www.youtube.com/watch?v=8hKJ4V82yLE&list=PLXQ5vz32rm_SwtTrnI6GW20HeRn-ed-Ot&index=3" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Plotting Video</a></h2>
+    <div class="example_solution">
+    <a href="https://www.youtube.com/watch?v=8hKJ4V82yLE&list=PLXQ5vz32rm_SwtTrnI6GW20HeRn-ed-Ot&index=3" target="_blank"><img src="images/cardioid_plot.PNG" alt="cardioid screenshot" class="center_img" width="610" height="351"></a>
+    </div>
+    
+    <h2>Rose Curves Examples | <a href="https://www.youtube.com/watch?v=ukZUZqRUhQM&list=PLXQ5vz32rm_SwtTrnI6GW20HeRn-ed-Ot&index=4" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Plotting Video</a></h2>
+    <div class="example_solution">
+    <a href="https://www.youtube.com/watch?v=ukZUZqRUhQM&list=PLXQ5vz32rm_SwtTrnI6GW20HeRn-ed-Ot&index=4" target="_blank"><img src="images/rose_curve_plot.PNG" alt="rose curve screenshot" class="center_img" width="611" height="357"></a>
+    </div>
+    
+    <h2><a href="https://www.wolframalpha.com/input?i=polar+plot+r%3Dcos%281%2F2*theta%29+from+0+to+4pi" target="_blank" style="text-decoration: underline; color: blue;">WolframAlpha Polar Plot Example 1</a></h2>
+    <div class="example_solution">
+    <p>Try to plot the function yourself.</p>
+    \begin{equation}
+    r(\theta) = \cos\left(\frac{1}{2}\theta\right)
+    \end{equation}
+    
+    <p>To check your work, use the above link to WolframAlpha which has the following input already entered.</p>
+    <pre>polar plot r=cos(1/2*theta) from 0 to 4pi</pre>
+    </div>
+    
+    <h2><a href="https://www.wolframalpha.com/input?i=polar+plot+r%3Dcos%283*theta%29+%2B+2+from+0+to+2pi" target="_blank" style="text-decoration: underline; color: blue;">WolframAlpha Polar Plot Example 2</a></h2>
+    <div class="example_solution">
+    <p>Try to plot the function yourself.</p>
+    \begin{equation}
+    r(\theta) = \cos(3\theta) + 2
+    \end{equation}
+    
+    <p>To check your work, use the above link to WolframAlpha which has the following input already entered.</p>
+    <pre>polar plot r=cos(3*theta) + 2 from 0 to 2pi</pre>
+    </div>
+      
+  </div>
+</div>
+</body>
+</html>
