@@ -168,16 +168,12 @@ table_of_contents_array["Differential Equations"] = """
         </li>
       </ol>
     </li>
-    <!--<li>Preview of Dynamical Systems
+    <li>Preview of Dynamical Systems
       <ol>
-        <li><a href="dynamical_systems_brief_outline.html">Brief Outline</a></li>
-        <li><a href="bifurcations.html">Bifurcations</a></li>
-        <li><a href="simple_pendulum.html">Simple Pendulum</a></li>
-        <li><a href="van_der_Pol_oscillator.html">van der Pol Oscillator</a></li>
-        <li><a href="logistic_map_and_Henon_map.html">Logistic map and H&eacute;non map</a></li>
+        <li><a href="dynamical_systems_self_study.html">Self-Study</a></li>
         <li><a href="rossler_attractor.html">R&ouml;ssler Attractor</a></li>
       </ol>
-    </li>-->
+    </li>
   </ol>
   """
 table_of_contents_array["Multivariable Calculus"] = """

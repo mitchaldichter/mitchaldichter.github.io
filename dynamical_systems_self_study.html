@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Dynamical Systems Self-Study</title>
+
+<meta name="description" content="Dynamical systems self-study recommended textbook and recorded lectures from Cornell University.">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="32x32" href="images/profile_image_favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/profile_image_favicon-16x16.png">
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$','$'], ['\\(','\\)']]
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/noerrors']
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script"></script>
+<link rel="stylesheet" href="maths_survival_guide.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="header_row">
+  <div id="left_header" class="differential_equations_header">
+    Table of Contents
+  </div>
+  <div id="right_header" class="differential_equations_header">
+    <!--Begin Header Text-->Differential Equations<!--End Header Text-->
+  </div>
+  <div id="profile_picture_div">
+	<img id="profile_picture_img" alt="channel logo" src="images/profile_image100x100.webp">
+  </div>
+</div>
+
+<div id="content_row">
+  <div id="left_content">
+    <!--Begin Table of Contents-->
+  <h3 class="table_of_contents_h3">Courses</h3>
+  <ol>
+    <!--<li>Single Variable Calculus
+      <ol>
+        <li><a href="limits_and_derivatives_overview.html">Limits and Derivatives</a></li>
+        <li><a href="integration_overview.html">Integration</a></li>
+        <li><a href="sequences_and_series_overview.html">Sequences and Series</a></li>
+      </ol>
+    </li>
+    <li><a href="multivariable_calculus_overview.html">Multivariable Calculus</a></li>
+    <li><a href="linear_algebra_overview.html">Linear Algebra</a></li>-->
+    <li><a href="differential_equations_overview.html">Differential Equations</a></li>
+    <li><a href="miscellaneous_overview.html">Miscellaneous Topics</a></li>
+  </ol>
+  <br>
+  <h3 class="table_of_contents_h3">Differential Equations</h3>
+  <ol>
+    <li>Introduction
+      <ol>
+        <li><a href="differential_equations_notation_and_definitions.html">Notation and Definitions</a></li>
+        <li><a href="differential_equations_verifying_solutions.html">Verifying Solutions</a></li>
+        <li><a href="initial_value_problems.html">Initial Values Problems</a></li>
+      </ol>
+    </li>
+    <li>First Order Differential Equations
+      <ol>
+        <li><a href="direction_fields.html">Direction Fields</a></li>
+        <li><a href="equilibria_stability_and_phase_lines.html">Equilibria, Stability, and Phase Lines</a></li>
+        <li><a href="separable_equations.html">Separable Equations</a></li>
+        <li><a href="integrating_factor.html">Integrating Factor</a></li>
+        <li><a href="differential_equations_substitution.html">Bernoulli Equations and Substitutions</a></li>
+        <li><a href="exact_equations.html">Exact Equations</a></li>
+        <li><a href="exact_equations_integrating_factor.html">Exact Equations with Integrating Factor</a></li>
+        <li><a href="eulers_method.html">Euler's Method</a></li>
+        <li><a href="existence_and_uniqueness.html">Existence and Uniqueness</a></li>
+        <li><a href="interval_of_validity.html">Interval of Validity</a></li>
+        <li>Applications
+          <ol>
+            <li><a href="radioactive_decay_and_population_growth.html">Radioactive Decay and Population Growth</a></li>
+            <!--<li><a href="logistic_equation.html">Logistic Equation</a></li>-->
+            <li><a href="mixing_tank_problem.html">Mixing Tank Problem</a></li>
+            <!--<li><a href="newtons_law_of_cooling.html">Newton's Law of Cooling</a></li>-->
+            <li><a href="terminal_velocity.html">Terminal Velocity</a></li>
+            <li><a href="continuous_compound_interest.html">Continuous Compound Interest</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="Wronskian.html">Wro&nacute;skian</a></li>
+    <li>Second Order Differential Equations
+      <ol>
+        <li>$ay''+by'+cy = 0$
+          <ol>
+            <li><a href="second_order_distinct_real_roots.html">Distinct Real Roots</a></li>
+            <li><a href="second_order_repeated_real_root.html">Repeated Real Root</a></li>
+            <li><a href="second_order_imaginary_roots.html">Imaginary Roots</a></li>
+          </ol>
+        </li>
+        <li>Spring-Mass-Damper
+          <ol>
+            <li><a href="spring_mass_damper_equivalent_RLC_circuit.html">Equivalent RLC Circuit</a></li>
+            <li><a href="under_over_critically_damped.html">Underdamped, Overdamped, Critically Damped</a></li>
+            <li><a href="undamped_oscillations_and_resonance.html">Undamped Oscillations and Resonance</a></li>
+          </ol>
+        </li>
+        <li><a href="method_of_undetermined_coefficients_second_order.html">Method of Undetermined Coefficients</a></li>
+        <li><a href="reduction_of_order_second_order.html">Reduction of Order</a></li>
+        <li><a href="variation_of_parameters_second_order.html">Variation of Parameters</a></li>
+        <li><a href="Cauchy_Euler_equation_second_order.html">Cauchy-Euler Equations</a></li>
+      </ol>
+    </li>
+    <!--<li>Higher Order Differential Equations
+      <ol>
+        <li><a href="linear_homogeneous_concepts_higher_order.html">Linear Homogeneous Concepts</a></li>
+        <li><a href="linear_constant_coefficient_higher_order.html">Linear Constant Coefficient</a></li>
+        <li><a href="method_of_undetermined_coefficients_higher_order.html">Method of Undetermined Coefficients</a></li>
+        <li><a href="variation_of_parameters_higher_order.html">Variation of Parameters</a></li>
+      </ol>
+    </li>-->
+    <li>Laplace Transform
+      <ol>
+        <!--<li><a href="laplace_transform_definition.html">Definition</a></li>
+        <li><a href="laplace_transform_Dirac_delta_function.html">Dirac delta function</a></li>
+        <li><a href="laplace_transform_Heaviside_function.html">Heaviside function</a></li>-->
+        <li><a href="laplace_transform_table_of_transforms_and_WolframAlpha.html">Lookup Table and WolframAlpha</a></li>
+      </ol>
+    </li>
+    <li>Systems of ODEs
+      <ol>
+        <li>Simplest Case $\begin{bmatrix}x' \\ y'\end{bmatrix} = \begin{bmatrix}a & b \\ c & d \end{bmatrix}\begin{bmatrix}x \\ y\end{bmatrix}$
+          <ol>
+            <!--<li><a href="ode_system_distinct_real_eigenvalues.html">Distinct Real Eigenvalues</a></li>
+            <li><a href="ode_system_repeated_eigenvalue.html">Repeated Eigenvalue</a></li>
+            <li><a href="ode_system_imaginary_eigenvalues.html">Imaginary Eigenvalues</a></li>
+            <li><a href="ode_system_zero_eigenvalue_cases.html">Zero Eigenvalue Cases</a></li>-->
+            <li><a href="ode_system_poincare_diagram.html">Poincar&eacute; Diagram</a></li>
+            </ol>
+        </li>
+      </ol>
+    </li>
+    <li>Preview of Dynamical Systems
+      <ol>
+        <li><a href="dynamical_systems_self_study.html">Self-Study</a></li>
+        <li><a href="rossler_attractor.html">R&ouml;ssler Attractor</a></li>
+      </ol>
+    </li>
+  </ol>
+  <br>
+  <h3 class="table_of_contents_h3">Additional Resources</h3>
+  <ol>
+    <li><a href="how_to_use_wolfram_alpha.html">WolframAlpha Examples</a></li>
+    <li><a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank" style="text-decoration: underline; color: blue;">Direction Field Plotter by Ariel Barton</a></li>
+    <li><a href="https://aeb019.hosted.uark.edu/pplane.html" target="_blank" style="text-decoration: underline; color: blue;">Phase Plane Plotter by Ariel Barton</a></li>
+  </ol>
+  <br><br><!--End Table of Contents-->
+  </div>
+  
+<div id="left_empty_column"></div>
+  <div id="right_content">
+    <div id="portrait_warning_div">
+      <p id="portrait_warning_p"><b>NARROW DISPLAY WARNING</b></p>
+      <hr color="black">
+      <p>You are most likely using a tablet or mobile device in portrait orientation. This website is best viewed using a typical computer screen with the browser window maximized.</p>
+      <p>Viewing this website in portrait orientation can cause problems with equations being longer than the screen width (you can scroll to the right), images being poorly sized, and the font size of maths text being much smaller than regular text. If your only option is a tablet or mobile device, your viewing experience will be better if you view this website in landscape orientation. You might need to refresh the page to fix any problems after rotating.</p>
+    </div>
+
+    <h1>Dynamical Systems Self-Study | <a href="https://www.youtube.com/watch?v=6HpOIODLh8A" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Brief Highlights</a></h1>
+    <p>From your first course in ordinary differential equations, you've learned that solving just linear ODEs isn't always possible. Then there's nonlinear ODEs which are so impossibly difficult to solve that people don't even try to solve them in general. The problem is nonlinear ODEs are still extremely important and show up in all sorts of science disciplines and applications. Analysing and making meaningful statements about nonlinear systems is the focus of dynamical systems theory. Since nonlinear dynamical systems are often impossibly difficult to solve, dynamical systems theory focuses on qualitative rather than quantitative statements about a dynamical system. An example of a quantitative description is solving for an exact solution and the ability to calculate the exact values of the ODE variables at any value of the independent variable. A qualitative description would be more like the system will stabilize at a finite value. (The value might not be known, but its existence and that the system will asymptotically approach the value can be proven.)</p>
+    
+    <p>Some interesting highlights from dynamical systems are:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;Phase portraits of nonlinear systems of ODEs, such as the <a href="https://en.wikipedia.org/wiki/Phase_portrait#Examples" target="_blank" style="text-decoration: underline; color: blue;">Simple Pendulum</a>.<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;Limit cycles, such as in the <a href="https://en.wikipedia.org/wiki/Van_der_Pol_oscillator#Hamiltonian_for_Van_der_Pol_oscillator" target="_blank" style="text-decoration: underline; color: blue;">van der Pol Oscillator</a> where all initial conditions converge to a periodic solution.<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;Bifurcations, such as a <a href="https://en.wikipedia.org/wiki/Hopf_bifurcation#Example" target="_blank" style="text-decoration: underline; color: blue;">Hopf bifurcation</a> where a fixed points changes stability and a limit cycle emerges from the fixed point.<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;Iterated Maps, which make for pretty <a href="https://en.wikipedia.org/wiki/Cobweb_plot" target="_blank" style="text-decoration: underline; color: blue;">Cobweb Plots</a>, and higher dimensional maps, like the <a href="https://en.wikipedia.org/wiki/H%C3%A9non_map" target="_blank" style="text-decoration: underline; color: blue;">H&eacute;non map</a>.<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;Strange Attractors like the <a href="https://en.wikipedia.org/wiki/Lorenz_system" target="_blank" style="text-decoration: underline; color: blue;">Lorenz Attractor</a> and the <a href="https://en.wikipedia.org/wiki/R%C3%B6ssler_attractor" target="_blank" style="text-decoration: underline; color: blue;">R&ouml;ssler Attractor</a>.
+    </p>
+    
+    <div style="text-align:center;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/VbGWVuubmEE?si=ufg2juv5lI6n7ss9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    
+    <p>If you're interested in learning more, there's "<i>Nonlinear Dynamics and Chaos</i>" by Steven H. Strogatz, which is the standard textbook for a first course in dynamical systems theory. There's also recorded lectures by the author filmed at Cornell University in Spring 2014 which closely follow the textbook, as well as a solutions manual so you can check your solutions to the odd problems.</p>
+    
+    <div style="text-align:center;">
+    <img src="images/nonlinear-dynamics-and-chaos.webp" alt="book front cover" width="200" height="300" style="margin-right: 50px;">
+    <img src="images/sm_second_border.webp" alt="book front cover" width="232" height="300" style="margin-right: 50px;">
+    
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=rW_Y8b-kcPj91Eah&amp;list=PLbN57C5Zdl6j_qJA-pARJnKsmROzPnO9V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    
+    <p>Taken directly from the playlist description:</p>
+    <blockquote cite="https://www.youtube.com/playlist?list=PLbN57C5Zdl6j_qJA-pARJnKsmROzPnO9V">
+    This course of 25 lectures, filmed at Cornell University in Spring 2014, is intended for newcomers to nonlinear dynamics and chaos. It closely follows Prof. Strogatz's book, "Nonlinear Dynamics and Chaos: With Applications to Physics, Biology, Chemistry, and Engineering."<br>
+    <br>
+    The mathematical treatment is friendly and informal, but still careful. Analytical methods, concrete examples, and geometric intuition are stressed. The theory is developed systematically, starting with first-order differential equations and their bifurcations, followed by phase plane analysis, limit cycles and their bifurcations, and culminating with the Lorenz equations, chaos, iterated maps, period doubling, renormalization, fractals, and strange attractors.<br>
+    <br>
+    A unique feature of the course is its emphasis on applications. These include airplane wing vibrations, biological rhythms, insect outbreaks, chemical oscillators, chaotic waterwheels, and even a technique for using chaos to send secret messages. In each case, the scientific background is explained at an elementary level and closely integrated with the mathematical theory. The theoretical work is enlivened by frequent use of computer graphics, simulations, and videotaped demonstrations of nonlinear phenomena.<br>
+    <br>
+    The essential prerequisite is single-variable calculus, including curve sketching, Taylor series, and separable differential equations. In a few places, multivariable calculus (partial derivatives, Jacobian matrix, divergence theorem) and linear algebra (eigenvalues and eigenvectors) are used. Fourier analysis is not assumed, and is developed where needed. Introductory physics is used throughout. Other scientific prerequisites would depend on the applications considered, but in all cases, a first course should be adequate preparation.
+    </blockquote>
+    
+    <p>Both the second and third editions of the textbook are compatible with the recorded lectures, which goes through all 12 chapters. The third edition has an additional chapter 13 on the Kuramoto model, which has to do with synchronization.</p>
+    
+    <div style="text-align:center;">
+    <img src="images/textbook_third.webp" alt="book front cover" width="188" height="300" style="margin-right: 50px;">
+    <img src="images/sm_third_border.webp" alt="book front cover" width="232" height="300" style="margin-right: 50px;">
+    </div>
+    
+    <p>Synchronization can happen when rhythmic things influence each other, either directly or through an intermediary, that nudge the population in a certain way. Examples include fireflies flashing, heart cells contracting in unison, neurons in epileptic seizures, coupled lasers, metronomes on a cart, and even people in certain cultures clapping in unison after clapping randomly at first. When analysing these coupled collections of things with rhythmic behaviour, one question to ask is whether or not a system can synchronize, and another is what physical characteristics are necessary for synchronization. For instance, there are certain drugs that can cause seizures. The drugs probably aren't changing which neurons are connected to each other (unless it's causing damage), but by altering how strongly neurons communicate with each other, a seizure could become more likely.</p>
+    
+    <p>For something more hands on, here's a fun interactive simulation of synchronization, created by Dirk Brockmann and Steven Strogatz, of a system called the Kuramoto model. Taken directly from the <a href="https://www.complexity-explorables.org/explorables/ride-my-kuramotocycle/" target="_blank" style="text-decoration: underline; color: blue;">Ride my Kuramotocycle!</a> webpage:</p>
+    <blockquote cite="https://www.complexity-explorables.org/explorables/ride-my-kuramotocycle/">
+    This explorable illustrates the <em><strong><a href="https://en.wikipedia.org/wiki/Kuramoto_model" style="font-weight: bolder; color: darkred; text-decoration: none;">Kuramoto model</a></strong></em> for phase coupled oscillators. This model is used to describe synchronization phenomena in natural systems, e.g. the flash synchronization of fire flies or wall-mounted clocks.<br>
+    <br>
+    The model is defined as a system of $N$ oscillators. Each oscillator has a <strong>phase variable</strong> $\theta_n(t)$ (illustrated by the angular position on a circle below), and an angular frequency $\omega_n$ that captures how fast the oscillator moves around the circle. Initially oscillators are distributed randomly along a circle (like watches that show different times) and have different frequencies (like watches that tick at different speeds). The model introduces an interaction between oscillators that naturally yields perfect or partial synchrony.
+    </blockquote>
+    
+    <p>The following image is a static screenshot of the <a href="https://www.complexity-explorables.org/explorables/ride-my-kuramotocycle/" target="_blank" style="text-decoration: underline; color: blue;">Ride my Kuramotocycle!</a> webpage, but clicking the image will redirect you to the actual webpage.</p>
+    <a href="https://www.complexity-explorables.org/explorables/ride-my-kuramotocycle/"><img src="images/ride_my_kuramoto_cycle_screenshot.png" alt="cross product matrix mnemonic" class="center_img" width="809" height="422"></a>
+    
+  </div>
+</div>
+</body>
+</html>

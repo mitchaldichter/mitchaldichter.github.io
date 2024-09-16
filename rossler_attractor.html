@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Dynamical Systems Brief Outline</title>
+<title>R&ouml;ssler Attractor</title>
 
-<meta name="description" content="">
+<meta name="description" content="The R&ouml;ssler Attractor is from a system of three nonlinear ODEs, which exhibit chaos at different parameter values.">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" sizes="32x32" href="images/profile_image_favicon-32x32.png">
@@ -141,6 +141,12 @@ window.MathJax = {
         </li>
       </ol>
     </li>
+    <li>Preview of Dynamical Systems
+      <ol>
+        <li><a href="dynamical_systems_self_study.html">Self-Study</a></li>
+        <li><a href="rossler_attractor.html">R&ouml;ssler Attractor</a></li>
+      </ol>
+    </li>
   </ol>
   <br>
   <h3 class="table_of_contents_h3">Additional Resources</h3>
@@ -161,34 +167,31 @@ window.MathJax = {
       <p>Viewing this website in portrait orientation can cause problems with equations being longer than the screen width (you can scroll to the right), images being poorly sized, and the font size of maths text being much smaller than regular text. If your only option is a tablet or mobile device, your viewing experience will be better if you view this website in landscape orientation. You might need to refresh the page to fix any problems after rotating.</p>
     </div>
 
-    <h1>Dynamical Systems Brief Outline | <a href="https://www.youtube.com/watch?v=qz0KQI8Ajj8&list=PLXQ5vz32rm_RWcAbeFlIHQQX-bGJBPCyN" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Topic Playlist</a></h1>
-    <p>There's an emphasis on quantitative information for the ODEs studied in an introductory differential equations course, meaning an exact solution and the ability to calculate the exact values of the ODE variables. From your first course in ordinary differential equations, you've learned that solving just linear ODEs isn't always possible. Then there's nonlinear ODEs which are so impossibly difficult to solve that people don't even try to solve them in general. The problem is nonlinear ODEs are still extremely important and show up in all sorts of science disciplines and applications. To analyse and make meaningful statements about nonlinear systems, dynamical systems theory focuses on a qualitative rather than quantitative description of the ODEs. An example of a qualitative description of an ODE system modelling air plane wings is, "The wing tip oscillation amplitude will never exceed 12cm." An exact quantitative value may not be necessary if you only care whether or not the wings will tear themselves apart during flight.</p>
+    <h1>R&ouml;ssler Attractor | <a href="https://www.youtube.com/watch?v=VbGWVuubmEE&list=PLXQ5vz32rm_TMBirlGKpMdEOxW-hgjtHy" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Topic Playlist</a></h1>
     
-    <p>A dynamical systems course will build up to analysing coupled systems of nonlinear ODEs, but will start by analysing single nonlinear ODEs. There's a sample of some interesting topics following this page.</p>
+    <h2>3D Print your own model</h2>
+    <p>For those who would like to purchase their own 3D printed Rössler attractor, there are companies that will give a quote to 3D print an STL file you provide. I was able to find an STL file you can use on <a href="https://www.thingiverse.com/thing:1425939" target="_blank" style="text-decoration: underline; color: blue;">Thingiverse</a>. There are a few models there, but one of them looks extremely similar to the physical model pictured below. (In fact, I wouldn't be surprised if that exact STL file was used since I found very few relevant search results.) That model fits in a 15cm cube.</p>
     
+    <h2>Definition</h2>
+    <p>The system of equations for the R&ouml;ssler Attractor has three parameters and only one nonlinear term.</p>
+    \begin{align}
+    \frac{\text{d}x}{\text{d}t} &= -y-z \\
+    \frac{\text{d}y}{\text{d}t} &= x+ay \\
+    \frac{\text{d}z}{\text{d}t} &= b+z(x-c)
+    \end{align}
+    <p>There are multiple values of the parameters that form a strange attractor, but the case when $a=0.2$, $b=0.2$, and $c=5.7$ has been studied by R&ouml;ssler and many others.</p>
     
-    
-    Bifurcations, Simple Pendulum, van der Pol Oscillator, Logistic map and H&eacute;non map, R&ouml;ssler Attractor
-    
-    
-    <p>If you're interested in learning more, there's "<i>Nonlinear Dynamics and Chaos</i>" by Steven H. Strogatz, which is the standard textbook for a first course in dynamical systems theory. There's also recorded lectures by the author filmed at Cornell University in Spring 2014 closely following the textbook and a solutions manual so you can check solutions to the odd problems.</p>
-    
-    https://www.youtube.com/playlist?list=PLbN57C5Zdl6j_qJA-pARJnKsmROzPnO9V
-    
-    
-	  <h2>Fixed Points and Bifurcations | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Explanation Video</a></h2>
-    <div class="theory">
-    <p>A dynamical systems course will build up to analysing coupled systems of nonlinear ODEs, but will start by analysing single nonlinear ODEs. The points where all the derivatives are zero are called fixed points because they are constant solutions to the ODE(s), and the stability of those fixed points can be determined by making a linear approximation of the ODE(s) about the fixed point. The position, stability, and existence of fixed points can change by changing parameters in the ODE(s). (A parameter is usually something representing a physical quantity that determines qualitatively different behaviour in different ranges of value, like friction determining if a mass-spring-damper system will be critically damped, overdamped, or underdamped.) The instant of creation or annihilation of fixed point(s) is called a bifurcation.</p>
-    
-    
+    <div style="text-align:center;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/VbGWVuubmEE?si=P40cpzjTu9hjf4J8&amp;start=529" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
     
-    https://en.wikipedia.org/wiki/Logistic_map
-    https://en.wikipedia.org/wiki/H%C3%A9non_map
+    <h2>Period-Doubling Bifurcations</h2>
+    <p>The system undergoes period-doubling bifurcations when changing the parameters, leading to chaos. <a href="https://www.youtube.com/watch?v=VbGWVuubmEE&list=PLXQ5vz32rm_TMBirlGKpMdEOxW-hgjtHy&index=1&t=377s" target="_blank">YouTube<img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Video</a></p>
+    <a href="https://www.youtube.com/watch?v=VbGWVuubmEE&list=PLXQ5vz32rm_TMBirlGKpMdEOxW-hgjtHy&index=1&t=377s" target="_blank"><img src="images/rossler_period_doubling.png" alt="rossler period doubling" class="center_img" width="1045" height="758"></a>
     
+    <h2>Where to learn more?</h2>
+    <p>This is a very small portion of all the interesting behaviours of the R&ouml;ssler system. There are ways to apply iteration maps, bifurcations diagrams, fractals, and many other concepts from dynamical systems theory. There would generally be covered in an introductory dynamical systems course.</p>
     
-    https://en.wikipedia.org/wiki/Van_der_Pol_oscillator
-	
   </div>
 </div>
 </body>
