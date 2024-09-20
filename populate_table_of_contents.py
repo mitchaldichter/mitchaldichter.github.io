@@ -20,7 +20,6 @@ table_of_contents_courses_section = """
     <li><a href="miscellaneous_overview.html">Miscellaneous Topics</a></li>
   </ol>
   """
-#    <li><a href="miscellaneous_overview.html">Miscellaneous</a></li>
 
 table_of_contents_additional_resources_section = """
   <h3 class="table_of_contents_h3">Additional Resources</h3>
@@ -78,8 +77,23 @@ table_of_contents_array["Linear Algebra"] = """
   <ol>
     <li><a href="systems_of_linear_equations.html">Systems of Linear Equations</a></li>
     <li><a href="matrix_multiplication.html">Matrix Multiplication</a></li>
-    <li><a href="vectors.html">Vectors</a></li>
-    <li><a href="eigenvalues_and_eigenvectors.html">Eigenvalues and Eigenvectors</a></li>
+    <li>Vectors
+      <ol>
+        <li><a href="vectors_fundamentals.html">Fundamentals</a></li>
+        <li><a href="vectors_dot_product.html">$\\vec{a} \\cdot \\vec{b}$&nbsp;&nbsp;Dot Product</a></li>
+        <li><a href="vectors_cross_product.html">$\\vec{a} \\times \\vec{b}$&nbsp;&nbsp;Cross Product</a></li>
+        <li><a href="normal_to_plane.html">Normal $\\vec{n}$ to Plane</a></li>
+      </ol>
+    </li>
+    <li>Eigenvalues and Eigenvectors
+      <ol>
+        <li><a href="eigen_theory.html">Theory</a></li>
+        <li><a href="eigen_distinct_real.html"></a>Distinct Real Eigenvalues</li>
+        <li><a href="eigen_repeated.html">Repeated Eigenvalues</a></li>
+        <li><a href="eigen_imaginary.html">Imaginary Eigenvalues</a></li>
+        <li><a href="eigen_nxn.html">$n \\times n $ Matrices</a></li>
+      </ol>
+    </li>
   </ol>
   """
 table_of_contents_array["Differential Equations"] = """

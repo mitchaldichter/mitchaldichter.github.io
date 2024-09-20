@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Systems of Linear Equations</title>
+<title>Eigenvalues and Eigenvectors</title>
 
-<meta name="description" content="Linear algebra is all about solving systems of linear equations. The \"linear\" part means equations of lines, equations of planes, and so on. The \"system\" part means a set of linear equations, all of which need to be satisfied simultaneously when substituting the same constants for the variables in each equation.">
+<meta name="description" content="">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" sizes="32x32" href="images/profile_image_favicon-32x32.png">
@@ -97,28 +97,96 @@ window.MathJax = {
       <p>Viewing this website in portrait orientation can cause problems with equations being longer than the screen width (you can scroll to the right), images being poorly sized, and the font size of maths text being much smaller than regular text. If your only option is a tablet or mobile device, your viewing experience will be better if you view this website in landscape orientation. You might need to refresh the page to fix any problems after rotating.</p>
     </div>
 
-    <h1>Systems of Linear Equations | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Topic Playlist</a></h1>
-    <p>Linear algebra is all about solving systems of linear equations. The "linear" part means equations of lines, equations of planes, and so on. There are no terms like $x^{2}$ or $\sin(y)$ or $e^{z}$ or any other nonlinear terms. The only equations allowed are a number times $x$ plus a number times $y$ equals a number, or a number times $x$ plus a number times $y$ plus a number times $z$ equals a number, and so on with any number of variables. The "system" part means a set of linear equations, all of which need to be solved by the same $(x,y)$ pair in two dimensions, solved by the same $(x,y,z)$ triple in three dimensions, and so on for higher dimensions.</p>
-	
-    <h2>Example 1 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
+    <h1>Eigenvalues and Eigenvectors | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Topic Playlist</a></h1>
+    <p></p>
+	  
+    
+    
+    
+    
+    
+    <h2>title | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Explanation Video</a></h2>
+    <div class="theory">
+    <p>Eigenvalues can be 0 but eigenvectors must be nonzero vectors.</p>
+    
+    <p>An eigenvalue $\lambda = 0$ has an eigenvector in the nullspace of $A$. The following matrix has a nontrivial nullspace.</p>
+    \begin{equation}
+    \begin{bmatrix}
+    1 & 4 & 7 \\
+    2 & 5 & 8 \\
+    3 & 6 & 9
+    \end{bmatrix}\begin{bmatrix}
+    1 \\
+    -2 \\
+    1
+    \end{bmatrix} = \begin{bmatrix}
+    0 \\
+    0 \\
+    0
+    \end{bmatrix} = 0 \begin{bmatrix}
+    1 \\
+    -2 \\
+    1
+    \end{bmatrix}
+    \end{equation}
+    
+    <p>If $\vec{0}$ was an allowed eigenvector, then every number would be an eigenvalue.</p>
+    \begin{equation}
+    \begin{bmatrix}
+    1 & 4 & 7 \\
+    2 & 5 & 8 \\
+    3 & 6 & 9
+    \end{bmatrix}\begin{bmatrix}
+    0 \\
+    0 \\
+    0
+    \end{bmatrix} = \begin{bmatrix}
+    0 \\
+    0 \\
+    0
+    \end{bmatrix} = 4 \begin{bmatrix}
+    0 \\
+    0 \\
+    0
+    \end{bmatrix} = \sqrt{2} \begin{bmatrix}
+    0 \\
+    0 \\
+    0
+    \end{bmatrix} = \pi \begin{bmatrix}
+    0 \\
+    0 \\
+    0
+    \end{bmatrix}
+    \end{equation}
+    
+    https://www.wolframalpha.com/input?i=%7B%7B1%2C4%2C7%7D%2C%7B2%2C5%2C8%7D%2C%7B3%2C6%2C9%7D%7D
+    
+    \begin{equation}
+    dog
+    \end{equation}
+    
+    <p>Eigendecomposition where $A$ is an $n \times n$ square matrix with $n$ linearly independent eigenvalues.</p>
+    \begin{equation}
+    A = V^{-1} \Lambda V
+    \end{equation}
+    </div>
+	  
+    <h2>Example 1 | <a href=" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
     <div class="example_solution">
-    <p>Assuming there is a solution, solve the system of linear equations by setting different equations equal to each other and solving for the variables one at a time.</p>
-    \begin{align}
-    y &= 3x-1 \\
-    y &= -2x+4
-    \end{align}
+    <p>blah</p>
+    
+    \begin{equation}
+    dog
+    \end{equation}
     </div>
     
-    <h2>Example 2 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
-    <div class="example_solution">
-    <p>Assuming there is a solution, solve the system of linear equations by setting different equations equal to each other and solving for the variables one at a time.</p>
-    \begin{align}
-    z &= 6-x-y \\
-    z &= 3+2x-y \\
-    z &= 8-x-2y
-    \end{align}
-    </div>
-	
+    
+    
+    
+    
+    
+    
+    
 	
 	
   </div>
