@@ -291,12 +291,12 @@ E_{\dot{x}x} & E_{\dot{x}\dot{x}}
 &= -2\epsilon x+1 - (\dot{x}-\alpha-\epsilon x^{2}+x)^{2}
 \end{align*}
 $\nabla E = (0,0)$ at the fixed fixed point. Both $E_{xx}, E_{\dot{x}\dot{x}} > 0$ at the fixed point for sufficiently small $\epsilon$, as well as the evaulation of the Jocobian at the fixed point,
-\begin{equation*}
+\begin{equation}
 \begin{vmatrix}
 E_{xx} & E_{x\dot{x}} \\
 E_{\dot{x}x} & E_{\dot{x}\dot{x}}
 \end{vmatrix}_{\left(\frac{1-\sqrt{1-4\alpha\epsilon}}{2\epsilon},0\right)} = \sqrt{1-4\alpha\epsilon} > 0 \Rightarrow \left(\frac{1-\sqrt{1-4\alpha\epsilon}}{2\epsilon},0\right) \text{is a local minimum.}
-\end{equation*}
+\end{equation}
 <br>
 7.2.7 a)<br>
 &nbsp;&nbsp;The partial derivatives should be reversed to $\displaystyle \frac{\partial}{\partial y}\big(y+2xy\big) = 1+2x = \frac{\partial}{\partial x}\big(x+x^{2}-y^{2}\big)$.<br>
@@ -319,9 +319,9 @@ Determining the solutions of this equation is difficult analytically, but graphi
 0 = \ddot{z}+k\big((z+1)^{2}-4\big)\dot{z} =\frac{\text{d}}{\text{d}t} \left(\dot{z}+k\left(\frac{1}{3}(z+1)^{3}-4z\right)\right)
 \end{equation}
 &nbsp;&nbsp;The limit cycle was assumed to be symmetric and is not, so both branches must be computed.
-\begin{equation*} 
+\begin{equation} 
 T \approx \int_{t_{A}}^{t_{B}}\text{d}t + \int_{t_{C}}^{t_{D}}\text{d}t = -k\left( \int_{3}^{1} \frac{(z+1)^{2}-4}{z}\text{d}z + \int_{-5}^{-3} \frac{(z+1)^{2}-4}{z}\text{d}z \right) = k\big(12-3\ln(5)\big)
-\end{equation*}
+\end{equation}
   
 &nbsp;&nbsp;The $\displaystyle 2k \ln\big(8 − \ln(27)\big)$ should be $\displaystyle 2k \big(8 − \ln(27)\big)$ without the first $\displaystyle \ln$.<br>
 <br>
@@ -350,13 +350,13 @@ r\frac{\text{d}\phi}{\text{d}T} &= \langle h\cos(\theta) \rangle = \frac{1}{2\pi
 \begin{equation}
 r(0) = \sqrt{x(0)^{2}+\dot{x}(0)^{2}} = a \qquad r(T) = a
 \end{equation}
-\begin{equation*}
+\begin{equation}
 \omega = 1 + \epsilon\phi' = 1 - \epsilon \frac{3}{8}r_{0}^{2} + O\big(\epsilon^{2}\big) \approx 1 - \frac{1}{16}a^{2}
-\end{equation*}
+\end{equation}
 <br>
 8.1.15 c)<br>
 &nbsp;&nbsp;One of the matrices at the bottom of part (c) was transposed. There was also an unnecessary matrix at the bottom. Here is the corrected version.
-\begin{equation*}
+\begin{equation}
 A = \begin{pmatrix}
 \frac{\text{d}}{\text{d}n_{A}}\dot{n}_{A} & \frac{\text{d}}{\text{d}n_{B}}\dot{n}_{A} \\
 \frac{\text{d}}{\text{d}n_{A}}\dot{n}_{B} & \frac{\text{d}}{\text{d}n_{B}}\dot{n}_{B}
@@ -364,19 +364,19 @@ A = \begin{pmatrix}
 -2n_{A}-2n_{B}-2p+1 & -2n_{A}-2p \\
 -2n_{B} & -2n_{A}-2n_{B}-p+1
 \end{pmatrix}
-\end{equation*}
-\begin{equation*}
+\end{equation}
+\begin{equation}
 A_{(1-p,0)} = \begin{pmatrix}
 -1 & -1 \\
 0 & p-1
 \end{pmatrix} \qquad \lambda_{1} = -1 \quad \lambda_{2} = p-1
-\end{equation*}
+\end{equation}
 <br>
 8.6.7 c)<br>
 &nbsp;&nbsp;The simplification for the winding number had a missing $\sqrt{3}$ in the second fraction.
-\begin{equation*}
+\begin{equation}
 \frac{\omega_{r}}{\omega_{\theta}} = \frac{\sqrt{3}\omega_{\theta}}{\omega_{\theta}} = \sqrt{3}
-\end{equation*}
+\end{equation}
 8.7.3 c)<br>
 &nbsp;&nbsp;The explanation for the limits as $T \rightarrow 0$ and $T \rightarrow \infty$ were poorly written, wrong, and ambiguous. Here is the rewritten part (c).<br>
 <br>
@@ -388,9 +388,9 @@ Using the equation derived from part (a)
 The first result is quite plausible. As the period goes to zero then the forcing function $F(t)$ has almost no time to do anything and $x(t)$ has no time to move anywhere within one $T$-length period. If $x(0) = x_{0}$ then $x(T) \approx x(0) = x_{0}$ as $T \rightarrow 0$. The solution has virtually no time to change.<br>
 <br>
 The second result is intuitive by letting $T$ be large, which in this context means $T \gg 1$. Why is that the correct condition? Because for the equation in question, the rate constant for exponential decay, and hence its inverse, the time scale, are both equal to 1. We can see that by looking at the coefficient of $x$ in the equation
-\begin{equation*}
+\begin{equation}
 \dot{x} + x = \pm A. 
-\end{equation*}
+\end{equation}
 So, how does $x(t)$ behave for large $T$? Well, at first the value of $x(t)$ relaxes exponentially fast, on a time scale of 1, to a value of $x \approx A$.  It stays there as the time dawdles its way up to $t = \frac{T}{2}$. Then, in the second half of the forcing cycle, we switch the value of $F(t)$ to $-A$. By the same reasoning as before, $x$ then moves exponentially fast to $x \approx -A$. It essentially stays at $x = -A$ until the end of the cycle at $t =T$.<br>  
 <br>
 What makes this reasoning valid (asymptotically, for $T \gg 1$) is that the relaxation to the equilibrium happens on a much faster time scale than the switching of $F$.<br>  
@@ -401,18 +401,18 @@ This all becomes very clear visually by plotting $x(t)$ for a moderately large f
 <br>
 8.7.9 a)<br>
 &nbsp;&nbsp;The expression for $r(t)$ is incorrect. The $2\pi$'s should be $t$'s.
-\begin{equation*}
+\begin{equation}
 r(t) = \frac{e^{t}r_{0}}{(e^{t}-1)r_{0}+1}
-\end{equation*}
+\end{equation}
 <br>
 9.5.5 a)<br>
 &nbsp;&nbsp;The was a mistake in the derivative of the $z$ term. A 1 should have turned into a 0 which propagated through the problem. Here are the corrected pieces.
-\begin{equation*}
+\begin{equation}
 \dot{z} = \frac{1}{\sigma\epsilon^{3}}\frac{\text{d}Z}{\text{d}\tau} = xy-bz = \frac{X}{\epsilon}\frac{Y}{\epsilon^{2}\sigma}-b\frac{1}{\epsilon^{2}}\left(\frac{Z}{\sigma}+1\right)
-\end{equation*}
-\begin{equation*}
+\end{equation}
+\begin{equation}
 \frac{1}{\sigma\epsilon^{3}}\frac{\text{d}Z}{\text{d}\tau} = \frac{X}{\epsilon}\frac{Y}{\epsilon^{2}\sigma}-b\frac{1}{\epsilon^{2}}\left(\frac{Z}{\sigma}+1\right) \Rightarrow \frac{\text{d}Z}{\text{d}\tau} = XY-b\epsilon\left(Z+\sigma\right) \qquad \lim_{\epsilon \rightarrow 0} \frac{\text{d}Z}{\text{d}\tau} = XY
-\end{equation*}
+\end{equation}
 10.1.9
 \begin{equation}
 f'(x) = \frac{2(1+x)-2x(1)}{(1+x)^{2}} = \frac{2}{(1+x)^{2}}
@@ -424,30 +424,30 @@ f'(x) = \frac{2(1+x)-2x(1)}{(1+x)^{2}} = \frac{2}{(1+x)^{2}}
 &= |x_{0}|(1 + 4\epsilon + \epsilon^{2})
 \end{align*}
 10.2.1 a)
-\begin{equation*}
+\begin{equation}
 x_{n+1} - x_{n} = -r\epsilon(1 + \epsilon) - (1 + \epsilon) = -(r \epsilon+1)(1 + \epsilon) < -r \epsilon
-\end{equation*}
+\end{equation}
 So the sequence decreases by at least $r \epsilon$ every iteration.<br>
 <br>
 10.3.3<br>
 &nbsp;&nbsp;I incorrectly wrote the square roots as $\pm\sqrt{1-r}$ when it should be $\pm\sqrt{r-1}$ which changed several parts of the problem.
-\begin{equation*}
+\begin{equation}
 x = 0,\pm\sqrt{r-1} 
-\end{equation*}
+\end{equation}
 So there are three fixed points for $1< r$ and one fixed point for $r \le 1$.
-\begin{equation*}
+\begin{equation}
 f'(\pm\sqrt{r-1}) = \frac{2}{r} - 1 \qquad r < 1 \Rightarrow x^{*} = 0 \text{ is stable}
-\end{equation*}
-\begin{equation*}
+\end{equation}
+\begin{equation}
 1 < r \Rightarrow x^{*} = 0 \text{ is unstable, and } x^{*} = \pm\sqrt{r-1} \text{ are stable}
-\end{equation*}
+\end{equation}
 10.3.11 a)
-\begin{equation*}
+\begin{equation}
 -1 < -(1+r) < 1 \Rightarrow -2 < r < 0
-\end{equation*}
-\begin{equation*}
+\end{equation}
+\begin{equation}
 -2 < r < 0 \Rightarrow \text{Stable} \qquad r < -2 \text{ or } 0 < r \Rightarrow \text{Unstable}
-\end{equation*}
+\end{equation}
 10.3.11 b)
 \begin{align*}
 &r < 0 \Rightarrow f'(0) = -(1+r) > -1 \Rightarrow \text{Stable} \\
@@ -455,16 +455,16 @@ f'(\pm\sqrt{r-1}) = \frac{2}{r} - 1 \qquad r < 1 \Rightarrow x^{*} = 0 \text{ is
 \end{align*}
 11.2.1<br>
 &nbsp;&nbsp;The step
-\begin{equation*}
+\begin{equation}
 = 1-\frac{1}{3}\sum_{n=0}^{\infty}\left(\frac{2}{3}\right)^{n}
-\end{equation*}
+\end{equation}
 is missing the $n$ in the exponent.<br>
 <br>
 11.3.1 b)<br>
 &nbsp;&nbsp;The step
-\begin{equation*}
+\begin{equation}
 = 1-\frac{1}{2}\sum_{n=0}^{\infty}\left(\frac{1}{2}\right)^{n}
-\end{equation*}
+\end{equation}
 is missing the $n$ in the exponent.<br>
 <br>
 11.4.1<br>
