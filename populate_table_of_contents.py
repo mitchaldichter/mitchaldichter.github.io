@@ -21,6 +21,14 @@ table_of_contents_courses_section = """
   </ol>
   """
 
+table_of_contents_off_on_a_tangent_section = """
+  <h3 class="table_of_contents_h3">Off on a Tangent</h3>
+  <ol>
+    <li><a href="educational_comics.html">Educational Comics</a></li>
+    <li><a href="the_business_of_higher_ed.html">The Business of Higher Ed</a></li>
+  </ol>
+  """
+
 table_of_contents_additional_resources_section = """
   <h3 class="table_of_contents_h3">Additional Resources</h3>
   <ol>
@@ -57,8 +65,6 @@ table_of_contents_array["Miscellaneous Topics"] = """
     </li>-->
   </ol>
 """
-#misc ends up in index.html between Courses and Additional Resources
-table_of_contents_array["Maths Survival Guide"] = table_of_contents_array["Miscellaneous Topics"]
 table_of_contents_array["Single Variable Calculus: Limits and Derivatives"] = """
   <h3 class="table_of_contents_h3">Single Variable Calculus: Limits and Derivatives</h3>
   <ol>
@@ -197,11 +203,36 @@ table_of_contents_array["Multivariable Calculus"] = """
     <li><a href="curl.html">Curl</a></li>
   </ol>
   """
-#blank because Additional Resources is included in all pages
+table_of_contents_array["Educational Comics"] = """
+  <h3 class="table_of_contents_h3">Educational Comics</h3>
+  <ol>
+    <li><a href=".html">idea1</a></li>
+    <li><a href=".html">idea2</a></li>
+  </ol>
+  """
+table_of_contents_array["The Business of Higher Ed"] = """
+  <h3 class="table_of_contents_h3">The Business of Higher Ed</h3>
+  <ol>
+    <li><a href=".html">idea1</a></li>
+    <li><a href=".html">idea2</a></li>
+  </ol>
+  """
+#not used because Maths Survival Guide is a special page
+table_of_contents_array["Maths Survival Guide"] = table_of_contents_array["Miscellaneous Topics"]
+#not used because Additional Resources is a special page
 table_of_contents_array["Additional Resources"] = ""
 
 for page in table_of_contents_array:
-  table_of_contents_array[page] = table_of_contents_courses_section + "<br>" + table_of_contents_array[page] + "<br>"  + table_of_contents_additional_resources_section + "<br><br>" 
+  if page == "Maths Survival Guide":
+    #temporary until Off on a Tangent pages are decent
+    table_of_contents_array[page] = table_of_contents_courses_section + "<br>" + table_of_contents_array[page] + "<br>" + table_of_contents_additional_resources_section + "<br><br>"
+    
+    #once Off on a Tangent pages are decent
+    #table_of_contents_array[page] = table_of_contents_courses_section + "<br>" + table_of_contents_off_on_a_tangent_section + "<br>" + table_of_contents_additional_resources_section + "<br><br>"
+  elif page == "Additional Resources":
+    table_of_contents_array[page] = table_of_contents_courses_section + "<br>" + table_of_contents_additional_resources_section + "<br><br>"
+  else:
+    table_of_contents_array[page] = table_of_contents_courses_section + "<br>" + table_of_contents_array[page] + "<br>" + table_of_contents_additional_resources_section + "<br><br>" 
 
 begin_header_comment = "<!--Begin Header Text-->"
 end_header_comment = "<!--End Header Text-->"
