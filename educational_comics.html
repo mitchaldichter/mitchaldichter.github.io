@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Vectors Cross Product</title>
+<title>Educational Comics</title>
 
-<meta name="description" content="In maths, the cross product, or vector product, calculates a vector perpendicular to a pair of input vectors. The name comes from the operator between the two input vectors, which is an \"x\" with right angles. The direction of the output vector follows the right hand rule with the order of the two input vectors and has magnitude equal to the parallelogram formed by the two input vectors. It is used extensively in vector calculus and physics.">
+<meta name="description" content="Some funny comics about maths, physics, being a student, et cetera.">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" sizes="32x32" href="images/profile_image_favicon-32x32.png">
@@ -23,15 +23,17 @@ window.MathJax = {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+
+<script type="text/javascript" src="shared_code.js"></script>
 </head>
-<body>
+<body onload="portrait_warning_visibility()">
 
 <div id="header_row">
-  <div id="left_header" class="miscellaneous_topics_header">
+  <div id="left_header" class="educational_comics_header">
     Table of Contents
   </div>
-  <div id="right_header" class="miscellaneous_topics_header">
-    <!--Begin Header Text-->Miscellaneous Topics<!--End Header Text-->
+  <div id="right_header" class="educational_comics_header">
+    <!--Begin Header Text-->Educational Comics<!--End Header Text-->
   </div>
   <div id="profile_picture_div">
 	<img id="profile_picture_img" alt="channel logo" src="images/profile_image100x100.webp">
@@ -99,51 +101,25 @@ window.MathJax = {
       <p>Viewing this website in portrait orientation can cause problems with equations being longer than the screen width (you can scroll to the right), images being poorly sized, and the font size of maths text being much smaller than regular text. If your only option is a tablet or mobile device, your viewing experience will be better if you view this website in landscape orientation. You might need to refresh the page to fix any problems after rotating.</p>
     </div>
 
-    <h1>Vectors Cross Product | <a href="https://www.youtube.com/watch?v=A_LwJJO5wG0&list=PLXQ5vz32rm_Typ9Qxas6ryo8DNTVBxKM2&index=3" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Topic Playlist</a></h1>
-    <p>In maths, the cross product, or vector product, calculates a vector perpendicular to a pair of input vectors. The name comes from the operator between the two input vectors, which is an "x" with right angles. The direction of the output vector follows the right hand rule with the order of the two input vectors and has magnitude equal to the parallelogram formed by the two input vectors. It is used extensively in vector calculus and physics.</p>
-    
-    <h2>Definition | <a href="https://www.youtube.com/watch?v=A_LwJJO5wG0&list=PLXQ5vz32rm_Typ9Qxas6ryo8DNTVBxKM2&index=3&t=626s" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
+    <h1>Topic Name | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Topic Playlist</a></h1>
+	  <p>description</p>
+	  
+	  <h2>theory | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Explanation Video</a></h2>
     <div class="theory">
-    <p>The cross product of $\vec{a}$ and $\vec{b}$, written as $\vec{a} \times \vec{b}$, is defined as,</p>
+    <p>paragraph</p>
     \begin{equation}
-    \vec{a} \times \vec{b} = \langle a_{2}b_{3}-a_{3}b_{2} , a_{3}b_{1}-a_{1}b_{3} , a_{1}b_{2}-a_{2}b_{1} \rangle
+    a+b
     \end{equation}
-    
-    <p>A convenient way to remember the formula uses the determinant of a 3x3 matrix.</p>
-    \begin{equation}
-    \vec{a} \times \vec{b} = \text{det}\begin{bmatrix}
-    \vec{i} & \vec{j} & \vec{k} \\
-    a_{1} & a_{2} & a_{3} \\
-    b_{1} & b_{2} & b_{3}
-    \end{bmatrix} = \vec{i}(a_{2}b_{3} - a_{3}b_{2}) + \vec{j}(a_{3}b_{1} - a_{1}b_{3}) + \vec{k}(a_{1}b_{2} - a_{2}b_{1})
-    \end{equation}
-    
-    <p>Here is a mnemonic for computer the 3x3 determinant.</p>
-    <img src="images/cross_product_matrix.png" alt="cross product matrix mnemonic" class="center_img" width="507" height="233">
     </div>
     
-    <h2>Properties | <a href="https://www.youtube.com/watch?v=A_LwJJO5wG0&list=PLXQ5vz32rm_Typ9Qxas6ryo8DNTVBxKM2&index=3&t=1565s" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Explanation Video</a></h2>
-    <div class="theory">
-    <h3>Direction of&nbsp;&nbsp;$\vec{a} \times \vec{b}$</h3>
-    <p>The cross product follows the right hand rule: orient your right hand so that your extended fingers can point in the direction of $\vec{a}$ and you can curl your fingers towards $\vec{b}$, then your thumb will point in the direction of $\vec{a} \times \vec{b}$.</p>
-    
-    <p>The right handedness of the cross product means $\vec{a} \times \vec{b}$ points in the opposite direction to $\vec{b} \times \vec{a}$.</p>
+    <h2>Example  | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
+    <div class="example_solution">
+    <p>desc</p>
     \begin{equation}
-    \vec{a} \times \vec{b} = -(\vec{b} \times \vec{a})
+    cf
     \end{equation}
-    
-    <h3>Length of&nbsp;&nbsp;$\vec{a} \times \vec{b}$</h3>
-    <p>The length of the cross product is the area of the parallelogram formed by $\vec{a}$ and $\vec{b}$, and if $\vec{a}$ and $\vec{b}$ are parallel, then $\vec{a} \times \vec{b} = \vec{0}$ because the area of the parallelogram is zero.</p>
-    \begin{equation}
-    |\vec{a} \times \vec{b}| = |\vec{a}||\vec{b}|\sin(\theta)
-    \end{equation}
-    <p>The derivation is quite long, but here is a link to a <a href="https://www.youtube.com/watch?v=A_LwJJO5wG0&list=PLXQ5vz32rm_Typ9Qxas6ryo8DNTVBxKM2&index=3&t=1114s" target="_blank">YouTube<img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Video</a> if you're interested.</p>
-    
-    <img src="images/cross_product_parallelogram.png" alt="cross product parallelogram" class="center_img" width="393" height="252">
-    
-    <p>The area of a parallelogram is the base times the height. In this case, the height is $|\vec{b}|\sin(\theta)$ and the base is $|\vec{a}|$, so the area is $|\vec{a}||\vec{b}|\sin(\theta)$.</p>
     </div>
- 
+      
   </div>
 </div>
 </body>

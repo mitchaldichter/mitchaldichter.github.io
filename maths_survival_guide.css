@@ -171,7 +171,7 @@ tr:nth-child(even) {
 }
 
 .miscellaneous_topics_header {
-  background-color: #EC745C;
+  background-color: #34e0a1;
 }
 
 .linear_algebra_header {
@@ -196,6 +196,14 @@ tr:nth-child(even) {
 
 .multivariable_calculus_header {
   background-color: #fbbc05;
+}
+
+.educational_comics_header {
+  background-color: royalblue;
+}
+
+.the_business_of_higher_ed_header {
+  background-color: #673ab7;
 }
 
 /*
