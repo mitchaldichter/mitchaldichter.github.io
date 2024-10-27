@@ -49,15 +49,16 @@ window.MathJax = {
         <li><a href="integration_overview.html">Integration</a></li>
         <li><a href="sequences_and_series_overview.html">Sequences and Series</a></li>
       </ol>
-    </li>
+    </li>-->
+    <li><a href="linear_algebra_overview.html">Linear Algebra</a></li>
     <li><a href="multivariable_calculus_overview.html">Multivariable Calculus</a></li>
-    <li><a href="linear_algebra_overview.html">Linear Algebra</a></li>-->
     <li><a href="differential_equations_overview.html">Differential Equations</a></li>
     <li><a href="miscellaneous_overview.html">Miscellaneous Topics</a></li>
   </ol>
   <br>
   <h3 class="table_of_contents_h3">Differential Equations</h3>
   <ol>
+    <!--<li><a href="differential_equations_glossary.html">Glossary</a></li>-->
     <li>Introduction
       <ol>
         <li><a href="differential_equations_notation_and_definitions.html">Notation and Definitions</a></li>
@@ -182,7 +183,7 @@ window.MathJax = {
     
     <p>The integral of the box $B(t)$ and the function $f(t)$ is approximately the value of the $f(t)$ at $t=0$ because $f(t)$ doesn't change much for $\dfrac{-1}{2n} < t < \dfrac{1}{2n}$.</p>
     \begin{equation}
-    \int_{-\infty}^{\infty} B(t)f(t) \text{d}t = \int_{-1/2n}^{1/2n} \frac{1}{n}f(t) \text{d}t \approx \int_{-1/2n}^{1/2n} \frac{1}{n}f(0) \text{d}t = f(0)
+    \int_{-\infty}^{\infty} B(t)f(t) \text{ d}t = \int_{-1/2n}^{1/2n} \frac{1}{n}f(t) \text{ d}t \approx \int_{-1/2n}^{1/2n} \frac{1}{n}f(0) \text{ d}t = f(0)
     \end{equation}
     
     <p>If the box keeps getting thinner and taller while keeping a unit area, the integral will keep getting closer to $f(0)$.</p>
@@ -190,7 +191,7 @@ window.MathJax = {
     <p>Intuitively, the Dirac delta function, $\delta(t)$, is a box with zero width and infinite height with unit area located at $t=0$. The integral of $\delta(t)$ and $f(t)$ is no longer approximately but exactly equal to $f(0)$.</p>
     
     \begin{equation}
-    \int_{-\infty}^{\infty} \delta(t)f(t) \text{d}t = f(0)
+    \int_{-\infty}^{\infty} \delta(t)f(t) \text{ d}t = f(0)
     \end{equation}
     </div>
     
@@ -198,7 +199,7 @@ window.MathJax = {
     <div class="example_solution">
     <p>Show that integrating $\delta(t-c)$ times $f(t)$ is equal to $f(c)$, where $c$ is a constant.</p>
     \begin{equation}
-    \int_{-\infty}^{\infty} \delta(t-c)f(t) \text{d}t = f(c)
+    \int_{-\infty}^{\infty} \delta(t-c)f(t) \text{ d}t = f(c)
     \end{equation}
     </div>
     
@@ -206,7 +207,7 @@ window.MathJax = {
     <div class="example_solution">
     <p>Calculate the Laplace Transform for $\delta(t-c)$.</p>
     \begin{equation}
-    \mathcal{L}\{ \delta(t-c) \} = \int_{0}^{\infty} \delta(t-c) e^{-st} \text{d}t
+    \mathcal{L}\{ \delta(t-c) \} = \int_{0}^{\infty} \delta(t-c) e^{-st} \text{ d}t
     \end{equation}
     </div>
     
@@ -214,7 +215,7 @@ window.MathJax = {
     <div class="example_solution">
     <p>Calculate the Laplace Transform for $\delta(t-c)f(t)$.</p>
     \begin{equation}
-    \mathcal{L}\{ \delta(t-c) f(t) \} = \int_{0}^{\infty} \delta(t-c) f(t) e^{-st} \text{d}t
+    \mathcal{L}\{ \delta(t-c) f(t) \} = \int_{0}^{\infty} \delta(t-c) f(t) e^{-st} \text{ d}t
     \end{equation}
     </div>
 	  

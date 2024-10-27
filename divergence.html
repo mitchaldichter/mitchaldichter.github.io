@@ -3,7 +3,7 @@
 <head>
 <title>Divergence</title>
 
-<meta name="description" content="An intuitive description of the divergence in vector calculus is a vector operator that quantifies how much flow is coming out of a point in the vector field. If there is a net flow of arrows coming out of a point, then the divergence at that point is positive. If there is a net flow going into a point, then the divergence is negative at that point. If the divergence at a point is zero, then there is net zero flow at the point.">
+<meta name="description" content="An intuitive description of the divergence in vector calculus is a vector operator that quantifies how much flow is coming out of a point in the vector field. If there is a net flow of arrows coming out of a point, then the divergence at that point is positive. If there is a net flow going into a point, then the divergence is negative at that point. If the divergence at a point is zero, then there is net zero flow into or out of the point.">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" sizes="32x32" href="images/profile_image_favicon-32x32.png">
@@ -49,15 +49,33 @@ window.MathJax = {
         <li><a href="integration_overview.html">Integration</a></li>
         <li><a href="sequences_and_series_overview.html">Sequences and Series</a></li>
       </ol>
-    </li>
+    </li>-->
+    <li><a href="linear_algebra_overview.html">Linear Algebra</a></li>
     <li><a href="multivariable_calculus_overview.html">Multivariable Calculus</a></li>
-    <li><a href="linear_algebra_overview.html">Linear Algebra</a></li>-->
     <li><a href="differential_equations_overview.html">Differential Equations</a></li>
     <li><a href="miscellaneous_overview.html">Miscellaneous Topics</a></li>
   </ol>
   <br>
   <h3 class="table_of_contents_h3">Multivariable Calculus</h3>
   <ol>
+    <!--<li><a href="multivariable_calculus_glossary.html">Glossary</a></li>-->
+    <li>Double Integrals
+      <ol>
+        <li><a href="double_integral_cartesian.html">Cartesian $\text{d}x\text{d}y$</a></li>
+        <li><a href="double_integral_polar.html">Polar $r\text{d}r\text{d}\theta$</a></li>
+        
+        <!--density, mass, center of mass, moments, moment of inertia-->
+        
+      </ol>
+    </li>
+    <li>Vectors
+      <ol>
+        <li><a href="vectors_fundamentals.html">Fundamentals</a></li>
+        <li><a href="vectors_dot_product.html">$\vec{a} \cdot \vec{b}$&nbsp;&nbsp;Dot Product</a></li>
+        <li><a href="vectors_cross_product.html">$\vec{a} \times \vec{b}$&nbsp;&nbsp;Cross Product</a></li>
+        <li><a href="normal_to_plane.html">Normal $\vec{n}$ to Plane</a></li>
+      </ol>
+    </li>
     <li><a href="divergence.html">Divergence</a></li>
     <li><a href="curl.html">Curl</a></li>
   </ol>
@@ -80,10 +98,10 @@ window.MathJax = {
       <p>Viewing this website in portrait orientation can cause problems with equations being longer than the screen width (you can scroll to the right), images being poorly sized, and the font size of maths text being much smaller than regular text. If your only option is a tablet or mobile device, your viewing experience will be better if you view this website in landscape orientation. You might need to refresh the page to fix any problems after rotating.</p>
     </div>
 
-    <h1>Divergence | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Topic Playlist</a></h1>
-    <p>An intuitive description of the divergence in vector calculus is a vector operator that quantifies how much flow is coming out of a point in the vector field. If there is a net flow of arrows coming out of a point, then the divergence at that point is positive. If there is a net flow going into a point, then the divergence is negative at that point. If the divergence at a point is zero, then there is net zero flow at the point.</p>
+    <h1>Divergence | <a href="https://www.youtube.com/watch?v=GzR2SNr0bBY&t=0s" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Chalkboard Video</a></h1>
+    <p>An intuitive description of the divergence in vector calculus is a vector operator that quantifies how much flow is coming out of a point in the vector field. If there is a net flow of arrows coming out of a point, then the divergence at that point is positive. If there is a net flow going into a point, then the divergence is negative at that point. If the divergence at a point is zero, then there is net zero flow into or out of the point.</p>
     
-    <h2>Definition | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Explanation Video</a></h2>
+    <h2>Definition | <a href="https://www.youtube.com/watch?v=GzR2SNr0bBY&t=0s" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Video Chapter</a></h2>
     <div class="theory">
     
     <h3>Two-dimensional vector field $\vec{F}(x,y)$</h3>
@@ -105,19 +123,97 @@ window.MathJax = {
     \begin{equation}
     \text{div}(\vec{F}) = \nabla \cdot \vec{F} = \frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z}
     \end{equation}
-    
-    
     </div>
 	
-    <h2>Example 1 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
-    <div class="example_solution">
-    <p>Evaluate the integral.</p>
+    <h2>Intuitive 2D Derivation | <a href="https://www.youtube.com/watch?v=GzR2SNr0bBY&t=225s" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Video Chapter</a></h2>
+    <div class="theory">
+    <p>The divergence at a point in a vector field $\vec{F}(x,y)$ is sort of the net amount of vector field arrows flowing out of that point, with arrows flowing out a positive contribution and arrows flowing in a negative contribution. It's not clear what that means, but the limit approximation actually makes a lot more sense.</p>
+    
+    <img src="images/2D_divergence_1.PNG" alt="2D_divergence_1" class="center_img" width="822" height="416">
+    
+    <p>If you want to find the divergence at a point $(x,y)$ in a vector field, it's approximately the flux of arrows flowing out of a small box around the point $(x,y)$. Here the box has width $\Delta x$ and height $\Delta y$. Since this is an approximation, we'll just use the vector field evaluated at the midpoint of each side. To calculate how much flux is flowing out of a side, take the dot product of the midpoint vector field arrow and unit normal vector $\vec{n}$ on that side times the length of that side.</p>
+    
+    <img src="images/2D_divergence_2and3.png" alt="2D_divergence_2and3" class="center_img" width="1113" height="481">
+    
+    <p>The total flux is the sum of all the side fluxes.</p>
+    
+    \begin{align}
+    \text{Total Flux } &= \left[P\left(x+\frac{\Delta x}{2},y\right) - P\left(x-\frac{\Delta x}{2},y\right)\right] \Delta y \\
+    &+ \left[Q\left(x,y+\frac{\Delta y}{2}\right) - Q\left(x,y-\frac{\Delta y}{2}\right)\right]\Delta x
+    \end{align}
+    
+    <p>There's still one piece missing though. In the limit as the box shrinks around the point $(x,y)$, the $\text{Total Flux}$ goes to zero because the side length go to zero.</p>
+    
     \begin{equation}
-    \int \frac{1}{x(3-x)} \text{ d}x
+    \lim_{\Delta x, \Delta y \rightarrow 0} \text{Total Flux } = 0
+    \end{equation}
+    
+    <p>So instead, the $\text{Total Flux}$ will be averaged over the area of the box, which is $\Delta x \Delta y$.</p>
+    
+    \begin{align}
+    \nabla \cdot \vec{F}(x,y) &= \lim_{\Delta x, \Delta y \rightarrow 0} \frac{\text{Total Flux}}{\Delta x \Delta y} \\
+    &= \lim_{\Delta x \rightarrow 0} \frac{P\left(x+\frac{\Delta x}{2},y\right) - P\left(x-\frac{\Delta x}{2},y\right)}{\Delta x} \\
+    &+ \lim_{\Delta y \rightarrow 0} \frac{Q\left(x,y+\frac{\Delta y}{2}\right) - Q\left(x,y-\frac{\Delta y}{2}\right)}{\Delta y}
+    \end{align}
+    
+    <p>This isn't usually the way they are written, but these are the partial derivatives of $P$ and $Q$ with respect to $x$ and $y$.</p>
+    
+    \begin{align}
+    \frac{\partial P}{\partial x} &= \lim_{\Delta x \rightarrow 0} \frac{P\left(x+\frac{\Delta x}{2},y\right) - P\left(x-\frac{\Delta x}{2},y\right)}{\Delta x} \\
+    \frac{\partial Q}{\partial y} &= \lim_{\Delta y \rightarrow 0} \frac{Q\left(x,y+\frac{\Delta y}{2}\right) - Q\left(x,y-\frac{\Delta y}{2}\right)}{\Delta y}
+    \end{align}
+    
+    <p>It's usually written as $P(x + \Delta x,y) - P(x,y)$ and $Q(x,y + \Delta y) - Q(x,y)$, but they still have a difference of $\Delta x$ and $\Delta y$ in their input arguments.</p>
+    
+    <p>So then the flux going out of the box averaged over the area of the box in the limit as the box shrinks to a point is,</p>
+    
+    \begin{equation}
+    \nabla \cdot \vec{F}(x,y) = \lim_{\Delta x, \Delta y \rightarrow 0} \frac{\text{Total Flux}}{\Delta x \Delta y} = \frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y}
     \end{equation}
     </div>
 	
-	
+	  <h2>Intuitive 3D Derivation | <a href="https://www.youtube.com/watch?v=GzR2SNr0bBY&t=1353s" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Video Chapter</a></h2>
+    <div class="theory">
+    <p>The idea for divergence of a vector field in 3D is similar to 2D. There's now a cube centered around a point $(x,y,z)$ with width $\Delta x$, length $\Delta y$, and height $\Delta z$.</p>
+    
+    <img src="images/3D_divergence_1.PNG" alt="3D_divergence_1" class="center_img" width="348" height="297">
+    
+    <p>There are six sides of the cube to calculate the flux for. To calculate how much flux is flowing out of a side, take the dot product of the midpoint vector field arrow and unit normal vector $\vec{n}$ on that side times the area of that side.</p>
+    
+    <img src="images/3D_divergence_2.PNG" alt="3D_divergence_2" class="center_img" width="1035" height="308">
+    
+    \begin{equation}
+    \vec{F}(x,y,z) = \langle P(x,y,z),Q(x,y,z),R(x,y,z)\rangle
+    \end{equation}
+    \begin{align}
+    \text{Left Flux} &\approx \vec{F}\left(x-\frac{\Delta x}{2},y,z\right) \cdot \langle -1,0,0 \rangle ~\Delta y \Delta z = -P\left(x-\frac{\Delta x}{2},y,z\right) \Delta y \Delta z \\
+    \text{Right Flux} &\approx \vec{F}\left(x+\frac{\Delta x}{2},y,z\right) \cdot \langle 1,0,0 \rangle ~\Delta y \Delta z = P\left(x+\frac{\Delta x}{2},y,z\right) \Delta y \Delta z \\
+    \text{Front Flux} &\approx \vec{F}\left(x,y+\frac{\Delta y}{2},z\right) \cdot \langle 0,1,0 \rangle ~\Delta x \Delta z = Q\left(x,y+\frac{\Delta y}{2},z\right) \Delta x \Delta z \\
+    \text{Back Flux} &\approx \vec{F}\left(x,y-\frac{\Delta y}{2},z\right) \cdot \langle 0,-1,0 \rangle ~\Delta x \Delta z = -Q\left(x,y-\frac{\Delta y}{2},z\right) \Delta x \Delta z \\
+    \text{Top Flux} &\approx \vec{F}\left(x,y,z+\frac{\Delta z}{2}\right) \cdot \langle 0,0,1 \rangle ~\Delta x \Delta y = R\left(x,y,z+\frac{\Delta z}{2}\right) \Delta x \Delta y \\
+    \text{Bottom Flux} &\approx \vec{F}\left(x,y,z-\frac{\Delta z}{2}\right) \cdot \langle 0,0,-1 \rangle ~\Delta x \Delta y = -R\left(x,y,z-\frac{\Delta z}{2}\right) \Delta x \Delta y
+    \end{align}
+    
+    <p>The divergence at $(x,y,z)$ is the limit of the sum of all the fluxes divided by the volume of the cube as the cube shrinks to the point.</p>
+    
+    \begin{align}
+    \frac{\text{Total Flux}}{\text{Volume}} &= \frac{\text{Right Flux } + \text{Left Flux}}{\Delta x \Delta y \Delta z} \\
+    &+ \frac{\text{Back Flux } + \text{Front Flux}}{\Delta x \Delta y \Delta z} \\
+    &+ \frac{\text{Top Flux } + \text{Bottom Flux}}{\Delta x \Delta y \Delta z} \\
+    \end{align}
+    \begin{align}
+    \nabla \cdot \vec{F} &= \lim_{\Delta x, \Delta y, \Delta z \rightarrow 0} \frac{\text{Total Flux}}{\text{Volume}} \\
+    &= \lim_{\Delta x \rightarrow 0} \frac{P\left(x+\frac{\Delta x}{2},y,z\right) - P\left(x-\frac{\Delta x}{2},y,z\right)}{\Delta x} \\
+    &+ \lim_{\Delta y \rightarrow 0} \frac{Q\left(x,y+\frac{\Delta y}{2},z\right) - Q\left(x,y-\frac{\Delta y}{2},z\right)}{\Delta y} \\
+    &+ \lim_{\Delta z \rightarrow 0} \frac{R\left(x,y,z+\frac{\Delta z}{2}\right) - R\left(x,y,z-\frac{\Delta z}{2}\right)}{\Delta z}
+    \end{align}
+    
+    <p>The limits are the partial derivatives of $P$, $Q$, and $R$ with respect to $x$, $y$, and $z$. That means the divergence is,</p>
+    
+    \begin{equation}
+    \nabla \cdot \vec{F} = \frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z}
+    \end{equation}
+    </div>
 	
   </div>
 </div>

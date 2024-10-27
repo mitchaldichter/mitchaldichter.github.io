@@ -51,17 +51,17 @@ window.MathJax = {
         <li><a href="integration_overview.html">Integration</a></li>
         <li><a href="sequences_and_series_overview.html">Sequences and Series</a></li>
       </ol>
-    </li>
+    </li>-->
+    <li><a href="linear_algebra_overview.html">Linear Algebra</a></li>
     <li><a href="multivariable_calculus_overview.html">Multivariable Calculus</a></li>
-    <li><a href="linear_algebra_overview.html">Linear Algebra</a></li>-->
     <li><a href="differential_equations_overview.html">Differential Equations</a></li>
     <li><a href="miscellaneous_overview.html">Miscellaneous Topics</a></li>
   </ol>
   <br>
   <h3 class="table_of_contents_h3">Linear Algebra</h3>
   <ol>
+    <!--<li><a href="linear_algebra_glossary.html">Glossary</a></li>-->
     <li><a href="systems_of_linear_equations.html">Systems of Linear Equations</a></li>
-    <li><a href="matrix_multiplication.html">Matrix Multiplication</a></li>
     <li>Vectors
       <ol>
         <li><a href="vectors_fundamentals.html">Fundamentals</a></li>
@@ -70,7 +70,23 @@ window.MathJax = {
         <li><a href="normal_to_plane.html">Normal $\vec{n}$ to Plane</a></li>
       </ol>
     </li>
-    <li>Eigenvalues and Eigenvectors
+    <li><a href="linear_equations_and_vectors.html">Linear Equations and Vectors</a></li>
+    <!--<li><a href="vectors_linear_independence.html">Linear Independence</a></li>
+    <li><a href=".html">Elementary Row Operations</a></li>-->
+    <!--<li>Matrices
+      <ol>
+        <li><a href="matrix_operations.html">Matrix Operations</a></li>
+        <li><a href="matrix_multiplication.html">Matrix Multiplication</a></li>
+        <li><a href="elementary_row_operation_matrices.html">Elementary Row Operation Matrices</a></li>
+        <li><a href=".html">Linear Transformations</a></li>
+        <li><a href="matrix_inverse.html">Matrix Inverse</a></li>
+        <li><a href="matrix_determinant.html">Determinant</a></li>
+        <li><a href="LU_decomposition.html">LU Decomposition</a></li>
+        <li><a href="matrix_nullspace.html">Nullspace</a></li>
+        <li><a href="echelon_forms.html">Row and Reduced Row Echelon Forms</a></li>
+      </ol>
+    </li>-->
+    <!--<li>Eigenvalues and Eigenvectors
       <ol>
         <li><a href="eigen_theory.html">Theory</a></li>
         <li><a href="eigen_distinct_real.html"></a>Distinct Real Eigenvalues</li>
@@ -78,7 +94,7 @@ window.MathJax = {
         <li><a href="eigen_imaginary.html">Imaginary Eigenvalues</a></li>
         <li><a href="eigen_nxn.html">$n \times n $ Matrices</a></li>
       </ol>
-    </li>
+    </li>-->
   </ol>
   <br>
   <h3 class="table_of_contents_h3">Additional Resources</h3>
@@ -103,17 +119,16 @@ window.MathJax = {
 	  <p>Welcome to the Linear Algebra course. The Table of Contents on the left has all the topics for the course, with expanded descriptions below. When you hover over the link to a page, the text will become <u>underlined</u>.</p>
     
     <h2>Expanded Table of Contents</h2>
-    <p><b>Introduction</b></p>
-      <p style="padding-left: 1em;"><a href=".html"><b class="overview_link_color">&#129149;</b></a> &mdash; </p>
-      <p style="padding-left: 1em;"><a href=".html"><b class="overview_link_color">&#129149;</b></a> &mdash; </p>
-      <p><b>Vectors</b></p>
+    <p><a href="systems_of_linear_equations.html"><b class="overview_link_color">&#129149;Systems of Linear Equations</b></a> &mdash; Linear algebra is all about solving systems of linear equations. The "linear" part means equations of lines, equations of planes, and so on. There are no terms like $x^{2}$ or $\sin(y)$ or $e^{z}$ or any other nonlinear terms. The only equations allowed are a number times $x$ plus a number times $y$ equals a number, or a number times $x$ plus a number times $y$ plus a number times $z$ equals a number, and so on with any number of variables. The "system" part means a set of linear equations, all of which need to be solved by the same $(x,y)$ pair in two dimensions, solved by the same $(x,y,z)$ triple in three dimensions, and so on for higher dimensions.</p>
+    <p><b>Vectors</b></p>
       <p style="padding-left: 1em;"><a href="vectors_fundamentals.html"><b class="overview_link_color">Fundamentals&#129149;</b></a> &mdash; A vector can be thought of geometrically as an arrow, which has a magnitude, or length, and direction. They are used in multivariable calculus and extensively in physics, such as electromagnetic fields, gravitational fields, and fluid flow.</p>
       <p style="padding-left: 1em;"><a href="vectors_dot_product.html"><b class="overview_link_color">$\vec{a} \cdot \vec{b}$&nbsp;&nbsp;Dot Product&#129149;</b></a> &mdash; The dot product, or inner product, can be used to find the angle between a pair of vectors, test if a pair of vectors is parallel or perpendicular, and find the projection of a vector onto another vector. The name "dot product" is comes from the dot operator that is used to represent the operation. Another name is scalar product which emphasizes the output is a scalar.</p>
       <p style="padding-left: 1em;"><a href="vectors_cross_product.html"><b class="overview_link_color">$\vec{a} \times \vec{b}$&nbsp;&nbsp;Cross Product&#129149;</b></a> &mdash; The cross product, or vector product, calculates a vector perpendicular to a pair of input vectors. The name comes from the operator between the two input vectors, which is an "x" with right angles. The direction of the output vector follows the right hand rule with the order of the two input vectors and has magnitude equal to the parallelogram formed by the two input vectors. It is used extensively in vector calculus and physics.</p>
       <p style="padding-left: 1em;"><a href="normal_to_plane.html"><b class="overview_link_color">Normal $\vec{n}$ to Plane&#129149;</b></a> &mdash; A quick way to create a vector perpendicular to a plane is to write the equation of the plane as a dot product of the coefficients on x, y, and z with vector [x,y,z] equal to a constant. The vector of coefficients is perpendicular to the plane, called a normal vector to the plane.</p>
-      <p style="padding-left: 1em;"><a href=".html"><b class="overview_link_color">&#129149;</b></a> &mdash; </p>
-      <p style="padding-left: 1em;"><a href=".html"><b class="overview_link_color">&#129149;</b></a> &mdash; </p>
-      
+    <p><a href="linear_equations_and_vectors.html"><b class="overview_link_color">&#129149;Linear Equations and Vectors</b></a> &mdash; Systems of linear equations can be interpreted as intersections of lines and planes and higher-dimensional linear objects, but another way is to interpret solutions of systems of linear equations as a linear combination of vectors.</p>
+    <!--<p><b>Matrices</b></p>
+      <p style="padding-left: 1em;"><a href="matrix_operations.html"><b class="overview_link_color">&#129149;Matrix Operations</b></a> &mdash; The rules adding or multiplying matrices to other matrices, as well as multiplying scalars times matrices, are much the same as for numbers. The one exception is that matrix multiplication does not commute.</p>
+      <p style="padding-left: 1em;"><a href="matrix_multiplication.html"><b class="overview_link_color">&#129149;Matrix Multiplication</b></a> &mdash; There are different ways to interpret matrix multiplication besides rows times columns. Each interpretation can more useful or intuitive depending on the context. Matrix multiplication can be calculated using a formula, visually as rows times columns, as linear combinations of columns, and linear combinations of rows.</p>-->
     
   </div>
 </div>

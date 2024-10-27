@@ -258,7 +258,7 @@ So in fact what happens is the trajectories that escape to infinity asymptote to
 &nbsp;&nbsp;The eigenvalues for matrix $\displaystyle A_{(0,0,z)}$ should be changed from $\displaystyle \lambda_{1} = 0 \quad \lambda_{2} = 0 \quad \lambda_{3} = rz$ to $\displaystyle \lambda_{1} = rz \quad \lambda_{2} = rz \quad \lambda_{3} = 0$.<br>
 <br>
 6.5.7 c)<br>
-\begin{align*}
+\begin{align}
 &A = \begin{pmatrix}
 0 & 1 \\
 2\epsilon u - 1 & 0
@@ -273,14 +273,14 @@ So in fact what happens is the trajectories that escape to infinity asymptote to
 -\sqrt{1-4\alpha\epsilon} & 0
 \end{pmatrix} \\
 &\Delta = \sqrt{1-4\alpha\epsilon} \quad \tau = 0 \Rightarrow \text{Linear Center}
-\end{align*}
+\end{align}
 This is also a nonlinear center by Theorem 6.5.1 with the only difficult condition to check is that the fixed point is a local minimum of a conserved quantity.
-\begin{align*}
+\begin{align}
 &E = \frac{1}{2}\dot{x}^{2} + \int -(\alpha+\epsilon x^{2} - x) \text{ d}x = \frac{1}{2}\dot{x}^{2} - \alpha x - \frac{\epsilon}{3}x^{3} + \frac{1}{2}x^{2} \\
 &\nabla E = \langle \alpha+\epsilon x^{2} - x , \dot{x} \rangle \\
 &\nabla E\left(\frac{1-\sqrt{1-4\alpha\epsilon}}{2\epsilon},0\right) = (0,0)
-\end{align*}
-\begin{align*}
+\end{align}
+\begin{align}
 \begin{vmatrix}
 E_{xx} & E_{x\dot{x}} \\
 E_{\dot{x}x} & E_{\dot{x}\dot{x}}
@@ -289,7 +289,7 @@ E_{\dot{x}x} & E_{\dot{x}\dot{x}}
 \dot{x}-\alpha-\epsilon x^{2}+x & 1
 \end{vmatrix} \\
 &= -2\epsilon x+1 - (\dot{x}-\alpha-\epsilon x^{2}+x)^{2}
-\end{align*}
+\end{align}
 $\nabla E = (0,0)$ at the fixed fixed point. Both $E_{xx}, E_{\dot{x}\dot{x}} > 0$ at the fixed point for sufficiently small $\epsilon$, as well as the evaulation of the Jocobian at the fixed point,
 \begin{equation}
 \begin{vmatrix}
@@ -320,7 +320,7 @@ Determining the solutions of this equation is difficult analytically, but graphi
 \end{equation}
 &nbsp;&nbsp;The limit cycle was assumed to be symmetric and is not, so both branches must be computed.
 \begin{equation} 
-T \approx \int_{t_{A}}^{t_{B}}\text{d}t + \int_{t_{C}}^{t_{D}}\text{d}t = -k\left( \int_{3}^{1} \frac{(z+1)^{2}-4}{z}\text{d}z + \int_{-5}^{-3} \frac{(z+1)^{2}-4}{z}\text{d}z \right) = k\big(12-3\ln(5)\big)
+T \approx \int_{t_{A}}^{t_{B}} \text{ d}t + \int_{t_{C}}^{t_{D}} \text{ d}t = -k\left( \int_{3}^{1} \frac{(z+1)^{2}-4}{z} \text{ d}z + \int_{-5}^{-3} \frac{(z+1)^{2}-4}{z} \text{ d}z \right) = k\big(12-3\ln(5)\big)
 \end{equation}
   
 &nbsp;&nbsp;The $\displaystyle 2k \ln\big(8 − \ln(27)\big)$ should be $\displaystyle 2k \big(8 − \ln(27)\big)$ without the first $\displaystyle \ln$.<br>
@@ -341,10 +341,10 @@ x(t,\epsilon) &= x_{0}(t,\epsilon) + \epsilon x_{1}(t,\epsilon) + \epsilon^{2}x_
 7.6.15 a)<br>
 &nbsp;&nbsp;There were many errors. Here is the corrected segment.
 \begin{align}
-\frac{\text{d}r}{\text{d}T} &= \langle h\sin(\theta) \rangle = \frac{1}{2\pi} \int_{0}^{2\pi} h\big(r\cos(\theta),-r\sin(\theta)\big)\sin(\theta) \text{d}\theta \\
-&= \frac{1}{2\pi} \int_{0}^{2\pi} -r^{3}\cos^{3}(\theta)\sin(\theta) \text{d}\theta = 0 \Rightarrow r(T) = r_{0} \\
-r\frac{\text{d}\phi}{\text{d}T} &= \langle h\cos(\theta) \rangle = \frac{1}{2\pi} \int_{0}^{2\pi} h\big(r\cos(\theta),-r\sin(\theta)\big)\cos(\theta) \text{d}\theta \\
-&= \frac{1}{2\pi} \int_{0}^{2\pi} -r^{3}\cos^{4}(\theta) \text{d}\theta = -\frac{3}{8}r^{3} \\
+\frac{\text{d}r}{\text{d}T} &= \langle h\sin(\theta) \rangle = \frac{1}{2\pi} \int_{0}^{2\pi} h\big(r\cos(\theta),-r\sin(\theta)\big)\sin(\theta) \text{ d}\theta \\
+&= \frac{1}{2\pi} \int_{0}^{2\pi} -r^{3}\cos^{3}(\theta)\sin(\theta) \text{ d}\theta = 0 \Rightarrow r(T) = r_{0} \\
+r\frac{\text{d}\phi}{\text{d}T} &= \langle h\cos(\theta) \rangle = \frac{1}{2\pi} \int_{0}^{2\pi} h\big(r\cos(\theta),-r\sin(\theta)\big)\cos(\theta) \text{ d}\theta \\
+&= \frac{1}{2\pi} \int_{0}^{2\pi} -r^{3}\cos^{4}(\theta) \text{ d}\theta = -\frac{3}{8}r^{3} \\
 \frac{\text{d}\phi}{\text{d}T} &= -\frac{3}{8}r^{2}
 \end{align}
 \begin{equation}
@@ -381,10 +381,10 @@ A_{(1-p,0)} = \begin{pmatrix}
 &nbsp;&nbsp;The explanation for the limits as $T \rightarrow 0$ and $T \rightarrow \infty$ were poorly written, wrong, and ambiguous. Here is the rewritten part (c).<br>
 <br>
 Using the equation derived from part (a)
-\begin{align*}
+\begin{align}
 &\lim_{T\rightarrow 0} x(T) = \lim_{T\rightarrow 0} e^{-T}x_{0} - A\big(1-e^{-\frac{T}{2}}\big)^{2} = x_{0} - A\big(1-1\big)^{2} = x_{0} \\
 &\lim_{T\rightarrow \infty} x(T) = \lim_{T\rightarrow \infty} e^{-T}x_{0} - A\big(1-e^{-\frac{T}{2}}\big)^{2} = (0)x_{0} - A\big(1-0\big)^{2} = -A
-\end{align*}
+\end{align}
 The first result is quite plausible. As the period goes to zero then the forcing function $F(t)$ has almost no time to do anything and $x(t)$ has no time to move anywhere within one $T$-length period. If $x(0) = x_{0}$ then $x(T) \approx x(0) = x_{0}$ as $T \rightarrow 0$. The solution has virtually no time to change.<br>
 <br>
 The second result is intuitive by letting $T$ be large, which in this context means $T \gg 1$. Why is that the correct condition? Because for the equation in question, the rate constant for exponential decay, and hence its inverse, the time scale, are both equal to 1. We can see that by looking at the coefficient of $x$ in the equation
@@ -418,11 +418,11 @@ r(t) = \frac{e^{t}r_{0}}{(e^{t}-1)r_{0}+1}
 f'(x) = \frac{2(1+x)-2x(1)}{(1+x)^{2}} = \frac{2}{(1+x)^{2}}
 \end{equation}
 10.1.11 d)
-\begin{align*}
+\begin{align}
 |x_{1}| &= |3x_{0}-x_{0}^{3}| = |x_{0}||3-x_{0}^{2}| = |x_{0}||3-(2 + \epsilon)^{2}| \\
 &= |x_{0}||3-(4 + 4\epsilon + \epsilon^{2})| = |x_{0}||-1 - 4\epsilon - \epsilon^{2})| \\
 &= |x_{0}|(1 + 4\epsilon + \epsilon^{2})
-\end{align*}
+\end{align}
 10.2.1 a)
 \begin{equation}
 x_{n+1} - x_{n} = -r\epsilon(1 + \epsilon) - (1 + \epsilon) = -(r \epsilon+1)(1 + \epsilon) < -r \epsilon
@@ -449,10 +449,10 @@ f'(\pm\sqrt{r-1}) = \frac{2}{r} - 1 \qquad r < 1 \Rightarrow x^{*} = 0 \text{ is
 -2 < r < 0 \Rightarrow \text{Stable} \qquad r < -2 \text{ or } 0 < r \Rightarrow \text{Unstable}
 \end{equation}
 10.3.11 b)
-\begin{align*}
+\begin{align}
 &r < 0 \Rightarrow f'(0) = -(1+r) > -1 \Rightarrow \text{Stable} \\
 &0 < r \Rightarrow f'(0) = -(1+r) < -1 \Rightarrow \text{Unstable}
-\end{align*}
+\end{align}
 11.2.1<br>
 &nbsp;&nbsp;The step
 \begin{equation}

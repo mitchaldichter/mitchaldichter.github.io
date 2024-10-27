@@ -3,7 +3,7 @@
 <head>
 <title>Polar Double Integral</title>
 
-<meta name="description" content="description">
+<meta name="description" content="Double integrals in polar coordinates are useful for integrating over radially symmetric regions in the xy-plane, but require a scaling factor to work correctly.">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" sizes="32x32" href="images/profile_image_favicon-32x32.png">
@@ -49,15 +49,33 @@ window.MathJax = {
         <li><a href="integration_overview.html">Integration</a></li>
         <li><a href="sequences_and_series_overview.html">Sequences and Series</a></li>
       </ol>
-    </li>
+    </li>-->
+    <li><a href="linear_algebra_overview.html">Linear Algebra</a></li>
     <li><a href="multivariable_calculus_overview.html">Multivariable Calculus</a></li>
-    <li><a href="linear_algebra_overview.html">Linear Algebra</a></li>-->
     <li><a href="differential_equations_overview.html">Differential Equations</a></li>
     <li><a href="miscellaneous_overview.html">Miscellaneous Topics</a></li>
   </ol>
   <br>
   <h3 class="table_of_contents_h3">Multivariable Calculus</h3>
   <ol>
+    <!--<li><a href="multivariable_calculus_glossary.html">Glossary</a></li>-->
+    <li>Double Integrals
+      <ol>
+        <li><a href="double_integral_cartesian.html">Cartesian $\text{d}x\text{d}y$</a></li>
+        <li><a href="double_integral_polar.html">Polar $r\text{d}r\text{d}\theta$</a></li>
+        
+        <!--density, mass, center of mass, moments, moment of inertia-->
+        
+      </ol>
+    </li>
+    <li>Vectors
+      <ol>
+        <li><a href="vectors_fundamentals.html">Fundamentals</a></li>
+        <li><a href="vectors_dot_product.html">$\vec{a} \cdot \vec{b}$&nbsp;&nbsp;Dot Product</a></li>
+        <li><a href="vectors_cross_product.html">$\vec{a} \times \vec{b}$&nbsp;&nbsp;Cross Product</a></li>
+        <li><a href="normal_to_plane.html">Normal $\vec{n}$ to Plane</a></li>
+      </ol>
+    </li>
     <li><a href="divergence.html">Divergence</a></li>
     <li><a href="curl.html">Curl</a></li>
   </ol>
@@ -80,26 +98,167 @@ window.MathJax = {
       <p>Viewing this website in portrait orientation can cause problems with equations being longer than the screen width (you can scroll to the right), images being poorly sized, and the font size of maths text being much smaller than regular text. If your only option is a tablet or mobile device, your viewing experience will be better if you view this website in landscape orientation. You might need to refresh the page to fix any problems after rotating.</p>
     </div>
 
-    <h1>Polar Double Integral | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Topic Playlist</a></h1>
-    <p>description</p>
-	  
-	  <h2>theory | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Explanation Video</a></h2>
+    <h1>Double Integrals in Polar Coordinates | <a href="https://www.youtube.com/watch?v=iX0KJky_5Xs&t=0s" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Chalkboard Video</a></h1>
+    <p>Double integrals in polar coordinates are useful for integrating over radially symmetric regions in the $xy$-plane, but require a scaling factor to work correctly.</p>
+    
+	  <h2>Change of Variables from $(x,y)$ to $(r,\theta)$ for $r \geq 0$ | <a href="https://www.youtube.com/watch?v=iX0KJky_5Xs&t=0s" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Video Chapter</a></h2>
     <div class="theory">
-    <p>paragraph</p>
+    <p>Going back to $u$ substitution in single variable calculus where $x = f(u)$, the $\text{d}x$ would change to $f'(u)\text{d}u$ to account for any stretching and shrinking of the $x$-axis. The same idea applies to a substitution of $x=r\cos(\theta)$ and $y=r\sin(\theta)$ from Cartesian to polar coordinates, but it's not obvious what the scaling factor for the $\text{d}r\text{d}\theta$ area rectangles should be, or how to calculate it.</p>
+    
+    <p>Part of the problem is the double integral doesn't know anything about what coordinate system is being used. The literal interpretation of every double integral is summing over little rectangles. The goal is to integrate over the region $R$ on the left, but the integral on the right is over a rectangle with length $2$ and width $\dfrac{\pi}{4}$, not a wedge of a circle.</p>
+    
     \begin{equation}
-    a+b
+    \iint\limits_{R} f(x,y) \text{ d}x\text{d}y \quad \neq \quad \int_{\pi/8}^{3\pi/8} \int_{1}^{3} f \big(r\cos(\theta),r\sin(\theta)\big) \text{ d}r\text{d}\theta
     \end{equation}
+    
+    <img src="images/rdrdtheta.svg" alt="normal to plane" class="center_img" width="1008" height="450">
+    
+    <p>The method to calculate the scaling factor in general uses the Jacobian, but the scaling factor for $\text{d}r\text{d}\theta$ can be derived geometrically for a Cartesian to polar substitution.</p>
+    
+    <p>The area of one of the wedges on the left with side length $\Delta r$ and arc $\Delta \theta$ can be calculated using the formula for the area of a circle. To put the value of $r$ in the center of the wedge, the ring has inner radius $r - \dfrac{\Delta r}{2}$ and outer radius $r + \dfrac{\Delta r}{2}$.</p>
+    
+    \begin{align}
+    \text{Ring area} &= \pi \left(r + \dfrac{\Delta r}{2} \right)^{2} - \pi \left(r - \dfrac{\Delta r}{2} \right)^{2} \\
+    &= \pi \left(r^{2} + r \Delta r + \dfrac{\Delta r^{2}}{4} \right) - \pi \left(r^{2} - r \Delta r + \dfrac{\Delta r^{2}}{4} \right) \\
+    &= 2\pi r \Delta r
+    \end{align}
+    
+    <p>That's the area of the entire ring, but the wedge is only a fraction $\dfrac{\Delta \theta}{2\pi}$ of a complete $2\pi$ rotation.</p>
+    
+    \begin{align}
+    \text{Wedge area} &= \dfrac{\Delta \theta}{2\pi}(\text{Ring area}) \\
+    &= \dfrac{\Delta \theta}{2\pi} 2\pi r \Delta r \\
+    &= r \Delta r \Delta \theta
+    \end{align}
+    
+    <p>Taking the limit as the wedge shrinks toward the center point $(r,\theta)$ with $\Delta r$ and $\Delta \theta$ going to zero gives the conversion from Cartesian to polar.</p>
+    
+    \begin{equation}
+    \lim_{\Delta r,\Delta \theta \rightarrow 0} \text{Wedge area} = r \text{d} r \text{d} \theta
+    \end{equation}
+    
+    <p>So the change of variables from Cartesian to polar needs a scaling factor of $r$ in the double integral to work correctly.</p>
+    
+    \begin{equation}
+    \iint\limits_{R} f(x,y) \text{ d}x\text{d}y \quad = \quad \int_{\pi/8}^{3\pi/8} \int_{1}^{3} f \big(r\cos(\theta),r\sin(\theta)\big) ~ r \text{d}r\text{d}\theta
+    \end{equation}
+    
+    <p>Interpreting the integral over the region $R$ as the volume of a solid with height $1$ and base the region $R$ on the left.</p>
+    
+    <img src="images/rdrdtheta3d.svg" alt="normal to plane" class="center_img" width="1008" height="562.5">
+    
+    <p>The volume of the solid on the right can be calculated using geometry with the area of the trapezoid the base length times the average of the two side heights.</p>
+    
+    \begin{align}
+    \iint\limits_{R} 1 \text{ d}x\text{d}y \quad &= \quad \int_{\pi/8}^{3\pi/8} \int_{1}^{3} r \text{d}r\text{d}\theta \\
+    (\text{wedge area})(\text{height}) \quad &= \quad (\text{length})(\text{trapezoid area}) \\
+    \frac{\dfrac{3\pi}{8} - \dfrac{\pi}{8}}{2\pi}(\pi 3^{2} - \pi 1^{2})(1) \quad &= \quad \left(\frac{3\pi}{8} - \frac{\pi}{8}\right) (3-1) \left(\frac{3+1}{2}\right) \\
+    \pi \quad &= \quad \pi
+    \end{align}
+    
+    <p>And the volumes are equal!</p>
     </div>
     
-    <h2>Example  | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
-    <div class="example_solution">
-    <p>desc</p>
+    <h2>Watch out for $r < 0$ | <a href="https://www.youtube.com/watch?v=iX0KJky_5Xs&t=1240s" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Video Chapter</a></h2>
+    <div class="theory">
+    <p>The previous derivation is dependent on $r \geq 0$. If a region is integrated over where $r$ is interpreted as negative, then $\text{d}A = r \text{d}r\text{d}\theta$ comes out negative. The double integral can still output the correct value by picking the $\text{d}r$ integral bounds correctly, but it's a mess. It's much easier to make sure $r$ is always positive, if possible.</p>
+    
+    <p>An example is the volume under a cone over a region R bounded by $r = \cos(\theta)$, which is a unit circle centered at $(x,y) = (0.5,0)$.</p>
+    
     \begin{equation}
-    cf
+    \iint\limits_{R} \sqrt{x^{2}+y^{2}} \text{ d}x\text{d}y = \iint\limits_{R} r^{2} \text{ d}r\text{d}\theta
+    \end{equation}
+    
+    <img src="images/cone_over_circle_small.png" alt="cone_over_circle_small" class="center_img" width="808" height="314">
+    
+    <p>One choice for the $\text{d}\theta$ bounds is $0 \leq \theta \leq \pi$, but that causes negative values of $r$ for $r(\theta) = \cos(\theta)$.</p>
+    
+    <img src="images/r_equals_cos_theta_0_to_pi.PNG" alt="r_equals_cos_theta_0_to_pi" class="center_img" width="488" height="297">
+    
+    <p>Because of this, the double integral in polar coordinates with these bounds evaluates to zero.</p>
+    
+    \begin{equation}
+    \iint\limits_{R} \sqrt{x^{2}+y^{2}} \text{ d}x\text{d}y \quad \neq \quad \int_{0}^{\pi}\int_{0}^{\cos(\theta)} r^{2} \text{ d}r\text{d}\theta = 0
+    \end{equation}
+    
+    <p>The volume under the cone is definitely not zero, so this is wrong. This could be fixed by being careful and using absolute values, but it's a mess and not worth the effort. Much better to change the bounds on the $\text{d}\theta$ integral</p>
+    
+    <p>A better choice for the $\text{d}\theta$ bounds is $\dfrac{-\pi}{2} \leq \theta \leq \dfrac{\pi}{2}$ because the values of $r$ for $r(\theta) = \cos(\theta)$ are all non-negative.</p>
+    
+    <img src="images/r_equals_cos_theta_plus_minus_half_pi.PNG" alt="r_equals_cos_theta_plus_minus_half_pi" class="center_img" width="487" height="312">
+    
+    \begin{equation}
+    \iint\limits_{R} \sqrt{x^{2}+y^{2}} \text{ d}x\text{d}y = \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\int_{0}^{\cos(\theta)} r^{2} \text{ d}r\text{d}\theta = \frac{4}{9}
+    \end{equation}
+    
+    <p>Now the volume evaluates to something reasonable.</p>
+    
+    <p>We can compare to another volume that is easy to calculate that will be approximately equal. Instead of the volume under cone, we can calculate the volume under a plane $z = x$ so it has the same slope as the cone in the $xz$-plane.</p>
+    
+    \begin{equation}
+    \iint\limits_{R} x \text{ d}x\text{d}y = \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\int_{0}^{\cos(\theta)} r^{2}\cos(\theta) \text{ d}r\text{d}\theta = \frac{\pi}{8}
+    \end{equation}
+    
+    <img src="images/plane_over_circle_small.png" alt="plane_over_circle_small" class="center_img" width="808" height="314">
+    
+    <p>This can be calculated without an integral because we know the formula for the volume of a cylinder, and this cylinder with radius $\dfrac{1}{2}$ and height 1 has been cut in half.</p>
+    
+    \begin{equation}
+    \frac{1}{2} \text{(Volume of Cylinder)} = \frac{1}{2}\pi \left(\frac{1}{2}\right)^{2}(1) = \frac{\pi}{8}
+    \end{equation}
+    
+    <p>The two results are fairly close.</p>
+    
+    \begin{equation}
+    \frac{4}{9} \approx 0.4444 \qquad 0.3927 \approx \frac{\pi}{8}
     \end{equation}
     </div>
-	
-	
+	  
+    <h2>Example 1 | <a href="https://www.youtube.com/watch?v=uqGaTCQpRHI&list=PLXQ5vz32rm_SIbi0rdzhUi5jFq8-cABGY" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
+    <div class="example_solution">
+    <p>Find the volume under the cone $z = \sqrt{x^{2}+y^{2}}$ over a circle of radius $0.5$ centered at $(x,y) = (0.5,0)$.</p>
+    
+    <img src="images/cone_over_circle_small.png" alt="cone_over_circle_small" class="center_img" width="808" height="314">
+    
+    <p>This is the example from the explanation section above.</p>
+    </div>
+	  
+    <h2>Example 2 | <a href="https://www.youtube.com/watch?v=W9oCx9ITlBo&list=PLXQ5vz32rm_SIbi0rdzhUi5jFq8-cABGY&index=2" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
+    <div class="example_solution">
+    <p>Find the volume under the plane $z = x$ over a circle of radius $0.5$ centered at $(x,y) = (0.5,0)$.</p>
+    
+    <img src="images/plane_over_circle_small.png" alt="plane_over_circle_small" class="center_img" width="808" height="314">
+    
+    <p>This is the example from the explanation section above.</p>
+    </div>
+    
+    <h2>Example 3 | <a href="https://www.youtube.com/watch?v=5nKgqomGDuw&list=PLXQ5vz32rm_SIbi0rdzhUi5jFq8-cABGY&index=3" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
+    <div class="example_solution">
+    <p>Find the volume of the paraboloid $z = 3-x^{2}-y^{2}$ above the $xy$-plane.</p>
+    
+    <img src="images/paraboloid.png" alt="paraboloid" class="center_img" width="382" height="361">
+    </div>
+    
+    <h2>Example 4 | <a href="https://www.youtube.com/watch?v=hj-8Fm-5org&list=PLXQ5vz32rm_SIbi0rdzhUi5jFq8-cABGY&index=4" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
+    <div class="example_solution">
+    <p>Find the area of one petal of the rose curve $r = \cos(3\theta)$.</p>
+    
+    <img src="images/rose_curve_2.PNG" alt="rose_curve" class="center_img" width="471" height="273">
+    </div>
+    
+    <h2>Example 5 | <a href="https://www.youtube.com/watch?v=JE8FjYOQpbk&list=PLXQ5vz32rm_SIbi0rdzhUi5jFq8-cABGY&index=5" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
+    <div class="example_solution">
+    <p>Find the area of the cardioid $r = 1 + \sin(\theta)$.</p>
+    
+    <img src="images/cardioid_1.PNG" alt="cardioid" class="center_img" width="484" height="275">
+    </div>
+    
+    <h2>Example 6 | <a href="https://www.youtube.com/watch?v=b5kXfRNWuMM&list=PLXQ5vz32rm_SIbi0rdzhUi5jFq8-cABGY&index=6" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
+    <div class="example_solution">
+    <p>Find the area of the limacon $r = \dfrac{1}{2} + \sin(\theta)$.</p>
+    
+    <img src="images/cardioid_2.PNG" alt="limacon" class="center_img" width="485" height="295">
+    </div>
 	
   </div>
 </div>

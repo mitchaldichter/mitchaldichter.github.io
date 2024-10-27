@@ -51,15 +51,33 @@ window.MathJax = {
         <li><a href="integration_overview.html">Integration</a></li>
         <li><a href="sequences_and_series_overview.html">Sequences and Series</a></li>
       </ol>
-    </li>
+    </li>-->
+    <li><a href="linear_algebra_overview.html">Linear Algebra</a></li>
     <li><a href="multivariable_calculus_overview.html">Multivariable Calculus</a></li>
-    <li><a href="linear_algebra_overview.html">Linear Algebra</a></li>-->
     <li><a href="differential_equations_overview.html">Differential Equations</a></li>
     <li><a href="miscellaneous_overview.html">Miscellaneous Topics</a></li>
   </ol>
   <br>
   <h3 class="table_of_contents_h3">Multivariable Calculus</h3>
   <ol>
+    <!--<li><a href="multivariable_calculus_glossary.html">Glossary</a></li>-->
+    <li>Double Integrals
+      <ol>
+        <li><a href="double_integral_cartesian.html">Cartesian $\text{d}x\text{d}y$</a></li>
+        <li><a href="double_integral_polar.html">Polar $r\text{d}r\text{d}\theta$</a></li>
+        
+        <!--density, mass, center of mass, moments, moment of inertia-->
+        
+      </ol>
+    </li>
+    <li>Vectors
+      <ol>
+        <li><a href="vectors_fundamentals.html">Fundamentals</a></li>
+        <li><a href="vectors_dot_product.html">$\vec{a} \cdot \vec{b}$&nbsp;&nbsp;Dot Product</a></li>
+        <li><a href="vectors_cross_product.html">$\vec{a} \times \vec{b}$&nbsp;&nbsp;Cross Product</a></li>
+        <li><a href="normal_to_plane.html">Normal $\vec{n}$ to Plane</a></li>
+      </ol>
+    </li>
     <li><a href="divergence.html">Divergence</a></li>
     <li><a href="curl.html">Curl</a></li>
   </ol>
@@ -86,11 +104,16 @@ window.MathJax = {
 	  <p>Welcome to the Multivariable Calculus course. The Table of Contents on the left has all the topics for the course, with expanded descriptions below. When you hover over the link to a page, the text will become <u>underlined</u>.</p>
     
     <h2>Expanded Table of Contents</h2>
-    <p><b>Introduction</b></p>
-      <p style="padding-left: 1em;"><a href=".html"><b class="overview_link_color">&#129149;</b></a> &mdash; </p>
-      <p style="padding-left: 1em;"><a href=".html"><b class="overview_link_color">&#129149;</b></a> &mdash; </p>
-      <p style="padding-left: 1em;"><a href=".html"><b class="overview_link_color">&#129149;</b></a> &mdash; </p>
-      <p style="padding-left: 1em;"><a href=".html"><b class="overview_link_color">&#129149;</b></a> &mdash; </p>
+    <p><b>Double Integrals</b></p>
+      <p style="padding-left: 1em;"><a href="double_integral_cartesian.html"><b class="overview_link_color">&#129149;Cartesian $\text{d}x\text{d}y$</b></a> &mdash; Double integrals can be used to find areas of regions in the $xy$-plane and volumes. If a density is defined for a region in the $xy$-plane, the mass, moments, center of mass, and moment of inertia can be calculated.</p>
+      <p style="padding-left: 1em;"><a href="double_integral_polar.html"><b class="overview_link_color">&#129149;Polar $r\text{d}r\text{d}\theta$</b></a> &mdash; Double integrals in polar coordinates are useful for integrating over radially symmetric regions in the $xy$-plane, but require a scaling factor to work correctly.</p>
+    <p><b>Vectors</b></p>
+      <p style="padding-left: 1em;"><a href="vectors_fundamentals.html"><b class="overview_link_color">Fundamentals&#129149;</b></a> &mdash; A vector can be thought of geometrically as an arrow, which has a magnitude, or length, and direction. They are used in multivariable calculus and extensively in physics, such as electromagnetic fields, gravitational fields, and fluid flow.</p>
+      <p style="padding-left: 1em;"><a href="vectors_dot_product.html"><b class="overview_link_color">$\vec{a} \cdot \vec{b}$&nbsp;&nbsp;Dot Product&#129149;</b></a> &mdash; The dot product, or inner product, can be used to find the angle between a pair of vectors, test if a pair of vectors is parallel or perpendicular, and find the projection of a vector onto another vector. The name "dot product" is comes from the dot operator that is used to represent the operation. Another name is scalar product which emphasizes the output is a scalar.</p>
+      <p style="padding-left: 1em;"><a href="vectors_cross_product.html"><b class="overview_link_color">$\vec{a} \times \vec{b}$&nbsp;&nbsp;Cross Product&#129149;</b></a> &mdash; The cross product, or vector product, calculates a vector perpendicular to a pair of input vectors. The name comes from the operator between the two input vectors, which is an "x" with right angles. The direction of the output vector follows the right hand rule with the order of the two input vectors and has magnitude equal to the parallelogram formed by the two input vectors. It is used extensively in vector calculus and physics.</p>
+      <p style="padding-left: 1em;"><a href="normal_to_plane.html"><b class="overview_link_color">Normal $\vec{n}$ to Plane&#129149;</b></a> &mdash; A quick way to create a vector perpendicular to a plane is to write the equation of the plane as a dot product of the coefficients on x, y, and z with vector [x,y,z] equal to a constant. The vector of coefficients is perpendicular to the plane, called a normal vector to the plane.</p>
+    <p><a href="divergence.html"><b class="overview_link_color">&#129149;Divergence</b></a> &mdash; An intuitive description of the divergence in vector calculus is a vector operator that quantifies how much flow is coming out of a point in the vector field. If there is a net flow of arrows coming out of a point, then the divergence at that point is positive. If there is a net flow going into a point, then the divergence is negative at that point. If the divergence at a point is zero, then there is net zero flow into or out of the point.</p>
+    <p><a href="curl.html"><b class="overview_link_color">&#129149;Curl</b></a> &mdash; An intuitive description of the curl in vector calculus is a vector operator that quantifies how much a vector field is rotating about a point and the direction of rotation. For a vector field in the $xy$-plane, the curl is often interpreted as a scalar function of $x$ and $y$ or as a vector pointing in the $z$ direction. For a vector field in three-dimensional space, the curl is a three dimensional vector. The direction of rotation at point in the vector field follows the right hand rule with the curl vector at that point. If the curl at a point in a vector field is zero, then there is zero rotation at that point.</p>
     
   </div>
 </div>

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Linear Equations and Vectors</title>
+
+<meta name="description" content="Systems of linear equations can be interpreted as intersections of lines and planes and higher-dimensional linear objects, but another way is to interpret solutions of systems of linear equations as a linear combination of vectors.">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="32x32" href="images/profile_image_favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/profile_image_favicon-16x16.png">
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$','$'], ['\\(','\\)']]
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/noerrors']
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script"></script>
+<link rel="stylesheet" href="maths_survival_guide.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="header_row">
+  <div id="left_header" class="linear_algebra_header">
+    Table of Contents
+  </div>
+  <div id="right_header" class="linear_algebra_header">
+    <!--Begin Header Text-->Linear Algebra<!--End Header Text-->
+  </div>
+  <div id="profile_picture_div">
+	<img id="profile_picture_img" alt="channel logo" src="images/profile_image100x100.webp">
+  </div>
+</div>
+
+<div id="content_row">
+  <div id="left_content">
+    <!--Begin Table of Contents-->
+  <h3 class="table_of_contents_h3">Courses</h3>
+  <ol>
+    <!--<li>Single Variable Calculus
+      <ol>
+        <li><a href="limits_and_derivatives_overview.html">Limits and Derivatives</a></li>
+        <li><a href="integration_overview.html">Integration</a></li>
+        <li><a href="sequences_and_series_overview.html">Sequences and Series</a></li>
+      </ol>
+    </li>-->
+    <li><a href="linear_algebra_overview.html">Linear Algebra</a></li>
+    <li><a href="multivariable_calculus_overview.html">Multivariable Calculus</a></li>
+    <li><a href="differential_equations_overview.html">Differential Equations</a></li>
+    <li><a href="miscellaneous_overview.html">Miscellaneous Topics</a></li>
+  </ol>
+  <br>
+  <h3 class="table_of_contents_h3">Linear Algebra</h3>
+  <ol>
+    <!--<li><a href="linear_algebra_glossary.html">Glossary</a></li>-->
+    <li><a href="systems_of_linear_equations.html">Systems of Linear Equations</a></li>
+    <li>Vectors
+      <ol>
+        <li><a href="vectors_fundamentals.html">Fundamentals</a></li>
+        <li><a href="vectors_dot_product.html">$\vec{a} \cdot \vec{b}$&nbsp;&nbsp;Dot Product</a></li>
+        <li><a href="vectors_cross_product.html">$\vec{a} \times \vec{b}$&nbsp;&nbsp;Cross Product</a></li>
+        <li><a href="normal_to_plane.html">Normal $\vec{n}$ to Plane</a></li>
+      </ol>
+    </li>
+    <li><a href="linear_equations_and_vectors.html">Linear Equations and Vectors</a></li>
+    <!--<li><a href="vectors_linear_independence.html">Linear Independence</a></li>
+    <li><a href=".html">Elementary Row Operations</a></li>-->
+    <!--<li>Matrices
+      <ol>
+        <li><a href="matrix_operations.html">Matrix Operations</a></li>
+        <li><a href="matrix_multiplication.html">Matrix Multiplication</a></li>
+        <li><a href="elementary_row_operation_matrices.html">Elementary Row Operation Matrices</a></li>
+        <li><a href=".html">Linear Transformations</a></li>
+        <li><a href="matrix_inverse.html">Matrix Inverse</a></li>
+        <li><a href="matrix_determinant.html">Determinant</a></li>
+        <li><a href="LU_decomposition.html">LU Decomposition</a></li>
+        <li><a href="matrix_nullspace.html">Nullspace</a></li>
+        <li><a href="echelon_forms.html">Row and Reduced Row Echelon Forms</a></li>
+      </ol>
+    </li>-->
+    <!--<li>Eigenvalues and Eigenvectors
+      <ol>
+        <li><a href="eigen_theory.html">Theory</a></li>
+        <li><a href="eigen_distinct_real.html"></a>Distinct Real Eigenvalues</li>
+        <li><a href="eigen_repeated.html">Repeated Eigenvalues</a></li>
+        <li><a href="eigen_imaginary.html">Imaginary Eigenvalues</a></li>
+        <li><a href="eigen_nxn.html">$n \times n $ Matrices</a></li>
+      </ol>
+    </li>-->
+  </ol>
+  <br>
+  <h3 class="table_of_contents_h3">Additional Resources</h3>
+  <ol>
+    <li><a href="how_to_use_wolfram_alpha.html">WolframAlpha Examples</a></li>
+    <li><a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank" style="text-decoration: underline; color: blue;">Direction Field Plotter by Ariel Barton</a></li>
+    <li><a href="https://aeb019.hosted.uark.edu/pplane.html" target="_blank" style="text-decoration: underline; color: blue;">Phase Plane Plotter by Ariel Barton</a></li>
+  </ol>
+  <br><br><!--End Table of Contents-->
+  </div>
+  
+<div id="left_empty_column"></div>
+  <div id="right_content">
+    <div id="portrait_warning_div">
+      <p id="portrait_warning_p"><b>NARROW DISPLAY WARNING</b></p>
+      <hr color="black">
+      <p>You are most likely using a tablet or mobile device in portrait orientation. This website is best viewed using a typical computer screen with the browser window maximized.</p>
+      <p>Viewing this website in portrait orientation can cause problems with equations being longer than the screen width (you can scroll to the right), images being poorly sized, and the font size of maths text being much smaller than regular text. If your only option is a tablet or mobile device, your viewing experience will be better if you view this website in landscape orientation. You might need to refresh the page to fix any problems after rotating.</p>
+    </div>
+
+    <h1>Linear Equations and Vectors | <a href="https://www.youtube.com/watch?v=zy-0JMHC2xo&t=0s" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Chalkboard Video</a></h1>
+	  <p>Systems of linear equations can be interpreted as intersections of lines and planes and higher-dimensional linear objects, but another way is to interpret solutions of systems of linear equations as a linear combination of vectors.</p>
+	  
+    <h2>2x2 Solution Cases | <a href="https://www.youtube.com/watch?v=zy-0JMHC2xo&t=0s" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Video Chapter</a></h2>
+    <div class="theory">
+    <p>Interpreting the solutions of two linear equations in $x$ and $y$ as intersections of lines in the $xy$-plane, there are three possible outcomes.</p>
+    
+    <img src="images/linear_equations_and_vectors_lines_intersecting_1.png" alt="intersecting lines cases" class="center_img" width="751" height="218">
+    
+    <p>Example systems for each case are below.</p>
+    \begin{equation}
+    \begin{matrix}
+    3x-y=\phantom{-}1 & \quad & 3x-y=1 & \quad & \phantom{-}3x-\phantom{2}y=\phantom{-}1 \\
+    3x-y=-2 & \quad & 2x+y=4 & \quad & -6x+2y=-2
+    \end{matrix}
+    \end{equation}
+    
+    <h3>Zero Solutions</h3>
+    <p>Writing the first case as augmented matrix.</p>
+    \begin{equation}
+    \left[
+    \begin{matrix}
+    3 & -1 \\
+    3 & -1 
+    \end{matrix}
+    \left|
+    \begin{matrix}
+    1 \\
+    -2
+    \end{matrix}
+    \right.
+    \right]
+    \end{equation}
+    
+    <p>There's no way for $3x-y$ to equal $1$ and $-2$ simultaneously, meaning there are zero solutions to this system of equations. That shows itself in the augmented matrix with coefficient rows on the left side of the vertical bar being exactly the same, but the the constant rows on the right side of the vertical bar are not.</p>
+    
+    <p>If the augmented matrix is row reduced,</p>
+    \begin{equation}
+    R_{1}+(-1)R_{2}\rightarrow R_{2} \quad \left[
+    \begin{matrix}
+    3 & -1 \\
+    0 & 0 
+    \end{matrix}
+    \left|
+    \begin{matrix}
+    1 \\
+    3
+    \end{matrix}
+    \right.
+    \right]
+    \end{equation}
+    <p>The bottom row requires the eqatation $0x+0y=3$, which is impossible. Since there is no $(x,y)$ pair that satisfies both equations, there are zero solutions to this system of equations.</p>
+    
+    <h3>One Solution</h3>
+    <p>Writing the second case as augmented matrix.</p>
+    \begin{equation}
+    \left[
+    \begin{matrix}
+    3 & -1 \\
+    2 & 1 
+    \end{matrix}
+    \left|
+    \begin{matrix}
+    1 \\
+    4
+    \end{matrix}
+    \right.
+    \right]
+    \end{equation}
+    
+    <p>If you wrote the equations as $y=mx+b$, the slope $m$ in each equation would be different, so they would have to intersect at some point. However, you can get the same result with less work by row reducing.</p>
+    \begin{equation}
+    R_{1}+(-3/2)R_{2}\rightarrow R_{2} \quad \left[
+    \begin{matrix}
+    3 & -1 \\
+    0 & -5/2 
+    \end{matrix}
+    \left|
+    \begin{matrix}
+    1 \\
+    -5
+    \end{matrix}
+    \right.
+    \right]
+    \end{equation}
+    <p>The second row is $-5/2 y = -5$ can be solved, then the first row can be solved. There is exactly one solution to this system of equations.</p>
+    
+    <h3>Infinite Solutions</h3>
+    <p>Writing the third case as augmented matrix.</p>
+    \begin{equation}
+    \left[
+    \begin{matrix}
+    3 & -1 \\
+    -6 & 2 
+    \end{matrix}
+    \left|
+    \begin{matrix}
+    1 \\
+    -2
+    \end{matrix}
+    \right.
+    \right]
+    \end{equation}
+    
+    <p>This is similar to the first case with zero solutions, except this time the entire bottom row cancels out after row reduction.</p>
+    \begin{equation}
+    R_{1}+(1/2)R_{2}\rightarrow R_{2} \quad \left[
+    \begin{matrix}
+    3 & -1 \\
+    0 & 0 
+    \end{matrix}
+    \left|
+    \begin{matrix}
+    1 \\
+    0
+    \end{matrix}
+    \right.
+    \right]
+    \end{equation}
+    <p>The second row is $0x+0y = 0$, which is always true. The second row is just the first row multiplied by $-2$, meaning they described the same line, so any solution to the first row will automatically be a solution to the second row. Then there's an infinite number solutions because there's an infinite number of points on the line.</p>
+    </div>
+    
+    <h2>3x3 Solution Cases | <a href="https://www.youtube.com/watch?v=zy-0JMHC2xo&t=306s" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Video Chapter</a></h2>
+    <div class="theory">
+    <p>There are a lot more cases when interpreting the solutions of three linear equations in $x$,$y$, and $z$ in 3D space.</p>
+    
+    <p>Despite there being many more ways for three planes to orient themselves, there are still only three possible solution types.</p>
+    
+    <h3>Zero Solutions</h3>
+    <img src="images/intersecting_planes_zero_solutions.png" alt="intersecting planes zero solutions" class="center_img" width="929" height="229">
+    
+    <h3>One Solution</h3>
+    <img src="images/intersecting_planes_one_solution.png" alt="one solution" class="center_img" width="273" height="309">
+    
+    <h3>Infinite Solutions</h3>
+    <img src="images/intersecting_planes_infinite_solutions.png" alt="intersecting planes infinite solutions" class="center_img" width="673" height="174">
+    
+    <p>Despite so many cases, the row reduced augmented matrices will look pretty much the same. A row with $0x+0y+0z=$ not zero is impossible and have zero solutions, infinite solutions will have rows full of zeros, and one solution will have a non-zero diagonal coefficients with a unique solution.</p>
+    </div>
+    
+    <h2>Linear Combination of 2D Vectors | <a href="https://www.youtube.com/watch?v=zy-0JMHC2xo&t=643s" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Video Chapter</a></h2>
+    <div class="theory">
+    <p>Systems of linear equations can also be interpreted as vectors by breaking up the coefficient matrix in columns times unknowns $c_{1}$ and $c_{2}$. (The row interpretation using $x$ and $y$ had to change to $c_{1}$ and $c_{2}$ for the column interpretation since the vectors have $x$ and $y$ components.)</p>
+    \begin{equation}
+    \begin{matrix}
+    3c_{1}-c_{2}=4 \\
+    -c_{1}+2c_{2}=3
+    \end{matrix} \qquad \begin{bmatrix}
+    3 & -1 \\
+    -1 & 2
+    \end{bmatrix}\begin{bmatrix}
+    c_{1} \\
+    c_{2}
+    \end{bmatrix} = \begin{bmatrix}
+    4 \\
+    3
+    \end{bmatrix}
+    \end{equation}
+    \begin{equation}
+    \begin{bmatrix}
+    3 \\
+    -1
+    \end{bmatrix}c_{1} + \begin{bmatrix}
+    -1 \\
+    2
+    \end{bmatrix}c_{2} = \begin{bmatrix}
+    4 \\
+    3
+    \end{bmatrix}
+    \end{equation}
+    <p>The solution to this system is $c_{1} = \dfrac{11}{5}$ and $c_{2} = \dfrac{13}{5}$, meaning</p>
+    
+    \begin{equation}
+    \begin{bmatrix}
+    3 \\
+    -1
+    \end{bmatrix}\frac{11}{5} + \begin{bmatrix}
+    -1 \\
+    2
+    \end{bmatrix}\frac{13}{5} = \begin{bmatrix}
+    4 \\
+    3
+    \end{bmatrix}
+    \end{equation}
+    
+    <p>The image on the left below illustrates adding the vectors together to arrive at the RHS vector.</p>
+    
+    <img src="images/linear_equations_and_vectors_linear_combination_1.PNG" alt="2D vectors zero one infinite solutions" class="center_img" width="903" height="312">
+    
+    <p>The middle and right illustrations are when the columns of the coefficient matrix end up being multiples of each other, which means the vectors are colinear. In that case, there can be an infinite number of solutions if the RHS point $P$ lies in the direction of the vectors, and zero solutions if the RHS point $P$ lies off the direction of the vectors.</p>
+    
+    <p>This vector interpretation isn't any easier to understand for two equations and two unknowns, but will be for larger systems.</p>
+    </div>
+    
+    <h2>Linear Combination of 3D Vectors | <a href="https://www.youtube.com/watch?v=zy-0JMHC2xo&t=1498s" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Video Chapter</a></h2>
+    <div class="theory">
+    <p>Making a linear combination of 3D vectors turns out to be a lot easier to visualize than the intersection of plane equations.</p>
+    
+    \begin{equation}
+    \begin{matrix}
+    3c_{1}-2c_{2}+c_{3}=1 \\
+    4c_{1}+c_{2}+c_{3}=2 \\
+    -c_{1}+3c_{2}-c_{3}=3
+    \end{matrix} \qquad
+    \begin{bmatrix}
+    3 & -2 & 1 \\
+    4 & 1 & 1 \\
+    -1 & 3 & -1
+    \end{bmatrix}\begin{bmatrix}
+    c_{1} \\
+    c_{2} \\
+    c_{3}
+    \end{bmatrix} = \begin{bmatrix}
+    1 \\
+    2 \\
+    3
+    \end{bmatrix}
+    \end{equation}
+    \begin{equation}
+    \begin{bmatrix}
+    3 \\
+    4 \\
+    -1
+    \end{bmatrix}c_{1} + \begin{bmatrix}
+    -2 \\
+    1 \\
+    3
+    \end{bmatrix}c_{2} + \begin{bmatrix}
+    1 \\
+    1 \\
+    -1
+    \end{bmatrix}c_{3} = \begin{bmatrix}
+    1 \\
+    2 \\
+    3
+    \end{bmatrix}
+    \end{equation}
+    
+    <p>The vectors can be linearly independent, coplanar, and colinear. (There is a silly case where all the vectors are $\vec{0}$.)</p>
+    
+    <img src="images/linear_equations_and_vectors_linear_combination_2.png" alt="2D vectors zero one infinite solutions" class="center_img" width="1029" height="347">
+    
+    <p>For linearly independent vectors, every point $P$ in 3D space can be solved for. For coplanar vectors, points $Q$ that lie in the plane containing the vectors can be solved for, but all points $P$ outside the plane have no solution. For colinear vectors, points $Q$ can be solved for on the line containing the vectors, but almost every other point $P$ in 3D space not on the line can't be solved for.</p>
+    </div>
+    
+	  <h2>Linear Combination of 4D and Higher Dimensional Vectors | <a href="https://www.youtube.com/watch?v=zy-0JMHC2xo&t=2220s" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Video Chapter</a></h2>
+    <div class="theory">
+    <p>The same ideas from 2D and 3D can be applied to 4D or any dimensional space.</p>
+    
+    \begin{equation}
+    \begin{matrix}
+    c_{1}+2c_{2}+3c_{3}+4c_{3}=5 \\
+    6c_{1}+72c_{2}+8c_{3}+9c_{3}=10 \\
+    11c_{1}+12c_{2}+13c_{3}+14c_{3}=15 \\
+    16c_{1}+17c_{2}+18c_{3}+19c_{3}=20
+    \end{matrix} \qquad
+    \begin{bmatrix}
+    1 & 2 & 3 & 4 \\
+    6 & 7 & 8 & 9 \\
+    11 & 12 & 13 & 14 \\
+    16 & 17 & 18 & 19
+    \end{bmatrix}\begin{bmatrix}
+    c_{1} \\
+    c_{2} \\
+    c_{3} \\
+    c_{4}
+    \end{bmatrix} = \begin{bmatrix}
+    5 \\
+    10 \\
+    15 \\
+    20
+    \end{bmatrix}
+    \end{equation}
+    \begin{equation}
+    \begin{bmatrix}
+    1 \\
+    6 \\
+    11 \\
+    16
+    \end{bmatrix}c_{1} + \begin{bmatrix}
+    2 \\
+    7 \\
+    12 \\
+    17
+    \end{bmatrix}c_{2} + \begin{bmatrix}
+    3 \\
+    8 \\
+    13 \\
+    18
+    \end{bmatrix}c_{3} + \begin{bmatrix}
+    4 \\
+    9 \\
+    14 \\
+    19
+    \end{bmatrix}c_{4} = \begin{bmatrix}
+    5 \\
+    10 \\
+    15 \\
+    20
+    \end{bmatrix}
+    \end{equation}
+    
+    <p>Even though it can't be graphed since it's higher than three dimensions, the vectors are either linearly independent or not. If the vectors are linearly independent, then there is always a solution. If the vectors are not linearly independent, then there will either be zero solutions or infinite solutions.</p>
+    </div>
+    
+  </div>
+</div>
+</body>
+</html>

@@ -49,17 +49,17 @@ window.MathJax = {
         <li><a href="integration_overview.html">Integration</a></li>
         <li><a href="sequences_and_series_overview.html">Sequences and Series</a></li>
       </ol>
-    </li>
+    </li>-->
+    <li><a href="linear_algebra_overview.html">Linear Algebra</a></li>
     <li><a href="multivariable_calculus_overview.html">Multivariable Calculus</a></li>
-    <li><a href="linear_algebra_overview.html">Linear Algebra</a></li>-->
     <li><a href="differential_equations_overview.html">Differential Equations</a></li>
     <li><a href="miscellaneous_overview.html">Miscellaneous Topics</a></li>
   </ol>
   <br>
   <h3 class="table_of_contents_h3">Linear Algebra</h3>
   <ol>
+    <!--<li><a href="linear_algebra_glossary.html">Glossary</a></li>-->
     <li><a href="systems_of_linear_equations.html">Systems of Linear Equations</a></li>
-    <li><a href="matrix_multiplication.html">Matrix Multiplication</a></li>
     <li>Vectors
       <ol>
         <li><a href="vectors_fundamentals.html">Fundamentals</a></li>
@@ -68,7 +68,23 @@ window.MathJax = {
         <li><a href="normal_to_plane.html">Normal $\vec{n}$ to Plane</a></li>
       </ol>
     </li>
-    <li>Eigenvalues and Eigenvectors
+    <li><a href="linear_equations_and_vectors.html">Linear Equations and Vectors</a></li>
+    <!--<li><a href="vectors_linear_independence.html">Linear Independence</a></li>
+    <li><a href=".html">Elementary Row Operations</a></li>-->
+    <!--<li>Matrices
+      <ol>
+        <li><a href="matrix_operations.html">Matrix Operations</a></li>
+        <li><a href="matrix_multiplication.html">Matrix Multiplication</a></li>
+        <li><a href="elementary_row_operation_matrices.html">Elementary Row Operation Matrices</a></li>
+        <li><a href=".html">Linear Transformations</a></li>
+        <li><a href="matrix_inverse.html">Matrix Inverse</a></li>
+        <li><a href="matrix_determinant.html">Determinant</a></li>
+        <li><a href="LU_decomposition.html">LU Decomposition</a></li>
+        <li><a href="matrix_nullspace.html">Nullspace</a></li>
+        <li><a href="echelon_forms.html">Row and Reduced Row Echelon Forms</a></li>
+      </ol>
+    </li>-->
+    <!--<li>Eigenvalues and Eigenvectors
       <ol>
         <li><a href="eigen_theory.html">Theory</a></li>
         <li><a href="eigen_distinct_real.html"></a>Distinct Real Eigenvalues</li>
@@ -76,7 +92,7 @@ window.MathJax = {
         <li><a href="eigen_imaginary.html">Imaginary Eigenvalues</a></li>
         <li><a href="eigen_nxn.html">$n \times n $ Matrices</a></li>
       </ol>
-    </li>
+    </li>-->
   </ol>
   <br>
   <h3 class="table_of_contents_h3">Additional Resources</h3>
@@ -97,19 +113,26 @@ window.MathJax = {
       <p>Viewing this website in portrait orientation can cause problems with equations being longer than the screen width (you can scroll to the right), images being poorly sized, and the font size of maths text being much smaller than regular text. If your only option is a tablet or mobile device, your viewing experience will be better if you view this website in landscape orientation. You might need to refresh the page to fix any problems after rotating.</p>
     </div>
 
-    <h1>Systems of Linear Equations | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Topic Playlist</a></h1>
+    <h1>Systems of Linear Equations | <a href="https://www.youtube.com/watch?v=krmzF3c8LeM&t=0s" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Chalkboard Video</a></h1>
     <p>Linear algebra is all about solving systems of linear equations. The "linear" part means equations of lines, equations of planes, and so on. There are no terms like $x^{2}$ or $\sin(y)$ or $e^{z}$ or any other nonlinear terms. The only equations allowed are a number times $x$ plus a number times $y$ equals a number, or a number times $x$ plus a number times $y$ plus a number times $z$ equals a number, and so on with any number of variables. The "system" part means a set of linear equations, all of which need to be solved by the same $(x,y)$ pair in two dimensions, solved by the same $(x,y,z)$ triple in three dimensions, and so on for higher dimensions.</p>
 	
-    <h2>Example 1 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
+    <h2>Example 1 | <a href="https://www.youtube.com/watch?v=krmzF3c8LeM&t=0s" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
     <div class="example_solution">
     <p>Assuming there is a solution, solve the system of linear equations by setting different equations equal to each other and solving for the variables one at a time.</p>
     \begin{align}
     y &= 3x-1 \\
     y &= -2x+4
     \end{align}
+    \begin{equation}
+    3x-1 = y = -2x+4
+    \end{equation}
+    <p>Solving for $x$, then using the value for $x$ in either of the top two equations gives the solution as,</p>
+    \begin{equation}
+    (x,y) = (1,2)
+    \end{equation}
     </div>
     
-    <h2>Example 2 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
+    <h2>Example 2 | <a href="https://www.youtube.com/watch?v=krmzF3c8LeM&t=189s" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
     <div class="example_solution">
     <p>Assuming there is a solution, solve the system of linear equations by setting different equations equal to each other and solving for the variables one at a time.</p>
     \begin{align}
@@ -117,10 +140,264 @@ window.MathJax = {
     z &= 3+2x-y \\
     z &= 8-x-2y
     \end{align}
+    <p>Setting the first equation equal to the second equation,</p>
+    \begin{equation}
+    6-x-y = z = 3+2x-y
+    \end{equation}
+    <p>Adding $y$ to each side leaves only $x$.</p>
+    \begin{equation}
+    6-x = 3+2x
+    \end{equation}
+    <p>This equation has solution $x=1$.</p>
+    
+    <p>Next, setting the first equation equal to the third equation to solve for $y$ and $z$,</p>
+    \begin{equation}
+    6-x-y = 8-x-2y
+    \end{equation}
+    <p>The value of $x$ is known, so $y$ can be solved for.</p>
+    \begin{equation}
+    6-1-y = 8-1-2y
+    \end{equation}
+    <p>This equation has solution $y=2$.</p>
+    
+    <p>To solve for $z$, plug the values of $x$ and $y$ into any of the equation, giving the solution.</p>
+    \begin{equation}
+    (x,y,z) = (1,2,3)
+    \end{equation}
+    </div>
+    
+    <h2>Solutions as Intersections of Lines and Planes | <a href="https://www.youtube.com/watch?v=krmzF3c8LeM&t=531s" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
+    <div class="theory">
+    <p>Solving the above systems of equations is the same as solving for intersections of the lines in the Example 1 and intersections of planes in Example 2.</p>
+    
+    <p>Example 1 is the unique intersection of two lines.</p>
+    <img src="images/systems_of_equations_lines_intersecting_1.png" alt="intersecting lines" class="center_img" width="295" height="299">
+    
+    <p>Example 2 is the unique intersection of three planes.</p>
+    <img src="images/systems_of_equations_intersecting_planes_1.png" alt="intersecting planes" class="center_img" width="456" height="423">
     </div>
 	
-	
-	
+    <h2>Example 1 in Standard Form | <a href="https://www.youtube.com/watch?v=krmzF3c8LeM&t=960s" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
+    <div class="example_solution">
+    <p>The way these equations are written,</p>
+    \begin{align}
+    y &= 3x-1 \\
+    y &= -2x+4
+    \end{align}
+    <p>Horizontal lines, like $y = 3$, but there's not a good way to represent vertical lines, like $x = -2$.</p>
+    
+    <p>Writing the equations with all the variables on the LHS and the constant on the RHS fixes that limitation.</p>
+    \begin{align}
+    -3x + y &= -1 \\
+    2x + y &= 4
+    \end{align}
+    <p>The equations are also easier to solve in this form by directly adding equations to each other and storing the results in one of the equation rows.</p>
+    
+    \begin{equation}
+    \text{Eqn }2 - \text{Eqn }1 \rightarrow \text{Eqn }2
+    \end{equation}
+    
+    \begin{align}
+    -3x + y &= -1 \\
+    5x + 0y &= 5
+    \end{align}
+    <p>By adding the equations together to cancel out the $y$ term, solving for $x$ in the new $\text{Eqn }2$ is much easier. After finding $x$, the value for $x$ can be plugged into $\text{Eqn }1$ to solve for $y$.</p>
+    </div>
+    
+    <h2>Example 2 in Standard Form | <a href="https://www.youtube.com/watch?v=krmzF3c8LeM&t=1515s" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
+    <div class="example_solution">
+    <p>Similarly to the previous example, the way these equations are written does not allow representing vertical planes where the coefficient on $z$ is $0$.</p>
+    \begin{align}
+    z &= 6-x-y \\
+    z &= 3+2x-y \\
+    z &= 8-x-2y
+    \end{align}
+    <p>Writing the equations with all the variables on the LHS and the constant on the RHS fixes that limitation.</p>
+    \begin{align}
+    x+y+z &= 6 \\
+    -2x+y+z &= 3 \\
+    x+2y+z &= 8
+    \end{align}
+    
+    <p>The idea is to add equations together to eliminate variables in other equations. This eliminates $x$ from the bottom two equations.</p>
+    \begin{align}
+    \text{Eqn }2 - 2(\text{Eqn }1) &\rightarrow \text{Eqn }2 \\
+    \text{Eqn }3 - \text{Eqn }1 &\rightarrow \text{Eqn }3
+    \end{align}
+    \begin{align}
+    x+y+z &= 6 \\
+    0x+3y+3z &= 15 \\
+    0x+1y+0z &= 2
+    \end{align}
+    
+    <p>It's less confusing, especially when working with even more equations and variables, to exchange rows sometimes.</p>
+    \begin{equation}
+    \text{Exchange Eqn }2 \text{ and Eqn }3
+    \end{equation}
+    \begin{align}
+    x+y+z &= 6 \\
+    0x+1y+0z &= 2 \\
+    0x+3y+3z &= 15
+    \end{align}
+    
+    <p>Now we can eliminate $y$ from the bottom equation.</p>
+    \begin{equation}
+    \text{Eqn }3 - 3(\text{Eqn }2) \rightarrow \text{Eqn }3
+    \end{equation}
+    \begin{align}
+    x+y+z &= 6 \\
+    0x+1y+0z &= 2 \\
+    0x+0y+3z &= 9
+    \end{align}
+    
+    <p>From here, the third equation can be solved, then the second (we didn't need the value of $z$ in this case), and then the first equation.</p>
+    </div>
+    
+    <h2>Solving Example 1 and 2 in Augmented Matrix Form | <a href="https://www.youtube.com/watch?v=krmzF3c8LeM&t=2172s" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
+    <div class="example_solution">
+    <p>Working with systems of equations like this is a little clunky. A more convenient notation is augmented matrix equations, which is more compact, saves a lot of writing, and keeps things lined up.</p>
+    
+    <p>For Example 1, the matrix equation and augmented matrix equations are,</p>
+    \begin{align}
+    -3x + y &= -1 \\
+    2x + y &= 4
+    \end{align}
+    
+    \begin{equation}
+    \begin{bmatrix}
+    -3 & 1 \\
+    2 & 1
+    \end{bmatrix}\begin{bmatrix}
+    x \\
+    y
+    \end{bmatrix} = \begin{bmatrix}
+    -1 \\
+    4
+    \end{bmatrix}
+    \end{equation}
+    
+    \begin{equation}
+    \left[
+    \begin{matrix}
+    -3 & 1 \\
+    2 & 1
+    \end{matrix}
+    \left|
+    \begin{matrix}
+    -1 \\
+    4
+    \end{matrix}
+    \right.
+    \right]
+    \end{equation}
+    <p>The first and second row are the first and second equations. The first and second column is the coefficients on $x$ and $y$ in each equation, the right column is the RHS constants, and the vertical bar is like an equals sign. Very compact!</p>
+    
+    <p>Now it's not so much writing to add rows together to eliminate variables.</p>
+    \begin{equation}
+    \left[
+    \begin{matrix}
+    -3 & 1 \\
+    2 & 1
+    \end{matrix}
+    \left|
+    \begin{matrix}
+    -1 \\
+    4
+    \end{matrix}
+    \right.
+    \right]
+    \end{equation}
+    \begin{equation}
+    \frac{2}{3}R_{1}+R_{2} \rightarrow R_{2} \quad \left[
+    \begin{matrix}
+    -3 & 1 \\
+    0 & 5/3
+    \end{matrix}
+    \left|
+    \begin{matrix}
+    -1 \\
+    10/3
+    \end{matrix}
+    \right.
+    \right]
+    \end{equation}
+    
+    
+    <p>For Example 2, the augmented matrix equation can be solved fairly quickly.</p>
+    \begin{align}
+    x+y+z &= 6 \\
+    -2x+y+z &= 3 \\
+    x+2y+z &= 8
+    \end{align}
+    
+    \begin{equation}
+    \begin{bmatrix}
+    1 & 1 & 1 \\
+    -2 & 1 & 1 \\
+    1 & 2 & 1 
+    \end{bmatrix}\begin{bmatrix}
+    x \\
+    y \\
+    z
+    \end{bmatrix} = \begin{bmatrix}
+    6 \\
+    3 \\
+    8
+    \end{bmatrix}
+    \end{equation}
+    
+    \begin{equation}
+    \left[
+    \begin{matrix}
+    1 & 1 & 1 \\
+    -2 & 1 & 1 \\
+    1 & 2 & 1 
+    \end{matrix}
+    \left|
+    \begin{matrix}
+    6 \\
+    3 \\
+    8
+    \end{matrix}
+    \right.
+    \right]
+    \end{equation}
+    
+    \begin{equation}
+    (-2)R_{1}+R_{2} \rightarrow R_{2} \quad \left[
+    \begin{matrix}
+    1 & 1 & 1 \\
+    0 & -3 & -3 \\
+    1 & 2 & 1 
+    \end{matrix}
+    \left|
+    \begin{matrix}
+    6 \\
+    -15 \\
+    8
+    \end{matrix}
+    \right.
+    \right]
+    \end{equation}
+    
+    \begin{equation}
+    (-1)R_{1}+R_{3} \rightarrow R_{3} \quad \left[
+    \begin{matrix}
+    1 & 1 & 1 \\
+    0 & -3 & -3 \\
+    0 & 1 & 0 
+    \end{matrix}
+    \left|
+    \begin{matrix}
+    6 \\
+    -15 \\
+    2
+    \end{matrix}
+    \right.
+    \right]
+    \end{equation}
+    </div>
+	  
   </div>
 </div>
 </body>

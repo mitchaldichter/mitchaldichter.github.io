@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Matrix Operations</title>
+
+<meta name="description" content="The rules adding or multiplying matrices to other matrices, as well as multiplying scalars times matrices, are much the same as for numbers. The one exception is that matrix multiplication does not commute.">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="32x32" href="images/profile_image_favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/profile_image_favicon-16x16.png">
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$','$'], ['\\(','\\)']]
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/noerrors']
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script"></script>
+<link rel="stylesheet" href="maths_survival_guide.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="header_row">
+  <div id="left_header" class="linear_algebra_header">
+    Table of Contents
+  </div>
+  <div id="right_header" class="linear_algebra_header">
+    <!--Begin Header Text-->Linear Algebra<!--End Header Text-->
+  </div>
+  <div id="profile_picture_div">
+	<img id="profile_picture_img" alt="channel logo" src="images/profile_image100x100.webp">
+  </div>
+</div>
+
+<div id="content_row">
+  <div id="left_content">
+    <!--Begin Table of Contents-->
+  <h3 class="table_of_contents_h3">Courses</h3>
+  <ol>
+    <!--<li>Single Variable Calculus
+      <ol>
+        <li><a href="limits_and_derivatives_overview.html">Limits and Derivatives</a></li>
+        <li><a href="integration_overview.html">Integration</a></li>
+        <li><a href="sequences_and_series_overview.html">Sequences and Series</a></li>
+      </ol>
+    </li>-->
+    <li><a href="linear_algebra_overview.html">Linear Algebra</a></li>
+    <li><a href="multivariable_calculus_overview.html">Multivariable Calculus</a></li>
+    <li><a href="differential_equations_overview.html">Differential Equations</a></li>
+    <li><a href="miscellaneous_overview.html">Miscellaneous Topics</a></li>
+  </ol>
+  <br>
+  <h3 class="table_of_contents_h3">Linear Algebra</h3>
+  <ol>
+    <!--<li><a href="linear_algebra_glossary.html">Glossary</a></li>-->
+    <li><a href="systems_of_linear_equations.html">Systems of Linear Equations</a></li>
+    <li>Vectors
+      <ol>
+        <li><a href="vectors_fundamentals.html">Fundamentals</a></li>
+        <li><a href="vectors_dot_product.html">$\vec{a} \cdot \vec{b}$&nbsp;&nbsp;Dot Product</a></li>
+        <li><a href="vectors_cross_product.html">$\vec{a} \times \vec{b}$&nbsp;&nbsp;Cross Product</a></li>
+        <li><a href="normal_to_plane.html">Normal $\vec{n}$ to Plane</a></li>
+      </ol>
+    </li>
+    <li><a href="linear_equations_and_vectors.html">Linear Equations and Vectors</a></li>
+    <!--<li><a href="vectors_linear_independence.html">Linear Independence</a></li>
+    <li><a href=".html">Elementary Row Operations</a></li>-->
+    <!--<li>Matrices
+      <ol>
+        <li><a href="matrix_operations.html">Matrix Operations</a></li>
+        <li><a href="matrix_multiplication.html">Matrix Multiplication</a></li>
+        <li><a href="elementary_row_operation_matrices.html">Elementary Row Operation Matrices</a></li>
+        <li><a href=".html">Linear Transformations</a></li>
+        <li><a href="matrix_inverse.html">Matrix Inverse</a></li>
+        <li><a href="matrix_determinant.html">Determinant</a></li>
+        <li><a href="LU_decomposition.html">LU Decomposition</a></li>
+        <li><a href="matrix_nullspace.html">Nullspace</a></li>
+        <li><a href="echelon_forms.html">Row and Reduced Row Echelon Forms</a></li>
+      </ol>
+    </li>-->
+    <!--<li>Eigenvalues and Eigenvectors
+      <ol>
+        <li><a href="eigen_theory.html">Theory</a></li>
+        <li><a href="eigen_distinct_real.html"></a>Distinct Real Eigenvalues</li>
+        <li><a href="eigen_repeated.html">Repeated Eigenvalues</a></li>
+        <li><a href="eigen_imaginary.html">Imaginary Eigenvalues</a></li>
+        <li><a href="eigen_nxn.html">$n \times n $ Matrices</a></li>
+      </ol>
+    </li>-->
+  </ol>
+  <br>
+  <h3 class="table_of_contents_h3">Additional Resources</h3>
+  <ol>
+    <li><a href="how_to_use_wolfram_alpha.html">WolframAlpha Examples</a></li>
+    <li><a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank" style="text-decoration: underline; color: blue;">Direction Field Plotter by Ariel Barton</a></li>
+    <li><a href="https://aeb019.hosted.uark.edu/pplane.html" target="_blank" style="text-decoration: underline; color: blue;">Phase Plane Plotter by Ariel Barton</a></li>
+  </ol>
+  <br><br><!--End Table of Contents-->
+  </div>
+  
+<div id="left_empty_column"></div>
+  <div id="right_content">
+    <div id="portrait_warning_div">
+      <p id="portrait_warning_p"><b>NARROW DISPLAY WARNING</b></p>
+      <hr color="black">
+      <p>You are most likely using a tablet or mobile device in portrait orientation. This website is best viewed using a typical computer screen with the browser window maximized.</p>
+      <p>Viewing this website in portrait orientation can cause problems with equations being longer than the screen width (you can scroll to the right), images being poorly sized, and the font size of maths text being much smaller than regular text. If your only option is a tablet or mobile device, your viewing experience will be better if you view this website in landscape orientation. You might need to refresh the page to fix any problems after rotating.</p>
+    </div>
+
+    <h1>Matrix Operations | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Topic Playlist</a></h1>
+    <p>The rules adding or multiplying matrices to other matrices, as well as multiplying scalars times matrices, are much the same as for numbers. The one exception is that matrix multiplication does not commute.</p>
+    
+    <h2>Adding Matrices | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Explanation Video</a></h2>
+    <div class="example_solution">
+    <p>A matrix can only be added to a matrix of the same dimensions because the matrix elements are added pairwise.</p>
+    
+    \begin{equation}
+    A_{2 \times 3} + B_{2 \times 3} = C_{2 \times 3}
+    \end{equation}
+    
+    \begin{equation}
+    \begin{bmatrix}
+    1 & 2 & 3 \\
+    4 & 5 & 6
+    \end{bmatrix} + \begin{bmatrix}
+    1 & -1 & 1 \\
+    -1 & 1 & -1
+    \end{bmatrix} = \begin{bmatrix}
+    2 & 1 & 4 \\
+    3 & 6 & 5
+    \end{bmatrix}
+    \end{equation}
+    
+    \begin{equation}
+    A_{m \times n} + B_{m \times n} = C_{m \times n}
+    \end{equation}
+    
+    \begin{align}
+    \begin{bmatrix}
+    a_{1,1} & a_{1,2} & \cdots & a_{1,n} \\
+    a_{2,1} & a_{2,2} & \cdots & a_{2,n} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    a_{m,1} & a_{m,2} & \cdots & a_{m,n}
+    \end{bmatrix} + \begin{bmatrix}
+    b_{1,1} & b_{1,2} & \cdots & b_{1,n} \\
+    b_{2,1} & b_{2,2} & \cdots & b_{2,n} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    b_{m,1} & b_{m,2} & \cdots & b_{m,n}
+    \end{bmatrix} &= \begin{bmatrix}
+    a_{1,1}+b_{1,1} & a_{1,2}+b_{1,2} & \cdots & a_{1,n}+b_{1,n} \\
+    a_{2,1}+b_{2,1} & a_{2,2}+b_{2,2} & \cdots & a_{2,n}+b_{2,n} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    a_{m,1}+b_{m,1} & a_{m,2}+b_{m,2} & \cdots & a_{m,n}+b_{m,n}
+    \end{bmatrix} \\
+    \\
+    &= \begin{bmatrix}
+    c_{1,1} & c_{1,2} & \cdots & c_{1,n} \\
+    c_{2,1} & c_{2,2} & \cdots & c_{2,n} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    c_{m,1} & c_{m,2} & \cdots & c_{m,n}
+    \end{bmatrix}
+    \end{align}
+    </div>
+    
+    <h2>Scalar Matrix Multiplication | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Explanation Video</a></h2>
+    <div class="example_solution">
+    <p>A scalar is a regular number. A scalar times a matrix will multiply every element of the matrix by the scalar.</p>
+    
+    \begin{equation}
+    3 \begin{bmatrix}
+    1 & 2 & 3 \\
+    4 & 5 & 6
+    \end{bmatrix} = \begin{bmatrix}
+    3 & 6 & 9 \\
+    12 & 15 & 18
+    \end{bmatrix}
+    \end{equation}
+    
+    \begin{equation}
+    k \begin{bmatrix}
+    a_{1,1} & a_{1,2} & \cdots & a_{1,n} \\
+    a_{2,1} & a_{2,2} & \cdots & a_{2,n} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    a_{m,1} & a_{m,2} & \cdots & a_{m,n}
+    \end{bmatrix} = \begin{bmatrix}
+    k a_{1,1} & k a_{1,2} & \cdots & k a_{1,n} \\
+    k a_{2,1} & k a_{2,2} & \cdots & k a_{2,n} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    k a_{m,1} & k a_{m,2} & \cdots & k a_{m,n}
+    \end{bmatrix}
+    \end{equation}
+    
+    <p>A scalar times a matrix is the same as multiplying a matrix by a diagonal matrix where all the diagonal elements equal the scalar.</p>
+    
+    \begin{align}
+    k A &= \begin{bmatrix}
+    k & 0 & \cdots & 0 \\
+    0 & k & \ddots & \vdots \\
+    \vdots & \ddots & \ddots & 0 \\
+    0 & \cdots & 0 & k
+    \end{bmatrix} \begin{bmatrix}
+    a_{1,1} & a_{1,2} & \cdots & a_{1,n} \\
+    a_{2,1} & a_{2,2} & \cdots & a_{2,n} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    a_{m,1} & a_{m,2} & \cdots & a_{m,n}
+    \end{bmatrix} \\
+    \\
+    &= \begin{bmatrix}
+    k a_{1,1} & k a_{1,2} & \cdots & k a_{1,n} \\
+    k a_{2,1} & k a_{2,2} & \cdots & k a_{2,n} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    k a_{m,1} & k a_{m,2} & \cdots & k a_{m,n}
+    \end{bmatrix}
+    \end{align}
+    </div>
+    
+    <h2>Multiply Square Matrices | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Explanation Video</a></h2>
+    <div class="example_solution">
+    <p>A matrix $A$ times a matrix $B$ will result in another matrix, which will be called $C$. Every element of matrix $C$ is a row of the left matrix $A$ times the column of the right matrix $B$. The elements of $C$ are numbered $c_{i,j}$ where $i$ is the row index and $j$ is the column index.</p>
+    
+    \begin{equation}
+    \begin{bmatrix}
+    1 &  2 & 3 \\
+    4 & 5 & 6 \\
+    7 & 8 & 9
+    \end{bmatrix}\begin{bmatrix}
+    1 & -1 & 0 \\
+    0 & 2 & -2 \\
+    -3 & 0 & 3
+    \end{bmatrix} = \begin{bmatrix}
+    c_{1,1} & c_{1,2} & c_{1,3} \\
+    c_{2,1} & c_{2,2} & c_{2,3} \\
+    c_{3,1} & c_{3,2} & c_{3,3}
+    \end{bmatrix}
+    \end{equation}
+    \begin{equation}
+    c_{1,1} = (1)(1)+(2)(0)+(3)(-3) = -8
+    \end{equation}
+    \begin{equation}
+    \begin{bmatrix}
+    \textcolor{black}{1} &  \textcolor{black}{2} &  \textcolor{black}{3} \\
+    \textcolor{white}{4} & \textcolor{white}{5} & \textcolor{white}{6} \\
+    \textcolor{white}{7} & \textcolor{white}{8} & \textcolor{white}{9}
+    \end{bmatrix}\begin{bmatrix}
+    \textcolor{black}{1} & \textcolor{white}{-1} & \textcolor{white}{0} \\
+    \textcolor{black}{0} & \textcolor{white}{2} & \textcolor{white}{-2} \\
+    \textcolor{black}{-3} & \textcolor{white}{0} & \textcolor{white}{3}
+    \end{bmatrix} = \begin{bmatrix}
+    \textcolor{black}{-8} & \textcolor{white}{3} & \textcolor{white}{5} \\
+    \textcolor{white}{-14} & \textcolor{white}{6} & \textcolor{white}{8} \\
+    \textcolor{white}{-20} & \textcolor{white}{9} & \textcolor{white}{11}
+    \end{bmatrix}
+    \end{equation}
+    \begin{equation}
+    c_{1,3} = (1)(0)+(2)(-2)+(3)(3) = 5
+    \end{equation}
+    \begin{equation}
+    \begin{bmatrix}
+    \textcolor{black}{1} &  \textcolor{black}{2} &  \textcolor{black}{3} \\
+    \textcolor{white}{4} & \textcolor{white}{5} & \textcolor{white}{6} \\
+    \textcolor{white}{7} & \textcolor{white}{8} & \textcolor{white}{9}
+    \end{bmatrix}\begin{bmatrix}
+    \textcolor{white}{1} & \textcolor{white}{-1} & \textcolor{black}{0} \\
+    \textcolor{white}{0} & \textcolor{white}{2} & \textcolor{black}{-2} \\
+    \textcolor{white}{-3} & \textcolor{white}{0} & \textcolor{black}{3}
+    \end{bmatrix} = \begin{bmatrix}
+    \textcolor{white}{-8} & \textcolor{white}{3} & \textcolor{black}{5} \\
+    \textcolor{white}{-14} & \textcolor{white}{6} & \textcolor{white}{8} \\
+    \textcolor{white}{-20} & \textcolor{white}{9} & \textcolor{white}{11}
+    \end{bmatrix}
+    \end{equation}
+    \begin{equation}
+    c_{2,2} = (4)(-1)+(5)(2)+(6)(0) = 6
+    \end{equation}
+    \begin{equation}
+    \begin{bmatrix}
+    \textcolor{white}{1} &  \textcolor{white}{2} &  \textcolor{white}{3} \\
+    \textcolor{black}{4} & \textcolor{black}{5} & \textcolor{black}{6} \\
+    \textcolor{white}{7} & \textcolor{white}{8} & \textcolor{white}{9}
+    \end{bmatrix}\begin{bmatrix}
+    \textcolor{white}{1} & \textcolor{black}{-1} & \textcolor{white}{0} \\
+    \textcolor{white}{0} & \textcolor{black}{2} & \textcolor{white}{-2} \\
+    \textcolor{white}{-3} & \textcolor{black}{0} & \textcolor{white}{3}
+    \end{bmatrix} = \begin{bmatrix}
+    \textcolor{white}{-8} & \textcolor{white}{3} & \textcolor{white}{5} \\
+    \textcolor{white}{-14} & \textcolor{black}{6} & \textcolor{white}{8} \\
+    \textcolor{white}{-20} & \textcolor{white}{9} & \textcolor{white}{11}
+    \end{bmatrix}
+    \end{equation}
+    \begin{equation}
+    c_{3,1} = (7)(1)+(8)(0)+(9)(-3) = -20
+    \end{equation}
+    \begin{equation}
+    \begin{bmatrix}
+    \textcolor{white}{1} &  \textcolor{white}{2} &  \textcolor{white}{3} \\
+    \textcolor{white}{4} & \textcolor{white}{5} & \textcolor{white}{6} \\
+    \textcolor{black}{7} & \textcolor{black}{8} & \textcolor{black}{9}
+    \end{bmatrix}\begin{bmatrix}
+     \textcolor{black}{1} & \textcolor{white}{-1} & \textcolor{white}{0} \\
+    \textcolor{black}{0} & \textcolor{white}{2} & \textcolor{white}{-2} \\
+    \textcolor{black}{-3} & \textcolor{white}{0} & \textcolor{white}{3}
+    \end{bmatrix} = \begin{bmatrix}
+    \textcolor{white}{-8} & \textcolor{white}{3} & \textcolor{white}{5} \\
+    \textcolor{white}{-14} & \textcolor{white}{6} & \textcolor{white}{8} \\
+    \textcolor{black}{-20} & \textcolor{white}{9} & \textcolor{white}{11}
+    \end{bmatrix}
+    \end{equation}
+    \begin{equation}
+    c_{i,j} = (a_{i,1})(b_{1,j})+(a_{i,2})(b_{2,j})+(a_{i,3})(b_{3,j})
+    \end{equation}
+    \begin{equation}
+    \begin{bmatrix}
+    1 & 2 & 3 \\
+    4 & 5 & 6 \\
+    7 & 8 & 9
+    \end{bmatrix}\begin{bmatrix}
+     1 & -1 & 0 \\
+     0 & 2 & -2 \\
+    -3 & 0 & 3
+    \end{bmatrix} = \begin{bmatrix}
+    -8 & 3 & 5 \\
+    -14 & 6 & 8 \\
+    -20 & 9 & 11
+    \end{bmatrix}
+    \end{equation}
+    </div>
+    
+    <h2>Compatible Dimensions | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Explanation Video</a></h2>
+    <div class="theory">
+    <p>Not all matrices can be multiplied together. An $m \times p$ matrix can only multiply a $p \times n$ matrix. The reason for this is the length of the rows from the left matrix must be the same length as the columns of the right matrix.</p>
+    \begin{equation}
+    \begin{bmatrix}
+    a_{1,1} & a_{1,2} & a_{1,3} & \cdots & a_{1,p} \\
+    a_{2,1} & a_{2,2} & a_{2,3} & \cdots & a_{2,p} \\
+    \vdots &  &  &  & \vdots \\
+    a_{m,1} & a_{m,2} & a_{m,3} & \cdots & a_{m,p}
+    \end{bmatrix}\begin{bmatrix}
+    b_{1,1} & b_{1,2} & \cdots & b_{1,n} \\
+    b_{2,1} & b_{2,2} &  & b_{2,n} \\
+    b_{3,1} & b_{3,2} &  & b_{3,n} \\
+    \\
+    \vdots & \vdots &  & \vdots \\
+    \\
+    b_{p,1} & b_{p,2} & \cdots & b_{p,n}
+    \end{bmatrix}
+    \end{equation}
+    
+    <p>Each row in the $A$ matrix has $p$ elements. In order to multiply a column of the $B$ matrix, each column of $B$ must have $p$ elements as well.</p>
+    </div>
+    
+    <h2>Matrix Multiplication does not Commute | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
+    <div class="example_solution">
+    <p>In general, $AB \neq BA$. Below is an example.</p>
+    \begin{equation}
+    A \begin{bmatrix}
+    1 & 2 \\
+    3 & 4
+    \end{bmatrix} \qquad B = \begin{bmatrix}
+    1 & 0 \\
+    0 & 0
+    \end{bmatrix}
+    \end{equation}
+    
+    \begin{equation}
+    AB = \begin{bmatrix}
+    1 & 0 \\
+    3 & 0
+    \end{bmatrix} \neq \begin{bmatrix}
+    1 & 2 \\
+    0 & 0
+    \end{bmatrix} = BA
+    \end{equation}
+    </div>
+    
+    transpose
+    conjugate
+    adjoint
+    A(BC) = (AB)C
+	
+    
+    
+    <h2>Example 2 | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
+    <div class="example_solution">
+    <p>Evaluate the integral.</p>
+    \begin{equation}
+    \int x^{3}e^{x} \text{ d}x
+    \end{equation}
+    </div>
+	
+	
+	
+  </div>
+</div>
+</body>
+</html>

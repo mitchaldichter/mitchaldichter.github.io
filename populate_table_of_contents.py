@@ -13,9 +13,9 @@ table_of_contents_courses_section = """
         <li><a href="integration_overview.html">Integration</a></li>
         <li><a href="sequences_and_series_overview.html">Sequences and Series</a></li>
       </ol>
-    </li>
+    </li>-->
+    <li><a href="linear_algebra_overview.html">Linear Algebra</a></li>
     <li><a href="multivariable_calculus_overview.html">Multivariable Calculus</a></li>
-    <li><a href="linear_algebra_overview.html">Linear Algebra</a></li>-->
     <li><a href="differential_equations_overview.html">Differential Equations</a></li>
     <li><a href="miscellaneous_overview.html">Miscellaneous Topics</a></li>
   </ol>
@@ -68,12 +68,14 @@ table_of_contents_array["Miscellaneous Topics"] = """
 table_of_contents_array["Single Variable Calculus: Limits and Derivatives"] = """
   <h3 class="table_of_contents_h3">Single Variable Calculus: Limits and Derivatives</h3>
   <ol>
+    <li><a href="limits_and_derivatives_glossary.html">Glossary</a></li>
     <li><a href=".html">stuff</a></li>
   </ol>
   """
 table_of_contents_array["Single Variable Calculus: Integration"] = """
   <h3 class="table_of_contents_h3">Single Variable Calculus: Integration</h3>
   <ol>
+    <li><a href="integration_glossary.html">Glossary</a></li>
     <li><a href="integration_by_parts.html">Integration by Parts</a></li>
     <li><a href="partial_fraction_decomposition.html">Partial Fraction Decomposition</a></li>
   </ol>
@@ -81,8 +83,8 @@ table_of_contents_array["Single Variable Calculus: Integration"] = """
 table_of_contents_array["Linear Algebra"] = """
   <h3 class="table_of_contents_h3">Linear Algebra</h3>
   <ol>
+    <!--<li><a href="linear_algebra_glossary.html">Glossary</a></li>-->
     <li><a href="systems_of_linear_equations.html">Systems of Linear Equations</a></li>
-    <li><a href="matrix_multiplication.html">Matrix Multiplication</a></li>
     <li>Vectors
       <ol>
         <li><a href="vectors_fundamentals.html">Fundamentals</a></li>
@@ -91,7 +93,23 @@ table_of_contents_array["Linear Algebra"] = """
         <li><a href="normal_to_plane.html">Normal $\\vec{n}$ to Plane</a></li>
       </ol>
     </li>
-    <li>Eigenvalues and Eigenvectors
+    <li><a href="linear_equations_and_vectors.html">Linear Equations and Vectors</a></li>
+    <!--<li><a href="vectors_linear_independence.html">Linear Independence</a></li>
+    <li><a href=".html">Elementary Row Operations</a></li>-->
+    <!--<li>Matrices
+      <ol>
+        <li><a href="matrix_operations.html">Matrix Operations</a></li>
+        <li><a href="matrix_multiplication.html">Matrix Multiplication</a></li>
+        <li><a href="elementary_row_operation_matrices.html">Elementary Row Operation Matrices</a></li>
+        <li><a href=".html">Linear Transformations</a></li>
+        <li><a href="matrix_inverse.html">Matrix Inverse</a></li>
+        <li><a href="matrix_determinant.html">Determinant</a></li>
+        <li><a href="LU_decomposition.html">LU Decomposition</a></li>
+        <li><a href="matrix_nullspace.html">Nullspace</a></li>
+        <li><a href="echelon_forms.html">Row and Reduced Row Echelon Forms</a></li>
+      </ol>
+    </li>-->
+    <!--<li>Eigenvalues and Eigenvectors
       <ol>
         <li><a href="eigen_theory.html">Theory</a></li>
         <li><a href="eigen_distinct_real.html"></a>Distinct Real Eigenvalues</li>
@@ -99,12 +117,13 @@ table_of_contents_array["Linear Algebra"] = """
         <li><a href="eigen_imaginary.html">Imaginary Eigenvalues</a></li>
         <li><a href="eigen_nxn.html">$n \\times n $ Matrices</a></li>
       </ol>
-    </li>
+    </li>-->
   </ol>
   """
 table_of_contents_array["Differential Equations"] = """
   <h3 class="table_of_contents_h3">Differential Equations</h3>
   <ol>
+    <!--<li><a href="differential_equations_glossary.html">Glossary</a></li>-->
     <li>Introduction
       <ol>
         <li><a href="differential_equations_notation_and_definitions.html">Notation and Definitions</a></li>
@@ -199,6 +218,24 @@ table_of_contents_array["Differential Equations"] = """
 table_of_contents_array["Multivariable Calculus"] = """
   <h3 class="table_of_contents_h3">Multivariable Calculus</h3>
   <ol>
+    <!--<li><a href="multivariable_calculus_glossary.html">Glossary</a></li>-->
+    <li>Double Integrals
+      <ol>
+        <li><a href="double_integral_cartesian.html">Cartesian $\\text{d}x\\text{d}y$</a></li>
+        <li><a href="double_integral_polar.html">Polar $r\\text{d}r\\text{d}\\theta$</a></li>
+        
+        <!--density, mass, center of mass, moments, moment of inertia-->
+        
+      </ol>
+    </li>
+    <li>Vectors
+      <ol>
+        <li><a href="vectors_fundamentals.html">Fundamentals</a></li>
+        <li><a href="vectors_dot_product.html">$\\vec{a} \\cdot \\vec{b}$&nbsp;&nbsp;Dot Product</a></li>
+        <li><a href="vectors_cross_product.html">$\\vec{a} \\times \\vec{b}$&nbsp;&nbsp;Cross Product</a></li>
+        <li><a href="normal_to_plane.html">Normal $\\vec{n}$ to Plane</a></li>
+      </ol>
+    </li>
     <li><a href="divergence.html">Divergence</a></li>
     <li><a href="curl.html">Curl</a></li>
   </ol>
@@ -213,8 +250,8 @@ table_of_contents_array["Educational Comics"] = """
 table_of_contents_array["The Business of Higher Ed"] = """
   <h3 class="table_of_contents_h3">The Business of Higher Ed</h3>
   <ol>
-    <li><a href=".html">idea1</a></li>
-    <li><a href=".html">idea2</a></li>
+    <li><a href="#recorded_lectures">Recorded Lectures</a></li>
+    <li><a href="#curved_grading">Curved Grading</a></li>
   </ol>
   """
 #not used because Maths Survival Guide is a special page

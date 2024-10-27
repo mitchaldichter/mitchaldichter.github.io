@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Row Echelon Forms</title>
+
+<meta name="description" content="A matrix is in row echelon form after Gaussian elimination. A matrix is in reduced row echelon form after Gauss–Jordan elimination.">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="32x32" href="images/profile_image_favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/profile_image_favicon-16x16.png">
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$','$'], ['\\(','\\)']]
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/noerrors']
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script"></script>
+<link rel="stylesheet" href="maths_survival_guide.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="header_row">
+  <div id="left_header" class="linear_algebra_header">
+    Table of Contents
+  </div>
+  <div id="right_header" class="linear_algebra_header">
+    <!--Begin Header Text-->Linear Algebra<!--End Header Text-->
+  </div>
+  <div id="profile_picture_div">
+	<img id="profile_picture_img" alt="channel logo" src="images/profile_image100x100.webp">
+  </div>
+</div>
+
+<div id="content_row">
+  <div id="left_content">
+    <!--Begin Table of Contents-->
+  <h3 class="table_of_contents_h3">Courses</h3>
+  <ol>
+    <!--<li>Single Variable Calculus
+      <ol>
+        <li><a href="limits_and_derivatives_overview.html">Limits and Derivatives</a></li>
+        <li><a href="integration_overview.html">Integration</a></li>
+        <li><a href="sequences_and_series_overview.html">Sequences and Series</a></li>
+      </ol>
+    </li>-->
+    <li><a href="linear_algebra_overview.html">Linear Algebra</a></li>
+    <li><a href="multivariable_calculus_overview.html">Multivariable Calculus</a></li>
+    <li><a href="differential_equations_overview.html">Differential Equations</a></li>
+    <li><a href="miscellaneous_overview.html">Miscellaneous Topics</a></li>
+  </ol>
+  <br>
+  <h3 class="table_of_contents_h3">Linear Algebra</h3>
+  <ol>
+    <!--<li><a href="linear_algebra_glossary.html">Glossary</a></li>-->
+    <li><a href="systems_of_linear_equations.html">Systems of Linear Equations</a></li>
+    <li>Vectors
+      <ol>
+        <li><a href="vectors_fundamentals.html">Fundamentals</a></li>
+        <li><a href="vectors_dot_product.html">$\vec{a} \cdot \vec{b}$&nbsp;&nbsp;Dot Product</a></li>
+        <li><a href="vectors_cross_product.html">$\vec{a} \times \vec{b}$&nbsp;&nbsp;Cross Product</a></li>
+        <li><a href="normal_to_plane.html">Normal $\vec{n}$ to Plane</a></li>
+      </ol>
+    </li>
+    <li><a href="linear_equations_and_vectors.html">Linear Equations and Vectors</a></li>
+    <!--<li><a href="vectors_linear_independence.html">Linear Independence</a></li>
+    <li><a href=".html">Elementary Row Operations</a></li>-->
+    <!--<li>Matrices
+      <ol>
+        <li><a href="matrix_operations.html">Matrix Operations</a></li>
+        <li><a href="matrix_multiplication.html">Matrix Multiplication</a></li>
+        <li><a href="elementary_row_operation_matrices.html">Elementary Row Operation Matrices</a></li>
+        <li><a href=".html">Linear Transformations</a></li>
+        <li><a href="matrix_inverse.html">Matrix Inverse</a></li>
+        <li><a href="matrix_determinant.html">Determinant</a></li>
+        <li><a href="LU_decomposition.html">LU Decomposition</a></li>
+        <li><a href="matrix_nullspace.html">Nullspace</a></li>
+        <li><a href="echelon_forms.html">Row and Reduced Row Echelon Forms</a></li>
+      </ol>
+    </li>-->
+    <!--<li>Eigenvalues and Eigenvectors
+      <ol>
+        <li><a href="eigen_theory.html">Theory</a></li>
+        <li><a href="eigen_distinct_real.html"></a>Distinct Real Eigenvalues</li>
+        <li><a href="eigen_repeated.html">Repeated Eigenvalues</a></li>
+        <li><a href="eigen_imaginary.html">Imaginary Eigenvalues</a></li>
+        <li><a href="eigen_nxn.html">$n \times n $ Matrices</a></li>
+      </ol>
+    </li>-->
+  </ol>
+  <br>
+  <h3 class="table_of_contents_h3">Additional Resources</h3>
+  <ol>
+    <li><a href="how_to_use_wolfram_alpha.html">WolframAlpha Examples</a></li>
+    <li><a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank" style="text-decoration: underline; color: blue;">Direction Field Plotter by Ariel Barton</a></li>
+    <li><a href="https://aeb019.hosted.uark.edu/pplane.html" target="_blank" style="text-decoration: underline; color: blue;">Phase Plane Plotter by Ariel Barton</a></li>
+  </ol>
+  <br><br><!--End Table of Contents-->
+  </div>
+  
+<div id="left_empty_column"></div>
+  <div id="right_content">
+    <div id="portrait_warning_div">
+      <p id="portrait_warning_p"><b>NARROW DISPLAY WARNING</b></p>
+      <hr color="black">
+      <p>You are most likely using a tablet or mobile device in portrait orientation. This website is best viewed using a typical computer screen with the browser window maximized.</p>
+      <p>Viewing this website in portrait orientation can cause problems with equations being longer than the screen width (you can scroll to the right), images being poorly sized, and the font size of maths text being much smaller than regular text. If your only option is a tablet or mobile device, your viewing experience will be better if you view this website in landscape orientation. You might need to refresh the page to fix any problems after rotating.</p>
+    </div>
+
+    <h1>Topic Name | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Topic Playlist</a></h1>
+	  <p>description</p>
+    
+    
+    
+    WolframAlpha row reduction
+    
+    
+    
+    
+    French &eacute;chelon ("level" or step of a ladder)
+    
+    Row Echelon Form
+    Gaussian Elimination
+    
+    Reduced Row Echelon Form
+    Gauss-Jordan Elimination
+	  
+	  <h2>theory | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Explanation Video</a></h2>
+    <div class="theory">
+    <p>paragraph</p>
+    \begin{equation}
+    a+b
+    \end{equation}
+    </div>
+    
+    <h2>Example  | <a href="" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Solution Video</a></h2>
+    <div class="example_solution">
+    <p>desc</p>
+    \begin{equation}
+    cf
+    \end{equation}
+    </div>
+      
+    
+  </div>
+</div>
+</body>
+</html>
