@@ -26,6 +26,7 @@ table_of_contents_off_on_a_tangent_section = """
   <ol>
     <li><a href="educational_comics.html">Educational Comics</a></li>
     <li><a href="the_business_of_higher_ed.html">The Business of Higher Ed</a></li>
+    <!-- LaTeX -->
   </ol>
   """
 
@@ -250,6 +251,7 @@ table_of_contents_array["Educational Comics"] = """
 table_of_contents_array["The Business of Higher Ed"] = """
   <h3 class="table_of_contents_h3">The Business of Higher Ed</h3>
   <ol>
+    <li><a href="#your_investment_in_higher_education">Your Investment in Higher Education</a></li>
     <li><a href="#recorded_lectures">Recorded Lectures</a></li>
     <li><a href="#curved_grading">Curved Grading</a></li>
   </ol>
