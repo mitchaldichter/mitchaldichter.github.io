@@ -17,7 +17,12 @@
 <!--main page-->
   <url>
     <loc>https://mitchaldichter.com/</loc>
-    <lastmod>2024-10-27</lastmod>
+  </url>
+
+<!--Maths Survival Guide page-->
+  <url>
+    <loc>https://mitchaldichter.com/MathsSurvivalGuide.html</loc>
+    <lastmod>2025-07-04</lastmod>
   </url>
 
 <!--wolfram alpha-->
