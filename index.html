@@ -3,130 +3,175 @@
 <head>
 <link rel="canonical" href="https://mitchaldichter.com/">
 
-<title>Maths Survival Guide by Mitchal Dichter</title>
+<title>Mitchal Dichter</title>
 
-<meta name="description" content="Example problems and video solutions for common STEM maths courses.">
+<meta name="description" content="Personal website for Mitchal Dichter.">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" sizes="32x32" href="images/profile_image_favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/profile_image_favicon-16x16.png">
-<script>
-window.MathJax = {
-  tex: {
-    inlineMath: [['$','$'], ['\\(','\\)']]
-  },
-  loader: {
-    load: ['input/asciimath', '[tex]/noerrors']
-  }
-};
-</script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script"></script>
-<link rel="stylesheet" href="maths_survival_guide.css">
+<link rel="icon" type="image/png" sizes="32x32" href="images/linkedin_image_favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/linkedin_image_favicon-16x16.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
 
-<script type="text/javascript" src="shared_code.js"></script>
-</head>
-<body onload="portrait_warning_visibility()">
+<style>
+body {
+  margin: 0;
+  
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  
+  line-height: 175%;
+}
 
-<div id="header_row">
-  <div id="left_header" class="maths_survival_guide_header">
-    Table of Contents
-  </div>
-  <div id="right_header" class="maths_survival_guide_header">
-    <!--Begin Header Text-->Maths Survival Guide<!--End Header Text-->
-  </div>
-  <div id="profile_picture_div">
-	<img id="profile_picture_img" alt="channel logo" src="images/profile_image100x100.webp">
-  </div>
+hr {
+  margin: 0;
+}
+
+.center_content {
+  max-width: 80%;
+  margin: auto;
+}
+
+.navigation_bar {
+  overflow: hidden;
+}
+
+.navigation_bar a {
+  float: left;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navigation_bar a:hover {
+  background-color: #DDD;
+  color: black;
+}
+
+.navigation_bar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  padding: 10px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.inline_icon {
+  height: 1.5em;
+  vertical-align:middle;
+  padding-bottom: 0.1em;
+}
+
+a {
+  color: #0077B7;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.right_img {
+  max-height:100%;
+  float:left;
+  padding-right:25px;
+  margin-bottom:25px;
+}
+</style>
+</head>
+<body>
+
+<div class="navigation_bar center_content">
+  <a href="#Introduction">Introduction</a>
+  <a href="#BEM_Instructionals">BEM Instructionals</a>
+  <a href="#Strogatz_Errata">Strogatz Errata</a>
+  <a href="#Maths_Survival_Guide">Maths Survival Guide</a>
+  <a href="#Contact">Contact</a>
 </div>
 
-<div id="content_row">
-  <div id="left_content">
-    <!--Begin Table of Contents-->
-  <h3 class="table_of_contents_h3">Courses</h3>
-  <ol>
-    <!--<li>Single Variable Calculus
-      <ol>
-        <li><a href="limits_and_derivatives_overview.html">Limits and Derivatives</a></li>
-        <li><a href="integration_overview.html">Integration</a></li>
-        <li><a href="sequences_and_series_overview.html">Sequences and Series</a></li>
-      </ol>
-    </li>-->
-    <li><a href="linear_algebra_overview.html">Linear Algebra</a></li>
-    <li><a href="multivariable_calculus_overview.html">Multivariable Calculus</a></li>
-    <li><a href="differential_equations_overview.html">Differential Equations</a></li>
-    <li><a href="miscellaneous_overview.html">Miscellaneous Topics</a></li>
-  </ol>
-  <br>
-  <h3 class="table_of_contents_h3">Miscellaneous Topics</h3>
-  <ol>
-    <li>Vectors
-      <ol>
-        <li><a href="vectors_fundamentals.html">Fundamentals</a></li>
-        <li><a href="vectors_dot_product.html">$\vec{a} \cdot \vec{b}$&nbsp;&nbsp;Dot Product</a></li>
-        <li><a href="vectors_cross_product.html">$\vec{a} \times \vec{b}$&nbsp;&nbsp;Cross Product</a></li>
-        <li><a href="normal_to_plane.html">Normal $\vec{n}$ to Plane</a></li>
-      </ol>
-    </li>
-    <li>Coordinate Systems
-      <ol>
-        <li><a href="polar_coordinates.html">Polar $(r,\theta)$</a></li>
-        <!--<li><a href="cylindrical_coordinates.html">Cylindrical $(r,\theta,z)$</a></li>
-        <li><a href="spherical_coordinates.html">Spherical $(r,\theta,\phi)$</a></li>-->
-      </ol>
-    </li>
-    <!--<li>Parametric Equations
-      <ol>
-        <li><a href="parametric_paths.html">1D Paths</a></li>
-        <li><a href="parametric_surfaces.html">2D Surfaces</a></li>
-      </ol>
-    </li>-->
-  </ol>
-<br>
-  <h3 class="table_of_contents_h3">Additional Resources</h3>
-  <ol>
-    <li><a href="how_to_use_wolfram_alpha.html">WolframAlpha Examples</a></li>
-    <li><a href="https://aeb019.hosted.uark.edu/dfield.html" target="_blank" style="text-decoration: underline; color: blue;">Direction Field Plotter by Ariel Barton</a></li>
-    <li><a href="https://aeb019.hosted.uark.edu/pplane.html" target="_blank" style="text-decoration: underline; color: blue;">Phase Plane Plotter by Ariel Barton</a></li>
-  </ol>
-  <br><br><!--End Table of Contents-->
+<hr>
+
+<div class="center_content">
+
+  <div id="Introduction" class="row">
+    <div class="column" style="width:30%; text-align:center;">
+      <img src="images/linkedin_image.png" alt="Profile Image" width=300 style="max-width:100%;">
+      <h1>Mitchal Dichter</h1>
+      <h2>Energy Consultant</h2>
+    </div>
+    
+    <div class="column"  style="width:70%;">
+      <h1>Introduction</h1>
+      <p>I work as a consultant in the energy industry creating EnergyPlus models for clients and automating the generation of thousands to millions of building models, their simulation, and performance analysis. If you need EnergyPlus modeling for a project, support learning EnergyPlus, or as needed technical assistance, you can contact me at <a href="mailto:mitchaldichter@beminstructionals.com">mitchaldichter@beminstructionals.com</a> or view the <a href="https://beminstructionals.com/#id_Consulting" target="_blank">BEM Instructionals consulting</a> section of my website.</p>
+      
+      <!--<p>For some assurance of my qualifications, I've made some YouTube videos going over the basics of EnergyPlus on the BEM Instructionals YouTube channel, and proof of my coding skills is from creating the BEM File Editor from scratch with modern features compared to other EnergyPlus editors, which you can see the code for at the BEM Instructionals Github repo.</p>-->
+      
+      <p>My career in the energy industry started at the UC Davis Western Cooling Efficiency Center (WCEC) in 2017. My work at the WCEC was focused on behind the meter energy usage and efficiency technologies. The main project I worked on was to generate millions of EnergyPlus models from parametrically combining different energy efficiency technologies on different commercial building types in multiple climate zones, running them all on a UC Davis compute cluster. Other projects I worked on included modeling a novel ground source heat pump in Python and co-simulation with an EnergyPlus building model, wrote linear programming models of electric utility tariffs for optimization of battery control in buildings using the Python PuLP package, and determining the building construction components that made phase change materials effective. I also worked at a battery startup with an electrochemistry geared toward grid energy storage and was head hunted by Energy Exemplar to work on their energy market simulation engine PLEXOS as a developer.</p>
+      
+      <p align="right">
+        MSc Applied Mathematics&nbsp;&nbsp;|&nbsp;&nbsp;BS Computer Science<br>
+        <a href="https://www.linkedin.com/in/mitchaldichter/" target="_blank"><img class="inline_icon" alt="LinkedIn icon" src="images/linkedin_icon.svg"></a> <a href="https://www.linkedin.com/in/mitchaldichter/" target="_blank">LinkedIn Page</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://github.com/mitchaldichter" target="_blank"><img class="inline_icon" alt="GitHub icon" src="images/github_icon.svg"></a> <a href="https://github.com/mitchaldichter" target="_blank">GitHub Projects</a>
+      </p>
+    </div>
   </div>
   
-<div id="left_empty_column"></div>
-  <div id="right_content">
-    <div id="portrait_warning_div">
-      <p id="portrait_warning_p"><b>NARROW DISPLAY WARNING</b></p>
-      <hr color="black">
-      <p>You are most likely using a tablet or mobile device in portrait orientation. This website is best viewed using a typical computer screen with the browser window maximized.</p>
-      <p>Viewing this website in portrait orientation can cause problems with equations being longer than the screen width (you can scroll to the right), images being poorly sized, and the font size of maths text being much smaller than regular text. If your only option is a tablet or mobile device, your viewing experience will be better if you view this website in landscape orientation. You might need to refresh the page to fix any problems after rotating.</p>
+  <div id="BEM_Instructionals">
+    <h1><a href="https://beminstructionals.com/#id_Downloads" target="_blank">BEM Instructionals</a></h1>
+    <div>
+      <a href="https://beminstructionals.com/#id_Downloads" target="_blank"><img src="https://beminstructionals.com/BEM_Instructionals496_CCbysa.png" alt="BEM Instructionals logo" height=125 class="right_img"></a>
+    
+      <p>This is my consulting business for EnergyPlus, which you probably found via <!--my YouTube videos covering the basics of EnergyPlus or -->the BEM File Editor open-source software I created and maintain for modifying EnergyPlus *.idf files. If this is what you were looking for when you found this page, the BEM Instructionals website has a lot more resources, such as the <a href="https://beminstructionals.com/#id_Downloads" target="_blank">BEM File Editor installers</a> for the latest version<!-- and a catalog of my EnergyPlus YouTube videos-->.</p>
+      
+      <p>If you are interested in contracting with me through my LLC, you can contact me at <a href="mailto:mitchaldichter@beminstructionals.com">mitchaldichter@beminstructionals.com</a> or view the <a href="https://beminstructionals.com/#id_Consulting" target="_blank">BEM Instructionals consulting</a> section of my website.</p>
     </div>
-
-    <h1>How to Study with this Website | <a href="https://www.youtube.com/watch?v=1KFLy0xPjRw" target="_blank"><img class="inline_youtube_icon" alt="youtube icon" src="images/youtube_icon.svg"> Video</a></h1>
-    
-    <p>This website is for university level mathematics courses taken by most STEM students, from a first course in calculus to differential equations. The website organizes all the individual topics and YouTube videos so they are easy to navigate.</p>
-    
-    <h2>Navigable Table of Contents</h2>
-    <p>Topics can be found in the Table of Contents on the left organized in a typical order for that course. When you hover over links to pages, the text will become <u>underlined</u>.</p>
-	
-    <h2>Individual Pages for each Topic</h2>
-    <p>These pages have a very high level description of a topic, but their real purpose is to provide links for all the videos and playlists on YouTube.</p>
-    <a href="file:///C:/Users/mitchal/Documents/GitHub/mitchaldichter.github.io/equilibria_stability_and_phase_lines.html" target="_blank"><img src="images/Stability_of_Equilibria_screenshot640x360.webp" alt="Stability of Equilibria page"></a>
-    
-    <h2>Examples and Solutions as Playlists on YouTube</h2>
-    <p>The page for a topic will have written a explanation of the concept, but most of the content is examples and video solutions hosted on YouTube. The videos are in the format of watching a private tutor complete a homework problem by handwriting in front of you.</p>
-    <a href="https://www.youtube.com/watch?v=JjCGNtXltC8&list=PLXQ5vz32rm_TZ2eBVYzYZopCOfmuJAN3l" target="_blank"><img src="images/integrating_factor_playlist_screenshot640x291.webp" alt="youtube playlist"></a>
-    
-    <h2>Chalkboard Lectures</h2>
-    <p>If you prefer the traditional lecture format (or you missed a lecture), topics are covered in lectures at the chalkboard with tens of lectures for an entire course. <!--Similar to in person lectures, there isn't enough time to do a plethora of examples, but links are provided in the upper right corner of the videos and playlists of individual problems.--></p>
-    <a href="https://www.youtube.com/@mitchaldichter" target="_blank"><img src="images/example_youtube_lecture640x360.webp" alt="chalkboard youtube lecture" style="border-radius: 20px;"></a>
-    
-    <h2>What is different about this website from all the existing online resources?</h2>
-    <p>There are some high quality resources on the internet, which include lectures, recorded videos of pencil and paper solutions, and free textbooks, but the materials can be inconsistent and incomplete, so students have trouble finding them. Even worse, many of the resources are plain wrong, which students often can't distinguish. The worst quote I ever got from a student describing a paid subscription website with solutions to the problems in their textbook was, "For every problem, there's usually at least five contributed solutions, and usually, at least one of them is right." Suffice to say, things could be better.</p>
-    
-    <p>I wanted to remedy this. Also, not only do I have a good understanding of mathematics, I'm a good teacher. I created this website for students with poor high school maths teachers, or working while in college, or needing to review a prerequisite course, or sick during lectures, or whatever, to succeed, and these common maths courses won't be the insurmountable obstacle to their STEM studies.</p>
   </div>
+  
+  <div id="Strogatz_Errata" style="clear:both;">
+    <h1><a href="https://mitchaldichter.com/Strogatz_errata.html" target="_blank">Strogatz Errata</a></h1>
+    <div>
+      <a href="https://mitchaldichter.com/Strogatz_errata.html" target="_blank"><img src="images/book_covers.webp" alt="book covers" height=125 class="right_img"></a>
+    
+      <p>I am the author of the solution manuals for the second and third editions of <span style="text-decoration: underline;">Nonlinear Dynamics and Chaos</span> by Steven H. Strogatz. I also manage the reported errata for both the main textbooks and the solution manuals. In case you found this page while looking for the errata page, here is a <a href="https://mitchaldichter.com/Strogatz_errata.html" target="_blank">Strogatz Errata</a> page link.</p>
+      
+      <p>If you have found errata to report for one of the textbooks or solution manuals, please use <a href="mailto:info@mitchaldichter.com">info@mitchaldichter.com</a> to contact me.</p>
+    </div>
+  </div>
+  
+  <div id="Maths_Survival_Guide" style="clear:both;">
+    <h1><a href="https://mitchaldichter.com/MathsSurvivalGuide.html" target="_blank">Maths Survival Guide</a></h1>
+    <div>
+      <a href="https://mitchaldichter.com/MathsSurvivalGuide.html" target="_blank"><img src="images/cone_over_circle_small.png" alt="cylindrical integration" height=125 class="right_img"></a>
+      
+      <p>If you found this page looking for the <a href="https://mitchaldichter.com/MathsSurvivalGuide.html" target="_blank">Maths Survival Guide</a>, click the previous link to go to the main page. If you believe you found an error, please send me an email at <a href="mailto:info@mitchaldichter.com">info@mitchaldichter.com</a> with the specifics.</p>
+      
+      <p>This is a passion project of mine. It's a website and a bunch of YouTube videos for an Introduction to Ordinary Differential Equations course, and some other topics. When I worked at UC Santa Barbara, I really enjoyed helping students with their lower division maths courses, from a first course in calculus to differential equations. One thing students always asked for is online resources to supplement their courses. The resources exist, but they can be difficult to find, spread out across multiple places, and many of the things on the internet are just plain wrong! I don't work at UC Santa Barbara anymore, but I still like making educational materials for the common STEM maths courses. Hopefully some students out there find what I've made useful.</p>
+    </div>
+  </div>
+  
+  <div id="Contact" style="clear:both;">
+    <h1>Contact</h1>
+    <p>Please use <a href="mailto:mitchaldichter@beminstructionals.com">mitchaldichter@beminstructionals.com</a> for inquiries about the BEM File Editor and consulting for EnergyPlus.</p>
+    <p>Use <a href="mailto:info@mitchaldichter.com">info@mitchaldichter.com</a> for everything else.</p>
+  </div>
+  
 </div>
+
 </body>
 </html>
