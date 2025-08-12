@@ -2,7 +2,8 @@ import os
 
 exclude_HTMLs = [
 "Strogatz_errata.html",
-"combining.html",]
+"combining.html",
+"index.html",]
 
 table_of_contents_courses_section = """
   <h3 class="table_of_contents_h3">Courses</h3>
