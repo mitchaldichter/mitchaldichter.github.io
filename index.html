@@ -62,7 +62,15 @@ hr {
   box-sizing: border-box;
 }
 
-.column {
+.left_column {
+  width: 30%;
+  text-align: center;
+  float: left;
+  padding: 10px;
+}
+
+.right_column {
+  width: 70%;
   float: left;
   padding: 10px;
 }
@@ -75,7 +83,7 @@ hr {
 
 .inline_icon {
   height: 1.5em;
-  vertical-align:middle;
+  vertical-align: middle;
   padding-bottom: 0.1em;
 }
 
@@ -88,11 +96,76 @@ a:hover {
   text-decoration: underline;
 }
 
-.right_img {
-  max-height:100%;
-  float:left;
-  padding-right:25px;
-  margin-bottom:25px;
+.left_img {
+  max-height: 100%;
+  max-width: 15%;
+  float: left;
+  padding-right: 25px;
+  margin-bottom: 25px;
+}
+
+.left_wide_img {
+  max-height: 100%;
+  max-width: 30%;
+  float: left;
+  padding-right: 25px;
+  margin-bottom: 25px;
+}
+
+@media screen and (orientation: portrait) {
+  body {
+    font-size: 12px;
+  }
+  
+  .left_img {
+    max-width: 30%;
+    margin-bottom: 0px;
+  }
+  
+  .left_wide_img {
+    max-width: 60%;
+    margin-bottom: 0px;
+  }
+  
+  .left_column {
+    width: 100%;
+    float: none;
+  }
+
+  .right_column {
+    width: 100%;
+    float: none;
+  }
+  
+  .center_content {
+    max-width: 95%;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width: 1079px) {
+  .left_img {
+    max-width: 20%;
+    margin-bottom: 0px;
+  }
+  
+  .left_wide_img {
+    max-width: 50%;
+    margin-bottom: 0px;
+  }
+  
+  .left_column {
+    width: 100%;
+    float: none;
+  }
+
+  .right_column {
+    width: 100%;
+    float: none;
+  }
+  
+  .center_content {
+    max-width: 95%;
+  }
 }
 </style>
 </head>
@@ -111,13 +184,13 @@ a:hover {
 <div class="center_content">
 
   <div id="Introduction" class="row">
-    <div class="column" style="width:30%; text-align:center;">
+    <div class="left_column">
       <img src="images/linkedin_image.png" alt="Profile Image" width=300 style="max-width:100%;">
       <h1>Mitchal Dichter</h1>
       <h2>EnergyPlus Consultant</h2>
     </div>
     
-    <div class="column"  style="width:70%;">
+    <div class="right_column">
       <h1>Introduction</h1>
       <p>I work as a consultant in the energy industry creating EnergyPlus models for clients and automating the generation of thousands to millions of building models, their simulation, and performance analysis. If you need EnergyPlus modeling for a project, support learning EnergyPlus, or as needed technical assistance, you can contact me at <a href="mailto:mitchaldichter@beminstructionals.com">mitchaldichter@beminstructionals.com</a> or view the <a href="https://beminstructionals.com/#id_Consulting" target="_blank">BEM Instructionals Consulting</a> section of my website.</p>
       
@@ -135,7 +208,7 @@ a:hover {
   <div id="BEM_Instructionals">
     <h1><a href="https://beminstructionals.com" target="_blank">BEM Instructionals</a></h1>
     <div>
-      <a href="https://beminstructionals.com" target="_blank"><img src="https://beminstructionals.com/BEM_Instructionals496_CCbysa.png" alt="BEM Instructionals logo" height=125 class="right_img"></a>
+      <a href="https://beminstructionals.com" target="_blank"><img src="https://beminstructionals.com/BEM_Instructionals496_CCbysa.png" alt="BEM Instructionals logo" class="left_img"></a>
     
       <p>This is my consulting business for EnergyPlus, which you probably found via <!--my YouTube videos covering the basics of EnergyPlus or -->the BEM File Editor open-source software I created and maintain for modifying EnergyPlus *.idf files. If this is what you were looking for when you found this page, the BEM Instructionals website has a lot more resources, such as the <a href="https://beminstructionals.com/#id_Downloads" target="_blank">BEM File Editor installers</a> for the latest version<!-- and a catalog of my EnergyPlus YouTube videos-->.</p>
       
@@ -146,7 +219,7 @@ a:hover {
   <div id="Strogatz_Errata" style="clear:both;">
     <h1><a href="https://mitchaldichter.com/Strogatz_errata.html" target="_blank">Strogatz Errata</a></h1>
     <div>
-      <a href="https://mitchaldichter.com/Strogatz_errata.html" target="_blank"><img src="images/book_covers.webp" alt="book covers" height=125 class="right_img"></a>
+      <a href="https://mitchaldichter.com/Strogatz_errata.html" target="_blank"><img src="images/book_covers.webp" alt="book covers" class="left_wide_img"></a>
     
       <p>I am the author of the solution manuals for the second and third editions of <span style="text-decoration: underline;">Nonlinear Dynamics and Chaos</span> by Steven H. Strogatz. I also manage the reported errata for both the main textbooks and the solution manuals. In case you found this page while looking for the errata page, here is a <a href="https://mitchaldichter.com/Strogatz_errata.html" target="_blank">Strogatz Errata</a> page link.</p>
       
@@ -157,7 +230,7 @@ a:hover {
   <div id="Maths_Survival_Guide" style="clear:both;">
     <h1><a href="https://mitchaldichter.com/MathsSurvivalGuide.html" target="_blank">Maths Survival Guide</a></h1>
     <div>
-      <a href="https://mitchaldichter.com/MathsSurvivalGuide.html" target="_blank"><img src="images/cone_over_circle_small.png" alt="cylindrical integration" height=125 class="right_img"></a>
+      <a href="https://mitchaldichter.com/MathsSurvivalGuide.html" target="_blank"><img src="images/cone_over_circle_small.png" alt="cylindrical integration" class="left_wide_img"></a>
       
       <p>If you found this page looking for the <a href="https://mitchaldichter.com/MathsSurvivalGuide.html" target="_blank">Maths Survival Guide</a>, click the previous link to go to the main page. If you believe you found an error, please send me an email at <a href="mailto:info@mitchaldichter.com">info@mitchaldichter.com</a> with the specifics.</p>
       
